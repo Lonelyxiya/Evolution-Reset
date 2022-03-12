@@ -1,4 +1,4 @@
-## Evolution Modpack
+## Evolution Reset Modpack
 
 ![This is an image](https://s4.ax1x.com/2022/02/19/Hb1UfA.png)
 
