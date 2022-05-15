@@ -12,8 +12,8 @@ RecipeBuilder.get("basic")
     [<pyrotech:material:16>, <pyrotech:anvil_iron_plated>, <pyrotech:anvil_iron_plated>, <pyrotech:anvil_iron_plated>, <pyrotech:material:16>],
     [<ore:ingotIron>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:ingotIron>],
     [<pyrotech:material:16>, <ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>, <pyrotech:material:16>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation3")
   .setLevelRequired(5)
   .setConsumeExperience(false)
@@ -23,7 +23,7 @@ RecipeBuilder.get("basic")
   .setExtraOutputOne(<minecraft:iron_nugget> * 2, 0.7)
   .setExtraOutputTwo(<pyrotech:material:16> * 3, 0.2)
   .setExtraOutputThree(<pyrotech:rock:7> * 5, 0.1)
-  .setSecondaryIngredients([<pyrotech:anvil_granite>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "blacksmith:workstation3"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_granite>, <contenttweaker:blueprint1>])
   .setMaximumTier(2)
   .addOutput(<minecraft:iron_ingot> * 4, 1)
   .addOutput(<artisanworktables:workstation:3>, 99)
@@ -38,7 +38,7 @@ RecipeBuilder.get("basic")
   .addTool(<ore:artisansCarver>, 10)
   .setExtraOutputOne(<pyrotech:material:23> * 2, 0.9)
   .setExtraOutputTwo(<pyrotech:material:23> * 3, 0.1)
-  .setSecondaryIngredients([<pyrotech:anvil_granite>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop5"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_granite>, <contenttweaker:blueprint2>])
   .create();
   
 RecipeBuilder.get("blacksmith")
@@ -53,7 +53,7 @@ RecipeBuilder.get("blacksmith")
   .addTool(<ore:artisansCutters>, 20)
   .setExtraOutputOne(<minecraft:iron_nugget> * 2, 0.9)
   .setExtraOutputTwo(<minecraft:iron_nugget> * 3, 0.1)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "blacksmith:bucket"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint3>])
   .addOutput(<minecraft:bucket>, 80)
   .addOutput(<minecraft:iron_nugget> * 5, 20)
   .create();
@@ -63,7 +63,7 @@ RecipeBuilder.get("basic")
         Copy.byOutput([<artisanworktables:workshop:3>]).runAfter())
   .setName("workshop3")
   .setLevelRequired(15)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop3"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint4>])
   .setExtraOutputOne(<minecraft:iron_nugget> * 2, 0.8)
   .setExtraOutputTwo(<pyrotech:rock:7> * 3, 0.2)	
   .addTool(<ore:artisansHammer>, 30)
@@ -73,7 +73,7 @@ RecipeBuilder.get("basic")
   
 RecipeBuilder.get("blacksmith")
   .setShaped([
-    [<pyrotech:stone_bricks>, <ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>, <pyrotech:stone_bricks>],
+    [<pyrotech:masonry_brick_block>, <ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>, <pyrotech:masonry_brick_block>],
     [<ore:stoneBasaltPolished>, <pyrotech:planks_tarred>, <pyrotech:crate_stone>, <pyrotech:planks_tarred>, <ore:stoneBasaltPolished>],
     [<ore:stoneBasaltPolished>, <ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>, <ore:stoneBasaltPolished>],
     [<ore:stoneBasaltPolished>, <ore:blockIron>, <ore:blockIron>, <ore:blockIron>, <ore:stoneBasaltPolished>],
@@ -88,8 +88,8 @@ RecipeBuilder.get("blacksmith")
   .addTool(<ore:artisansTSquare>, 40)  
   .addTool(<ore:artisansHammer>, 40)
   .addTool(<ore:artisansCarver>, 40) 
-  .setSecondaryIngredients([<immersiveengineering:metal:30> * 9, <pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "blacksmith:crafting_table"}})])
-  .addOutput(<minecraft:crafting_table>)
+  .setSecondaryIngredients([<immersiveengineering:metal:30> * 9, <pyrotech:anvil_iron_plated>, <contenttweaker:blueprint5>])
+  .addOutput(<tconstruct:tooltables>)
   .create();
   
 RecipeBuilder.get("blacksmith")
@@ -97,8 +97,8 @@ RecipeBuilder.get("blacksmith")
     [<ore:blockSteel>, <ore:plateCopper>, <ore:plateCopper>, <ore:plateCopper>, <ore:blockSteel>],
     [<ore:blockSteel>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:blockSteel>],
     [<ore:blockSteel>, <ore:blockCopper>, <ore:blockCopper>, <ore:blockCopper>, <ore:blockSteel>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation6")
   .setLevelRequired(10)
   .setConsumeExperience(false)
@@ -110,8 +110,7 @@ RecipeBuilder.get("blacksmith")
   .addTool(<ore:artisansTSquare>, 50)  
   .addTool(<ore:artisansHammer>, 50)
   .addTool(<ore:artisansCarver>, 50)
-  .addRequirement(GameStages.allOf(["one", "two"]))
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "blacksmith:workstation6"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint6>])
   .addOutput(<artisanworktables:workstation:6>)
   .create();
   
@@ -120,8 +119,8 @@ RecipeBuilder.get("basic")
     [<pyrotech:planks_tarred>, <ore:slabWood>, <ore:slabWood>, <ore:slabWood>, <pyrotech:planks_tarred>],
     [<pyrotech:planks_tarred>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:planks_tarred>],
     [<pyrotech:planks_tarred>, <ore:blockIron>, <ore:blockIron>, <ore:blockIron>, <pyrotech:planks_tarred>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation11")
   .setLevelRequired(15)
   .setMaximumTier(2)
@@ -131,7 +130,7 @@ RecipeBuilder.get("basic")
   .addTool(<ore:artisansHammer>, 25)
   .addTool(<ore:artisansCarver>, 50) 
   .addTool(<ore:artisansTSquare>, 30) 
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workstation11"}})])  
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint7>])  
   .addOutput(<artisanworktables:workstation:11>)
   .create();
   
@@ -140,14 +139,14 @@ RecipeBuilder.get("chef")
     [<contenttweaker:flour>, <contenttweaker:flour>, <contenttweaker:flour>],
     [<contenttweaker:flour>, <contenttweaker:flour>, <contenttweaker:flour>],
     [<contenttweaker:flour>, <contenttweaker:flour>, <contenttweaker:flour>]])
-  .setName("bread_unfired")
+  .setName("dough")
   .setLevelRequired(5)
   .setConsumeExperience(false)
   .setFluid(<liquid:milk> * 1000)		
   .addTool(<ore:artisansSifter>, 10)
   .addTool(<ore:artisansPan>, 10)
-  .setSecondaryIngredients([<artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "chef:bread_unfired"}})])  
-  .addOutput(<contenttweaker:bread_unfired>*3)  
+  .setSecondaryIngredients([<contenttweaker:blueprint8>])  
+  .addOutput(<xlfoodmod:dough>*3)  
   .create();
   
 RecipeBuilder.get("basic")
@@ -159,19 +158,19 @@ RecipeBuilder.get("basic")
   .addTool(<ore:artisansCarver>, 30)   
   .setExtraOutputOne(<minecraft:iron_nugget> * 4, 0.8)
   .setExtraOutputTwo(<pyrotech:rock:7> * 2, 0.2)	  
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop11"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint9>])
   .create();
   
 RecipeBuilder.get("chef")
   .setShaped([
-    [<pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>],
+    [<pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>],
     [<ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>],
     [<ore:blockSteel>, <ore:stoneBasaltPolished>, <ore:stoneBasaltPolished>, <ore:stoneBasaltPolished>, <ore:blockSteel>],
     [<ore:blockIron>, <ore:blockIron>, <ore:blockIron>, <ore:blockIron>, <ore:blockIron>],
     [<ore:blockIron>, <ore:stoneBasaltPolished>, <ore:stoneBasaltPolished>, <ore:stoneBasaltPolished>, <ore:blockIron>]])
   .setName("furnace")
   .setLevelRequired(30)
-  .setSecondaryIngredients([<immersiveengineering:metal:38> * 9, <minecraft:fire_charge> * 2, <pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "chef:furnace"}})])
+  .setSecondaryIngredients([<immersiveengineering:metal:38> * 9, <minecraft:fire_charge> * 2, <pyrotech:anvil_iron_plated>, <contenttweaker:blueprint10>])
   .addTool(<ore:artisansHammer>, 30)
   .setFluid(<liquid:lava> * 5000)
   .addTool(<ore:artisansCarver>, 30)  
@@ -180,8 +179,7 @@ RecipeBuilder.get("chef")
   .setExtraOutputOne(<minecraft:iron_nugget> * 4, 0.4)
   .setExtraOutputTwo(<pyrotech:material:16> * 6, 0.4)	
   .setExtraOutputThree(<immersiveengineering:metal:28> * 2, 0.2)
-  .addRequirement(GameStages.allOf(["one", "two", "three"]))
-  .addOutput(<minecraft:furnace>)
+  .addOutput(<contenttweaker:furnace_core>)
   .create(); 
   
 RecipeBuilder.get("engineer")
@@ -192,7 +190,7 @@ RecipeBuilder.get("engineer")
   .setFluid(<liquid:lava> * 2000)	
   .addTool(<ore:artisansDriver>, 20)
   .addTool(<ore:artisansSpanner>, 20)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workshop6"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint11>])
   .setExtraOutputOne(<immersiveengineering:metal:20> * 3, 0.8)	
   .setExtraOutputTwo(<immersiveengineering:metal:28> * 7, 0.2)	
   .create();
@@ -206,7 +204,7 @@ RecipeBuilder.get("engineer")
     [<minecraft:nether_brick>, <ore:blockSteel>, <minecraft:skull:1>, <ore:blockSteel>, <minecraft:nether_brick>]])
   .setName("wither_forge")
   .setLevelRequired(30)
-  .setSecondaryIngredients([<minecraft:fire_charge> * 4, <pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:wither_forge"}})])
+  .setSecondaryIngredients([<minecraft:fire_charge> * 4, <pyrotech:anvil_iron_plated>, <contenttweaker:blueprint12>])
   .setFluid(<liquid:lava> * 4000)	
   .addTool(<ore:artisansDriver>, 50)
   .addTool(<ore:artisansSpanner>, 50)
@@ -215,7 +213,7 @@ RecipeBuilder.get("engineer")
   .setExtraOutputOne(<minecraft:bone> * 3, 0.3)	 
   .setExtraOutputTwo(<minecraft:netherbrick> * 5, 0.4)	
   .setExtraOutputThree(<immersiveengineering:metal:28> * 7, 0.3)	
-  .addRequirement(GameStages.allOf(["one", "two", "three", "four", "five"]))
+  .addRequirement(GameStages.allOf(["one", "two", "three"]))
   .addOutput(<pyrotech:wither_forge>)
   .create(); 
   
@@ -226,7 +224,7 @@ RecipeBuilder.get("basic")
   .setLevelRequired(10)
   .setExtraOutputOne(<minecraft:brick> * 2, 0.5)	 
   .setExtraOutputTwo(<pyrotech:material:23> * 3, 0.5)	
-  .setSecondaryIngredients([<pyrotech:anvil_granite>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop14"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_granite>, <contenttweaker:blueprint13>])
   .addTool(<ore:artisansTrowel>, 15)
   .addTool(<ore:artisansChisel>, 10)
   .create();
@@ -240,6 +238,7 @@ RecipeBuilder.get("potter")
     [<contenttweaker:cement_powder>, <contenttweaker:cement_powder>, <contenttweaker:cement_powder>, <contenttweaker:cement_powder>, <contenttweaker:cement_powder>]])
   .setFluid(<liquid:water> * 4000)
   .setLevelRequired(10)
+  .addRequirement(GameStages.allOf(["one"]))
   .setConsumeExperience(false)
   .addTool(<ore:artisansDriver>, 40)
   .addTool(<ore:artisansSpanner>, 40)
@@ -291,7 +290,6 @@ RecipeBuilder.get("potter")
   .setExtraOutputOne(<minecraft:clay_ball> * 6, 0.3)	 
   .setExtraOutputTwo(<minecraft:brick> * 2, 0.6)	
   .setExtraOutputThree(<pyrotech:rock:5> * 5, 0.1)
-  .addRequirement(GameStages.allOf(["one"]))
   .addOutput(<immersiveengineering:stone_decoration:1>*3, 80)
   .addOutput(<immersiveengineering:stone_decoration:1>*4, 20)
   .create();
@@ -324,10 +322,10 @@ RecipeBuilder.get("engineer")
     [<ore:blockLapis>, <ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>, <ore:blockLapis>],
     [<ore:blockLapis>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:blockLapis>],
     [<ore:blockLapis>, <ore:blockLapis>, <ore:blockLapis>, <ore:blockLapis>, <ore:blockLapis>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation:7")
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workstation:7"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint14>])
   .setMaximumTier(2)
   .setExtraOutputOne(<immersiveengineering:metal:28> * 5, 0.5)	 
   .setExtraOutputTwo(<pyrotech:material:16> * 2, 0.2)	
@@ -335,7 +333,6 @@ RecipeBuilder.get("engineer")
   .addTool(<ore:artisansCarver>, 15)
   .addTool(<ore:artisansChisel>, 20)
   .addTool(<ore:artisansHammer>, 30)
-  .addRequirement(GameStages.allOf(["one", "two"]))
   .addOutput(<artisanworktables:workstation:7>, 95)
   .addOutput(<immersiveengineering:storage:8>*2, 5)
   .create();
@@ -345,7 +342,7 @@ RecipeBuilder.get("engineer")
         Copy.byOutput([<artisanworktables:workshop:7>]).runAfter())
   .setName("workshop:7")
   .setLevelRequired(15)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workshop7"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint15>])
   .setMaximumTier(2)
   .setExtraOutputOne(<minecraft:dye:4> * 5, 0.8)	 
   .setExtraOutputTwo(<pyrotech:material:23> * 6, 0.2)	
@@ -360,12 +357,12 @@ RecipeBuilder.get("mage")
     [<botania:livingrock>, <botania:livingrock>, <botania:livingrock>]])
   .setName("pool")
   .setLevelRequired(5)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "mage:pool"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint16>])
   .setExtraOutputOne(<minecraft:dye:4> * 3, 0.4)	 
   .setExtraOutputTwo(<pyrotech:rock:7> * 2, 0.5)	
   .addTool(<ore:artisansHammer>, 10)
   .addTool(<ore:artisansGrimoire>, 15)
-  .addRequirement(GameStages.allOf(["one", "two", "three", "four"]))
+  .addRequirement(GameStages.allOf(["one", "two"]))
   .addOutput(<botania:pool>)
   .create();
 
@@ -378,7 +375,7 @@ RecipeBuilder.get("mage")
     [<minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>]])
   .setName("alter")
   .setLevelRequired(10)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "mage:altar"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint17>])
   .setMaximumTier(2)
   .setExtraOutputOne(<minecraft:dye:4> * 4, 0.2)	 
   .setExtraOutputTwo(<pyrotech:rock> * 3, 0.2)	
@@ -394,8 +391,8 @@ RecipeBuilder.get("basic")
     [<minecraft:wool:4>, <minecraft:wool:3>, <minecraft:wool:10>, <minecraft:wool:3>, <minecraft:wool:4>],
     [<minecraft:wool:10>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <minecraft:wool:10>],
     [<minecraft:wool:4>, <ore:blockGold>, <ore:blockGold>, <ore:blockGold>, <minecraft:wool:4>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation")
   .setLevelRequired(10)
   .setConsumeExperience(false)
@@ -403,7 +400,7 @@ RecipeBuilder.get("basic")
   .setExtraOutputOne(<minecraft:string> * 5, 0.2)	 
   .setExtraOutputTwo(<pyrotech:material:16> * 7, 0.3)	
   .setExtraOutputThree(<pyrotech:rock> * 2, 0.5)	   
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workstation"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint18>])
   .addTool(<ore:artisansShears>, 20)
   .addTool(<ore:artisansHammer>, 25)
   .addTool(<ore:artisansCarver>, 30)
@@ -474,7 +471,7 @@ RecipeBuilder.get("basic")
   .setCopy(
         Copy.byOutput([<artisanworktables:workshop>]).runAfter())
   .setLevelRequired(10)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint19>])
   .addTool(<ore:artisansCarver>, 30)
   .addTool(<ore:artisansHammer>, 25)
   .setExtraOutputOne(<minecraft:string>, 0.4)	 
@@ -526,12 +523,12 @@ RecipeBuilder.get("basic")
     [<ore:leather>, <ore:leather>, <ore:leather>, <ore:leather>, <ore:leather>],
     [<ore:leather>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:leather>],
     [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation:13")
   .setLevelRequired(10)
   .setConsumeExperience(false)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workstation13"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint20>])
   .addTool(<ore:artisansCarver>, 30)
   .addTool(<ore:artisansHammer>, 30)
   .addTool(<ore:artisansTSquare>, 30)
@@ -624,7 +621,7 @@ RecipeBuilder.get("tailor")
     [<pyrotech:planks_tarred>, <pyrotech:wool_tarred>, <immersiveengineering:metal:38>, <pyrotech:wool_tarred>, <pyrotech:planks_tarred>]])
   .setName("bed")
   .setLevelRequired(25)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <minecraft:string>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tailor:bed"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <minecraft:string>, <contenttweaker:blueprint21>])
   .setMaximumTier(2)
   .addTool(<ore:artisansCutters>, 15)
   .addTool(<ore:artisansShears>, 20)
@@ -690,12 +687,12 @@ RecipeBuilder.get("basic")
     [<immersiveengineering:storage:8>, <immersiveengineering:storage:8>, <minecraft:emerald_block>, <immersiveengineering:storage:8>, <immersiveengineering:storage:8>],
     [<minecraft:iron_block>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <minecraft:iron_block>],
     [<minecraft:iron_block>, <minecraft:iron_block>, <minecraft:iron_block>, <minecraft:iron_block>, <minecraft:iron_block>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation:9")
   .setLevelRequired(30)
   .setConsumeExperience(false) 
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workstation9"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint22>])
   .setMaximumTier(2)
   .addTool(<ore:artisansLens>, 20)
   .addTool(<ore:artisansNeedle>, 20)
@@ -710,10 +707,10 @@ RecipeBuilder.get("chemist")
   .setShaped([
     [<ore:stickStone>, null, <ore:stickStone>],
     [null, <ore:rodBlaze>, null],
-    [<pyrotech:stone_bricks>, <ore:blockSteel>, <pyrotech:stone_bricks>]])
+    [<pyrotech:masonry_brick_block>, <ore:blockSteel>, <pyrotech:masonry_brick_block>]])
   .setName("brewing_stand")
   .setLevelRequired(10)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "chemist:brewing_stand"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint23>])
   .addTool(<ore:artisansLens>, 20)
   .addTool(<ore:artisansNeedle>, 20)
   .setExtraOutputOne(<pyrotech:material:16>, 0.6)	 
@@ -726,7 +723,7 @@ RecipeBuilder.get("engineer")
         Copy.byOutput([<artisanworktables:workshop:9>]).runAfter())
   .setName("workshop9")
   .setLevelRequired(15)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workshop9"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint24>])
   .addTool(<ore:artisansCarver>, 10)
   .addTool(<ore:artisansHammer>, 20)
   .setExtraOutputOne(<pyrotech:material:23> * 2, 0.5)	 
@@ -745,7 +742,7 @@ RecipeBuilder.get("chemist")
   .setLevelRequired(15)
   .setConsumeExperience(false)
   .setMaximumTier(2)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "chemist:brewery"}})])  
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint25>])  
   .addTool(<ore:artisansChisel>, 15)
   .addTool(<ore:artisansCarver>, 20)
   .addTool(<ore:artisansHammer>, 40)
@@ -870,7 +867,7 @@ RecipeBuilder.get("tanner")
   .setName("smallbag")
   .setLevelRequired(5)
   .setConsumeExperience(false)
-  .setSecondaryIngredients([<minecraft:string>*4, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tanner:smallbag"}})])  
+  .setSecondaryIngredients([<minecraft:string>*4, <contenttweaker:blueprint26>])  
   .setExtraOutputOne(<minecraft:leather>, 0.1)	 
   .setExtraOutputTwo(<minecraft:string> * 2, 0.9)	
   .addTool(<ore:artisansNeedle>, 10)
@@ -889,7 +886,7 @@ RecipeBuilder.get("tanner")
   .setName("midbag")
   .setLevelRequired(10)
   .setConsumeExperience(false)
-  .setSecondaryIngredients([<minecraft:string>*6, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tanner:midbag"}})])  
+  .setSecondaryIngredients([<minecraft:string>*6, <contenttweaker:blueprint27>])  
   .setExtraOutputOne(<minecraft:leather> * 4, 0.2)	 
   .setExtraOutputTwo(<minecraft:string> * 3, 0.4)
   .setExtraOutputThree(<minecraft:feather> * 2, 0.4)  
@@ -909,7 +906,7 @@ RecipeBuilder.get("tanner")
   .setName("largebag")
   .setLevelRequired(15)
   .setConsumeExperience(false)
-  .setSecondaryIngredients([<minecraft:string>*8, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tanner:largebag"}})])  
+  .setSecondaryIngredients([<minecraft:string>*8, <contenttweaker:blueprint28>])  
   .setExtraOutputOne(<minecraft:leather> * 2, 0.3)	 
   .setExtraOutputTwo(<minecraft:string> * 4, 0.5)
   .setExtraOutputThree(<minecraft:feather> * 6, 0.2)  
@@ -927,7 +924,7 @@ RecipeBuilder.get("tanner")
   .setName("simplebag")
   .setLevelRequired(3)
   .setConsumeExperience(false)
-  .setSecondaryIngredients([<minecraft:string>*4, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tanner:simplebag"}})])  
+  .setSecondaryIngredients([<minecraft:string>*4, <contenttweaker:blueprint29>])  
   .setExtraOutputTwo(<minecraft:string> * 2, 0.8)
   .setExtraOutputThree(<minecraft:leather>, 0.2)  
   .addTool(<ore:artisansNeedle>, 15)
@@ -941,7 +938,7 @@ RecipeBuilder.get("basic")
         Copy.byOutput([<artisanworktables:workshop:13>]).runAfter())
   .setName("workshop13")
   .setLevelRequired(20)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:workshop13"}})])  
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint30>])  
   .setExtraOutputTwo(<minecraft:string> * 3, 0.5)
   .setExtraOutputThree(<minecraft:leather> * 6, 0.5)  
   .addTool(<ore:artisansHammer>, 25)
@@ -964,7 +961,7 @@ RecipeBuilder.get("tanner")
   .addTool(<ore:artisansGroover>, 20)
   .addTool(<ore:artisansNeedle>, 35)
   .addTool(<ore:artisansPunch>, 10)  
-  .setSecondaryIngredients([<pyrotech:material:26> * 6, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tanner:durablebag"}})])
+  .setSecondaryIngredients([<pyrotech:material:26> * 6, <contenttweaker:blueprint31>])
   .addOutput(<pyrotech:bag_durable>)
   .create();
   
@@ -980,7 +977,7 @@ RecipeBuilder.get("chemist")
   .setLevelRequired(30)
   .setConsumeExperience(false)
   .setMaximumTier(2)
-  .setSecondaryIngredients([<minecraft:fire_charge>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "chemist:tnt"}})])  
+  .setSecondaryIngredients([<minecraft:fire_charge>, <contenttweaker:blueprint32>])  
   .addTool(<ore:artisansChisel>, 15)
   .addTool(<ore:artisansCarver>, 20)
   .addTool(<ore:artisansHammer>, 40)
@@ -1088,7 +1085,7 @@ RecipeBuilder.get("basic")
   .setLevelRequired(3)
   .setConsumeExperience(false)
   .setCopy(Copy.byOutput([items]))
-  .setSecondaryIngredients([<pyrotech:iron_hammer>, <pyrotech:chopping_block>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "basic:tools"}})])  
+  .setSecondaryIngredients([<pyrotech:iron_hammer>, <pyrotech:chopping_block>, <contenttweaker:blueprint33>])  
   .setExtraOutputOne(<pyrotech:rock:7>, 0.8)	 
   .setExtraOutputTwo(<pyrotech:rock:7> * 2, 0.2)	
   .create();	
@@ -1106,7 +1103,7 @@ RecipeBuilder.get("engineer")
   .setLevelRequired(10)
   .setConsumeExperience(false)
   .setMaximumTier(2)
-  .setSecondaryIngredients([<ore:twine>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:ladder"}})])  
+  .setSecondaryIngredients([<ore:twine>, <contenttweaker:blueprint34>])  
   .addTool(<ore:artisansTSquare>, 15)
   .addTool(<ore:artisansCarver>, 20)
   .addTool(<ore:artisansHammer>, 40)
@@ -1122,6 +1119,7 @@ RecipeBuilder.get("jeweler")
   .setLevelRequired(30)
   .setConsumeExperience(false)
   .setMaximumTier(2)
+  .addRequirement(GameStages.allOf(["one", "two", "three", "four", "five"]))
   .setFluid(<liquid:water> * 1000)		
   .addTool(<ore:artisansPliers>, 25)
   .addTool(<ore:artisansGemCutter>, 30)
@@ -1138,11 +1136,12 @@ RecipeBuilder.get("engineer")
     [<ore:obsidian>, <pyrotech:anvil_iron_plated>, <pyrotech:anvil_iron_plated>, <pyrotech:anvil_iron_plated>, <ore:obsidian>],
     [<ore:blockRedstone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:blockRedstone>],
     [<ore:obsidian>, <ore:blockGold>, <ore:blockDiamond>, <ore:blockGold>, <ore:obsidian>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>],
-    [<ore:stoneBasaltPolished>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <pyrotech:stone_bricks>, <ore:stoneBasaltPolished>]])
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
+    [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
   .setName("workstation4")
   .setLevelRequired(10)
   .setConsumeExperience(false)
+  .addRequirement(GameStages.allOf(["one", "two", "three", "four"]))
   .setFluid(<liquid:lava> * 8000)
   .addTool(<ore:artisansHammer>, 30)
   .addTool(<ore:artisansTSquare>, 10)
@@ -1150,7 +1149,7 @@ RecipeBuilder.get("engineer")
   .setExtraOutputOne(<minecraft:gold_nugget> * 3, 0.3)
   .setExtraOutputTwo(<minecraft:redstone> * 5, 0.6)
   .setExtraOutputThree(<pyrotech:rock:7> * 7, 0.1)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workstation4"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint35>])
   .setMaximumTier(2)
   .addOutput(<artisanworktables:workstation:4>)
   .create();
@@ -1165,7 +1164,7 @@ RecipeBuilder.get("engineer")
   .addTool(<ore:artisansCarver>, 30)
   .setExtraOutputOne(<minecraft:gold_nugget> * 6, 0.5)
   .setExtraOutputTwo(<pyrotech:material:23> * 5, 0.5)
-  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "engineer:workshop4"}})])
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint36>])
   .create();
   
 //Origins_Eternity
@@ -1209,7 +1208,7 @@ RecipeBuilder.get("tailor")
   .addTool(<ore:artisansShears>, 20)
   .setExtraOutputOne(<minecraft:string> * 3, 0.3)	 
   .setExtraOutputTwo(<minecraft:feather> * 2, 0.7)
-  .setSecondaryIngredients([<ore:string> * 9, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tailor:vacuumbag"}})])
+  .setSecondaryIngredients([<ore:string> * 9, <contenttweaker:blueprint37>])
   .create();
 
 }
@@ -1234,8 +1233,130 @@ RecipeBuilder.get("tailor")
   .addTool(<ore:artisansShears>, 10)
   .setExtraOutputOne(<minecraft:string> * 4, 0.6)	 
   .setExtraOutputTwo(<minecraft:feather> * 5, 0.4)		   
-  .setSecondaryIngredients([<ore:string> * 8, <artisanworktables:design_pattern>.withTag({ArtisanWorktables: {RecipeName: "tailor:respirator"}})])
+  .setSecondaryIngredients([<ore:string> * 8, <contenttweaker:blueprint38>])
   .create();
 
 }
 
+RecipeBuilder.get("blacksmith")
+  .setShaped([
+    [<pyrotech:planks_tarred>, <ore:plateSteel>, <pyrotech:planks_tarred>, <ore:plateSteel>, <pyrotech:planks_tarred>],
+    [<ore:plateSteel>, <pyrotech:crate_stone>, <pyrotech:crate_stone>, <pyrotech:crate_stone>, <ore:plateSteel>],
+    [<pyrotech:planks_tarred>, <ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>, <pyrotech:planks_tarred>],
+    [<ore:plateSteel>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <ore:plateSteel>],
+    [<pyrotech:planks_tarred>, <ore:plateSteel>, <pyrotech:planks_tarred>, <ore:plateSteel>, <pyrotech:planks_tarred>]])
+  .setName("chest")
+  .setLevelRequired(10)
+  .setMaximumTier(2)
+  .setExtraOutputOne(<minecraft:iron_nugget> * 5, 0.4)
+  .setExtraOutputTwo(<pyrotech:rock:7> * 8, 0.5)	
+  .setExtraOutputThree(<pyrotech:material:23> * 2, 0.1)	
+  .addTool(<ore:artisansTSquare>, 20)  
+  .addTool(<ore:artisansHammer>, 30)
+  .addTool(<ore:artisansCarver>, 40) 
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint39>])
+  .addOutput(<tconstruct:tooltables>)
+  .create();
+
+var food = loadedMods["xlfoodmod"].items;
+for items in food {
+  if((items.definition.id != "xlfoodmod:top_bun") && (items.definition.id != "xlfoodmod:dough") && (items.definition.id != "xlfoodmod:potato_bread") && (items.definition.id != "xlfoodmod:rice_bread") && (items.definition.id != "xlfoodmod:baguette") && (items.definition.id != "xlfoodmod:bottom_bun")) {
+
+RecipeBuilder.get("chef")
+  .setCopy(
+        Copy.byOutput([items]))
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20) 
+  .create();
+
+  }
+}
+
+//2022.5.7
+RecipeBuilder.get("chef")
+  .setShaped([
+[<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>],
+[<xlfoodmod:dough>, null, <xlfoodmod:dough>],
+[null, null, null]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:top_bun>)
+  .create();
+  
+  RecipeBuilder.get("chef")
+  .setShaped([
+[null, null, null],
+[<xlfoodmod:dough>, null, <xlfoodmod:dough>],
+[<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:bottom_bun>)
+  .create();
+  
+  RecipeBuilder.get("chef")
+  .setShaped([
+[<xlfoodmod:dough>, null, null],
+[null, <xlfoodmod:dough>, null],
+[null, null, <xlfoodmod:dough>]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:baguette>)
+  .create();
+  
+  RecipeBuilder.get("chef")
+  .setShaped([
+[null, null, null],
+[<xlfoodmod:dough>, <minecraft:baked_potato>, <xlfoodmod:dough>],
+[null, null, null]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:potato_bread>)
+  .create();
+  
+  RecipeBuilder.get("chef")
+  .setShaped([
+[<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>],
+[<xlfoodmod:dough>, null, <xlfoodmod:dough>],
+[null, null, null]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:top_bun>)
+  .create();
+  
+  RecipeBuilder.get("chef")
+  .setShaped([
+[null, null, null],
+[<xlfoodmod:dough>, <xlfoodmod:rice>, <xlfoodmod:dough>],
+[null, null, null]])
+  .setMaximumTier(2)
+  .setLevelRequired(10)
+  .setConsumeExperience(false)	
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansPan>, 10)
+  .addTool(<ore:artisansBurner>, 20)
+  .addOutput(<xlfoodmod:rice_bread>)
+  .create();

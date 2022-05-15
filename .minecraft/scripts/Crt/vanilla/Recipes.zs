@@ -185,7 +185,8 @@ var vanilla_recipes = [
 <minecraft:bed:*>,
 <minecraft:wool:*>,
 <minecraft:brewing_stand>,
-<minecraft:sugar>
+<minecraft:sugar>,
+<minecraft:chest>
 
 ] as IItemStack[];
 for items in vanilla_recipes
@@ -268,7 +269,6 @@ furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
 furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
-furnace.addRecipe(<minecraft:bread>, <contenttweaker:bread_unfired>);
 furnace.addRecipe(<minecraft:cooked_chicken>, <contenttweaker:raw_chicken>);
 furnace.addRecipe(<minecraft:cooked_rabbit>, <contenttweaker:raw_rabbit>);
 furnace.addRecipe(<minecraft:cooked_porkchop>, <contenttweaker:raw_pork>);

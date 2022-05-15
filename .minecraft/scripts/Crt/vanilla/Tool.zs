@@ -17,9 +17,7 @@ import crafttweaker.event.PlayerInteractEvent;
 <immersiveengineering:graphite_electrode>.addTooltip(game.localize("crafttweaker.graphite_electrode.tooltip"));
 <minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}).addTooltip(game.localize("crafttweaker.stone_pickaxe.tooltip"));
 <fluxnetworks:flux>.addTooltip(game.localize("crafttweaker.flux.tooltip"));
-<scalinghealth:crystalshard>.addTooltip(game.localize("crafttweaker.crystalshard.tooltip"));
 <minecraft:clay_ball>.addTooltip(game.localize("crafttweaker.clay_ball.tooltip"));
-<immersiveengineering:tool>.withTag({RepairCost: 0, Damage: 64}).addTooltip(game.localize("crafttweaker.hammer.tooltip"));
 <endercrop:ender_seeds>.addTooltip(game.localize("crafttweaker.enderseeds.tooltip"));
 
 //Origins_Eternity
@@ -41,6 +39,7 @@ import crafttweaker.event.PlayerInteractEvent;
 <pyrotech:kiln_pit>.addTooltip(game.localize("crafttweaker.kiln_pit.tooltip"));
 <tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
+
 var tool = [
 	<minecraft:stone_axe>,
 	<minecraft:iron_axe>,
@@ -114,12 +113,10 @@ var tool = [
     <mekanism:anchorupgrade>,
     <draconicevolution:grinder>,
     <draconicevolution:celestial_manipulator>,
-    <mekanism:machineblock2:11>.withTag({tier: 4}),
     <draconicevolution:draconium_capacitor:2>,
     <draconicevolution:ender_energy_manipulator>,
     <draconicevolution:creative_exchanger>,
     <draconicevolution:info_tablet>,
-    <botania:pool:1>,
     <botania:manatablet>.withTag({mana: 500000, creative: 1 as byte}),
     <doggytalents:creative_collar>,
     <doggytalents:creative_radar>,
@@ -131,7 +128,6 @@ var tool = [
     <galacticraftplanets:rocket_t2:4>,
     <galacticraftplanets:rocket_t2:14>,
     <galacticraftplanets:rocket_t3:4>,
-    <immersiveengineering:metal_device0:3>,
     <mekanism:energycube>.withTag({tier: 4}),
     <mekanism:energycube>.withTag({tier: 4, mekData: {energyStored: 1.7976931348623157E308}}),
     <projecte:item.pe_tome>,
@@ -151,7 +147,9 @@ var tool = [
 	<tconstruct:nuggets:4>,
 	<tconstruct:ingots:4>,
     <projecte:item.pe_rm_sword>,
-    <botania:terrapick>
+    <botania:terrapick>,
+    <minecraft:furnace>,
+    <minecraft:crafting_table>
 ] as IItemStack[];
 for items in tool
 	{	
