@@ -1,5 +1,6 @@
 import mods.dropt.Dropt;
 import mods.dropt.Harvester;
+import crafttweaker.item.IItemStack;
 //2021.06.27
 //Origin_s
 
@@ -2037,3 +2038,52 @@ Dropt.list("list_bed")
        )
        .addDrop(Dropt.drop())
     );
+    
+//2022.5.22
+
+Dropt.list("list_leaves")
+
+  .add(Dropt.rule()
+      .matchBlocks(["minecraft:leaves:*"])
+      .addDrop(Dropt.drop()
+          .items([<minecraft:stick>])
+      )
+  );
+
+var rocks = [
+
+<pyrotech:rock>,
+<pyrotech:rock:1>,
+<pyrotech:rock:2>,
+<pyrotech:rock:3>,
+<pyrotech:rock:6>,
+<pyrotech:rock:8>
+
+] as IItemStack[];
+
+val rockblocks = [
+
+"pyrotech:rock", 
+"pyrotech:rock:1", 
+"pyrotech:rock:2", 
+"pyrotech:rock:3", 
+"pyrotech:rock:6", 
+"pyrotech:rock:8"
+
+] as string[];
+
+for i, rockblock in rockblocks
+    {
+
+var rock = rocks[i];
+
+Dropt.list("list_rocks")
+
+  .add(Dropt.rule()
+      .matchBlocks([rockblock])
+      .addDrop(Dropt.drop()
+          .items([rock])
+      )
+  );
+  
+    }
