@@ -10,7 +10,7 @@ Dropt.list("list_wood")
       .matchBlocks(["twilightforest:twilight_log:*", "minecraft:log2:*", "minecraft:log:*", "traverse:fir_log"])
       .matchHarvester(Dropt.harvester()
           .type("PLAYER")
-          .mainHand("BLACKLIST", [], "axe;0;-1")
+          .mainHand("BLACKLIST", ["pyrotech:crude_axe"], "axe;0;-1")
       )
       .addDrop(Dropt.drop())
   );
