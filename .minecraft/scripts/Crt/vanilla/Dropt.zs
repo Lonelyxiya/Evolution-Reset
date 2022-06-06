@@ -3,17 +3,7 @@ import mods.dropt.Harvester;
 import crafttweaker.item.IItemStack;
 //2021.06.27
 //Origin_s
-
-Dropt.list("list_wood")
-.priority(1)
-  .add(Dropt.rule()
       .matchBlocks(["twilightforest:twilight_log:*", "minecraft:log2:*", "minecraft:log:*", "traverse:fir_log"])
-      .matchHarvester(Dropt.harvester()
-          .type("PLAYER")
-          .mainHand("BLACKLIST", ["pyrotech:crude_axe"], "axe;0;-1")
-      )
-      .addDrop(Dropt.drop())
-  );
 
 Dropt.list("list_gravel")
 .priority(1)
@@ -2085,5 +2075,72 @@ Dropt.list("list_rocks")
           .items([rock])
       )
   );
+  
+    }
+    
+
+var logs = [
+
+<twilightforest:twilight_log>,
+<twilightforest:twilight_log:1>,
+<twilightforest:twilight_log:2>,
+<twilightforest:twilight_log:3>,
+<twilightforest:magic_log>,
+<twilightforest:magic_log:1>,
+<twilightforest:magic_log:2>,
+<twilightforest:magic_log:3>,
+<minecraft:log>,
+<minecraft:log:1>,
+<minecraft:log:2>,
+<minecraft:log:3>,
+<minecraft:log2>,
+<minecraft:log2:1>
+
+] as IItemStack[];
+
+val woods = [
+
+"twilightforest:twilight_log", 
+"twilightforest:twilight_log:1", 
+"twilightforest:twilight_log:2", 
+"twilightforest:twilight_log:3", 
+"twilightforest:magic_log", 
+"twilightforest:magic_log:1",
+"twilightforest:magic_log:2",
+"twilightforest:magic_log:3",
+"minecraft:log",
+"minecraft:log:1",
+"minecraft:log:2",
+"minecraft:log:3",
+"minecraft:log2",
+"minecraft:log2:1"
+
+] as string[];
+
+for i, wood in woods
+    {
+
+var log = logs[i];
+
+Dropt.list("list_logs")
+
+  .add(Dropt.rule()
+      .matchBlocks([wood])
+        .matchHarvester(Dropt.harvester()
+          .type("PLAYER")
+          .mainHand("BLACKLIST", [], "axe;0;-1")
+      )
+      .addDrop(Dropt.drop())
+	)
+   .add(Dropt.rule()
+      .matchBlocks([wood])
+       .matchHarvester(Dropt.harvester()
+            .type("PLAYER")
+            .mainHand("WHITELIST", [], "axe;0;-1")
+       )
+	  .addDrop(Dropt.drop()
+          .items([rock])
+      )
+    );
   
     }
