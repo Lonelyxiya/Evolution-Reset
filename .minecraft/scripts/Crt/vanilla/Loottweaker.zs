@@ -122,7 +122,7 @@ box_extra1.addItemEntry(items,1);
 box_extra2.addItemEntry(items,1);
 box_extra3.addItemEntry(items,1);
 box_extra4.addItemEntry(items,1);
-box_extra5.addItemEntry(items,1)
+box_extra5.addItemEntry(items,1);
 box_extra6.addItemEntry(items,1);
 box_extra7.addItemEntry(items,1);
 box_extra8.addItemEntry(items,1);

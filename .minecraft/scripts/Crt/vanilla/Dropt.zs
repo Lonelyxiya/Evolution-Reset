@@ -3,7 +3,6 @@ import mods.dropt.Harvester;
 import crafttweaker.item.IItemStack;
 //2021.06.27
 //Origin_s
-      .matchBlocks(["twilightforest:twilight_log:*", "minecraft:log2:*", "minecraft:log:*", "traverse:fir_log"])
 
 Dropt.list("list_gravel")
 .priority(1)
@@ -2139,7 +2138,7 @@ Dropt.list("list_logs")
             .mainHand("WHITELIST", [], "axe;0;-1")
        )
 	  .addDrop(Dropt.drop()
-          .items([rock])
+          .items([log])
       )
     );
   
