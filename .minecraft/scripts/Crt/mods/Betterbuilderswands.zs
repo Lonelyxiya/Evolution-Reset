@@ -1,9 +1,11 @@
 import crafttweaker.item.IItemStack;
 
+#modloaded betterbuilderswands​
 //2022.1.11
 //Origins_Eternity
 
 //Betterbuilderswands
+
 
 var items = [
 <betterbuilderswands:wandiron>,

@@ -1,13 +1,22 @@
 import mods.dropt.Dropt;
-import mods.dropt.Harvester;
-import crafttweaker.item.IItemStack;
 //2021.06.27
 //Origin_s
+
+Dropt.list("list_wood")
+.priority(1)
+  .add(Dropt.rule()
+      .matchBlocks(["twilightforest:twilight_log:*", "minecraft:log2:*", "minecraft:log:*", "traverse:fir_log"])
+      .matchHarvester(Dropt.harvester()
+          .type("PLAYER")
+          .mainHand("BLACKLIST", [], "axe;0;-1")
+      )
+      .addDrop(Dropt.drop())
+  );
 
 Dropt.list("list_gravel")
 .priority(1)
 	.add(Dropt.rule()
-     .matchDrops([<ore:gravel>])
+      .matchBlocks(["minecraft:gravel"])
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
@@ -29,7 +38,7 @@ Dropt.list("list_gravel")
         )
 	)
     .add(Dropt.rule()
-       .matchDrops([<ore:gravel>])
+        .matchBlocks(["minecraft:gravel"])
         .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "shovel;1;-1")
@@ -37,7 +46,7 @@ Dropt.list("list_gravel")
         .addDrop(Dropt.drop())
         )
     .add(Dropt.rule()
-       .matchDrops([<ore:gravel>])
+        .matchBlocks(["minecraft:gravel"])
         .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("WHITELIST", [], "shovel;1;3")
@@ -61,7 +70,7 @@ Dropt.list("list_gravel")
     )
 	
 	.add(Dropt.rule()
-       .matchDrops([<ore:gravel>])
+        .matchBlocks(["minecraft:gravel"])
         .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("WHITELIST", [], "shovel;4;10")
@@ -136,6 +145,7 @@ Dropt.list("list_dirt")
 Dropt.list("list_sand")
 .priority(1)
 	.add(Dropt.rule()
+      .matchBlocks(["minecraft:sand:*"])
 	  .matchDrops([<minecraft:sand>])
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
@@ -150,6 +160,7 @@ Dropt.list("list_sand")
       )
 	)
 	.add(Dropt.rule()
+      .matchBlocks(["minecraft:sand:*"])
 	  .matchDrops([<minecraft:sand:1>])
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
@@ -164,7 +175,7 @@ Dropt.list("list_sand")
        )
 	)
     .add(Dropt.rule()
-     .matchDrops([<ore:sand>])
+      .matchBlocks(["minecraft:sand:*"])
       .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "shovel;0;-1")
@@ -172,6 +183,7 @@ Dropt.list("list_sand")
       .addDrop(Dropt.drop())
 	)	
     .add(Dropt.rule()
+       .matchBlocks(["minecraft:sand:*"])
 	   .matchDrops([<minecraft:sand>])
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
@@ -187,6 +199,7 @@ Dropt.list("list_sand")
        )
     )
 	   .add(Dropt.rule()
+       .matchBlocks(["minecraft:sand:*"])
 	   .matchDrops([<minecraft:sand:1>])
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
@@ -202,6 +215,7 @@ Dropt.list("list_sand")
        )
     )
    .add(Dropt.rule()
+       .matchBlocks(["minecraft:sand:*"])
 	   .matchDrops([<minecraft:sand:1>])
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
@@ -217,6 +231,7 @@ Dropt.list("list_sand")
         )
     )		
    .add(Dropt.rule()
+       .matchBlocks(["minecraft:sand:*"])
 	   .matchDrops([<minecraft:sand>])
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
@@ -329,9 +344,7 @@ Dropt.list("list_andesite")
             .selector(Dropt.weight(25))
             .items([<pyrotech:rock:3>], Dropt.range(4))
        )
-    );
-
-Dropt.list("list_andesite_high")
+    )
    .add(Dropt.rule()
        .matchBlocks(["minecraft:stone:5", "pyrotech:cobblestone", "minecraft:stone:6"])
        .matchHarvester(Dropt.harvester()
@@ -1989,157 +2002,8 @@ Dropt.list("list_chest")
     .add(Dropt.rule()
      .matchDrops([<ore:chest>])
      .matchHarvester(Dropt.harvester()
-     .gameStages("BLACKLIST", "ANY", ["chest"])
-       )
-       .addDrop(Dropt.drop())
-    );
-
-//2022.4.24
-Dropt.list("list_torch")
-
-    .add(Dropt.rule()
-        .matchDrops([<ore:torch>])
-        .addDrop(Dropt.drop()
-		  .items([<minecraft:stick>])
-	  )
-	);
-
-Dropt.list("list_bed")
-.priority(1)
-    .add(Dropt.rule()
-     .matchDrops([<ore:bed>])
-  	  .matchHarvester(Dropt.harvester()
-         .type("EXPLOSION")
-      )
-      .addDrop(Dropt.drop()
-	     .selector(Dropt.weight(80))
-	     .items([<pyrotech:rock:7>], Dropt.range(7))  
-	  )
-	  .addDrop(Dropt.drop()
-         .selector(Dropt.weight(20))
-		 .items([<pyrotech:rock:7>], Dropt.range(8))  
-	  )
-	)
-    .add(Dropt.rule()
-     .matchDrops([<ore:bed>])
-     .matchHarvester(Dropt.harvester()
-     .gameStages("BLACKLIST", "ANY", ["bed"])
-       )
-       .addDrop(Dropt.drop())
-    );
-    
-//2022.5.22
-
-Dropt.list("list_leaves")
-
-  .add(Dropt.rule()
-      .matchBlocks(["minecraft:leaves:*"])
-      .addDrop(Dropt.drop()
-          .items([<minecraft:stick>])
-      )
-  );
-
-var rocks = [
-
-<pyrotech:rock>,
-<pyrotech:rock:1>,
-<pyrotech:rock:2>,
-<pyrotech:rock:3>,
-<pyrotech:rock:6>,
-<pyrotech:rock:8>
-
-] as IItemStack[];
-
-val rockblocks = [
-
-"pyrotech:rock", 
-"pyrotech:rock:1", 
-"pyrotech:rock:2", 
-"pyrotech:rock:3", 
-"pyrotech:rock:6", 
-"pyrotech:rock:8"
-
-] as string[];
-
-for i, rockblock in rockblocks
-    {
-
-var rock = rocks[i];
-
-Dropt.list("list_rocks")
-
-  .add(Dropt.rule()
-      .matchBlocks([rockblock])
-      .addDrop(Dropt.drop()
-          .items([rock])
-      )
-  );
-  
-    }
-    
-
-var logs = [
-
-<twilightforest:twilight_log>,
-<twilightforest:twilight_log:1>,
-<twilightforest:twilight_log:2>,
-<twilightforest:twilight_log:3>,
-<twilightforest:magic_log>,
-<twilightforest:magic_log:1>,
-<twilightforest:magic_log:2>,
-<twilightforest:magic_log:3>,
-<minecraft:log>,
-<minecraft:log:1>,
-<minecraft:log:2>,
-<minecraft:log:3>,
-<minecraft:log2>,
-<minecraft:log2:1>
-
-] as IItemStack[];
-
-val woods = [
-
-"twilightforest:twilight_log", 
-"twilightforest:twilight_log:1", 
-"twilightforest:twilight_log:2", 
-"twilightforest:twilight_log:3", 
-"twilightforest:magic_log", 
-"twilightforest:magic_log:1",
-"twilightforest:magic_log:2",
-"twilightforest:magic_log:3",
-"minecraft:log",
-"minecraft:log:1",
-"minecraft:log:2",
-"minecraft:log:3",
-"minecraft:log2",
-"minecraft:log2:1"
-
-] as string[];
-
-for i, wood in woods
-    {
-
-var log = logs[i];
-
-Dropt.list("list_logs")
-
-  .add(Dropt.rule()
-      .matchBlocks([wood])
-        .matchHarvester(Dropt.harvester()
           .type("PLAYER")
-          .mainHand("BLACKLIST", [], "axe;0;-1")
-      )
-      .addDrop(Dropt.drop())
-	)
-   .add(Dropt.rule()
-      .matchBlocks([wood])
-       .matchHarvester(Dropt.harvester()
-            .type("PLAYER")
-            .mainHand("WHITELIST", [], "axe;0;-1")
+          .mainHand("BLACKLIST", [], "axe;8;-1")
        )
-	  .addDrop(Dropt.drop()
-          .items([log])
-      )
+       .addDrop(Dropt.drop())
     );
-  
-    }

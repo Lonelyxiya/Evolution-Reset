@@ -1,6 +1,6 @@
 #loader contenttweaker
 #ignoreBracketErrors 
-#modloaded tconstruct
+#modloaded tconstruct 
 import mods.contenttweaker.tconstruct.MaterialBuilder;
 import mods.contenttweaker.tconstruct.Material;
 import mods.contenttweaker.tconstruct.Trait;

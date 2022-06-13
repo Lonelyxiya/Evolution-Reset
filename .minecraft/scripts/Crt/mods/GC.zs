@@ -25,7 +25,7 @@ recipes.remove(items);
 //2020.10.16
 
 recipes.addShaped(<galacticraftcore:rocket_workbench>,
-[[<galacticraftcore:basic_item:9>, <tconstruct:tooltables>, <galacticraftcore:basic_item:9>],
+[[<galacticraftcore:basic_item:9>, <minecraft:crafting_table>, <galacticraftcore:basic_item:9>],
 [<pyrotech:tongs_iron>, <galacticraftcore:basic_item:14>, <pyrotech:tongs_iron>],
 [<galacticraftcore:basic_item:9>, <minecraft:redstone_torch>, <galacticraftcore:basic_item:9>]]);
 

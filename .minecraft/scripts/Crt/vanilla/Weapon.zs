@@ -54,8 +54,17 @@ static RequiredMods as string[] = [
     "resourceloader",
     "custommainmenu",
     "AI-Improvements",
-    "tombstone",
-    "orestages"
+    "orestages",
+    "pyrotech",
+    "botania",
+    "chisel",
+    "draconicevolution",
+    "environmentaltech",
+    "immersiveengineering",
+    "mekanism",
+    "tconstruct",
+    "twilightforest"
+    
 ];
 var index1 as int = RequiredMods.length;
 static InvalidMods as string[] = [
@@ -103,7 +112,6 @@ var ser = server.commandManager as ICommandManager;
           ser.executeCommand(server, "gamemode spectator " + player.name);
         }, 4 * 20);
     } else {
-    ser.executeCommand(server, "gamemode survival " + player.name);
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
     }
 });
@@ -126,7 +134,6 @@ var ser1 = server.commandManager as ICommandManager;
            ser1.executeCommand(server, "gamemode spectator " + player1.name);
         }, 4 * 20);
     } else {
-        ser1.executeCommand(server, "gamemode survival " + player1.name);
         player1.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
     }
 });

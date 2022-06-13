@@ -36,15 +36,9 @@ recipes.addShaped(<immersiveengineering:stone_decoration:8>*2,
 
 recipes.addShapeless(<immersiveengineering:metal:39>, [<minecraft:iron_ingot>, <immersiveengineering:tool>.transformDamage(1)]);
 
-recipes.remove(<immersiveengineering:wooden_device0>);
-recipes.addShaped(<immersiveengineering:wooden_device0>,
-[[<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:plankTreatedWood>],
-[<ore:plankTreatedWood>, <ore:chest>, <ore:plankTreatedWood>],
-[<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:plankTreatedWood>]]);
-
 //2021.09.05
-mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:iron_nugget>*18, <pyrotech:generated_pile_slag_iron>, 1600);
-mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:gold_nugget>*18, <pyrotech:generated_pile_slag_gold>, 1600);
+mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:iron_nugget>*18, <pyrotech:generated_pile_slag_iron>, 1600, <contenttweaker:cement_powder>*3);
+mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:gold_nugget>*18, <pyrotech:generated_pile_slag_gold>, 1600, <minecraft:iron_nugget>*4);
 mods.immersiveengineering.BlastFurnace.addRecipe(<immersiveengineering:metal:20>*18, <pyrotech:generated_pile_slag_copper>, 1600);
 mods.immersiveengineering.AlloySmelter.addRecipe(<pyrotech:material:16>*10, <minecraft:gunpowder>, <minecraft:stonebrick>*2, 1600);
 mods.immersiveengineering.AlloySmelter.addRecipe(<pyrotech:material:5>*5, <pyrotech:material:4>, <pyrotech:material:4>, 1600);

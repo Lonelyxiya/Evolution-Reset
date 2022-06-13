@@ -1,7 +1,6 @@
 //2022.2.19
 //Origins_Eternity
-
-//Betterbuilderswands
+#modloaded villagermarket 
 
 recipes.remove(<villagermarket:villager_market>);
 recipes.addShaped(<villagermarket:villager_market>, 

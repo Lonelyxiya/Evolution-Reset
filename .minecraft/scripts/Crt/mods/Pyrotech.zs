@@ -1,5 +1,5 @@
 #priority 0
-import mods.pyrotech.Stages;
+
 import mods.pyrotech.Worktable;
 import mods.pyrotech.CompactingBin;
 import mods.pyrotech.BrickKiln;
@@ -16,7 +16,6 @@ import mods.pyrotech.GraniteAnvil;
 import mods.pyrotech.SoakingPot;
 import mods.zenutils.StringList;
 import mods.pyrotech.StoneCrucible;
-import crafttweaker.text.ITextComponent;
 //Lacz
 //2020.10.16
 //pyrotech
@@ -63,9 +62,9 @@ pyrRack("pyrotech_straw", <pyrotech:material:2>, <minecraft:wheat>, 120*20);
 
 recipes.remove(<pyrotech:worktable_stone>);
 Worktable.buildShaped(<pyrotech:worktable_stone>, [
-[<pyrotech:material:16>, <pyrotech:masonry_brick_block>, <pyrotech:material:16>],
+[<pyrotech:material:16>, <pyrotech:stone_bricks>, <pyrotech:material:16>],
 [<minecraft:cobblestone>, <pyrotech:worktable>, <minecraft:cobblestone>],
-[<pyrotech:material:16>, <pyrotech:masonry_brick_block>, <pyrotech:material:16>]
+[<pyrotech:material:16>, <pyrotech:stone_bricks>, <pyrotech:material:16>]
 ])
 .setName("custom_recipe_stoneworktable")
 .setTool(<pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 3)
@@ -78,6 +77,7 @@ function pyrWorktableCreate(modid as string, name as string, output as IItemStac
         .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, damage)
         .register();
 }
+pyrWorktableCreate("IE", "_gongchengshichui", <immersiveengineering:tool>.withTag({RepairCost: 0, Damage: 64}), null, <pyrotech:material:16>, null, <pyrotech:material:16>, <tconstruct:tool_rod>.withTag({Material: "copper"}), null, null, null, <tconstruct:tool_rod>.withTag({Material: "copper"}), 5);
 pyrWorktableCreate("IE", "_tieban", <immersiveengineering:metal:39>, null, <minecraft:iron_ingot>, null, null, ietool, null, null, null, null, 2);
 pyrWorktableCreate("tconstruct", "_jianzhuding", <tconstruct:punji>*5, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, 5);
 pyrWorktableCreate("artisans", "_hammerwood", <artisanworktables:artisans_hammer_wood>, null, <minecraft:planks:*>, <minecraft:string>, null, <minecraft:stick>, <minecraft:planks:*>, <minecraft:stick>, null, null, 3);
@@ -139,7 +139,7 @@ Worktable.buildShaped(<pyrotech:flint_axe>, [
 [<pyrotech:material:10>, <pyrotech:material:27>, null],
 [null, <pyrotech:material:27>, null]
 ])
-.setName("flintaxe")
+.setName("custom_recipe_flintaxe")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -148,7 +148,7 @@ Worktable.buildShaped(<pyrotech:flint_pickaxe>, [
 [null, <pyrotech:material:27>, null],
 [null, <pyrotech:material:27>, null]
 ])
-.setName("flintpickaxe")
+.setName("custom_recipe_flintpickaxe")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -157,7 +157,7 @@ Worktable.buildShaped(<pyrotech:flint_hoe>, [
 [null, <pyrotech:material:27>, null],
 [null, <pyrotech:material:27>, null]
 ])
-.setName("flinthoe")
+.setName("custom_recipe_flinthoe")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -166,7 +166,7 @@ Worktable.buildShaped(<pyrotech:flint_sword>, [
 [null, <pyrotech:material:10>, null],
 [null, <pyrotech:material:27>, null]
 ])
-.setName("flintsword")
+.setName("custom_recipe_flintsword")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -175,7 +175,7 @@ Worktable.buildShaped(<pyrotech:flint_shovel>, [
 [null, <pyrotech:material:27>, null],
 [null, <pyrotech:material:27>, null]
 ])
-.setName("flintshovel")
+.setName("custom_recipe_flintshovel")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -185,7 +185,7 @@ Worktable.buildShaped(<pyrotech:flint_hammer>, [
 [null, <pyrotech:material:27>, <pyrotech:material:10>],
 [<pyrotech:material:27>, null, null]
 ])
-.setName("flinthammer")
+.setName("custom_recipe_flinthammer")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
 
@@ -482,7 +482,7 @@ var worktable_recipes = [
 "minecraft:piston", 
 "crafttweaker:ct_shaped1047555401", 
 "crafttweaker:ct_shaped-1549944393",
-"pyrotech:masonry_brick_block",
+"pyrotech:stone_bricks",
 "pyrotech:stone_door"
 
 ] as string[];
@@ -498,7 +498,6 @@ BrickSawmill.addRecipe("cement_powder_from_soil", <contenttweaker:cement_powder>
 
 Campfire.removeRecipes(<minecraft:bread>);
 Campfire.removeRecipes(<minecraft:blaze_powder>);
-
 StoneKiln.removeRecipes(<minecraft:netherbrick>);
 
 PitKiln.removeRecipes(<minecraft:netherbrick>);
@@ -577,16 +576,15 @@ GraniteAnvil.addRecipe("nugget_from_ingot_65", <mekanism:nugget:5>*9, <ore:ingot
 GraniteAnvil.addRecipe("nugget_from_ingot_66", <mekanism:nugget:6>*9, <ore:ingotTin>, 10, "hammer", true);
 GraniteAnvil.addRecipe("nugget_from_ingot_67", <mekanism:nugget:2>*9, <ore:ingotBronze>, 10, "hammer", true);
 GraniteAnvil.addRecipe("copper_plate_from_block", <immersiveengineering:metal:30>*3, <ore:blockCopper>, 27, "hammer", true);
-GraniteAnvil.addRecipe("gold_plate_from_block", <immersiveengineering:metal:40>*3, <ore:blockGold>, 27, "hammer", true);
+
 
 //2021.8.27
 
 Worktable.buildShaped(<artisanworktables:workstation:5>, [
 [<pyrotech:material:16>, <ore:plateCopper>, <pyrotech:material:16>],
 [<ore:blockCopper>, <pyrotech:stash_stone>, <ore:blockCopper>],
-[<chisel:basalt2:7>, <pyrotech:masonry_brick_block>, <chisel:basalt2:7>]
-]
-)
+[<chisel:basalt2:7>, <pyrotech:stone_bricks>, <chisel:basalt2:7>]
+])
 .setName("custom_recipe_workstation5")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 20)
 .register();
@@ -594,7 +592,7 @@ Worktable.buildShaped(<artisanworktables:workstation:5>, [
 Worktable.buildShaped(<artisanworktables:workstation:14>, [
 [<pyrotech:material:16>, <minecraft:brick>, <pyrotech:material:16>],
 [<minecraft:brick_block>, <pyrotech:stash_stone>, <minecraft:brick_block>],
-[<chisel:basalt2:7>, <pyrotech:masonry_brick_block>, <chisel:basalt2:7>]
+[<chisel:basalt2:7>, <pyrotech:stone_bricks>, <chisel:basalt2:7>]
 ])
 .setName("custom_recipe_workstation14")
 .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 30)
@@ -619,12 +617,6 @@ StoneCrucible.addRecipe("liquid_dirt_from_dirt", <liquid:dirt> * 500, <ore:dirt>
 SoakingPot.addRecipe("sugar_from_sugarcane", <contenttweaker:sugar>, <liquid:sugarcane>, <pyrotech:material:8>, true, 5 * 60 * 20);
 StoneCrucible.addRecipe("liquid_sugarcane_from_sugarcane", <liquid:sugarcane> * 500, <ore:sugarcane>, 2 * 60 * 20, true);
 
-Worktable.buildShaped(<immersiveengineering:tool>, [
-[null, <pyrotech:material:16>, <ore:twine>],
-[null, <tconstruct:tool_rod>.withTag({Material: "copper"}), <pyrotech:material:16>],
-[<tconstruct:tool_rod>.withTag({Material: "copper"}), null, null]
-])
-.setRecipeGameStages(Stages.and(["greenhand"]))
-.setName("custom_recipe_flinthammer")
-.setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
+Worktable.buildShapeless(<immersiveengineering:metal:30>, [<ore:blockCopper>])
+.setTool(<pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 20)
 .register();

@@ -110,7 +110,7 @@ for i in wand{
 
 //2022.3.12
 <ore:string>.add(<pyrotech:material:14>);
-
-//2022.5.2
 <ore:rockLimestone>.add(<pyrotech:rock:8>);
-<ore:chest>.add(<immersiveengineering:wooden_device0>);
+
+<ore:carbon>.addAll(<ore:coal>);
+<ore:carbon>.addAll(<ore:charcoal>);

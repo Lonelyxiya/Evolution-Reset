@@ -1,6 +1,6 @@
 //Lacz
 //2020.10.16
-
+#modloaded projecte
 recipes.remove(<projecte:item.pe_philosophers_stone>);
 recipes.addShaped(<projecte:item.pe_philosophers_stone>,
 [[<environmentaltech:litherite_crystal>, <minecraft:emerald>, <environmentaltech:litherite_crystal>],

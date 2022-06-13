@@ -185,8 +185,7 @@ var vanilla_recipes = [
 <minecraft:bed:*>,
 <minecraft:wool:*>,
 <minecraft:brewing_stand>,
-<minecraft:sugar>,
-<minecraft:chest>
+<minecraft:sugar>
 
 ] as IItemStack[];
 for items in vanilla_recipes
@@ -269,6 +268,7 @@ furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
 furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
+furnace.addRecipe(<minecraft:bread>, <contenttweaker:bread_unfired>);
 furnace.addRecipe(<minecraft:cooked_chicken>, <contenttweaker:raw_chicken>);
 furnace.addRecipe(<minecraft:cooked_rabbit>, <contenttweaker:raw_rabbit>);
 furnace.addRecipe(<minecraft:cooked_porkchop>, <contenttweaker:raw_pork>);
@@ -279,9 +279,9 @@ furnace.setFuel(<minecraft:blaze_rod>, 0);
 //2021.8.10
 recipes.remove(<ore:matal_block>);
 
-recipes.addShapeless(<minecraft:torch>, [<immersiveengineering:material:6>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<immersiveengineering:material:6>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<immersiveengineering:material:6>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
 
 var sticks = [
 <minecraft:stick>,

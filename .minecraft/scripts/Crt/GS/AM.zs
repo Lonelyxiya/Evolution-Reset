@@ -1,7 +1,7 @@
 //Lacz
 //2021.09.02
 
-#modloaded armoreablemobs
+#modloaded armoreablemobs gamestages
 import mods.armoreablemobs.ArmorHandler;
 import mods.armoreablemobs.ArmorEntity;
 import mods.armoreablemobs.ArmorSlot;

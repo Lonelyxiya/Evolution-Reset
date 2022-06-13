@@ -1,7 +1,7 @@
 //Lacz
 //2021.02.18
 //Bot
-
+#modloaded botania
 import crafttweaker.item.IItemStack;
 
 var botbanlist = [

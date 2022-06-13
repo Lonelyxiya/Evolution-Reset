@@ -1,3 +1,4 @@
+#modloaded mobstages multiblockstages
 //Lacz
 //2021.09.02
 
@@ -21,4 +22,4 @@ mods.MobStages.addStage("three", "mekanism:babyskeleton");
 mods.MobStages.addStage("four", "minecraft:creeper");
 mods.MobStages.addStage("four", "minecraft:enderman");
 
-IEMultiBlockStages.addStage("oreexacavator", "IE:Excavator", "你还不能完成多方块结构斗轮采掘机！");
+IEMultiBlockStages.addStage("oreexacavator", "IE:Excavator", game.localize("crafttweaker.tip.iemultiblockstages.excavator"));
