@@ -80,8 +80,6 @@ val banlist = [
 "minecraft:mutton", 
 "minecraft:potato", 
 "minecraft:apple", 
-"minecraft:fish", 
-"minecraft:fish:1", 
 "minecraft:beetroot", 
 "minecraft:cooked_chicken", 
 "minecraft:cooked_beef", 
@@ -123,14 +121,13 @@ val minecraftchest = [
 for table in minecraftchest {
 
 mods.ltt.LootTable.removeItem(table, "main", "botania:manabottle");
-
+mods.ltt.LootTable.removeItem(table, "main", "minecraft:fish");
+mods.ltt.LootTable.removeItem(table, "main", "minecraft:fish:1");
 }
 
 val modchest = [
 
-"IvToolkit", 
-"champions", 
-"reccomplex"
+"champions"
 
 ] as string[];
 
