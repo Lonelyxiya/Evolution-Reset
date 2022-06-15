@@ -41,22 +41,6 @@ import crafttweaker.event.PlayerInteractEvent;
 <pyrotech:kiln_pit>.addTooltip(game.localize("crafttweaker.kiln_pit.tooltip"));
 <tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
-<akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}}).addTooltip(game.localize("crafttweaker.tome.tooltip"));
-<taiga:tiberium_ore>.addTooltip(game.localize("crafttweaker.tiberium_ore.tooltip"));
-<taiga:dilithium_ore>.addTooltip(game.localize("crafttweaker.dilithium_ore.tooltip"));
-<taiga:abyssum_ore>.addTooltip(game.localize("crafttweaker.abyssum_ore.tooltip"));
-<taiga:eezo_ore>.addTooltip(game.localize("crafttweaker.eezo_ore.tooltip"));
-<taiga:osram_ore>.addTooltip(game.localize("crafttweaker.osram_ore.tooltip"));
-<taiga:prometheum_ore>.addTooltip(game.localize("crafttweaker.prometheum_ore.tooltip"));
-<taiga:palladium_ore>.addTooltip(game.localize("crafttweaker.palladiu_ore.tooltip"));
-<taiga:valyrium_ore>.addTooltip(game.localize("crafttweaker.valyrium_ore.tooltip"));
-<taiga:uru_ore>.addTooltip(game.localize("crafttweaker.uru_ore.tooltip"));
-<taiga:obsidiorite_block>.addTooltip(game.localize("crafttweaker.obsidiorite_block.tooltip"));
-<contenttweaker:tungsten_ore>.addTooltip(game.localize("crafttweaker.tungsten_ore.tooltip"));
-<contenttweaker:chromium_ore>.addTooltip(game.localize("crafttweaker.chromium_ore.tooltip"));
-<pyrotech:kiln_pit>.addTooltip(game.localize("crafttweaker.kiln_pit.tooltip"));
-<tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
-<draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
 
 var tool = [
 	<minecraft:stone_axe>,
