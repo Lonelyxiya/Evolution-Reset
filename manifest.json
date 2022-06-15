@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Evolution-Reset",
-  "version": "1.0.0",
+  "version": "1.1.0-RC1",
   "author": "Origins_Eternity Lacz",
   "files": [
     {
@@ -20,8 +20,8 @@
       "required": true
     },
     {
-      "projectID": 245028,
-      "fileID": 2876841,
+      "projectID": 297680,
+      "fileID": 3636518,
       "required": true
     },
     {
@@ -350,6 +350,16 @@
       "required": true
     },
     {
+      "projectID": 222789,
+      "fileID": 3025806,
+      "required": true
+    },
+    {
+      "projectID": 244256,
+      "fileID": 2763197,
+      "required": true
+    },
+    {
       "projectID": 235279,
       "fileID": 2915375,
       "required": true
@@ -520,11 +530,6 @@
       "required": true
     },
     {
-      "projectID": 306676,
-      "fileID": 3604905,
-      "required": true
-    },
-    {
       "projectID": 289412,
       "fileID": 3156637,
       "required": true
@@ -551,7 +556,7 @@
     },
     {
       "projectID": 284973,
-      "fileID": 3641275,
+      "fileID": 3758733,
       "required": true
     },
     {
