@@ -130,27 +130,6 @@ for items in block7
 	items.asBlock().definition.setHarvestLevel("pickaxe", 4);
 	}
 
-//2022.1.29
-var block8 = [
-
-<traverse:fir_planks>,
-<immersiveengineering:treated_wood>,
-<minecraft:planks:*>,
-<twilightforest:twilight_oak_planks>,
-<twilightforest:canopy_planks>,
-<twilightforest:mangrove_planks>,
-<twilightforest:dark_planks>,
-<twilightforest:time_planks>,
-<twilightforest:trans_planks>,
-<twilightforest:mine_planks>,
-<twilightforest:sort_planks>
-
-] as IItemStack[];
-for items in block8{	
-	items.asBlock().definition.setHarvestLevel("axe", 1);
-}
-
 <taiga:palladium_ore>.asBlock().definition.setHarvestLevel("pickaxe", 6);
 <taiga:prometheum_ore>.asBlock().definition.setHarvestLevel("pickaxe", 6);
 <taiga:vibranium_ore>.asBlock().definition.setHarvestLevel("pickaxe", 8);
-

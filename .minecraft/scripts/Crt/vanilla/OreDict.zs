@@ -110,7 +110,82 @@ for i in wand{
 
 //2022.3.12
 <ore:string>.add(<pyrotech:material:14>);
-<ore:rockLimestone>.add(<pyrotech:rock:8>);
 
+//2022.5.2
 <ore:carbon>.addAll(<ore:coal>);
 <ore:carbon>.addAll(<ore:charcoal>);
+
+<ore:rockLimestone>.add(<pyrotech:rock:8>);
+<ore:chest>.add(<immersiveengineering:wooden_device0>);
+<ore:grout>.add(<tconstruct:soil>);
+<ore:blockSlakedlime>.add(<contenttweaker:slakedlime_block>);
+<ore:tnt>.add(<minecraft:tnt>);
+<ore:oreFossil>.add(<pyrotech:fossil_ore>);
+
+var flowers =[
+
+<botania:flower:*>,
+<botania:specialflower:*>,
+<minecraft:red_flower:*>,
+<minecraft:cornflower>,
+<minecraft:lily_of_the_valley>,
+<minecraft:wither_rose>,
+<minecraft:yellow_flower>,
+<minecraft:double_plant:*>
+
+] as IItemStack[];
+for i in flowers{
+    <ore:flower>.add(i);
+}
+
+var tools = [
+
+<ore:artisansAthame>,
+<ore:artisansBeaker>,
+<ore:artisansBurner>,
+<ore:artisansCarver>,
+<ore:artisansChisel>,
+<ore:artisansCompass>,
+<ore:artisansCutters>,
+<ore:artisansCuttingBoard>,
+<ore:artisansDriver>,
+<ore:artisansFile>,
+<ore:artisansFramingHammer>,
+<ore:artisansGemCutter>,
+<ore:artisansGrimoire>,
+<ore:artisansGroover>,
+<ore:artisansHammer>,
+<ore:artisansHandsaw>,
+<ore:artisansHatchet>,
+<ore:artisansKnife>,
+<ore:artisansLens>,
+<ore:artisansNeedle>,
+<ore:artisansPan>,
+<ore:artisansPencil>,
+<ore:artisansPliers>,
+<ore:artisansPunch>,
+<ore:artisansQuill>,
+<ore:artisansShears>,
+<ore:artisansSifter>,
+<ore:artisansSolderer>,
+<ore:artisansSpanner>,
+<ore:artisansTrowel>,
+<ore:artisansTSquare>,
+<ore:constructionWand>
+
+] as IOreDictEntry[];
+for tool in tools {
+<ore:artisansTool>.addAll(tool);
+}
+
+var toolslows = [
+
+<ore:artisansHammer>,
+<ore:artisansTSquare>,
+<ore:artisansCarver>,
+<ore:constructionWand>
+
+] as IOreDictEntry[];
+for toolslow in toolslows {
+<ore:artisansToolslow>.addAll(toolslow);
+}

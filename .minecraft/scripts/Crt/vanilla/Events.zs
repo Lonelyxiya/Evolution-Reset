@@ -54,8 +54,8 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 for i in start
 	{
     event.player.give(i);
-    event.player.update({wasGivenStarters: true});
 	}
+	event.player.update({wasGivenStarters: true});
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
     }, 1 * 20);
