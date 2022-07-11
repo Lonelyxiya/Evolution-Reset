@@ -69,9 +69,7 @@ var block3 = [
 <pyrotech:cobblestone:2>,
 <minecraft:stone:3>,
 <minecraft:stone:4>,
-<pyrotech:cobblestone:1>,
-<traverse:blue_rock>,
-<traverse:red_rock>
+<pyrotech:cobblestone:1>
 
 ] as IItemStack[];
 for items in block3{	

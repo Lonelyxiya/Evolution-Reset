@@ -2,7 +2,7 @@
 //Lacz
 //2020.10.16
 //OreDict
-
+import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
@@ -124,12 +124,7 @@ for i in wand{
 
 var flowers =[
 
-<botania:flower:*>,
-<botania:specialflower:*>,
 <minecraft:red_flower:*>,
-<minecraft:cornflower>,
-<minecraft:lily_of_the_valley>,
-<minecraft:wither_rose>,
 <minecraft:yellow_flower>,
 <minecraft:double_plant:*>
 
@@ -189,3 +184,52 @@ var toolslows = [
 for toolslow in toolslows {
 <ore:artisansToolslow>.addAll(toolslow);
 }
+
+var vacuumbags = [
+
+<adpother:diamond_vacuum_bag>,
+<adpother:iron_vacuum_bag>,
+<adpother:gold_vacuum_bag>
+
+] as IItemStack[];
+for bag in vacuumbags {
+<ore:vacuumbag>.add(bag);
+}
+
+var respirators = [
+
+<adpother:diamond_respirator>,
+<adpother:iron_respirator>,
+<adpother:gold_respirator>
+
+] as IItemStack[];
+for r in respirators {
+<ore:respirator>.add(r);
+}
+
+var botflowers = [
+
+<ore:mysticFlowerWhite>,
+<ore:mysticFlowerLightGray>,
+<ore:mysticFlowerOrange>,
+<ore:mysticFlowerCyan>,
+<ore:mysticFlowerMagenta>,
+<ore:mysticFlowerPurple>,
+<ore:mysticFlowerLightBlue>,
+<ore:mysticFlowerBlue>,
+<ore:mysticFlowerYellow>,
+<ore:mysticFlowerBrown>,
+<ore:mysticFlowerLime>,
+<ore:mysticFlowerGreen>,
+<ore:mysticFlowerPink>,
+<ore:mysticFlowerRed>,
+<ore:mysticFlowerGray>,
+<ore:mysticFlowerBlack>
+
+] as IOreDictEntry[];
+for botflower in botflowers {
+<ore:flower>.addAll(botflower);
+}
+
+<ore:skull>.add(<minecraft:skull:*>);
+<ore:bed>.add(<minecraft:bed:*>);

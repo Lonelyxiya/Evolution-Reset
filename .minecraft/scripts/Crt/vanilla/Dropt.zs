@@ -19,16 +19,24 @@ for wood in woods
 {
 Dropt.list("list_woods")
     .add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
     .matchDrops([wood])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
-      .addDrop(Dropt.drop())
+      .addDrop(Dropt.drop()
+	     .selector(Dropt.weight(80))
+	     .items([<pyrotech:rock:7>], Dropt.range(3))  
+	  )
+	  .addDrop(Dropt.drop()
+         .selector(Dropt.weight(20))
+	  )
 	)
   .add(Dropt.rule()
+      .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
      .matchDrops([wood])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
       .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "axe;0;-1")
@@ -58,13 +66,14 @@ val stones = [
 
 ] as IOreDictEntry[];
 
-for stone in stones
+for i, stone in stones
 {
 var dropstone = dropstones[i];
 Dropt.list("list_stones")
     .add(Dropt.rule()
+    .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
     .matchDrops([stone])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
@@ -78,8 +87,9 @@ Dropt.list("list_stones")
 	  )
 	)
     .add(Dropt.rule()
-    .matchDrops([dirt])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
+    .matchDrops([stone])
       .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "pickaxe;0;-1")
@@ -87,8 +97,9 @@ Dropt.list("list_stones")
       .addDrop(Dropt.drop())
 	)
    .add(Dropt.rule()
+    .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
     .matchDrops([stone])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("WHITELIST", [], "pickaxe;0;-1")
@@ -134,8 +145,9 @@ for i, dirt in dirts
 var dropdirt = dropdirts[i];
 Dropt.list("list_dirt")
     .add(Dropt.rule()
+       .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
     .matchDrops([dirt])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
@@ -149,8 +161,9 @@ Dropt.list("list_dirt")
 	  )
 	)
     .add(Dropt.rule()
+      .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
     .matchDrops([dirt])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
       .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "shovel;0;-1")
@@ -158,8 +171,9 @@ Dropt.list("list_dirt")
       .addDrop(Dropt.drop())
 	)
    .add(Dropt.rule()
+      .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
     .matchDrops([dirt])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("WHITELIST", [], "shovel;0;-1")
@@ -177,8 +191,9 @@ Dropt.list("list_dirt")
 
 Dropt.list("list_gravel")
 	.add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
      .matchDrops([<ore:gravel>])
-      .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
@@ -200,8 +215,9 @@ Dropt.list("list_gravel")
         )
 	)
 	 .add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
        .matchDrops([<ore:gravel>])
-         .replaceStrategy("REPLACE_ALL_IF_SELECTED")
         .matchHarvester(Dropt.harvester()
           .type("PLAYER")
           .mainHand("BLACKLIST", [], "shovel;1;-1")
@@ -209,6 +225,8 @@ Dropt.list("list_gravel")
         .addDrop(Dropt.drop())
         )
     .add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
      .matchDrops([<ore:gravel>])
         .matchHarvester(Dropt.harvester()
             .type("PLAYER")
@@ -244,7 +262,7 @@ val addblocks = [
 
 <ore:grass>,
 <ore:oreFossil>,
-<ore:oreCoal>,
+<ore:oreCoal>
 
 ] as IOreDictEntry[];
 
@@ -253,8 +271,9 @@ for i, addblock in addblocks
 var adddrop = adddrops[i];
 Dropt.list("list_addblock")
   .add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("ADD")
      .matchDrops([addblock])
-      .replaceStrategy("ADD")
       .addDrop(Dropt.drop()
           .selector(Dropt.weight(85))
       )
@@ -267,16 +286,18 @@ Dropt.list("list_addblock")
 
 Dropt.list("list_wool")
 	.add(Dropt.rule()
+    .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
      .matchDrops([<ore:wool>])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
       .addDrop(Dropt.drop())
 	)
 	.add(Dropt.rule()
+    .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
      .matchDrops([<ore:wool>])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("BLACKLIST", [], "shears;0;-1")
@@ -290,7 +311,7 @@ var dropores = [
 <pyrotech:generated_slag_iron>,
 <pyrotech:generated_slag_tin>,
 <pyrotech:generated_slag_gold>,
-<pyrotech:generated_slag_aluminium>,
+<pyrotech:generated_pile_slag_aluminum>,
 <pyrotech:generated_slag_osmium>,
 <pyrotech:generated_slag_silver>,
 <pyrotech:generated_slag_uranium>,
@@ -309,6 +330,7 @@ var dropores = [
 <pyrotech:generated_slag_valyrium>,
 <pyrotech:generated_slag_tiberium>,
 <pyrotech:generated_slag_vibranium>,
+<pyrotech:generated_slag_nickel>,
 <pyrotech:generated_slag_magnesium>,
 <galacticraftcore:basic_item:2>,
 <pyrotech:generated_slag_meteorite>,
@@ -334,6 +356,7 @@ val ores = [
 <ore:oreDiamond>,
 <ore:oreTungsten>,
 <ore:oreDilithium>,
+<ore:oreAbyssum>,
 <ore:oreEezo>,
 <ore:oreOsram>,
 <ore:orePalladium>,
@@ -353,13 +376,14 @@ val ores = [
 
 ] as IOreDictEntry[];
 
-for ore in ores
+for i, ore in ores
 {
 var dropore = dropores[i];
 Dropt.list("list_ore")
   	.add(Dropt.rule()
+      .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
      .matchDrops([ore])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	   .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
@@ -373,8 +397,9 @@ Dropt.list("list_ore")
 	   )
 	)
 	.add(Dropt.rule()
+	  .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS_IF_SELECTED")
 	   .matchDrops([ore])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
       .addDrop(Dropt.drop()
 	     .force()
 		  .items([<pyrotech:rock>], Dropt.range(2))
@@ -409,16 +434,18 @@ for i, banblock in banblocks
 var bandrop = bandrops[i];
 Dropt.list("list_banblocks")
  .add(Dropt.rule()
+     .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
     .matchDrops([banblock])
-     .replaceStrategy("REPLACE_ALL_IF_SELECTED")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
       .addDrop(Dropt.drop())
 	)
     .add(Dropt.rule()
+      .dropStrategy("UNIQUE")
+    .replaceStrategy("REPLACE_ITEMS")
         .matchDrops([banblock])
-        .replaceStrategy("REPLACE_ALL_IF_SELECTED")
         .addDrop(Dropt.drop()
 		  .items([bandrop])
 	  )

@@ -1,5 +1,5 @@
 #priority 0
-
+import mods.pyrotech.Stages;
 import mods.pyrotech.Worktable;
 import mods.pyrotech.CompactingBin;
 import mods.pyrotech.BrickKiln;
@@ -227,7 +227,8 @@ var compacting_bin_recipes = [
 <pyrotech:generated_pile_slag_vibranium>,
 <pyrotech:generated_pile_slag_magnesium>,
 <pyrotech:generated_pile_slag_silicon>,
-<minecraft:quartz_block>
+<minecraft:quartz_block>,
+<minecraft:grass>
 
 ] as IItemStack[];
 
@@ -470,13 +471,6 @@ var worktable_recipes = [
 "tconstruct:tools/table/part_builder", 
 "crafttweaker:ct_shaped-1866121448", 
 "crafttweaker:ct_shapeless-657931450", 
-"toughasnails:wool_pants", 
-"toughasnails:wool_boots", 
-"toughasnails:wool_jacket", 
-"toughasnails:wool_hood", 
-"usefulbackpacks:backpack_small", 
-"usefulbackpacks:backpack_medium", 
-"usefulbackpacks:backpack_large", 
 "minecraft:leather", 
 "crafttweaker:ct_shapeless-352574163", 
 "minecraft:piston", 
@@ -619,4 +613,24 @@ StoneCrucible.addRecipe("liquid_sugarcane_from_sugarcane", <liquid:sugarcane> * 
 
 Worktable.buildShapeless(<immersiveengineering:metal:30>, [<ore:blockCopper>])
 .setTool(<pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 20)
+.register();
+
+Worktable.buildShaped(<immersiveengineering:tool>, [
+[null, <pyrotech:material:16>, <ore:twine>],
+[null, <tconstruct:tool_rod>.withTag({Material: "copper"}), <pyrotech:material:16>],
+[<tconstruct:tool_rod>.withTag({Material: "copper"}), null, null]
+])
+.setRecipeGameStages(Stages.and(["greenhand"]))
+.setName("iehammer")
+.setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
+.register();
+
+Worktable.buildShaped(<minecraft:ladder>, [
+[<ore:stickWood>, <ore:twine>, <ore:stickWood>],
+[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
+[<ore:stickWood>, <ore:twine>, <ore:stickWood>]
+])
+.setRecipeGameStages(Stages.and(["greenhand"]))
+.setName("beforeladder")
+.setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, 10)
 .register();
