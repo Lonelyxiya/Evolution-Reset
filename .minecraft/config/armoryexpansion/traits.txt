@@ -91,7 +91,6 @@
   "cheapskate_armor",
   "slimey_green_armor",
   "catcher",
-  "sassy",
   "splintering",
   "congenial",
   "diffuse",
