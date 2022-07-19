@@ -113,7 +113,8 @@
         "galaxyspace:tile.gold_ore",
         "galaxyspace:tile.mars_gold",
         "galaxyspace:tile.proxima_b_gold_ore",
-        "minecraft:tile.oreGold"
+        "minecraft:tile.oreGold",
+        "pyrotech:tile.pyrotech.pile_slag"
       ],
       "output": [
         "minecraft:gold_nugget:0"
