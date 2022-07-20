@@ -127,7 +127,8 @@ var items = [
 <pyrotech:flint_hoe>,
 <pyrotech:flint_pickaxe>,
 <pyrotech:flint_axe>,
-<pyrotech:straw_bed>
+<pyrotech:straw_bed>,
+<pyrotech:furnace_core>
 
 ] as IItemStack[];
 

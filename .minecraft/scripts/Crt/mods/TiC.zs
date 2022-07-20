@@ -11,7 +11,7 @@ recipes.remove(<tconstruct:seared_furnace_controller>);
 recipes.remove(<tconstruct:smeltery_controller>);
 recipes.addShaped(<tconstruct:smeltery_controller:0>, 
 [[<tconstruct:materials:0>, <tconstruct:materials:0>, <tconstruct:materials:0>],
-[<tconstruct:materials:0>, <contenttweaker:furnace_core>, <tconstruct:materials:0>], 
+[<tconstruct:materials:0>, <pyrotech:furnace_core>, <tconstruct:materials:0>], 
 [<tconstruct:materials:0>, <tconstruct:materials:0>, <tconstruct:materials:0>]]);
 
 mods.mekanism.enrichment.addRecipe(<tconstruct:materials:16>*9, <tconstruct:metal:6>);

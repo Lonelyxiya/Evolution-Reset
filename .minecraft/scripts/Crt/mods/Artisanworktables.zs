@@ -182,7 +182,7 @@ RecipeBuilder.get("chef")
   .setExtraOutputOne(<minecraft:iron_nugget> * 4, 0.4)
   .setExtraOutputTwo(<pyrotech:material:16> * 6, 0.4)	
   .setExtraOutputThree(<immersiveengineering:metal:28> * 2, 0.2)
-  .addOutput(<contenttweaker:furnace_core>)
+  .addOutput(<pyrotech:furnace_core>)
   .create(); 
   
 RecipeBuilder.get("engineer")
