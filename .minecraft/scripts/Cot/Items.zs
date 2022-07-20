@@ -164,7 +164,3 @@ blueprint38.register();
 
 val blueprint39 as Item = VanillaFactory.createItem("blueprint39");
 blueprint39.register();
-
-//2022.4.16
-val furnace_core as Item = VanillaFactory.createItem("furnace_core");
-furnace_core.register();
