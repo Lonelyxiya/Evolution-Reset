@@ -255,11 +255,6 @@ furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
 furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
-furnace.addRecipe(<minecraft:cooked_chicken>, <contenttweaker:raw_chicken>);
-furnace.addRecipe(<minecraft:cooked_rabbit>, <contenttweaker:raw_rabbit>);
-furnace.addRecipe(<minecraft:cooked_porkchop>, <contenttweaker:raw_pork>);
-furnace.addRecipe(<minecraft:cooked_beef>, <contenttweaker:raw_beef>);
-furnace.addRecipe(<minecraft:cooked_mutton>, <contenttweaker:raw_mutton>);
 furnace.setFuel(<minecraft:blaze_rod>, 0);
 
 //2021.8.10

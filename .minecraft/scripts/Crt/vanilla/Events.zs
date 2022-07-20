@@ -178,7 +178,7 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
         event.player.update({wasGivenTip7: true});
     }
-    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "contenttweaker:furnace_core")) {
+    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:furnace_core")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + "greenhand");
         event.player.update({wasGivenTip8: true});
     }
