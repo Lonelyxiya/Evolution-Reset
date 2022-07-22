@@ -1,7 +1,7 @@
 {
 	title: "Interstellar Age",
 	icon: {
-		id: "galaxyspace:rocket_tier_6",
+		id: "advancedrocketry:satellite",
 		tag: {
 			sublight_engine: 1b,
 			modification_count: 0

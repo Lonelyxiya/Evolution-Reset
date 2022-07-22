@@ -8,7 +8,7 @@
 		uid: "e17e1471",
 		type: "item",
 		items: [{
-			item: "galaxyspace:dungeon_keys"
+			item: "advancedrocketry:satellitebuilder"
 		}],
 		ignore_nbt: 1b
 	}]
