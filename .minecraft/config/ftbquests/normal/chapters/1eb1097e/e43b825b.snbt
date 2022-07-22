@@ -20,7 +20,7 @@
 	{
 		uid: "8587cd13",
 		type: "item",
-		item: "galacticraftplanets:atomic_battery"
+		item: "libvulpes:battery 1 1"
 	},
 	{
 		uid: "5e6a27d8",
