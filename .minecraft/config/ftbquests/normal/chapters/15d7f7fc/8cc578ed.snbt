@@ -8,14 +8,14 @@
 		uid: "8b516cf0",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:collector"
+			item: "advancedrocketry:oxygenscrubber"
 		}]
 	},
 	{
 		uid: "2f440a0f",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:oxygen_compressor"
+			item: "advancedrocketry:oxygenvent"
 		}]
 	}],
 	rewards: [{

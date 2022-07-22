@@ -8,7 +8,7 @@
 		uid: "9b4488e9",
 		type: "item",
 		items: [{
-			item: "galacticraftplanets:key"
+			item: "advancedrocketry:moonturf_dark"
 		}]
 	}]
 }

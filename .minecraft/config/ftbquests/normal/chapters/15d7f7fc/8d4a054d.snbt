@@ -8,7 +8,7 @@
 		uid: "75766aae",
 		type: "item",
 		items: [{
-			item: "galacticraftplanets:key_t3"
+			item: "advancedrocketry:geode"
 		}],
 		ignore_nbt: 1b
 	}]

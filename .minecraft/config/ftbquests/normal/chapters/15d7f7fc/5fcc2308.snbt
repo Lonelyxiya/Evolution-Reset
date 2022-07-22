@@ -8,21 +8,21 @@
 		uid: "a72bde13",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:rocket_workbench"
+			item: "advancedrocketry:rocketbuilder"
 		}]
 	},
 	{
 		uid: "c53a917b",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:machine2 1 4"
+			item: "advancedrocketry:fueltank"
 		}]
 	},
 	{
 		uid: "63e861e6",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:machine 1 12"
+			item: "advancedrocketry:rocketmotor"
 		}]
 	}]
 }

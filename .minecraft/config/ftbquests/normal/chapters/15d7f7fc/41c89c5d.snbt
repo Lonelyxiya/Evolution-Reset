@@ -8,7 +8,7 @@
 		uid: "95fe877a",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:landing_pad"
+			item: "advancedrocketry:launchpad"
 		}],
 		count: 9L
 	},
@@ -16,7 +16,7 @@
 		uid: "8610d3f5",
 		type: "item",
 		items: [{
-			item: "galacticraftcore:refinery"
+			item: "advancedrocketry:chemicalreactor"
 		}]
 	}],
 	rewards: [{
