@@ -18,14 +18,6 @@ var ingot = [
 <contenttweaker:tungsten_ingot>,
 <contenttweaker:tungsten_steel_ingot>,
 <draconicevolution:draconium_ingot>,
-<galacticraftcore:basic_item:5>,
-<galacticraftcore:item_basic_moon>,
-<galacticraftplanets:item_basic_mars:2>,
-<galacticraftplanets:item_basic_asteroids>,
-<galacticraftplanets:basic_item_venus:1>,
-<galaxyspace:ingots>,
-<galaxyspace:ingots:1>,
-<galaxyspace:ingots:2>,
 <immersiveengineering:material:19>,
 <immersiveengineering:metal:1>,
 <immersiveengineering:metal:3>,
@@ -102,8 +94,6 @@ var nugget = [
 <botania:manaresource:17>,
 <botania:manaresource:18>,
 <botania:manaresource:19>,
-<contenttweaker:silicon_nugget>,
-<contenttweaker:magnesium_nugget>,
 <contenttweaker:tungsten_nugget>,
 <draconicevolution:nugget>,
 <draconicevolution:nugget:1>,
@@ -221,25 +211,18 @@ var myLogs = [<minecraft:log:0>,<minecraft:log:1>,<minecraft:log:2>,<minecraft:l
 var myPlanks = [<minecraft:planks:0>,<minecraft:planks:1>,<minecraft:planks:2>,<minecraft:planks:3>,<minecraft:planks:4>,<minecraft:planks:5>] as IItemStack[];
 var mySlabs = [<minecraft:wooden_slab>,<minecraft:wooden_slab:1>,<minecraft:wooden_slab:2>,<minecraft:wooden_slab:3>,<minecraft:wooden_slab:4>,<minecraft:wooden_slab:5>] as IItemStack[];
 
-var steel = <galacticraftcore:steel_axe>.anyDamage().transformDamage(5);
-var desh = <galacticraftplanets:desh_axe>.anyDamage().transformDamage(5);
-var titanium = <galacticraftplanets:titanium_axe>.anyDamage().transformDamage(5);
-
+var diamond = <artisanworktables:artisans_handsaw_diamond>.anyDamage().transformDamage(5);
 
 for i, log in myLogs
 {
 var plank = myPlanks[i];
-recipes.addShapeless(plank * 8, [log, log, steel]);
-recipes.addShapeless(plank * 8, [log, log, desh]);
-recipes.addShapeless(plank * 8, [log, log, titanium]);
+recipes.addShapeless(plank * 4, [log, diamond]);
 }
 
 for j, plank in myPlanks
 {
 var slab = mySlabs[j];
-recipes.addShapeless(slab * 3, [plank, steel]);
-recipes.addShapeless(slab * 3, [plank, desh]);
-recipes.addShapeless(slab * 3, [plank, titanium]);
+recipes.addShapeless(slab * 3, [plank, diamond]);
 }
 
 //2021.8.15

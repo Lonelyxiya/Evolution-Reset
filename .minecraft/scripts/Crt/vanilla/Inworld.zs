@@ -3,7 +3,7 @@
 import crafttweaker.item.IItemStack;
 mods.inworldcrafting.FluidToItem.transform(<minecraft:stick>, <liquid:water>, [<minecraft:torch>], false);
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.20
 mods.inworldcrafting.FluidToItem.transform(<tconstruct:soil>, <liquid:slaked_lime>, [<minecraft:clay>], true);
 mods.plustweaks.Liquid.setInfinite(<liquid:water>, true);

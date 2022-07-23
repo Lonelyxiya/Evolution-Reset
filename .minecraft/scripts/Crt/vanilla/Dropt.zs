@@ -186,7 +186,7 @@ var dropores = [
 <pyrotech:generated_slag_iron>,
 <pyrotech:generated_slag_tin>,
 <pyrotech:generated_slag_gold>,
-<pyrotech:generated_pile_slag_aluminum>,
+<pyrotech:generated_slag_aluminum>,
 <pyrotech:generated_slag_osmium>,
 <pyrotech:generated_slag_silver>,
 <pyrotech:generated_slag_uranium>,
@@ -205,13 +205,12 @@ var dropores = [
 <pyrotech:generated_slag_tiberium>,
 <pyrotech:generated_slag_vibranium>,
 <pyrotech:generated_slag_nickel>,
-<pyrotech:generated_slag_magnesium>,
-<galacticraftcore:basic_item:2>,
 <pyrotech:generated_slag_meteorite>,
 <pyrotech:generated_slag_obsidiorit>,
 <pyrotech:generated_slag_chromium>,
 <pyrotech:material:8>,
-<pyrotech:material:18>
+<pyrotech:material:18>,
+<pyrotech:generated_slag_iridium>
 
 ] as IItemStack[];
 val ores = [
@@ -220,7 +219,7 @@ val ores = [
 <ore:oreIron>,
 <ore:oreTin>,
 <ore:oreGold>,
-<ore:oreAluminium>,
+<ore:oreAluminum>,
 <ore:oreOsmium>,
 <ore:oreSilver>,
 <ore:oreUranium>,
@@ -239,13 +238,12 @@ val ores = [
 <ore:oreTiberium>,
 <ore:oreVibranium>,
 <ore:oreNickel>,
-<ore:oreMagnesium>,
-<ore:oreSilicon>,
 <ore:blockMeteorite>,
 <ore:blockObsidiorit>,
 <ore:oreChromium>,
 <ore:blockSlakedlime>,
-<ore:eroreDiamond>
+<ore:eroreDiamond>,
+<ore:oreIridium>
 
 ] as IOreDictEntry[];
 

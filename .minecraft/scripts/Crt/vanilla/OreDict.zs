@@ -45,13 +45,6 @@ var metal_block = [
     <refinedstorage:quartz_enriched_iron_block>,
     <draconicevolution:draconium_block>,
     <draconicevolution:draconic_block>,
-    <galacticraftcore:basic_block_core:9>,
-    <galacticraftcore:basic_block_core:10>,
-    <galacticraftcore:basic_block_core:11>,
-    <galacticraftcore:basic_block_core:12>,
-    <galacticraftcore:basic_block_core:13>,
-    <galacticraftplanets:asteroids_block:7>,
-    <galacticraftplanets:mars:8>,
     <immersiveengineering:storage:*>,
     <mekanism:basicblock>,
     <mekanism:basicblock:1>,
@@ -60,7 +53,14 @@ var metal_block = [
     <mekanism:basicblock:5>,
     <mekanism:basicblock:12>,
     <mekanism:basicblock:13>,
-    <projecte:fuel_block:*>
+    <projecte:fuel_block:*>,
+    <libvulpes:metal0:4>,
+    <libvulpes:metal0:5>,
+    <libvulpes:metal0:6>,
+    <libvulpes:metal0:7>,
+    <libvulpes:metal0:9>,
+    <libvulpes:metal0:10>
+    
 ] as IItemStack[];
 for j in metal_block
     {
@@ -70,7 +70,7 @@ for j in metal_block
 <ore:fiery>.add(<twilightforest:fiery_blood>);
 <ore:fiery>.add(<twilightforest:fiery_tears>);
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.7.26
 
 <ore:sandpile>.add(<pyrotech:rock:5>);
@@ -78,9 +78,6 @@ for j in metal_block
 
 //2021.8.15
 <ore:oreTungsten>.add(<contenttweaker:tungsten_ore>);
-
-//2021.8.23
-<ore:itemSilicon>.remove(<galacticraftcore:basic_item:2>);
 
 //2021.1.11
 
@@ -375,12 +372,20 @@ var cobblestones = [
 <ore:cobblestoneGranite>,
 <ore:cobblestoneAndesite>,
 <ore:cobblestoneLimestone>,
-<ore:cobblestoneDiorite>
+<ore:cobblestoneDiorite>,
+<ore:stoneGranite>,
+<ore:stoneAndesite>,
+<ore:stoneLimestone>,
+<ore:stoneDiorite>
 
 ] as IOreDictEntry[];
 
 var erstones = [
 
+<ore:erstoneGranite>,
+<ore:erstoneAndesite>,
+<ore:erstoneLimestone>,
+<ore:erstoneDiorite>,
 <ore:erstoneGranite>,
 <ore:erstoneAndesite>,
 <ore:erstoneLimestone>,
@@ -399,3 +404,122 @@ for cstone in cobblestones {
 for item in <ore:cstone>.items {
 <ore:erstone>.remove(item);
 }
+
+var rocketparts =[
+
+<advancedrocketry:fueltank>,
+<advancedrocketry:bipropellantfueltank>,
+<advancedrocketry:oxidizerfueltank>
+
+] as IItemStack[];
+for i in rocketparts {
+    <ore:rocketparts>.add(i);
+}
+
+var tool = [
+	<minecraft:stone_axe>,
+	<minecraft:iron_axe>,
+	<minecraft:golden_axe>,
+	<minecraft:diamond_axe>,
+	<minecraft:stone_shovel>,
+	<minecraft:iron_shovel>,
+	<minecraft:golden_shovel>,
+	<minecraft:diamond_shovel>,
+	<minecraft:stone_pickaxe>,
+	<minecraft:iron_pickaxe>,
+	<minecraft:golden_pickaxe>,
+	<minecraft:diamond_pickaxe>,
+	<minecraft:stone_sword>,
+	<minecraft:iron_sword>,
+	<minecraft:golden_sword>,
+	<minecraft:diamond_sword>,
+	<minecraft:stone_hoe>,
+	<minecraft:iron_hoe>,
+	<minecraft:golden_hoe>,
+	<minecraft:diamond_hoe>,
+	<minecraft:leather_chestplate>,
+	<minecraft:leather_leggings>,
+	<minecraft:leather_boots>,
+	<minecraft:iron_helmet>,
+	<minecraft:iron_chestplate>,
+	<minecraft:iron_leggings>,
+	<minecraft:iron_boots>,
+	<minecraft:golden_helmet>,
+	<minecraft:golden_chestplate>,
+	<minecraft:golden_leggings>,
+	<minecraft:golden_boots>,
+	<minecraft:diamond_helmet>,
+	<minecraft:diamond_chestplate>,
+	<minecraft:diamond_leggings>,
+	<minecraft:diamond_boots>,
+	<minecraft:chainmail_helmet>,
+	<minecraft:chainmail_chestplate>,
+	<minecraft:chainmail_leggings>,
+	<minecraft:chainmail_boots>,
+	<betternether:cincinnasite_axe>,
+	<betternether:cincinnasite_axe_diamond>,
+	<betternether:cincinnasite_pickaxe>,
+	<betternether:cincinnasite_pickaxe_diamond>,
+	<twilightforest:fiery_sword>,
+	<twilightforest:fiery_pickaxe>,
+	<twilightforest:steeleaf_helmet>,
+    <twilightforest:steeleaf_chestplate>,
+    <twilightforest:steeleaf_leggings>,
+    <twilightforest:steeleaf_boots>,
+    <twilightforest:steeleaf_sword>,
+    <twilightforest:steeleaf_shovel>,
+    <twilightforest:steeleaf_pickaxe>,
+    <twilightforest:steeleaf_axe>,
+    <twilightforest:steeleaf_hoe>,
+	<twilightforest:knightmetal_helmet>,
+    <twilightforest:knightmetal_chestplate>,
+    <twilightforest:knightmetal_leggings>,
+    <twilightforest:knightmetal_boots>,
+    <twilightforest:knightmetal_sword>,
+    <twilightforest:knightmetal_pickaxe>,
+    <twilightforest:knightmetal_axe>,
+    <twilightforest:knightmetal_shield>,
+	<minecraft:sugar>,
+	<mekanism:cardboardbox>,
+    <mekanism:anchorupgrade>,
+    <draconicevolution:grinder>,
+    <draconicevolution:celestial_manipulator>,
+    <draconicevolution:draconium_capacitor:2>,
+    <draconicevolution:ender_energy_manipulator>,
+    <draconicevolution:creative_exchanger>,
+    <draconicevolution:info_tablet>,
+    <botania:manatablet>.withTag({mana: 500000, creative: 1 as byte}),
+    <doggytalents:creative_collar>,
+    <doggytalents:creative_radar>,
+    <draconicevolution:creative_rf_source>,
+    <mekanism:energycube>.withTag({tier: 4}),
+    <mekanism:energycube>.withTag({tier: 4, mekData: {energyStored: 1.7976931348623157E308}}),
+    <projecte:item.pe_tome>,
+    <refinedstorage:controller:1>.withTag({Energy: 32000}),
+    <refinedstorage:portable_grid:1>,
+    <refinedstorage:storage:4>,
+    <refinedstorage:fluid_storage:4>,
+    <refinedstorage:fluid_storage_disk:4>.withTag({IdLeast: -7218665002269440659 as long, IdMost: 3767300693677852156 as long}),
+    <refinedstorage:wireless_grid:1>,
+    <refinedstorage:wireless_fluid_grid:1>,
+    <refinedstorage:wireless_crafting_monitor:1>,
+    <conarm:gauntlet_mat_reach>,
+    <twilightforest:uncrafting_table>,
+    <twilightforest:uncrafting_table>,
+    <projecte:item.pe_rm_katar>,
+    <tconstruct:throwball:1>,
+	<tconstruct:nuggets:4>,
+	<tconstruct:ingots:4>,
+    <projecte:item.pe_rm_sword>,
+    <botania:terrapick>,
+    <minecraft:furnace>,
+    <minecraft:crafting_table>,
+    <refinedstorage:silicon>
+] as IItemStack[];
+for items in tool
+	{	
+	<ore:banitems>.add(items);
+    }
+<ore:banitems>.addAll(<ore:oreSilicon>);
+<ore:whitesand>.add(<minecraft:sand>);
+<ore:radsand>.add(<minecraft:sand:1>);

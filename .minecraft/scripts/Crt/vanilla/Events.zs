@@ -14,7 +14,7 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.world.IWorldInfo;
 import crafttweaker.event.PlayerSleepInBedEvent;
 import crafttweaker.recipes.ICraftingRecipe;
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.14
 //events
 
