@@ -1,5 +1,5 @@
 #modloaded betternether​
-//Origins_Eternity
+//Origins_Eternal
 //2021.4.30
 //betternether
 

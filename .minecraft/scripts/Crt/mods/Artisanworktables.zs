@@ -1,5 +1,5 @@
 #modloaded artisanintegrations​
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.27
 //Artisanworktables
 import mods.artisanworktables.builder.RecipeBuilder;
@@ -1119,22 +1119,22 @@ RecipeBuilder.get("engineer")
   .addOutput(<artisanworktables:workshop:4>)
   .create();
   
-//Origins_Eternity
+//Origins_Eternal
 //2022.1.21
 
 RecipeBuilder.get("jeweler")
   .setShaped([
-    [null, <ore:dustGlowstone>, <pyrotech:material:26>],
-    [null, <ore:stickTreatedWood>, <ore:dustGlowstone>],
+    [null, <ore:dustThermite>, <pyrotech:material:26>],
+    [null, <ore:stickTreatedWood>, <ore:dustThermite>],
     [<ore:stickTreatedWood>, null, null]])
-  .setName("glowstonetorch")
+  .setName("hermitetorch")
   .setLevelRequired(10)
   .setConsumeExperience(false)
   .addTool(<ore:artisansPliers>, 10)
   .addTool(<ore:artisansLens>, 5)
   .setExtraOutputOne(<pyrotech:material:13> * 5, 0.25)	 
   .setExtraOutputTwo(<pyrotech:rock:7> * 2, 0.75)	
-  .addOutput(<galacticraftcore:glowstone_torch>)
+  .addOutput(<advancedrocketry:thermitetorch>)
   .create();
 
 //2022.2.6

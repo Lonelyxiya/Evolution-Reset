@@ -108,7 +108,7 @@ for i, slag in slags {
 }
 
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.2
 recipes.remove(<immersiveengineering:material:8>);
 
@@ -162,7 +162,7 @@ for items in brick
 recipes.remove(items);
     }
 
-//Origins_Eternity
+//Origins_Eternal
 
 //2021.12.14
 

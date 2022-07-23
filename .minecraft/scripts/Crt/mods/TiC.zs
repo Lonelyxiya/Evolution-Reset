@@ -34,7 +34,7 @@ tic2Dying(<tconstruct:edible:12>, <minecraft:chicken>, 120*20);
 tic2Dying(<tconstruct:edible:11>, <minecraft:beef>, 120*20);
 tic2Dying(<tconstruct:edible:10>, <minecraft:rotten_flesh>, 150*20);
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.3.27
 
 recipes.remove(<tconstruct:soil>);
@@ -42,7 +42,7 @@ recipes.remove(<tconstruct:soil>);
 furnace.remove(<tconstruct:materials>);
 furnace.addRecipe(<tconstruct:materials>, <contenttweaker:searedbrick_unfired>);
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.3.28
 recipes.remove(<tconstruct:tooltables:3>);
 recipes.addShaped(<tconstruct:tooltables:3>,

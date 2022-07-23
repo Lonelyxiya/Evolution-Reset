@@ -1,4 +1,4 @@
-//Origins_Eternity
+//Origins_Eternal
 //2022.2.6
 //Pollution_of_the_Realms
 
@@ -59,7 +59,7 @@ for i, materials in material
 var respirators = respirator[i];
 
 recipes.addShaped(respirators,
-[[<minecraft:glass_bottle>, <galacticraftcore:oxygen_mask>, <minecraft:glass_bottle>],
+[[<minecraft:glass_bottle>, <advancedrocketry:spacehelmet>, <minecraft:glass_bottle>],
 [<ore:leather>, materials, <ore:leather>],
 [<ore:wool>, <ore:treeLeaves>, <ore:wool>]]);
   

@@ -2,7 +2,7 @@ import crafttweaker.item.IItemStack;
 
 #modloaded betterbuilderswands​
 //2022.1.11
-//Origins_Eternity
+//Origins_Eternal
 
 //Betterbuilderswands
 

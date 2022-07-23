@@ -1,6 +1,6 @@
 import crafttweaker.item.IItemStack;
 //2022.1.18
-//Origins_Eternity
+//Origins_Eternal
 
 //Tough_As_Nails
 

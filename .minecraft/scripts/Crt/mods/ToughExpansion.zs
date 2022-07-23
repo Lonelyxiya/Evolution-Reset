@@ -1,4 +1,4 @@
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.10
 #modloaded tanaddons
 

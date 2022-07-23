@@ -25,13 +25,13 @@ recipes.remove(<projecte:transmutation_table>);
 recipes.addShaped(<projecte:transmutation_table>,
 [[<minecraft:obsidian>, <twilightforest:block_storage:1>, <minecraft:obsidian>],
 [<mekanism:reinforcedplasticblock:0>, <projecte:item.pe_philosophers_stone>, <tconstruct:slime:*>],
-[<minecraft:obsidian>, <galacticraftplanets:mars:8>, <minecraft:obsidian>]]);
+[<minecraft:obsidian>, <advancedrocketry:moonturf_dark>, <minecraft:obsidian>]]);
 
 recipes.remove(<projecte:condenser_mk1>);
 recipes.addShaped(<projecte:condenser_mk1>,
-[[<galacticraftcore:item_basic_moon:0>, <minecraft:diamond>, <galacticraftcore:item_basic_moon:0>],
+[[<advancedrocketry:geode>, <minecraft:diamond>, <advancedrocketry:geode>],
 [<minecraft:diamond>, <projecte:alchemical_chest>, <minecraft:diamond>],
-[<galacticraftcore:item_basic_moon:0>, <minecraft:diamond>, <galacticraftcore:item_basic_moon:0>]]);
+[<advancedrocketry:geode>, <minecraft:diamond>, <advancedrocketry:geode>]]);
 
 recipes.remove(<projecte:dm_pedestal>);
 recipes.addShaped(<projecte:dm_pedestal>,

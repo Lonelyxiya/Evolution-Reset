@@ -115,7 +115,7 @@ pyrWorktableCreate("artisans", "_chisel_bone", <artisanworktables:artisans_chise
 pyrWorktableCreate("artisans", "_chisel_flint", <artisanworktables:artisans_chisel_flint>, null, null, <minecraft:flint>, null, <minecraft:flint>, null, <minecraft:stick>, null, null, 3);
 
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.1.22
 var items = [
 <pyrotech:wither_forge>,
@@ -227,8 +227,6 @@ var compacting_bin_recipes = [
 <pyrotech:generated_pile_slag_uru>,
 <pyrotech:generated_pile_slag_tiberium>,
 <pyrotech:generated_pile_slag_vibranium>,
-<pyrotech:generated_pile_slag_magnesium>,
-<pyrotech:generated_pile_slag_silicon>,
 <minecraft:quartz_block>
 
 ] as IItemStack[];
@@ -259,7 +257,6 @@ MechanicalCompactor.addRecipe("emerald_block_from_emerald", <minecraft:emerald_b
 MechanicalCompactor.addRecipe("slime_block_from_slimeball", <minecraft:slime>, <ore:slimeball>, 9);
 MechanicalCompactor.addRecipe("slakedlime_block_from_slakedlime", <contenttweaker:slakedlime_block>, <pyrotech:material:8>, 9);
 MechanicalCompactor.addRecipe("slakedlime_block_from_cement_powder", <tconstruct:soil>, <contenttweaker:cement_powder>, 9);
-MechanicalCompactor.addRecipe("silicon_from_nugget", <galacticraftcore:basic_item:2>, <contenttweaker:silicon_nugget>, 9);
 MechanicalCompactor.addRecipe("obsidiorite_block_from_ingot", <taiga:obsidiorite_block>, <taiga:obsidiorite_ingot>, 9);
 MechanicalCompactor.addRecipe("meteorite_block_from_ingot", <taiga:meteorite_block>, <taiga:meteorite_ingot>, 9);
 MechanicalCompactor.addRecipe("steel_block_from_ingot", <immersiveengineering:storage:8>, <ore:ingotSteel>, 9);
@@ -278,11 +275,9 @@ MechanicalCompactor.addRecipe("ironwood_block_from_ingot", <twilightforest:block
 MechanicalCompactor.addRecipe("quartz_enriched_iron_block_from_ingot", <refinedstorage:quartz_enriched_iron_block>, <refinedstorage:quartz_enriched_iron>,9);
 MechanicalCompactor.addRecipe("draconium_block_from_ingot", <draconicevolution:draconium_block>, <ore:blockDraconium>,9);
 MechanicalCompactor.addRecipe("draconic_block_from_ingot", <draconicevolution:draconic_block>, <ore:ingotDraconiumAwakened>,9);
-MechanicalCompactor.addRecipe("aluminum_block_from_ingot", <galacticraftcore:basic_block_core:11>, <ore:ingotAluminum>,9);
-MechanicalCompactor.addRecipe("meteoricIron_block_from_ingot", <galacticraftcore:basic_block_core:12>, <ore:ingotMeteoricIron>,9);
-MechanicalCompactor.addRecipe("silicon_block_from_ingot", <galacticraftcore:basic_block_core:13>, <ore:itemSilicon>,9);
-MechanicalCompactor.addRecipe("titanium_block_from_ingot", <galacticraftplanets:asteroids_block:7>, <ore:ingotTitanium>,9);
-MechanicalCompactor.addRecipe("desh_block_from_ingot", <galacticraftplanets:mars:8>, <ore:blockDesh>,9);
+MechanicalCompactor.addRecipe("aluminum_block_from_ingot", <libvulpes:metal0:9>, <ore:ingotAluminum>,9);
+MechanicalCompactor.addRecipe("meteoricIron_block_from_ingot", <taiga:meteorite_block>, <ore:ingotMeteoricIron>,9);
+MechanicalCompactor.addRecipe("titanium_block_from_ingot", <libvulpes:metal0:7>, <ore:ingotTitanium>,9);
 MechanicalCompactor.addRecipe("Electrum_block_from_ingot", <immersiveengineering:storage:7>, <ore:ingotElectrum>,9);
 MechanicalCompactor.addRecipe("constantan_block_from_ingot", <immersiveengineering:storage:6>, <ore:blockConstantan>,9);
 MechanicalCompactor.addRecipe("nickel_block_from_ingot", <immersiveengineering:storage:4>, <ore:blockNickel>,9);
@@ -299,7 +294,7 @@ MechanicalCompactor.addRecipe("aeternalis_fuel_block_from_ingot", <projecte:fuel
 MechanicalCompactor.addRecipe("achemical_coal_fuel_block_from_ingot", <projecte:fuel_block>, <projecte:item.pe_fuel>,9);
 MechanicalCompactor.addRecipe("steeleaf_block_from_ingot", <twilightforest:block_storage:2>, <ore:ingotSteeleaf>,9);
 MechanicalCompactor.addRecipe("carminite_block_from_ingot", <twilightforest:block_storage:4>, <ore:carminite>,9);
-MechanicalCompactor.addRecipe("lead_block_from_ingot", <galacticraftplanets:venus:12>, <ore:ingotLead>,9);
+MechanicalCompactor.addRecipe("lead_block_from_ingot", <immersiveengineering:storage:2>, <ore:ingotLead>,9);
 MechanicalCompactor.addRecipe("furarctic_block_from_ingot", <twilightforest:block_storage:3>, <ore:furArctic>,9);
 
 var worktable_recipes = [
@@ -349,8 +344,7 @@ IroncladAnvil.addRecipe("nugget_from_ingot_8", <taiga:karmesine_nugget>*9, <ore:
 IroncladAnvil.addRecipe("nugget_from_ingot_9", <botania:manaresource:17>*9, <ore:ingotManasteel>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_10", <botania:manaresource:18>*9, <ore:ingotTerrasteel>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_11", <botania:manaresource:19>*9, <ore:ingotElvenElementium>, 20, "hammer");
-IroncladAnvil.addRecipe("nugget_from_ingot_12", <contenttweaker:silicon_nugget>*9, <ore:itemSilicon>, 20, "hammer");
-IroncladAnvil.addRecipe("nugget_from_ingot_13", <contenttweaker:magnesium_nugget>*9, <ore:ingotMagnesium>, 20, "hammer");
+IroncladAnvil.addRecipe("nugget_from_ingot_12", <libvulpes:productnugget:3>*9, <ore:ingotSilicon>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_14", <contenttweaker:tungsten_nugget>*9, <contenttweaker:tungsten_ingot>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_15", <draconicevolution:nugget>*9, <ore:ingotDraconium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_16", <draconicevolution:nugget:1>*9, <ore:ingotDraconiumAwakened>, 20, "hammer");

@@ -1,5 +1,5 @@
 //2022.2.19
-//Origins_Eternity
+//Origins_Eternal
 #modloaded villagermarket 
 
 recipes.remove(<villagermarket:villager_market>);

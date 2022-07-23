@@ -1,5 +1,5 @@
 //2022.5.2
-//Origins_Eternity
+//Origins_Eternal
 import crafttweaker.item.IItemStack;
 //Xlfood
 
