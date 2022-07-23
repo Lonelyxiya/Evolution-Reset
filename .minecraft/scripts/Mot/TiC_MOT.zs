@@ -1,4 +1,4 @@
-//Origins_Eternity
+//Origins_Eternal
 //2021.7.27
 //Tconstruct_Mot
 import crafttweaker.item.IItemStack;
