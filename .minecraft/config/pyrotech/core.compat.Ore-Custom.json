@@ -23,15 +23,7 @@
     "oreAluminum": {
       "slagColor": "e2e2e3",
       "langKey": [
-        "galacticraftcore:tile.basic_block_core.ore_aluminum_gc",
-        "galacticraftplanets:tile.asteroids_block.ore_aluminum_asteroids",
-        "galacticraftplanets:tile.venus.venus_ore_aluminum",
-        "immersiveengineering:tile.immersiveengineering.ore.aluminum",
-        "moreplanets:tile.chalos_block.aluminum_ore",
-        "moreplanets:tile.diona_block.aluminum_ore",
-        "moreplanets:tile.fronos_ore.aluminum_ore",
-        "moreplanets:tile.koentus_block.aluminum_ore",
-        "moreplanets:tile.nibiru_ore.aluminum_ore"
+        "immersiveengineering:tile.immersiveengineering.ore.aluminum"
       ],
       "output": [
         "immersiveengineering:metal:21"
@@ -58,17 +50,8 @@
     "oreCopper": {
       "slagColor": "ffaa1c",
       "langKey": [
-        "galacticraftcore:tile.basic_block_core.ore_copper_gc",
-        "galacticraftcore:tile.basic_block_moon.coppermoon",
-        "galacticraftplanets:tile.mars.coppermars",
-        "galacticraftplanets:tile.venus.venus_ore_copper",
         "immersiveengineering:tile.immersiveengineering.ore.copper",
-        "mekanism:tile.OreBlock.CopperOre",
-        "moreplanets:tile.chalos_block.copper_ore",
-        "moreplanets:tile.diona_block.copper_ore",
-        "moreplanets:tile.fronos_ore.copper_ore",
-        "moreplanets:tile.koentus_block.copper_ore",
-        "moreplanets:tile.nibiru_ore.copper_ore"
+        "mekanism:tile.OreBlock.CopperOre"
       ],
       "output": [
         "immersiveengineering:metal:20",
@@ -89,13 +72,7 @@
     "oreIron": {
       "slagColor": "d8af93",
       "langKey": [
-        "galacticraftplanets:tile.asteroids_block.ore_iron_asteroids",
-        "galacticraftplanets:tile.mars.ironmars",
-        "minecraft:tile.oreIron",
-        "moreplanets:tile.chalos_block.iron_ore",
-        "moreplanets:tile.fronos_ore.iron_ore",
-        "moreplanets:tile.koentus_block.iron_ore",
-        "moreplanets:tile.nibiru_ore.iron_ore"
+        "minecraft:tile.oreIron"
       ],
       "output": [
         "immersiveengineering:metal:29",
@@ -105,9 +82,7 @@
     "oreLead": {
       "slagColor": "95afee",
       "langKey": [
-        "galacticraftplanets:tile.venus.venus_ore_galena",
-        "immersiveengineering:tile.immersiveengineering.ore.lead",
-        "moreplanets:tile.fronos_ore.lead_ore"
+        "immersiveengineering:tile.immersiveengineering.ore.lead"
       ],
       "output": [
         "immersiveengineering:metal:22"
@@ -143,16 +118,7 @@
     "oreTin": {
       "slagColor": "c3e9ff",
       "langKey": [
-        "galacticraftcore:tile.basic_block_core.ore_tin_gc",
-        "galacticraftcore:tile.basic_block_moon.tinmoon",
-        "galacticraftplanets:tile.mars.tinmars",
-        "galacticraftplanets:tile.venus.venus_ore_tin",
-        "mekanism:tile.OreBlock.TinOre",
-        "moreplanets:tile.chalos_block.tin_ore",
-        "moreplanets:tile.diona_block.tin_ore",
-        "moreplanets:tile.fronos_ore.tin_ore",
-        "moreplanets:tile.koentus_block.tin_ore",
-        "moreplanets:tile.nibiru_ore.tin_ore"
+        "mekanism:tile.OreBlock.TinOre"
       ],
       "output": [
         "mekanism:nugget:6"
@@ -266,38 +232,11 @@
         "taiga:vibranium_nugget"
       ]
     },
-	"oreSilicon": {
-      "slagColor": "5b615f",
-      "langKey": [
-		    "galaxyspace:tile.mars_silicon", 
-		    "galacticraftcore:tile.basic_block_core.oresilicon",
-		    "galacticraftplanets:tile.venus.venus_ore_silicon", 
-		    "galaxyspace:tile.europa_silicon_ore", 
-		    "galaxyspace:tile.proxima_b_silicon_ore", 
-		    "galaxyspace:tile.silicon_ore"
-
-      ],
-      "output": [
-        "contenttweaker:silicon_nugget"
-      ]
-    },
-	"oreMagnesium": {
-      "slagColor": "897673",
-      "langKey": [
-		    "galaxyspace:tile.ganymede_magnesium_ore", 
-		    "galacticraftcore:tile.mercury_magnesium_ore"
-
-      ],
-      "output": [
-        "contenttweaker:magnesium_nugget"
-      ]
-    },
 	"oreObsidiorit": {
       "slagColor": "897673",
       "langKey": [
 		    "taiga:tile.obsidioritecobble_block", 
 		    "taiga:tile.obsidiorite_block"
-
       ],
       "output": [
         "taiga:obsidiorite_nugget"
@@ -307,8 +246,7 @@
       "slagColor": "897673",
       "langKey": [
 	    	"taiga:tile.meteoritecobble_block", 
-	    	"galaxyspace:tile.ceres_meteoriciron_ore",
-        "taiga.meteorite_block"
+            "taiga.meteorite_block"
       ],
       "output": [
         "taiga:meteorite_nugget"
@@ -321,6 +259,15 @@
       ],
       "output": [
         "contenttweaker:chromium_nugget"
+      ]
+    },
+   "oreIridium": {
+      "slagColor": "a5a399",
+      "langKey": [
+        "libvulpes:material.Iridium"
+      ],
+      "output": [
+        "libvulpes:productnugget:10"
       ]
     }
   }
