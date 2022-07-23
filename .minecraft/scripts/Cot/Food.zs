@@ -3,7 +3,7 @@ import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.ItemFood;
 import mods.contenttweaker.IItemFoodEaten;
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.19
 //Food
 

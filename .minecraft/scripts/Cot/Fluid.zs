@@ -3,7 +3,7 @@ import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Fluid;
 import mods.contenttweaker.Color;
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.14
 //fluids
 

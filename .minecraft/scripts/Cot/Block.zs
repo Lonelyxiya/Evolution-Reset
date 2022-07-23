@@ -2,7 +2,7 @@
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Block;
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.15
 //block
 

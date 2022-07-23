@@ -2,7 +2,7 @@
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Item;
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.8.15
 //Items
 
@@ -26,12 +26,6 @@ cement_powder.register();
 
 val searedbrick_unfired as Item = VanillaFactory.createItem("searedbrick_unfired");
 searedbrick_unfired.register();
-
-val silicon_nugget as Item = VanillaFactory.createItem("silicon_nugget");
-silicon_nugget.register();
-
-val magnesium_nugget as Item = VanillaFactory.createItem("magnesium_nugget");
-magnesium_nugget.register();
 
 //2021.12.14
 val tungsten_carbide_nugget as Item = VanillaFactory.createItem("tungsten_carbide_nugget");
@@ -164,3 +158,6 @@ blueprint38.register();
 
 val blueprint39 as Item = VanillaFactory.createItem("blueprint39");
 blueprint39.register();
+
+val heavy_plating as Item = VanillaFactory.createItem("heavy_plating");
+heavy_plating.register();

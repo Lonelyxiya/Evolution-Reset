@@ -5,7 +5,7 @@ import mods.contenttweaker.tconstruct.MaterialBuilder;
 import mods.contenttweaker.tconstruct.Material;
 import mods.contenttweaker.tconstruct.Trait;
 
-//Origins_Eternity
+//Origins_Eternal
 //2021.7.25
 //Tconstruct_Material
 
