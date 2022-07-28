@@ -1,0 +1,13 @@
+{
+	title: "Interstellar Age",
+	icon: {
+		id: "advancedrocketry:satellite",
+		tag: {
+			sublight_engine: 1b,
+			modification_count: 0
+		}
+	},
+	always_invisible: false,
+	group: 1878408764,
+	default_quest_shape: ""
+}
