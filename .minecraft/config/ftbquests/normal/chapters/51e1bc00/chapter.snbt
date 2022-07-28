@@ -1,7 +1,0 @@
-{
-	title: "Industrial Age",
-	icon: "chisel:technical1 1 1",
-	always_invisible: false,
-	group: 0,
-	default_quest_shape: ""
-}
