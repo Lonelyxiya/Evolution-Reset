@@ -42,3 +42,7 @@ for eightblock in <ore:blockEight>.items {
 for nineblock in <ore:blockNine>.items {	
 	nineblock.asBlock().definition.setHarvestLevel("pickaxe", 8);
 }
+
+for tenblock in <ore:blockTen>.items {	
+	tenblock.asBlock().definition.setHarvestLevel("pickaxe", 9);
+}

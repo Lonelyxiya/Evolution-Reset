@@ -24,7 +24,7 @@ mods.tconstruct.Melting.addRecipe(<liquid:uru_fluid> * 144,<pyrotech:generated_p
 mods.tconstruct.Melting.addRecipe(<liquid:tiberium_fluid> * 144,<pyrotech:generated_pile_slag_tiberium>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:vibranium_fluid> * 144,<pyrotech:generated_pile_slag_vibranium>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<pyrotech:generated_pile_slag_tungsten>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:chromium> * 144,<pyrotech:generated_pile_slag_chromium>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:iridium> * 144,<pyrotech:generated_pile_slag_iridium>, 1000);
 
 //2021.8.10
 var iron = [
@@ -66,13 +66,13 @@ mods.tconstruct.Alloy.addRecipe(<liquid:obsidiorite_fluid> * 1, [<liquid:meteori
 
 //2021.8.15
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<pyrotech:generated_pile_slag_tungsten>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 16,<contenttweaker:tungsten_nugget>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 16,<endreborn:wolframium_nugget>, 1000);
 mods.tconstruct.Fuel.registerFuel(<liquid:obsidian_fluid> * 2, 200);
 mods.tconstruct.Fuel.registerFuel(<liquid:tungsten_steel_fluid> * 2, 200);
 
 //2021.12.7
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ore>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ingot>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<endreborn:block_wolframium_ore>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<endreborn:item_ingot_wolframium>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 144,<contenttweaker:tungsten_steel_ingot>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 16,<contenttweaker:tungsten_steel_nugget>, 1000);
 
@@ -86,14 +86,12 @@ mods.tconstruct.Alloy.addRecipe(<liquid:alumite> * 3, [<liquid:obsidian_fluid> *
 
 //2022.1.22
 mods.tconstruct.Alloy.removeRecipe(<liquid:adamant_fluid>);
-mods.tconstruct.Alloy.addRecipe(<liquid:adamant_fluid> * 4, [<liquid:vibranium_fluid> * 2, <liquid:solarium_fluid> * 3, <liquid:iox_fluid> * 5, <liquid:chromium> * 3]);
-mods.tconstruct.Melting.addRecipe(<liquid:chromium> * 144,<contenttweaker:chromium_ingot>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:chromium> * 16,<contenttweaker:chromium_nugget>, 1000);
+mods.tconstruct.Alloy.addRecipe(<liquid:adamant_fluid> * 4, [<liquid:vibranium_fluid> * 2, <liquid:solarium_fluid> * 3, <liquid:iox_fluid> * 5, <liquid:iridium> * 3]);
 
 //2022.1.25
-mods.tconstruct.Casting.addTableRecipe(<contenttweaker:chromium_ingot>, null, <liquid:chromium>, 144, false, 200);
+mods.tconstruct.Casting.addTableRecipe(<libvulpes:productingot:10>, null, <liquid:iridium>, 144, false, 200);
 mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:metal:1>, null, <liquid:aluminum>, 144, false, 200);
-mods.tconstruct.Casting.addTableRecipe(<contenttweaker:tungsten_ingot>, null, <liquid:tungsten_fluid>, 144, false, 200);
+mods.tconstruct.Casting.addTableRecipe(<endreborn:item_ingot_wolframium>, null, <liquid:tungsten_fluid>, 144, false, 200);
 
 
 

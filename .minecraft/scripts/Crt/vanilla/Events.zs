@@ -30,15 +30,13 @@ events.onCommand(function(event as CommandEvent) {
    }
 });
 
-static DifficultyLocked as bool = false;
-
 events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     val player as IPlayer = event.player;
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
-    if (DifficultyLocked == false) {
+    if (isNull(event.player.data.wasGivenStarters)) {
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }, 1 * 20);
@@ -65,7 +63,7 @@ for i in start
 	DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
     }, 3 * 20);
-    if (DifficultyLocked == false) {
+    if (isNull(event.player.data.wasGivenStarters)) {
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }, 5 * 20);
@@ -78,7 +76,7 @@ for i in start
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
-    if (DifficultyLocked == false) {
+    if (isNull(event.player.data.wasGivenStarters)) {
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.difficulty"));
         }, 5 * 20);
@@ -135,7 +133,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var difficulty3 = info3.getDifficulty();
     if ((Locked2 == true) && (difficulty2 != "PEACEFUL") && (Locked3 == true) && (difficulty3 != "PEACEFUL")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.locked"));
-        DifficultyLocked = true;
+        event.player.update({wasDifficultyLocked: true});
     } else {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.notchoose")); 
         recipes.removeAll();
@@ -143,7 +141,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     }  
         }, 26 * 20);
   } else {
-        DifficultyLocked = true;
+        event.player.update({wasDifficultyLocked: true});
   }
 });
 

@@ -3,6 +3,8 @@
 //2021.05.05
 import crafttweaker.item.IItemStack;
 
+recipes.replaceAllOccurences(<earthenbounty:mithril_ingot>, <twilightforest:fiery_ingot>);
+
 //2021.8.23
 var ingot = [
 <immersiveengineering:metal:7>,
@@ -15,7 +17,7 @@ var ingot = [
 <botania:manaresource>,
 <botania:manaresource:4>,
 <botania:manaresource:7>,
-<contenttweaker:tungsten_ingot>,
+<endreborn:item_ingot_wolframium>,
 <contenttweaker:tungsten_steel_ingot>,
 <draconicevolution:draconium_ingot>,
 <immersiveengineering:material:19>,
@@ -94,7 +96,7 @@ var nugget = [
 <botania:manaresource:17>,
 <botania:manaresource:18>,
 <botania:manaresource:19>,
-<contenttweaker:tungsten_nugget>,
+<endreborn:wolframium_nugget>,
 <draconicevolution:nugget>,
 <draconicevolution:nugget:1>,
 <immersiveengineering:metal:20>,
@@ -176,7 +178,8 @@ var vanilla_recipes = [
 <minecraft:wool:*>,
 <minecraft:brewing_stand>,
 <minecraft:sugar>,
-<minecraft:chest>
+<minecraft:chest>,
+<minecraft:gunpowder>
 
 ] as IItemStack[];
 for items in vanilla_recipes
@@ -237,7 +240,7 @@ furnace.addRecipe(<immersiveengineering:metal:25>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_slag_lead>);
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
-furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
+furnace.addRecipe(<endreborn:wolframium_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
 furnace.setFuel(<minecraft:blaze_rod>, 0);
 
 //2021.8.10

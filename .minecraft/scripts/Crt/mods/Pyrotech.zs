@@ -20,15 +20,16 @@ import mods.pyrotech.StoneCrucible;
 import crafttweaker.text.ITextComponent;
 import crafttweaker.recipes.ICraftingRecipe;
 import mods.pyrotech.StoneOven;
-//Lacz
-//2020.10.16
-//pyrotech
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
 import mods.pyrotech.CrudeDryingRack;
 import mods.pyrotech.DryingRack;
 import mods.pyrotech.Burn;
+
+//Lacz
+//2020.10.16
+//pyrotech
 
 function pyrKilns(name as string, output as IItemStack, input as IIngredient, failed as IItemStack, time as int){
     PitKiln.removeRecipes(output);
@@ -79,8 +80,8 @@ function pyrWorktableCreate(modid as string, name as string, output as IItemStac
         .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, damage)
         .register();
 }
-pyrWorktableCreate("IE", "_tieban", <immersiveengineering:metal:39>, null, <minecraft:iron_ingot>, null, null, ietool, null, null, null, null, 2);
-pyrWorktableCreate("tconstruct", "_jianzhuding", <tconstruct:punji>*5, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, 5);
+pyrWorktableCreate("IE", "_plateiron", <immersiveengineering:metal:39>, null, <minecraft:iron_ingot>, null, null, ietool, null, null, null, null, 2);
+pyrWorktableCreate("tconstruct", "_sharp bamboo nails", <tconstruct:punji>*5, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, 5);
 pyrWorktableCreate("artisans", "_hammerwood", <artisanworktables:artisans_hammer_wood>, null, <minecraft:planks:*>, <minecraft:string>, null, <minecraft:stick>, <minecraft:planks:*>, <minecraft:stick>, null, null, 3);
 pyrWorktableCreate("artisans", "_hammerstone", <artisanworktables:artisans_hammer_stone>, null, <minecraft:stone>, <minecraft:string>, null, <minecraft:stick>, <minecraft:stone>, <minecraft:stick>, null, null, 3);
 pyrWorktableCreate("artisans", "_hammerbone", <artisanworktables:artisans_hammer_bone>, null, <minecraft:bone>, <minecraft:string>, null, <minecraft:stick>, <minecraft:bone>, <minecraft:stick>, null, null, 3);
@@ -217,6 +218,7 @@ var compacting_bin_recipes = [
 <pyrotech:generated_pile_slag_osmium>,
 <pyrotech:generated_pile_slag_lead>,
 <pyrotech:generated_pile_slag_tungsten>,
+<pyrotech:generated_pile_slag_iridium>,
 <pyrotech:generated_pile_slag_dilithium>,
 <pyrotech:generated_pile_slag_abyssum>,
 <pyrotech:generated_pile_slag_eezo>,
@@ -227,7 +229,8 @@ var compacting_bin_recipes = [
 <pyrotech:generated_pile_slag_uru>,
 <pyrotech:generated_pile_slag_tiberium>,
 <pyrotech:generated_pile_slag_vibranium>,
-<minecraft:quartz_block>
+<minecraft:quartz_block>,
+<minecraft:grass>
 
 ] as IItemStack[];
 
@@ -296,6 +299,7 @@ MechanicalCompactor.addRecipe("steeleaf_block_from_ingot", <twilightforest:block
 MechanicalCompactor.addRecipe("carminite_block_from_ingot", <twilightforest:block_storage:4>, <ore:carminite>,9);
 MechanicalCompactor.addRecipe("lead_block_from_ingot", <immersiveengineering:storage:2>, <ore:ingotLead>,9);
 MechanicalCompactor.addRecipe("furarctic_block_from_ingot", <twilightforest:block_storage:3>, <ore:furArctic>,9);
+MechanicalCompactor.removeRecipes(<minecraft:grass>);
 
 var worktable_recipes = [
 
@@ -345,7 +349,7 @@ IroncladAnvil.addRecipe("nugget_from_ingot_9", <botania:manaresource:17>*9, <ore
 IroncladAnvil.addRecipe("nugget_from_ingot_10", <botania:manaresource:18>*9, <ore:ingotTerrasteel>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_11", <botania:manaresource:19>*9, <ore:ingotElvenElementium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_12", <libvulpes:productnugget:3>*9, <ore:ingotSilicon>, 20, "hammer");
-IroncladAnvil.addRecipe("nugget_from_ingot_14", <contenttweaker:tungsten_nugget>*9, <contenttweaker:tungsten_ingot>, 20, "hammer");
+IroncladAnvil.addRecipe("nugget_from_ingot_14", <endreborn:wolframium_nugget>*9, <endreborn:item_ingot_wolframium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_15", <draconicevolution:nugget>*9, <ore:ingotDraconium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_16", <draconicevolution:nugget:1>*9, <ore:ingotDraconiumAwakened>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_17", <immersiveengineering:metal:21>*9, <ore:ingotAluminum>, 20, "hammer");

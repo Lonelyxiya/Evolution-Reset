@@ -35,8 +35,7 @@ import crafttweaker.event.PlayerInteractEvent;
 <taiga:valyrium_ore>.addTooltip(game.localize("crafttweaker.valyrium_ore.tooltip"));
 <taiga:uru_ore>.addTooltip(game.localize("crafttweaker.uru_ore.tooltip"));
 <taiga:obsidiorite_block>.addTooltip(game.localize("crafttweaker.obsidiorite_block.tooltip"));
-<contenttweaker:tungsten_ore>.addTooltip(game.localize("crafttweaker.tungsten_ore.tooltip"));
-<contenttweaker:chromium_ore>.addTooltip(game.localize("crafttweaker.chromium_ore.tooltip"));
+<endreborn:block_wolframium_ore>.addTooltip(game.localize("crafttweaker.tungsten_ore.tooltip"));
 <pyrotech:kiln_pit>.addTooltip(game.localize("crafttweaker.kiln_pit.tooltip"));
 <tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
@@ -73,3 +72,4 @@ events.onPlayerInteract(function(event as PlayerInteractEvent) {
 <toughasnails:jelled_slime_boots>.maxDamage = 400;
 <minecraft:bow>.maxDamage = 1;
 <minecraft:wooden_sword>.maxDamage = 1;
+<endreborn:tool_sword_endorium>.maxDamage = 1;

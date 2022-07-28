@@ -55,8 +55,7 @@ RecipeBuilder.get("blacksmith")
   .setExtraOutputOne(<minecraft:iron_nugget> * 2, 0.9)
   .setExtraOutputTwo(<minecraft:iron_nugget> * 3, 0.1)
   .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <contenttweaker:blueprint3>])
-  .addOutput(<minecraft:bucket>, 80)
-  .addOutput(<minecraft:iron_nugget> * 5, 20)
+  .addOutput(<minecraft:bucket>)
   .create();
   
 RecipeBuilder.get("basic")
@@ -252,7 +251,7 @@ RecipeBuilder.get("potter")
   .setExtraOutputOne(<minecraft:clay_ball> * 5, 0.3)	 
   .setExtraOutputTwo(<contenttweaker:cement_powder> * 2, 0.4)	
   .setExtraOutputThree(<pyrotech:material:8> * 1, 0.3)	
-  .addOutput(<contenttweaker:searedbrick_unfired>*4)
+  .addOutput(<contenttweaker:searedbrick_unfired>)
   .create();
   
 RecipeBuilder.get("potter")
@@ -758,6 +757,26 @@ RecipeBuilder.get("chemist")
   .setExtraOutputTwo(<botania:manaresource>, 0.6)	
   .setExtraOutputThree(<minecraft:iron_nugget> * 6, 0.2)
   .addOutput(<botania:brewery>)
+  .create();
+
+RecipeBuilder.get("chemist")
+   .setShaped([
+    [<earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>],
+    [<earthenbounty:sulfur_item>, <immersiveengineering:material:24>, <minecraft:coal:1>, <immersiveengineering:material:24>, <earthenbounty:sulfur_item>],
+    [<earthenbounty:sulfur_item>, <minecraft:coal:1>, <immersiveengineering:material:24>, <minecraft:coal:1>, <earthenbounty:sulfur_item>],
+    [<earthenbounty:sulfur_item>, <immersiveengineering:material:24>, <minecraft:coal:1>, <immersiveengineering:material:24>, <earthenbounty:sulfur_item>],
+    [<earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>, <earthenbounty:sulfur_item>]])
+  .setName("gunpowder")
+  .setLevelRequired(30)
+  .setConsumeExperience(false)
+  .setMaximumTier(2)
+  .addTool(<ore:artisansBeaker>, 10)
+  .addTool(<ore:artisansSifter>, 5)
+  .addTool(<ore:artisansMortar>, 10)
+  .setExtraOutputOne(<pyrotech:material:21> * 3, 0.8)	 
+  .setExtraOutputTwo(<immersiveengineering:material:25>, 0.1)	
+  .setExtraOutputThree(<immersiveengineering:material:24>, 0.1)
+  .addOutput(<minecraft:gunpowder>)
   .create();
 
 recipes.remove(<usefulbackpacks:backpack:*>);
@@ -1277,4 +1296,25 @@ RecipeBuilder.get("chef")
   .addTool(<ore:artisansPan>, 10)
   .addTool(<ore:artisansBurner>, 20)
   .addOutput(<xlfoodmod:rice_bread>)
+  .create();
+
+RecipeBuilder.get("jeweler")
+  .setShaped([
+    [<contenttweaker:tungsten_steel_ingot>, <ore:ingotPlatinum>, <ore:ingotPlatinum>, <ore:ingotPlatinum>, <contenttweaker:tungsten_steel_ingot>],
+    [<ore:ingotPlatinum>, <ore:ingotElectrum>, <ore:gemEmerald>, <ore:ingotElectrum>, <ore:ingotPlatinum>],
+    [<ore:ingotPlatinum>, <ore:gemEmerald>, <ore:gemDiamond>, <ore:gemEmerald>, <ore:ingotPlatinum>],
+    [<ore:ingotPlatinum>, <ore:ingotElectrum>, <ore:gemEmerald>, <ore:ingotElectrum>, <ore:ingotPlatinum>],
+    [<contenttweaker:tungsten_steel_ingot>, <ore:ingotPlatinum>, <ore:ingotPlatinum>, <ore:ingotPlatinum>, <contenttweaker:tungsten_steel_ingot>]])
+  .setName("platinumcrown")
+  .setLevelRequired(30)
+  .setFluid(<liquid:lava> * 4000)
+  .addTool(<ore:artisansHammer>, 30)
+  .addTool(<ore:artisansNeedle>, 40)
+  .addTool(<ore:artisansPliers>, 20)
+  .setExtraOutputOne(<minecraft:gold_nugget> * 2, 0.4)
+  .setExtraOutputTwo(<contenttweaker:platinum_nugget>, 0.1)
+  .setExtraOutputThree(<endreborn:wolframium_nugget> * 2, 0.5)
+  .setSecondaryIngredients([<pyrotech:anvil_iron_plated>, <taiga:tiberium_crystal>])
+  .setMaximumTier(2)
+  .addOutput(<earthenbounty:platinum_crown>)
   .create();

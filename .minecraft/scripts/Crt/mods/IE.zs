@@ -63,7 +63,6 @@ var slags as IItemStack[] = [
 	<pyrotech:generated_pile_slag_silver>,
 	<pyrotech:generated_pile_slag_tin>,
 	<pyrotech:generated_pile_slag_uranium>,
-	<pyrotech:generated_pile_slag_tungsten>,
 	<pyrotech:generated_pile_slag_dilithium>,
 	<pyrotech:generated_pile_slag_abyssum>,
 	<pyrotech:generated_pile_slag_eezo>,
@@ -74,7 +73,7 @@ var slags as IItemStack[] = [
 	<pyrotech:generated_pile_slag_uru>,
 	<pyrotech:generated_pile_slag_tiberium>,
     <pyrotech:generated_pile_slag_tungsten>,
-    <pyrotech:generated_pile_slag_chromium>	
+    <pyrotech:generated_pile_slag_iridium>	
 ];
 var ingots as IItemStack[] = [
 	<immersiveengineering:metal:1>,
@@ -89,7 +88,6 @@ var ingots as IItemStack[] = [
 	<immersiveengineering:metal:3>,
 	<mekanism:ingot:6>,
 	<immersiveengineering:metal:5>,
-	<contenttweaker:tungsten_ingot>,
 	<taiga:dilithium_ingot>,
 	<taiga:abyssum_ingot>,
 	<taiga:eezo_ingot>,
@@ -99,8 +97,8 @@ var ingots as IItemStack[] = [
 	<taiga:valyrium_ingot>,
 	<taiga:uru_ingot>,
 	<taiga:tiberium_ingot>,
-    <contenttweaker:tungsten_ingot>,
-	<contenttweaker:chromium_ingot>
+	<endreborn:item_ingot_wolframium>,
+	<libvulpes:productingot:10>
 ];
 for i, slag in slags {
 	var ingot = ingots[i];

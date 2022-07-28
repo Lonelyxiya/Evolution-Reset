@@ -42,7 +42,6 @@ static RequiredMods as string[] = [
     "adpother",
     "oeintegration",
     "sereneseasons",
-    "planetprogression",
     "toughasnails",
     "hardcoredarkness",
     "resourceloader",

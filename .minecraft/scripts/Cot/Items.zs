@@ -12,12 +12,6 @@ tungsten_steel_ingot.register();
 val tungsten_steel_nugget as Item = VanillaFactory.createItem("tungsten_steel_nugget");
 tungsten_steel_nugget.register();
 
-val tungsten_ingot as Item = VanillaFactory.createItem("tungsten_ingot");
-tungsten_ingot.register();
-
-val tungsten_nugget as Item = VanillaFactory.createItem("tungsten_nugget");
-tungsten_nugget.register();
-
 val flour as Item = VanillaFactory.createItem("flour");
 flour.register();
 
@@ -34,12 +28,8 @@ tungsten_carbide_nugget.register();
 val tungsten_carbide_ingot as Item = VanillaFactory.createItem("tungsten_carbide_ingot");
 tungsten_carbide_ingot.register();
 
-//2022.1.22
-val chromium_nugget as Item = VanillaFactory.createItem("chromium_nugget");
-chromium_nugget.register();
-
-val chromium_ingot as Item = VanillaFactory.createItem("chromium_ingot");
-chromium_ingot.register();
+val platinum_nugget as Item = VanillaFactory.createItem("platinum_nugget");
+platinum_nugget.register();
 
 //2022.3.27
 val blueprint1 as Item = VanillaFactory.createItem("blueprint1");

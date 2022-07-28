@@ -61,15 +61,15 @@ tungsten_carbide.material = <blockmaterial:lava>;
 tungsten_carbide.register();
 
 //2022.1.22
-var chromium = VanillaFactory.createFluid("chromium", Color.fromHex("292826"));
-chromium.temperature = 1400;
-chromium.viscosity = 3000;
-chromium.density = 3000;
-chromium.luminosity = 8;
-chromium.stillLocation = "base:fluids/molten";
-chromium.flowingLocation = "base:fluids/molten_flowing";
-chromium.material = <blockmaterial:lava>;
-chromium.register();
+var iridium = VanillaFactory.createFluid("iridium", Color.fromHex("292826"));
+iridium.temperature = 1400;
+iridium.viscosity = 3000;
+iridium.density = 3000;
+iridium.luminosity = 8;
+iridium.stillLocation = "base:fluids/molten";
+iridium.flowingLocation = "base:fluids/molten_flowing";
+iridium.material = <blockmaterial:lava>;
+iridium.register();
 
 //2022.2.7
 var sugarcane = VanillaFactory.createFluid("sugarcane", Color.fromHex("F8F8FF"));
