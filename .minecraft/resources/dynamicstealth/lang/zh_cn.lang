@@ -1,0 +1,590 @@
+attribute.name.dynamicstealth.visibilityReduction=% 能见度降低
+attribute.name.dynamicstealth.sight=% 视线
+
+attribute.name.dynamicstealth.noiseReduction=% 降噪
+attribute.name.dynamicstealth.hearing=% 听力
+
+attribute.name.dynamicstealth.scentReduction=% 气味减少
+attribute.name.dynamicstealth.smelling=% 嗅觉
+
+
+
+itemGroup.dynamicstealth=动态潜行
+
+item.dynamicstealth:handmirror.name=手镜
+
+dynamicstealth.soulsight=灵魂之眼
+potion.effect.dynamicstealth.soulsight=魂视药水
+splash_potion.effect.dynamicstealth.soulsight=喷溅灵视药水
+lingering_potion.effect.dynamicstealth.soulsight=魂视滞留药水
+tipped_arrow.effect.dynamicstealth.soulsight=魂视之箭
+
+potion.effect.dynamicstealth.blindness=致盲药水
+splash_potion.effect.dynamicstealth.blindness=喷溅致盲药水
+lingering_potion.effect.dynamicstealth.blindness=滞留致盲药水
+tipped_arrow.effect.dynamicstealth.blindness=失明之箭
+
+potion.effect.dynamicstealth.glowing=发光药水
+splash_potion.effect.dynamicstealth.glowing=喷溅发光药水
+lingering_potion.effect.dynamicstealth.glowing=滞留的发光药水
+tipped_arrow.effect.dynamicstealth.glowing=发光之箭
+
+
+
+dynamicstealth.cmd.creativeinvis.comment=§d设置你在创造模式下是否可见
+
+dynamicstealth.cmd.creativeinvisIsTrue=§a你在创造模式下被隐藏
+dynamicstealth.cmd.creativeinvisIsFalse=§e你在创造模式下可见
+dynamicstealth.cmd.creativeinvisSetTrue=§a你现在在创造模式下隐藏
+dynamicstealth.cmd.creativeinvisSetFalse=§e你现在在创造模式下可见
+dynamicstealth.cmd.creativeinvisTrue=§a在创造模式下已经隐藏
+dynamicstealth.cmd.creativeinvisFalse=§e在创造模式下已经可见
+dynamicstealth.cmd.creativeinvisTFError=§c第二个参数必须是以下之一：§dt, true, f, false
+
+dynamicstealth.cmd.hidefromPlayerTF.comment=§dTrue 是正常/默认，false 意味着玩家可以随时看到你
+dynamicstealth.cmd.hidefromPlayer.comment=§d显示你是否试图对玩家隐藏
+dynamicstealth.cmd.hidefrom.comment=§d显示你不想隐藏的玩家列表
+
+dynamicstealth.cmd.hidefromEmpty=§a你当前正试图对所有玩家隐藏
+dynamicstealth.cmd.hidefrom=§e你当前没有试图隐藏...%s
+dynamicstealth.cmd.hidefromPlayerTrue=§a你当前正试图从 %s 中隐藏
+dynamicstealth.cmd.hidefromPlayerFalse=§e你当前没有试图躲避 %s
+dynamicstealth.cmd.hidefromPlayerSetTrue=§a你现在正试图躲避 %s
+dynamicstealth.cmd.hidefromPlayerSetFalse=§e你现在没有试图躲避 %s
+dynamicstealth.cmd.hidefromPlayerTFError=§c第三个参数必须是以下之一：§dt, true, f, false
+
+dynamicstealth.cmd.threatEntityMissing=§c未找到 UUID 的实体：%s
+dynamicstealth.cmd.threatEntityNotLivingBase=§cUUID 的实体不是 EntityLivingBase: %s
+dynamicstealth.cmd.threatInvalidAmount=§c威胁量必须在 0 到 100（含）之间
+
+
+
+dynamicstealth.hud.hp=HP: %s / %s (%s%%)
+
+dynamicstealth.hud.unknown=???
+
+dynamicstealth.hud.action=动作：%s
+dynamicstealth.hud.fleeFrom=逃离 %s
+dynamicstealth.hud.search=正在搜索...
+dynamicstealth.hud.idlePassive=空闲（被动）
+dynamicstealth.hud.idleNonPassive=空闲（非被动）
+dynamicstealth.hud.targeting=目标 %s
+dynamicstealth.hud.dazed=茫然
+
+dynamicstealth.hud.threat=威胁：%s%%
+dynamicstealth.hud.threatNotApplicable=威胁：不适用
+dynamicstealth.hud.distance=距离：%s
+
+
+
+dynamicstealth.config.clientSettings=客户端设置
+dynamicstealth.config.serverSettings=服务器设置
+
+dynamicstealth.config.hud=HUD
+dynamicstealth.config.hud.tooltip=FILLSCREEN 您希望在屏幕上显示什么信息
+dynamicstealth.config.entityFading=实体衰落
+dynamicstealth.config.entityFading.tooltip=FILLSCREEN 实体如何淡入和淡出，如果有的话
+dynamicstealth.config.tooltips=工具提示
+dynamicstealth.config.tooltips.tooltip=FILLSCREEN 如何更改项目工具提示
+
+dynamicstealth.config.mainHUDStyle=主HUD风格
+dynamicstealth.config.opHUDFilter=点 HUD 过滤器
+dynamicstealth.config.opHUDStyle=点 HUD 样式
+dynamicstealth.config.targetingFilter=目标过滤器
+dynamicstealth.config.targetingStyle=定位HUD风格
+dynamicstealth.config.lightGauge=光量计
+
+dynamicstealth.config.stealthGaugeAlpha=隐形仪表不透明度
+dynamicstealth.config.stealthGaugeAlpha.tooltip=FILLSCREEN FIXNEWLINES 隐身量表的可见度，透明度方面\n\n0 表示不可见，1 表示完全不透明\n \n
+dynamicstealth.config.stealthGaugeColor=隐形仪表颜色
+dynamicstealth.config.stealthGaugeColor.tooltip=FILLSCREEN FIXNEWLINES 隐形仪表的颜色\n\n这使用格式 RRGGBB 颜色格式（如果你用 google 搜索 RRGGBB，你会找到一个可以使用的颜色选择器）\n \n
+dynamicstealth.config.stealthGaugeRimColor=隐形仪表边缘颜色
+dynamicstealth.config.stealthGaugeRimColor.tooltip=FILLSCREEN FIXNEWLINES 隐形仪表的边缘和箭头的颜色\n\n这使用格式 RRGGBB 颜色格式（如果你用 google 搜索 RRGGBB，你会找到一个可以使用的颜色选择器）\n \n
+dynamicstealth.config.stealthGaugeSize=隐形仪表尺寸
+dynamicstealth.config.stealthGaugeSize.tooltip=FILLSCREEN FIXNEWLINES 隐形仪表的大小\n \n
+dynamicstealth.config.stealthGaugeMode=隐形仪表模式
+dynamicstealth.config.stealthGaugeMode.tooltip=FILLSCREEN FIXNEWLINES 隐形仪表的一般显示模式\n\n0 = 无\n1 = 旋转\n2 = 动画\n3 = 动画，替换原版光标\n \n
+dynamicstealth.config.stealthGaugeX=隐形仪表 X 位置
+dynamicstealth.config.stealthGaugeX.tooltip=FILLSCREEN FIXNEWLINES 隐身量表的 x 位置\n\n0 是最左边，0.5 是中心，1 是最右边\n \n
+dynamicstealth.config.stealthGaugeY=隐形仪表 Y 位置
+dynamicstealth.config.stealthGaugeY.tooltip=FILLSCREEN FIXNEWLINES 隐身仪表的 y 位置\n\n0 是顶部，0.5 是中心，1 是底部\n \n
+dynamicstealth.config.stealthGaugeSpeed=隐形仪表速度
+dynamicstealth.config.stealthGaugeSpeed.tooltip=FILLSCREEN FIXNEWLINES 对于模式 2 和 3，较低的数字使隐形仪表动画更流畅，较高的数字使隐形仪表更准确\n \n
+dynamicstealth.config.cursorReversionDelay=光标反转延迟
+dynamicstealth.config.cursorReversionDelay.tooltip=FILLSCREEN FIXNEWLINES 对于模式 3，一旦你完全隐身，在从眼睛恢复到光标之前要等待多少滴答声\n \n
+
+dynamicstealth.config.opHUDShowBypass=绕过
+dynamicstealth.config.opHUDShowBypass.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会为绕过威胁系统的实体显示准点指示符\n \n
+dynamicstealth.config.opHUDShowIdlePassive=空闲（被动）
+dynamicstealth.config.opHUDShowIdlePassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示空闲被动实体的点指示器\n \n
+dynamicstealth.config.opHUDShowIdleNonPassive=空闲（非被动）
+dynamicstealth.config.opHUDShowIdleNonPassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则为空闲的非被动实体显示点指示器。如果服务器禁用了被动识别，这也适用于空闲的被动实体\n \n
+dynamicstealth.config.opHUDShowAtkYou=攻击你
+dynamicstealth.config.opHUDShowAtkYou.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会针对正在攻击您的实体显示准点指示器\n \n
+dynamicstealth.config.opHUDShowAtkOther=攻击其他
+dynamicstealth.config.opHUDShowAtkOther.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会针对正在攻击您之外的某物的实体显示准点指示器\n \n
+dynamicstealth.config.opHUDShowSearching=正在搜索
+dynamicstealth.config.opHUDShowSearching.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会为正在主动搜索目标的警报实体显示点指示符\n \n
+dynamicstealth.config.opHUDShowFleePassive=逃跑（被动）
+dynamicstealth.config.opHUDShowFleePassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会为正在逃离的被动实体显示准点指示器\n \n
+dynamicstealth.config.opHUDShowFlee=逃跑（非被动）
+dynamicstealth.config.opHUDShowFlee.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则为正在逃离的非被动实体显示准点指示器\n \n
+dynamicstealth.config.opHUDShowDazed=茫然
+dynamicstealth.config.opHUDShowDazed.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会为眩晕的实体显示点指示符\n \n
+
+dynamicstealth.config.opHUDDepth=使用深度
+dynamicstealth.config.opHUDDepth.tooltip=FILLSCREEN FIXNEWLINES 如果为 false，点 HUD 将显示在块和模型的顶部，但在阴影下方（重叠阴影时有点故障）\n\n如果为 true，点 HUD 将显示在顶部正确的阴影，但在它们在世界中的位置，即。它们可以隐藏在方块/模型后面\n \n
+dynamicstealth.config.opHUD3DVPercent=3D 垂直百分比
+dynamicstealth.config.opHUD3DVPercent.tooltip=FILLSCREEN FIXNEWLINES 3D位置高度为<此设置*实体高度+垂直偏移>\n\n基本上，如果你想用头顶作为基准位置（然后添加偏移），将此设置为 1\n\n脚为 0，而 0.5 将使基础位置成为实体的 3D 中心\n\n
+dynamicstealth.config.opHUDSneakOffset=偷偷账户
+dynamicstealth.config.opHUDSneakOffset.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，当实体潜行时，垂直位置会向下移动一点，类似于默认铭牌行为\n \n
+dynamicstealth.config.opHUD3DVOffset=3D 垂直偏移
+dynamicstealth.config.opHUD3DVOffset.tooltip=FILLSCREEN FIXNEWLINES 3D 位置高度为 <垂直百分比 * 实体高度 + 此设置>\n\n因此，如果您希望 3D 位置在头部上方半个街区（与铭牌同步），请设置垂直百分比为 1，此设置为 0.5\n \n
+dynamicstealth.config.opHUD3DHPercent=3D 水平百分比
+dynamicstealth.config.opHUD3DHPercent.tooltip=FILLSCREEN FIXNEWLINES 此设置会改变水平 3D 位置*在*旋转发生后\n\n如果您将此设置为 0.5，它将在实体的左侧居中，-0.5 将居中在右边\n \n
+dynamicstealth.config.opHUD2DHOffset=2D 水平偏移
+dynamicstealth.config.opHUD2DHOffset.tooltip=FILLSCREEN FIXNEWLINES 相对于您的屏幕左右滑动指示器\n \n
+dynamicstealth.config.opHUD2DVOffset=2D 垂直偏移
+dynamicstealth.config.opHUD2DVOffset.tooltip=FILLSCREEN FIXNEWLINES 相对于您的屏幕上下滑动指示器\n \n
+dynamicstealth.config.opHUDScale=缩放
+dynamicstealth.config.opHUDScale.tooltip=FILLSCREEN FIXNEWLINES 指标本身的比例；指标有多大\n \n
+dynamicstealth.config.opHUDHealthGauge=生命值计
+dynamicstealth.config.opHUDHealthGauge.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则会在实体的头部上方显示健康量表\n \n
+dynamicstealth.config.opHUDHealthGaugePercent=显示生命值百分比
+dynamicstealth.config.opHUDHealthGaugePercent.tooltip=FILLSCREEN FIXNEWLINES 如果为 true（并显示健康状况表），健康状况表将显示健康百分比的数字\n \n
+dynamicstealth.config.opHUDHealthGaugeCurrentAndMax=显示当前和最大生命值
+dynamicstealth.config.opHUDHealthGaugeCurrentAndMax.tooltip=FILLSCREEN FIXNEWLINES 如果为 true（并显示健康指标），健康指标将显示当前和最大生命值的数字\n \n
+
+dynamicstealth.config.targetingMaxDist=最大距离
+dynamicstealth.config.targetingMaxDist.tooltip=FILLSCREEN FIXNEWLINES 目标系统获取目标的最大距离\n \n
+dynamicstealth.config.targetingMaxAngle=最大角度
+dynamicstealth.config.targetingMaxAngle.tooltip=FILLSCREEN FIXNEWLINES 定位系统获取目标的最大角度\n如果设置为 -1，则禁用定位\n \n
+dynamicstealth.config.targetingBypass=绕过
+dynamicstealth.config.targetingBypass.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在聚焦于绕过威胁系统的实体时显示\n \n
+dynamicstealth.config.targetingIdlePassive=空闲（被动）
+dynamicstealth.config.targetingIdlePassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在专注于空闲被动实体时显示\n \n
+dynamicstealth.config.targetingIdleNonPassive=空闲（非被动）
+dynamicstealth.config.targetingIdleNonPassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在专注于空闲的非被动实体时显示。如果服务器禁用了被动识别，这也适用于空闲的被动实体\n \n
+dynamicstealth.config.targetingAtkYou=攻击你
+dynamicstealth.config.targetingAtkYou.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在聚焦于攻击您的实体时显示\n \n
+dynamicstealth.config.targetingAtkOther=攻击其他
+dynamicstealth.config.targetingAtkOther.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在专注于攻击除你之外的某个实体时显示\n \n
+dynamicstealth.config.targetingSearching=正在搜索
+dynamicstealth.config.targetingSearching.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在聚焦于正在主动搜索目标的实体时显示\n \n
+dynamicstealth.config.targetingFleePassive=逃跑（被动）
+dynamicstealth.config.targetingFleePassive.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在聚焦于正在逃离的被动实体时显示\n \n
+dynamicstealth.config.targetingFlee=逃跑（非被动）
+dynamicstealth.config.targetingFlee.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，目标 HUD 会在聚焦于正在逃离的非被动实体时显示\n \n
+dynamicstealth.config.targetingDazed=茫然
+dynamicstealth.config.targetingDazed.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则目标 HUD 会在聚焦于眩晕实体时显示\n \n
+
+dynamicstealth.config.targetingGlow=发光
+dynamicstealth.config.targetingGlow.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，当前目标实体以发光效果突出显示\n \n
+dynamicstealth.config.targetingGlowStateColor=状态彩色发光
+dynamicstealth.config.targetingGlowStateColor.tooltip=FILLSCREEN FIXNEWLINES 如果此选项和 ​​Glow 都设置为 true，则当前目标实体会以与其当前状态相关的颜色而不是白色发光\n \n
+dynamicstealth.config.targetingAlpha=准星不透明度
+dynamicstealth.config.targetingAlpha.tooltip=FILLSCREEN FIXNEWLINES 目标标线的可见度，透明度方面\n\n0 表示不可见，1 表示完全不透明\n \n
+dynamicstealth.config.targetingColor=默认标线颜色
+dynamicstealth.config.targetingColor.tooltip=FILLSCREEN FIXNEWLINES 目标标线的颜色，如果状态色标线为假\n\n这使用格式 RRGGBB 颜色格式（如果您在 google 上搜索 RRGGBB，您会找到可以使用的颜色选择器） \n \n
+dynamicstealth.config.targetingStateColor=状态色标线
+dynamicstealth.config.targetingStateColor.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则以与目标当前状态相关的颜色绘制目标标线\n \n
+dynamicstealth.config.targetingSpacing=十字线间距
+dynamicstealth.config.targetingSpacing.tooltip=FILLSCREEN FIXNEWLINES 目标标线的部分离中心有多远\n \n
+dynamicstealth.config.targetingSize=准星尺寸
+dynamicstealth.config.targetingSize.tooltip=FILLSCREEN FIXNEWLINES 标线部分的大小\n \n
+dynamicstealth.config.targetingTextAlpha=文字不透明度
+dynamicstealth.config.targetingTextAlpha.tooltip=FILLSCREEN FIXNEWLINES 目标 HUD 文本的可见度，透明度方面\n\n0 表示不可见，1 表示完全不透明\n \n
+dynamicstealth.config.targetingTextColor=默认文本颜色
+dynamicstealth.config.targetingTextColor.tooltip=FILLSCREEN FIXNEWLINES 目标 HUD 文本的颜色，如果状态彩色文本为 false\n\n这使用格式 RRGGBB 颜色格式（如果你在 google 上搜索 RRGGBB，你会找到一个可以使用的颜色选择器)\n \n
+dynamicstealth.config.targetingTextStateColor=状态彩色文本
+dynamicstealth.config.targetingTextStateColor.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则以与目标当前状态相关的颜色绘制目标 HUD 文本\n \n
+dynamicstealth.config.targetingTextScale=文字比例
+dynamicstealth.config.targetingTextScale.tooltip=FILLSCREEN FIXNEWLINES 目标 HUD 的文本比例\n \n
+dynamicstealth.config.targetingArrowAlpha=箭头不透明度
+dynamicstealth.config.targetingArrowAlpha.tooltip=FILLSCREEN FIXNEWLINES 主要目标的方向指示符的可见度，透明度方面\n此箭头仅在当前目标离开屏幕时可见\n\n0 表示不可见，1 表示完全不透明\ n \n
+dynamicstealth.config.targetingArrowColor=默认箭头颜色
+dynamicstealth.config.targetingArrowColor.tooltip=FILLSCREEN FIXNEWLINES 主目标的方向指示器的颜色，如果状态彩色箭头为假\n此箭头仅在当前目标不在屏幕时可见\n\n此使用格式 RRGGBB颜色格式（如果你 google RRGGBB，你会找到一个可以使用的颜色选择器）\n \n
+dynamicstealth.config.targetingArrowStateColor=状态彩色箭头
+dynamicstealth.config.targetingArrowStateColor.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则主目标的方向指示器以与目标当前状态相关的颜色绘制\n此箭头仅在当前目标不在屏幕时可见\n\n
+dynamicstealth.config.targetingArrowSize=箭头大小
+dynamicstealth.config.targetingArrowSize.tooltip=FILLSCREEN FIXNEWLINES 主要目标的方向指示器的大小\n此箭头仅在当前目标离开屏幕时可见\n \n
+dynamicstealth.config.targetingComponents=组件
+
+dynamicstealth.config.targetShowName=名称
+dynamicstealth.config.targetShowName.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示目标实体的名称（如果可用）\n \n
+dynamicstealth.config.targetShowHP=健康
+dynamicstealth.config.targetShowHP.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示目标实体的健康状况（如果可用）\n \n
+dynamicstealth.config.targetShowAction=动作
+dynamicstealth.config.targetShowAction.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示目标实体的当前操作（如果可用）\n \n
+dynamicstealth.config.targetShowThreat=威胁
+dynamicstealth.config.targetShowThreat.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示目标实体的威胁级别（如果可用）\n \n
+dynamicstealth.config.targetShowDistance=距离
+dynamicstealth.config.targetShowDistance.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则显示目标实体的距离（如果可用）\n \n
+
+dynamicstealth.config.lightGaugeShow=显示光量计
+dynamicstealth.config.lightGaugeShow.tooltip=FILLSCREEN FIXNEWLINES 是否显示光量表\n \n
+dynamicstealth.config.lightGaugeAlpha=光量计不透明度
+dynamicstealth.config.lightGaugeAlpha.tooltip=FILLSCREEN FIXNEWLINES 光度计的可见度，透明度方面\n\n0 表示不可见，1 表示完全不透明\n \n
+dynamicstealth.config.lightGaugeColorEmpty=光量计颜色（空）
+dynamicstealth.config.lightGaugeColorEmpty.tooltip=FILLSCREEN FIXNEWLINES 空光规片的颜色\n\n这使用格式 RRGGBB 颜色格式（如果你在 google 上搜索 RRGGBB，你会找到一个可以使用的颜色选择器）\n \n
+dynamicstealth.config.lightGaugeColorFull=光量计颜色（全）
+dynamicstealth.config.lightGaugeColorFull.tooltip=FILLSCREEN FIXNEWLINES 填充光量计的颜色\n\n这使用格式 RRGGBB 颜色格式（如果你在 google 上搜索 RRGGBB，你会找到一个可以使用的颜色选择器）\n \n
+dynamicstealth.config.lightGaugeSize=光量规尺寸
+dynamicstealth.config.lightGaugeSize.tooltip=FILLSCREEN FIXNEWLINES 光量计的大小\n \n
+dynamicstealth.config.lightGaugeX=光量计 X 位置
+dynamicstealth.config.lightGaugeX.tooltip=FILLSCREEN FIXNEWLINES 光量计的 x 位置\n\n0 是最左边，0.5 是中心，1 是最右边\n \n
+dynamicstealth.config.lightGaugeY=光量计 Y 位置
+dynamicstealth.config.lightGaugeY.tooltip=FILLSCREEN FIXNEWLINES 光量计的 y 位置\n\n0 是顶部，0.5 是中心，1 是底部\n \n
+
+dynamicstealth.config.fadeMinAlpha=最小实体不透明度
+dynamicstealth.config.fadeMinAlpha.tooltip=FILLSCREEN FIXNEWLINES 当你几乎看不到实体时它的不透明度\n\n如果设置为 0，你视野边缘的实体几乎不可见\n\n如果设置为 1，实体总是出现完全可见\n \n
+dynamicstealth.config.fadeMaxAt=完全不透明度...
+dynamicstealth.config.fadeMaxAt.tooltip=FILLSCREEN FIXNEWLINES 以完全不透明度绘制实体的隐身等级或以上\n\n如果设置为 1，实体仅在最佳可见性条件下以完全不透明度绘制\n\n递减该值使实体在更远的距离和较低的光照等下显得不透明\n \n
+
+dynamicstealth.config.alterTooltips=修改工具提示
+dynamicstealth.config.alterTooltips.tooltip=FILLSCREEN FIXNEWLINES 如果为 false，Dynamic Stealth 将不会触及项目工具提示\n \n
+dynamicstealth.config.alwaysShowAssassinationInfo=总是显示暗杀信息
+dynamicstealth.config.alwaysShowAssassinationInfo.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则工具提示始终显示暗杀信息，即使它只是默认值\n如果为 false，则工具提示仅在与默认值不同时显示暗杀信息\n \n
+
+dynamicstealth.config.ai=AI
+dynamicstealth.config.HUDAllowances=客户端 HUD 限额
+dynamicstealth.config.senses=感官
+dynamicstealth.config.threat=威胁系统
+dynamicstealth.config.threat.tooltip=FILLSCREEN FIXNEWLINES 威胁系统决定实体何时从一个攻击目标切换到另一个目标\n\n这类似于某些 MMORPG 中的威胁系统\n\n
+dynamicstealth.config.helperSys=辅助系统
+dynamicstealth.config.helperSys.tooltip=FILLSCREEN 哪些实体会帮助哪些其他实体
+dynamicstealth.config.interact=交互
+dynamicstealth.config.interact.tooltip=FILLSCREEN 在特殊情况下发生的事情，例如。隐形攻击
+dynamicstealth.config.items=物品
+dynamicstealth.config.fullBypass=实体特定的完全绕过
+dynamicstealth.config.fullBypass.tooltip=FILLSCREEN 此列表中的实体将完全绕过所有 DS 系统！
+
+dynamicstealth.config.aiHeadSpeed=头部转弯速度
+dynamicstealth.config.aiHeadSpeed.tooltip=FILLSCREEN FIXNEWLINES 例如，实体的头部旋转速度有多快。搜索序列\n \n
+dynamicstealth.config.aiEntitySpecific=实体特定设置（高级）
+dynamicstealth.config.aiFlee=逃跑
+dynamicstealth.config.aiCantReach=无法到达
+dynamicstealth.config.aiNoPetTeleport=防止宠物传送
+dynamicstealth.config.aiNoPetTeleport.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，狼、猫和鹦鹉在跟随其主人时不会传送\n \n
+dynamicstealth.config.addNullChecksToAI=向 AI 添加空检查
+dynamicstealth.config.addNullChecksToAI.tooltip=FILLSCREEN FIXNEWLINES AI 类添加空检查（以防止与不进行空检查的 AI 任务导致与 DS 兼容的崩溃）\n\n语法是...\nmodid, PartialClassName\n \nmodid 是包含崩溃 AI 任务类的 mod 的确切 modid\n\nPartialClassName 至少是崩溃 AI 任务类名称的一部分。这是一个“包含”检查，因此任何包含此字符串作为其名称一部分的 AI 任务类都将添加空检查\n \n
+
+dynamicstealth.config.entitySpecificHeadSpeed=头部转弯速度
+dynamicstealth.config.entitySpecificHeadSpeed.tooltip=FILLSCREEN FIXNEWLINES 例如，实体头部旋转的速度有多快。一个搜索序列\n\nentityID, headTurnSpeed\n\neg...\n\nminecraft:skeleton, 5\n\n你也可以指定具有特定名称的实体，例如：\nmodid:entity:name\n\n
+dynamicstealth.config.entitySpecificFleeThreshold=实体特定的逃跑阈值
+dynamicstealth.config.entitySpecificFleeThreshold.tooltip=FILLSCREEN FIXNEWLINES 实体开始逃跑的生命值百分比\n\nentityID,fleeThreshold\n\neg...\n\nminecraft:skeleton, 70\n\n你也可以用某个名称，例如：\nmodid:entity:name\n \n
+
+dynamicstealth.config.fleeThreshold=生命值阈值
+dynamicstealth.config.fleeThreshold.tooltip=FILLSCREEN FIXNEWLINES 实体开始逃跑的 %% 生命值\n \n
+dynamicstealth.config.fleeDamageLengthen=伤害增加逃跑持续时间
+dynamicstealth.config.fleeDamageLengthen.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，那么当实体*已经*处于逃跑模式时，伤害会增加其逃跑持续时间\n \n
+dynamicstealth.config.fleeHome=CNPC 逃回原位
+dynamicstealth.config.fleeHome.tooltip=FILLSCREEN FIXNEWLINES 如果启用，自定义 NPC 会逃到他们的原始位置而不是远离击中他们的位置\n \n
+dynamicstealth.config.waterReset=CNPC 在水中重置
+dynamicstealth.config.waterReset.tooltip=FILLSCREEN FIXNEWLINES 如果启用，自定义 NPC 在接触水时会重置\n \n
+
+dynamicstealth.config.cantReachCombatTime=战斗时间
+dynamicstealth.config.cantReachCombatTime.tooltip=FILLSCREEN FIXNEWLINES 决定我们不能到达目标至少需要战斗中的这么多滴答声\n \n
+dynamicstealth.config.cantReachNoAttackTime=无攻击时间
+dynamicstealth.config.cantReachNoAttackTime.tooltip=FILLSCREEN FIXNEWLINES 决定我们不能到达目标至少需要自上次成功攻击以来的这么多滴答声\n \n
+dynamicstealth.config.cantReachNoPathTime=无路径时间
+dynamicstealth.config.cantReachNoPathTime.tooltip=FILLSCREEN FIXNEWLINES 决定我们不能到达目标至少需要这么多滴答声，但没有到目标的路径\n \n
+dynamicstealth.config.cantReachTargetTime=目标时间
+dynamicstealth.config.cantReachTargetTime.tooltip=FILLSCREEN FIXNEWLINES 确定我们无法到达目标至少需要这么多滴答声和有效目标\n \n
+dynamicstealth.config.cantReachFlee=如果无法到达则逃跑
+dynamicstealth.config.cantReachFlee.tooltip=FILLSCREEN FIXNEWLINES 如果我们无法到达目标，就去做勇敢的罗宾爵士所做的事情\n \n
+dynamicstealth.config.cantReachPotionFilter=药水过滤器
+dynamicstealth.config.cantReachPotionFilter.tooltip=FILLSCREEN FIXNEWLINES 如果实体具有这些药水效果之一，它将不会进入“无法到达”模式\n\n如果实体的缓慢等级为 99，这将防止“无法到达”模式:\nslowness.99"\n\n如果实体有任何悬浮水平，这将阻止“无法到达”模式：\n悬浮。*\n \n
+
+dynamicstealth.config.targetingAllowances=目标限额
+dynamicstealth.config.OPHUDAllowances=OPHUD 配额
+dynamicstealth.config.allowPassiveRecognition=自动识别被动
+dynamicstealth.config.allowPassiveRecognition.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端的威胁 HUD 将对被动生物显示为绿色。如果禁用，被动显示为非被动（蓝色）。\n \n
+dynamicstealth.config.allowStealthGauge=允许隐身量表
+dynamicstealth.config.allowStealthGauge.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以在其 HUD 中看到他们当前的隐身等级\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\ n
+dynamicstealth.config.stealthgaugeblacklist=隐形仪表黑名单
+dynamicstealth.config.stealthgaugeblacklist.tooltip=FILLSCREEN FIXNEWLINES 此列表中的实体将不会触发隐形仪表！\n\n您还可以指定具有特定名称的实体，如下所示：\nmodid:entity:name\n \n
+
+dynamicstealth.config.allowTargetName=允许“名称”显示
+dynamicstealth.config.allowTargetName.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以看到实体的名称\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\n
+dynamicstealth.config.allowTargetHP=允许“HP”显示
+dynamicstealth.config.allowTargetHP.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以看到实体的生命值\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\n
+dynamicstealth.config.allowTargeting=允许“目标的目标”显示
+dynamicstealth.config.allowTargeting.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以看到其他实体的目标\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\n
+dynamicstealth.config.allowTargetThreat=允许“威胁”显示
+dynamicstealth.config.allowTargetThreat.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以看到实体的数字威胁百分比\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\n
+dynamicstealth.config.allowTargetDistance=允许“距离”显示
+dynamicstealth.config.allowTargetDistance.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以看到到实体的距离\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n\n
+
+dynamicstealth.config.allowOPHUD=允许 On-Point HUD
+dynamicstealth.config.allowOPHUD.tooltip=FILLSCREEN FIXNEWLINES 如果启用，客户端可以打开/关闭显示在每个实体上方的 HUD\n\n0 表示对所有玩家禁用\n1 表示仅对 OP 玩家启用\n2 表示对所有玩家启用\n \n
+dynamicstealth.config.OPHUDRange=OPHUD 范围
+dynamicstealth.config.OPHUDRange.tooltip=FILLSCREEN FIXNEWLINES 点式 HUD 出现在客户端的最大距离；过高会影响服务器性能\n \n
+dynamicstealth.config.OPHUDDelay=OPHUD 更新延迟
+dynamicstealth.config.OPHUDDelay.tooltip=FILLSCREEN FIXNEWLINES 点 HUD 更新之间有多少滴答；增加这将减少服务器负载\n \n
+
+dynamicstealth.config.playerSenses=使用玩家感官
+dynamicstealth.config.playerSenses.tooltip=FILLSCREEN FIXNEWLINES 如果启用，隐身机制会对玩家起作用\n\n基本上，如果启用此功能并且骷髅在黑暗中静止不动，您可能在靠近之前无法看到他\ n \n
+dynamicstealth.config.pvpStealth=PvP 隐身（需要玩家感官）
+dynamicstealth.config.pvpStealth.tooltip=FILLSCREEN FIXNEWLINES 如果启用（并启用玩家感知），潜行机制适用于 PvP\n \n
+dynamicstealth.config.touch=触摸
+dynamicstealth.config.sight=视线
+dynamicstealth.config.hearing=听力
+
+dynamicstealth.config.enabletouch=启用触摸
+dynamicstealth.config.enabletouch.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，实体在相互碰撞时可以相互感知\n \n
+dynamicstealth.config.touchreveals=触摸显示
+dynamicstealth.config.touchreveals.tooltip=FILLSCREEN FIXNEWLINES 如果为 true，则相互碰撞的实体都会从它们身上移除隐身性\n \n
+dynamicstealth.config.unfeeling=没有感觉
+dynamicstealth.config.unfeeling.tooltip=FILLSCREEN FIXNEWLINES 此列表中的实体在遇到碰撞时不会注意到\n\n您还可以指定具有特定名称的实体，如下所示：\nmodid:entity:name\n \n
+
+dynamicstealth.config.stealthMultipliers=隐形乘数
+dynamicstealth.config.stealthMultipliers.tooltip=FILLSCREEN FIXNEWLINES 包含增加隐身/降低意识的乘数\n\n使用这些乘数中当前提供最佳（最低）乘数的那个\n \n
+dynamicstealth.config.visibilityMultipliers=可见度乘数
+dynamicstealth.config.visibilityMultipliers.tooltip=FILLSCREEN FIXNEWLINES 包含降低隐身/提高意识的乘数\n\n使用这些乘数中当前给出最差（最高）乘数的那个\n \n
+dynamicstealth.config.lighting=灯光
+dynamicstealth.config.lighting.tooltip=FILLSCREEN 照明对隐身的影响程度。夜视也在这里
+dynamicstealth.config.angle=角度
+dynamicstealth.config.angle.tooltip=FILLSCREEN FOV 角度
+dynamicstealth.config.distance=距离
+dynamicstealth.config.distance.tooltip=FILLSCREEN FOV 距离
+dynamicstealth.config.absolutes=绝对案例
+dynamicstealth.config.absolutes.tooltip=FILLSCREEN 特殊情况，例如。发光的
+dynamicstealth.config.entitySpecificSight=实体特定设置（高级）
+
+dynamicstealth.config.couchMultiplier=蹲伏倍率
+dynamicstealth.config.crouchMultiplier.tooltip=FILLSCREEN FIXNEWLINES 蹲下时将实体的可见性乘以该小数\n\n如果设置为 1，则没有效果\n\n如果设置为 0，则蹲下的实体不可见（特殊情况除外）\ n \n
+dynamicstealth.config.mobHeadMultiplier=生物头部倍率
+dynamicstealth.config.mobHeadMultiplier.tooltip=FILLSCREEN FIXNEWLINES 当一个实体（包括玩家）戴着一个生物头时，该类型的生物意识到他们是目标的机会减少\n\n如果设置为 1，则没有效果\n\n如果设置为 0，则生物头型的生物不会注意到头戴头的实体\n\n
+dynamicstealth.config.invisibilityMultiplier=隐形乘数
+dynamicstealth.config.invisibilityMultiplier.tooltip=FILLSCREEN FIXNEWLINES 不可见实体的可见性乘以此\n\n如果设置为 1，则没有效果\n\n如果设置为 0，则不可见实体是，呃...不可见\n \ n
+dynamicstealth.config.blindnessMultiplier=失明倍数
+dynamicstealth.config.blindnessMultiplier.tooltip=FILLSCREEN FIXNEWLINES 盲实体的检测范围乘以这个\n\n如果设置为 1，则没有效果\n\n如果设置为 0，则盲实体看不到\n\n
+dynamicstealth.config.levelUp2StealthMultiplier=升级隐形技能乘数
+dynamicstealth.config.levelUp2StealthMultiplier.tooltip=FILLSCREEN FIXNEWLINES 将玩家的可见度乘以 1 - (levelUpStealthLevel * this)\n\n如果设置为 0，则没有效果\n\n如果设置为 1，则玩家只有 1 级隐身在 Level Up Reloaded 中将无法看到\n如果设置为 0.1，则在 Level Up Reloaded 中具有 10 级隐身的玩家将无法看到\n如果设置为 0.05，在 Level Up Reloaded 中具有 10 级隐身的玩家将是两倍很难看到\n \n
+
+dynamicstealth.config.armorMultiplier=护甲倍率（累积）
+dynamicstealth.config.armorMultiplier.tooltip=FILLSCREEN FIXNEWLINES 实体的可见性乘以 1 +（此设置 * 护甲）\n\n如果设置为 0，则没有效果\n\n如果设置为 0.25，则实体有 20 护甲 (完整的菱形）是 5 倍可能被看到\n \n
+
+dynamicstealth.config.lightLevelHigh=亮度等级（高/亮）
+dynamicstealth.config.lightLevelHigh.tooltip=FILLSCREEN FIXNEWLINES 在或高于此光照级别时，实体会收到最大光照级别乘数\n \n
+dynamicstealth.config.lightLevelLow=亮度级别（低/暗）
+dynamicstealth.config.lightLevelLow.tooltip=FILLSCREEN FIXNEWLINES 在或低于此光照级别时，实体会收到最小光照级别乘数\n \n
+dynamicstealth.config.lightMultHigh=倍数（高/亮）
+dynamicstealth.config.lightMultHigh.tooltip=FILLSCREEN FIXNEWLINES 站在明亮区域时的光照水平可见度乘数\n\n0 表示不可见，1 表示完全可见（其他因素未考虑）\n \n
+dynamicstealth.config.lightMultLow=乘数（低/暗）
+dynamicstealth.config.lightMultLow.tooltip=FILLSCREEN FIXNEWLINES 站在黑暗区域时的光照水平可见度乘数\n\n0 表示不可见，1 表示完全可见（其他因素未考虑）\n \n
+dynamicstealth.config.nightvisionBonus=夜视奖励
+dynamicstealth.config.nightvisionBonus.tooltip=FILLSCREEN FIXNEWLINES 当一个实体有夜视效果时，这个值会被添加到他们感知到的光照水平（如果大于 15，然后设置为 15）\n \n
+dynamicstealth.config.minimumDimensionLightLevels=最小维度光照级别
+dynamicstealth.config.minimumDimensionLightLevels.tooltip=FILLSCREEN FIXNEWLINES Dynamic Stealth 将在给定维度中检测到的最低光照水平\n\n这些主要用于具有环境照明的维度（例如下界和末地）\n\n第一个数字是维度 id，第二个是该维度的最小光照级别\n \n
+
+dynamicstealth.config.angleNear=角度（大/宽；近）
+dynamicstealth.config.angleNear.tooltip=FILLSCREEN FIXNEWLINES 一个实体可以近距离看到另一个实体的角度（距离 <= distanceNear），以度为单位\n\n这在其他方面类似于 angleSmall\n\n如果 this 和 angleSmall 都是0，实体（除了例外）是盲的\n\n不能小于angleSmall\n\n
+dynamicstealth.config.angleFar=角度（小/薄；远）
+dynamicstealth.config.angleFar.tooltip=FILLSCREEN FIXNEWLINES 一个实体可以远距离看到另一个实体的角度（距离>= distanceFar，以度为单位\n\n这是一个锥形FOV，设置为两个实体之间的角度圆锥的中心轴和圆锥的外表面\n\n除非你让它 > 90* 在这种情况下它无处不在考虑了其他设置的形状，但我们不要深入探讨\n\n如果 this 和 angleLarge 都为 0，则实体（例外除外）是盲的\n\n不能大于 angleLarge\n\n
+
+dynamicstealth.config.distanceFar=距离（远）
+dynamicstealth.config.distanceFar.tooltip=FILLSCREEN FIXNEWLINES 实体可以看到另一个实体的绝对最大距离，以块为单位\n\n独占，所以如果设置为 0 小怪永远看不到任何东西，除了少数例外，例如...\ n\n僵尸仍会照常攻击村民；这使用的逻辑与我访问 atm 的逻辑完全不同，所以我暂时不尝试更改它\n\n出于与上述相同的原因，一些生物完全不受影响，包括末影人和末影龙\n \n
+dynamicstealth.config.distanceNear=距离（近）
+dynamicstealth.config.distanceNear.tooltip=FILLSCREEN FIXNEWLINES 在实体的视线开始自然下降之前的距离（即使在良好的条件下），以块为单位\n\n排他性，所以如果设置为 0，则怪物永远看不到任何东西，除了少数例外，例如。 ..\n\n...僵尸仍然会像往常一样攻击村民；这使用的逻辑与我访问 atm 的逻辑完全不同，所以我暂时不尝试更改它\n\n...出于与上述相同的原因，一些生物完全不受影响，包括末影人和末影龙\n \n
+
+dynamicstealth.config.seeGlowing=见发光
+dynamicstealth.config.seeGlowing.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，则在另一个实体的 FOV 内会看到发光的实体，忽略所有其他因素\n\n允许实体看到正在发光的隐形玩家，但不会移除隐形；如果在隐身之前发光用完，你就很难再被看到\n \n
+dynamicstealth.config.seeBurning=见燃烧
+dynamicstealth.config.seeBurning.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，则燃烧的实体始终被视为处于全光照状态\n \n
+
+dynamicstealth.config.entitySpecificAngle=角度
+dynamicstealth.config.entitySpecificAngle.tooltip=FILLSCREEN FIXNEWLINES 实体的视野有多宽，远近\n\nentityID, angleLarge, angleSmall\n\neg...\n\nminecraft:skeleton, 90, 45\n \n
+dynamicstealth.config.entitySpecificDistance=距离
+dynamicstealth.config.entitySpecificDistance.tooltip=FILLSCREEN FIXNEWLINES 实体在其视野边缘和焦点处可以看到多远\n\nentityID, distanceFar, distanceNear\n\neg...\n\nminecraft:skeleton, 40, 3\n \n
+dynamicstealth.config.entitySpecificLighting=灯光
+dynamicstealth.config.entitySpecificLighting.tooltip=FILLSCREEN FIXNEWLINES 实体在黑暗中的视力如何\n\nentityID, lightLevelHigh, lightMultHigh, lightLevelLow, lightMultLow\n\neg...\n\nminecraft:skeleton, 15, 1, 0, 0\n\n
+dynamicstealth.config.naturallyBright=自然明亮
+dynamicstealth.config.naturallyBright.tooltip=FILLSCREEN FIXNEWLINES 此列表中的实体始终被视为处于最大光照级别\n\n您还可以指定具有特定名称的实体，如下所示：\nmodid:entity:name\n \n
+dynamicstealth.config.naturalNightvision=自然夜视
+dynamicstealth.config.naturalNightvision.tooltip=FILLSCREEN FIXNEWLINES 此列表中的实体总是获得夜视奖励\n\n您也可以指定具有特定名称的实体，如下所示：\nmodid:entity:name\n \n
+dynamicstealth.config.naturalSoulSight=自然魂视
+dynamicstealth.config.naturalSoulSight.tooltip=FILLSCREEN FIXNEWLINES 此列表中的实体几乎可以看到所有内容\n\n将 player 关键字添加到此列表中会使所有玩家看到所有实体，就好像它们有发光一样（通过墙壁可见）\n\n您还可以指定具有特定名称的实体，例如：\nmodid:entity:name\n \n
+
+dynamicstealth.config.warningRange=警告范围
+dynamicstealth.config.warningRange.tooltip=FILLSCREEN FIXNEWLINES 默认情况下，实体可以听到多远的警告\n \n
+dynamicstealth.config.notificationRange=通知范围
+dynamicstealth.config.notificationRange.tooltip=FILLSCREEN FIXNEWLINES 默认情况下，实体可以听到多远的目标死亡通知\n\n从他们信任的实体听到目标死亡通知会使他们放弃威胁目标\n\n
+dynamicstealth.config.noLOSMultiplier=无 LOS 乘数
+dynamicstealth.config.noLOSMultiplier.tooltip=FILLSCREEN FIXNEWLINES 如果观察者对声源没有 LOS，则其听力范围乘以这个\n \n
+
+dynamicstealth.config.threatEntitySpecific=实体特定设置（高级）
+dynamicstealth.config.threatCNPC=CNPC 威胁设置
+dynamicstealth.config.threatDealtDamage=造成伤害倍数
+dynamicstealth.config.threatDealtDamage.tooltip=FILLSCREEN FIXNEWLINES 当战斗中的实体对其当前目标造成伤害时，其威胁值会按造成的伤害乘以此值再除以目标的最大生命值而增加\n \n
+dynamicstealth.config.threatAttackedBySame="Attacked By Same" 乘数
+dynamicstealth.config.threatAttackedBySame.tooltip=FILLSCREEN FIXNEWLINES 当一个战斗中的实体受到当前目标的攻击时，它的威胁值会增加，乘以受到的伤害乘以它的最大生命值\n \n
+dynamicstealth.config.threatAttackedByOther="被其他人攻击" 乘数
+dynamicstealth.config.threatAttackedByOther.tooltip=FILLSCREEN FIXNEWLINES 当一个战斗中的实体受到*不是*其当前目标的东西的攻击时，它的威胁值会根据受到的伤害乘以这个值，再除以它的最大生命值而降低\n \n
+dynamicstealth.config.threatBypassGlobal=绕过威胁系统（全球）
+dynamicstealth.config.threatBypassGlobal.tooltip=FILLSCREEN FIXNEWLINES 如果启用，所有实体都应绕过威胁系统\n \n
+dynamicstealth.config.threatCombatStart="开始战斗" 威胁
+dynamicstealth.config.threatCombatStart.tooltip=FILLSCREEN FIXNEWLINES 当一个脱离战斗的实体第一次进入战斗时，它的威胁设置为这个\n\n这可能发生在一个实体看到一个有效的目标要攻击或一个实体受到伤害时脱离战斗\n\n
+dynamicstealth.config.threatAllyKilled="Ally Killed" 威胁
+dynamicstealth.config.threatAllyKilled.tooltip=FILLSCREEN FIXNEWLINES 当一个实体看到一个盟友死亡时，增加威胁\n \n
+dynamicstealth.config.threatWarned="Warned" 威胁
+dynamicstealth.config.threatWarned.tooltip=FILLSCREEN FIXNEWLINES 当一个实体注意到另一个实体的警告时，它的威胁设置为这个（如果小于这个）\n \n
+dynamicstealth.config.threatUnseenMinThreshold=看不见的目标最低威胁等级
+dynamicstealth.config.threatUnseenMinThreshold.tooltip=FILLSCREEN FIXNEWLINES 如果实体的威胁级别低于此级别并且他们看不到目标，他们将退出战斗/停止搜索\n \n
+dynamicstealth.config.threatUnseenRate=看不见的目标退化率
+dynamicstealth.config.threatUnseenRate.tooltip=FILLSCREEN FIXNEWLINES 每次实体更新且其目标位置未知时，都会从其威胁中减去此值\n \n
+dynamicstealth.config.threatFleeRate=逃跑降级率
+dynamicstealth.config.threatFleeRate.tooltip=FILLSCREEN FIXNEWLINES 逃跑时威胁表降低的速度；数字越小意味着他们逃跑的时间越长\n \n
+dynamicstealth.config.threatSeenRate=看到目标威胁率
+dynamicstealth.config.threatSeenRate.tooltip=FILLSCREEN FIXNEWLINES 每次实体更新并且其目标可见且可到达时，都会将其添加到他们的威胁中\n \n
+dynamicstealth.config.threatCantReachRate=拥有的无法达到降级率
+dynamicstealth.config.threatCantReachRate.tooltip=FILLSCREEN FIXNEWLINES 每当一个拥有的实体更新并且无法到达他们的目标时，这都会从他们的威胁中减去\n \n
+
+dynamicstealth.config.entitySpecificBypass=威胁绕过
+dynamicstealth.config.entitySpecificBypass.tooltip=FILLSCREEN FIXNEWLINES 实体绕过威胁系统\n\n这意味着他们不会使用搜索 AI，会出现 ????作为目标 HUD 中的目标和威胁级别，并且始终在点 HUD 中显示为完全警报\n\n对于某些实体，此选项是它们正常​​工作所必需的，例如史莱姆。对于其他人，比如末影龙和其他玩家，除了它们在HUD中的显示方式之外没有任何影响\n\n你也可以指定具有特定名称的实体，例如：\nmodid:entity:name\n\n
+dynamicstealth.config.entityPassiveness=被动
+dynamicstealth.config.entityPassiveness.tooltip=FILLSCREEN FIXNEWLINES 设置威胁系统是否检测到实体是否为被动\n\nentityID, passivity\n\neg...\n\nminecraft:skeleton, true\n\n你也可以指定具有特定名称的实体，例如：\nmodid:entity:name\n \n
+
+dynamicstealth.config.CNPCFactionBypass=阵营威胁绕过
+dynamicstealth.config.CNPCFactionBypass.tooltip=FILLSCREEN FIXNEWLINES 这些派系中的所有 CNPC 都将绕过威胁系统\n \n
+
+dynamicstealth.config.helperOwnership=所有权
+dynamicstealth.config.helperTeams=团队
+dynamicstealth.config.helperCNPCFactions=自定义 NPC 派系
+dynamicstealth.config.helperCNPCFactions.tooltip=FILLSCREEN 这些设置只有在安装了自定义 NPC 时才有意义
+dynamicstealth.config.helperType=帮助相同的实体类型
+dynamicstealth.config.helperType.tooltip=FILLSCREEN FIXNEWLINES 是否帮助相同类型的实体\n\n例如。如果设置为 true，骷髅会帮助其他骷髅（但不是僵尸）\n \n
+
+dynamicstealth.config.helpOwner=帮助所有者
+dynamicstealth.config.helpOwner.tooltip=FILLSCREEN FIXNEWLINES 帮助我们的所有者（如果我们有的话）\n \n
+dynamicstealth.config.helpSameOwner=如果同一所有者提供帮助
+dynamicstealth.config.helpSameOwner.tooltip=FILLSCREEN FIXNEWLINES 如果我们拥有相同的所有者（如果我们有一个），请帮助他们\n \n
+dynamicstealth.config.helpDedicated=专用
+dynamicstealth.config.helpDedicated.tooltip=FILLSCREEN FIXNEWLINES 不要帮助他们，如果他们没有相同的所有者（如果我们有）\n \n
+dynamicstealth.config.helpOwned=帮助拥有
+dynamicstealth.config.helpOwned.tooltip=FILLSCREEN FIXNEWLINES 如果我们拥有它们，请帮助他们\n \n
+
+dynamicstealth.config.helpTeam=帮助同一个团队
+dynamicstealth.config.helpTeam.tooltip=FILLSCREEN FIXNEWLINES 帮助我们团队中的其他实体\n \n
+dynamicstealth.config.dontHelpOtherTeam=不要帮助其他团队
+dynamicstealth.config.dontHelpOtherTeam.tooltip=FILLSCREEN FIXNEWLINES 确保不要帮助其他团队的实体\n \n
+
+dynamicstealth.config.helpGoodRep=声望好的帮助
+dynamicstealth.config.helpGoodRep.tooltip=FILLSCREEN FIXNEWLINES 帮助同一阵营中的 npc 和具有良好阵营声望的玩家\n \n
+dynamicstealth.config.dontHelpBadRep=如果表现不佳不要帮助
+dynamicstealth.config.dontHelpBadRep.tooltip=FILLSCREEN FIXNEWLINES 确保不要帮助我们敌视的人\n \n
+
+dynamicstealth.config.interactAttack=攻击（近战，未格挡）
+dynamicstealth.config.interactAttack.tooltip=FILLSCREEN 当任何东西攻击其他东西时（近战，未阻挡）
+dynamicstealth.config.interactRangedAttack=攻击（远程，未阻挡）
+dynamicstealth.config.interactRangedAttack.tooltip=FILLSCREEN 当任何东西攻击其他东西时（远程，未阻挡）
+dynamicstealth.config.interactStealthAtk=隐形攻击（近战，未格挡）
+dynamicstealth.config.interactStealthAtk.tooltip=FILLSCREEN 当有东西攻击不知情的受害者时（近战，未阻挡）
+dynamicstealth.config.interactRangedStealthAtk=隐形攻击（远程，未阻挡）
+dynamicstealth.config.interactRangedStealthAtk.tooltip=FILLSCREEN 当某物攻击不知情的受害者时（远程，未阻挡）
+dynamicstealth.config.interactAttackBlocked=攻击（近战，格挡）
+dynamicstealth.config.interactAttackBlocked.tooltip=FILLSCREEN 当任何东西攻击其他东西时（近战，被阻止）
+dynamicstealth.config.interactRangedAttackBlocked=攻击（远程，被阻止）
+dynamicstealth.config.interactRangedAttackBlocked.tooltip=FILLSCREEN 当任何东西攻击其他东西时（远程，被阻止）
+dynamicstealth.config.interactStealthAtkBlocked=隐形攻击（近战，格挡）
+dynamicstealth.config.interactStealthAtkBlocked.tooltip=FILLSCREEN 当有东西攻击不知情的受害者时（近战，被阻止）
+dynamicstealth.config.interactRangedStealthAtkBlocked=隐形攻击（远程，被阻止）
+dynamicstealth.config.interactRangedStealthAtkBlocked.tooltip=FILLSCREEN 当某物攻击不知情的受害者时（远程，被阻止）
+dynamicstealth.config.interactAssassination=刺杀（近战）
+dynamicstealth.config.interactAssassination.tooltip=FILLSCREEN 当有东西被杀而不被发现时（近战）
+dynamicstealth.config.interactRangedAssassination=刺杀（远程）
+dynamicstealth.config.interactRangedAssassination.tooltip=FILLSCREEN 当有东西在没有被发现的情况下被杀时（远程）
+dynamicstealth.config.interactCalmDown=冷静
+dynamicstealth.config.interactCalmDown.tooltip=FILLSCREEN 当某物正在逃跑，但没有威胁时
+dynamicstealth.config.interactGiveUpSearch=放弃搜索
+dynamicstealth.config.interactGiveUpSearch.tooltip=FILLSCREEN 当某物正在搜索目标，但没有威胁时
+dynamicstealth.config.interactRally=拉力赛
+dynamicstealth.config.interactRally.tooltip=FILLSCREEN 当某物逃跑但恢复健康时
+dynamicstealth.config.interactDesperation=绝望
+dynamicstealth.config.interactDesperation.tooltip=FILLSCREEN 当某物在逃跑时走投无路时
+dynamicstealth.config.interactCantReach=无法到达
+dynamicstealth.config.interactCantReach.tooltip=FILLSCREEN 当某物无法到达其目标时
+
+dynamicstealth.config.removeInvis=击中时移除隐身
+dynamicstealth.config.removeInvis.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，当一个生物体撞击另一个生物体时，它们都会失去隐形\n\n这发生在应用任何新效果之前\n\n
+dynamicstealth.config.removeBlind=击中时移除失明
+dynamicstealth.config.removeBlind.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，当一个生物撞击另一个生物时，它们都会失去失明\n\n这发生在应用任何新效果之前\n\n
+dynamicstealth.config.attackArmorPenetration=护甲和护盾穿透
+dynamicstealth.config.attackArmorPenetration.tooltip=FILLSCREEN FIXNEWLINES 隐形攻击是否绕过盔甲和盾牌\n \n
+dynamicstealth.config.attackDamageMult=伤害倍数
+dynamicstealth.config.attackDamageMult.tooltip=FILLSCREEN FIXNEWLINES 隐身攻击时伤害乘以此值\n \n
+dynamicstealth.config.attackAEffects=攻击者效果
+dynamicstealth.config.attackAEffects.tooltip=FILLSCREEN FIXNEWLINES 攻击发生时应用到攻击者的药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2"\n\n这会应用灵魂视觉100 刻（5 秒）：\ndynamicstealth:soulsight.100\n \n
+dynamicstealth.config.attackVEffects=受害者效应
+dynamicstealth.config.attackVEffects.tooltip=FILLSCREEN FIXNEWLINES 攻击发生时对受害者施加的药水效果\n\n这会导致失明 100 刻（5 秒）：\nblindness.100\n \n
+dynamicstealth.config.attackWeaponSpecific=武器特定设置
+dynamicstealth.config.attackWeaponSpecific.tooltip=FILLSCREEN FIXNEWLINES 武器特定覆盖\n语法是...\n\ndomain:item:meta > nbtkey1 = nbtkey1 & nbtkey2 = nbtvalue2, armourandshieldpenetration, multiplier, Attackerpotion1 & Attackerpotion2,victimpotion1 &victimpotion2, consumeitem \n\neg...\n\nbackstab:diamond_dagger, true, 3\n\ntetra:duplex_tool_modular > duplex/sickle_left_material & duplex/butt_right_material, true, 3,regeneration.60.3, wither.60.3\n\ndye, false, 0, , 失明.20, 真\n \n
+
+dynamicstealth.config.stealthAtkArmorPenetration=护甲和护盾穿透
+dynamicstealth.config.stealthAtkArmorPenetration.tooltip=FILLSCREEN FIXNEWLINES 隐身攻击是否绕过装甲和盾牌\n \n
+dynamicstealth.config.stealthAtkDamageMult=伤害倍数
+dynamicstealth.config.stealthAtkDamageMult.tooltip=FILLSCREEN FIXNEWLINES 隐身攻击时伤害会乘以这个值\n \n
+dynamicstealth.config.stealthAtkAEffects=攻击者效果
+dynamicstealth.config.stealthAtkAEffects.tooltip=FILLSCREEN FIXNEWLINES 潜行攻击发生时应用到攻击者的药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会应用灵魂视觉100 刻（5 秒）：\ndynamicstealth:soulsight.100\n \n
+dynamicstealth.config.stealthAtkVEffects=受害者效应
+dynamicstealth.config.stealthAtkVEffects.tooltip=FILLSCREEN FIXNEWLINES 发生隐形攻击时对受害者施加的药水效果\n\n这会在 100 刻（5 秒）内应用失明：\nblindness.100\n \n
+dynamicstealth.config.stealthAtkWeaponSpecific=武器特定设置
+dynamicstealth.config.stealthAtkWeaponSpecific.tooltip=FILLSCREEN FIXNEWLINES 武器特定覆盖\n语法是...\n\ndomain:item:meta > nbtkey1 = nbtvalue1 & nbtkey2 = nbtvalue2, armourandshieldpenetration, multiplier, Attackerpotion1 & Attackerpotion2,victimpotion1 &victimpotion2,consumeitem \n\neg...\n\nbackstab:diamond_dagger, true, 3\n\ntetra:duplex_tool_modular > duplex/sickle_left_material & duplex/butt_right_material, true, 3,regeneration.60.3, wither.60.3\n\ndye, false, 0, , 失明.20, 真\n \n
+
+dynamicstealth.config.assassinationAEffects=攻击者效果
+dynamicstealth.config.assassinationAEffects.tooltip=FILLSCREEN FIXNEWLINES 药水效果会在暗杀发生时应用到攻击者\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会应用灵魂视觉 100滴答声（5 秒）：\ndynamicstealth:soulsight.100\n \n
+dynamicstealth.config.assassinationWeaponSpecific=武器特定设置
+dynamicstealth.config.assassinationWeaponSpecific.tooltip=FILLSCREEN FIXNEWLINES 特定于武器的覆盖\n语法是...\n\ndomain:item:meta > nbtkey1 = nbtvalue1 & nbtkey2 = nbtvalue2, Attackerpotion1 & Attackerpotion2\n\neg...\n\ nbackstab:diamond_dagger, 隐形.200\n\ntetra:duplex_tool_modular > duplex/sickle_left_material & duplex/butt_right_material, 再生.60.3\n \n
+
+dynamicstealth.config.calmDownFullHP=恢复所有生命值
+dynamicstealth.config.calmDownFullHP.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，则在平静时立即恢复所有 hp\n \n
+dynamicstealth.config.calmDownCNPCWarp=CNPCs Warp Home
+dynamicstealth.config.calmDownCNPCWarp.tooltip=FILLSCREEN 如果设置为 true，cnpcs 平静下来时自动返回
+dynamicstealth.config.calmDownPotions=药水效果
+dynamicstealth.config.calmDownPotions.tooltip=FILLSCREEN FIXNEWLINES 当某物在逃离后平静下来时应用药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会在 100 刻（ 5 秒）：\n动态隐形：soulsight.100\n \n
+
+dynamicstealth.config.giveUpSearchFullHP=恢复所有生命值
+dynamicstealth.config.giveUpSearchFullHP.tooltip=FILLSCREEN FIXNEWLINES 如果设置为 true，则在放弃搜索目标时立即恢复所有 hp\n \n
+dynamicstealth.config.giveUpSearchCNPCWarp=CNPCs Warp Home
+dynamicstealth.config.giveUpSearchCNPCWarp.tooltip=FILLSCREEN 如果设置为 true，cnpcs 在放弃搜索目标时会自动返回
+
+dynamicstealth.config.rallyPotions=药水效果
+dynamicstealth.config.rallyPotions.tooltip=FILLSCREEN FIXNEWLINES 当某物集结时应用药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会在 100 刻（5 秒）内应用灵魂视觉:\n动态隐形：soulsight.100\n \n
+
+dynamicstealth.config.desperationPotions=药水效果
+dynamicstealth.config.desperationPotions.tooltip=FILLSCREEN FIXNEWLINES 当某物走投无路和绝望时应用药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会在 100 刻（ 5 秒）：\n动态隐形：soulsight.100\n \n
+
+dynamicstealth.config.cantReachPotions=药水效果
+dynamicstealth.config.cantReachPotions.tooltip=FILLSCREEN FIXNEWLINES 当某物无法到达其目标时应用药水效果\n\n这会在 200 刻（10 秒）内应用强度 2：\nstrength.200.2\n\n这会应用灵魂视觉 100滴答声（5 秒）：\ndynamicstealth:soulsight.100\n \n
+
+dynamicstealth.config.potions=药水
+dynamicstealth.config.handMirrorRecipe=手镜配方
+dynamicstealth.config.handMirrorRecipe.tooltip=FILLSCREEN FIXNEWLINES 是否加载手镜配方（铁锭上方的玻璃板）\n \n
+
+dynamicstealth.config.potionSoulSight=灵魂视觉药水
+dynamicstealth.config.potionSoulSight.tooltip=FILLSCREEN FIXNEWLINES 是否加载灵魂视觉药水（可从创造菜单的酿造标签访问）\n \n
+dynamicstealth.config.potionSoulSightRecipe=灵魂视觉药水配方
+dynamicstealth.config.potionSoulSightRecipe.tooltip=FILLSCREEN FIXNEWLINES 是否加载灵魂之眼药水配方（浓药水 + 末影之眼）\n \n
+dynamicstealth.config.potionBlindness=致盲药水
+dynamicstealth.config.potionBlindness.tooltip=FILLSCREEN FIXNEWLINES 是否加载致盲药水（可从创造菜单的酿造标签访问）\n \n
+dynamicstealth.config.potionBlindnessRecipe=致盲药水配方
+dynamicstealth.config.potionBlindnessRecipe.tooltip=FILLSCREEN FIXNEWLINES 是否加载致盲药水配方（浓药水+墨囊）\n \n
+dynamicstealth.config.potionGlowing=发光药水
+dynamicstealth.config.potionGlowing.tooltip=FILLSCREEN FIXNEWLINES 是否加载发光药水（可从创造菜单的酿造标签访问）\n \n
+dynamicstealth.config.potionGlowingRecipe=发光药水配方
+dynamicstealth.config.potionGlowingRecipe.tooltip=FILLSCREEN FIXNEWLINES 是否加载发光药水配方（浓药水 + 萤石粉）\n \n
+
+
+
+dynamicstealth.tooltip.normalAttacks=§7普通攻击...
+dynamicstealth.tooltip.stealthAttacks=§8隐形攻击...
+dynamicstealth.tooltip.blockedNormalAttacks=§d阻止普通攻击...
+dynamicstealth.tooltip.blockedStealthAttacks=§5阻止隐形攻击...
+dynamicstealth.tooltip.assassinations=§4暗杀...
+
+dynamicstealth.tooltip.consumeItem=§7* §c消耗物品！
+dynamicstealth.tooltip.normalDamage=§7* 造成 §6%s 伤害
+dynamicstealth.tooltip.penetratingDamage=§7* §e造成 %s 穿透伤害
+dynamicstealth.tooltip.giveYouPotion=§7* 给你 %s %s (%s)
+dynamicstealth.tooltip.giveVictimPotion=§7* 给你的受害者 %s %s (%s)
