@@ -1,0 +1,27 @@
+{
+	x: 6.5d,
+	y: 1.0d,
+	dependencies: [
+		"e42dd5b4"
+	],
+	tasks: [{
+		uid: "8c5a1fdb",
+		type: "item",
+		items: [{
+			item: "earthenbounty:platinum_crown"
+		}],
+		ignore_damage: true,
+		ignore_nbt: 1b
+	}],
+	rewards: [{
+		uid: "478a916d",
+		type: "ftbmoney:money",
+		ftb_money: 1000L,
+		random_bonus: 500
+	},
+	{
+		uid: "b5791dd2",
+		type: "xp_levels",
+		xp_levels: 10
+	}]
+}
