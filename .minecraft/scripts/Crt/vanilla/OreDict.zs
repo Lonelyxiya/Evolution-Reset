@@ -532,7 +532,15 @@ var tool = [
     <endreborn:armour_chestplate_obsidian>,
     <endreborn:armour_leggings_obsidian>,
     <endreborn:armour_boots_obsidian>,
-    <endreborn:armour_helmet_helmet>
+    <endreborn:armour_helmet_helmet>,
+    <immersiveengineering:ore>,
+    <mekanism:oreblock:2>,
+    <mekanism:oreblock:1>,
+    <libvulpes:ore0:5>,
+    <libvulpes:ore0:5>,
+    <libvulpes:ore0:9>,
+    <libvulpes:ore0:10>,
+    <libvulpes:ore0>
     
 ] as IItemStack[];
 for items in tool
