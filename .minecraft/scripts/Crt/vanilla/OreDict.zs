@@ -556,3 +556,4 @@ for items in tool
 <ore:ergravel>.add(<minecraft:flint>);
 <ore:blockSeven>.add(<earthenbounty:sulfur_ore>);
 <ore:oreSulfur>.add(<earthenbounty:sulfur_ore>);
+<ore:stoneBasalt>.add(<advancedrocketry:basalt>);

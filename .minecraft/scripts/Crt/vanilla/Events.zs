@@ -46,7 +46,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
     var ser = server.commandManager as ICommandManager;
     if (isNull(event.player.data.wasGivenStarters)) {
-    ser.executeCommand(server, "gamestage silentadd " + event.player.name + "greenhand");
+    ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
     event.player.update({wasGivenStarters: true});
     var start = [
     <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
@@ -170,15 +170,29 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
     if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " two");       
         event.player.update({wasGivenTip6: true});
     }
-    if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "minecraft:diamond")) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
-        event.player.update({wasGivenTip7: true});
-    }
     if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:furnace_core")) {
-        ser.executeCommand(server, "gamestage silentremove " + event.player.name + "greenhand");
+        ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " one");
         event.player.update({wasGivenTip8: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "tconstruct:smeltery_controller")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " three");
+        event.player.update({wasGivenTip9: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "immersiveengineering:metal_decoration0:5")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " oreexacavator");
+        event.player.update({wasGivenTip10: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "pyrotech:wither_forge")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " four");
+        event.player.update({wasGivenTip11: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+        event.player.update({wasGivenTip12: true});
     }
 });
 

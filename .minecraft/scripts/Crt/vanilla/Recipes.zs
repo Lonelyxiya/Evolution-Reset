@@ -320,7 +320,7 @@ recipes.addShaped(<artisanworktables:workshop:5>,
 [<pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>]]);
 
 recipes.addShaped(<artisanworktables:workshop:3>,
-[[<pyrotech:material:16>, <ore:plateIron>, <pyrotech:material:16>],
+[[<ore:ingotSteel>, <ore:plateIron>, <ore:ingotSteel>],
 [<ore:blockIron>, <artisanworktables:workstation:3>, <ore:blockIron>],
 [<pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>]]);
 

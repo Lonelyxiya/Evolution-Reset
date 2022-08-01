@@ -11,7 +11,7 @@ import mods.immersiveengineering.Excavator;
 import mods.immersiveengineering.MineralMix;
 
 recipes.remove(<immersiveengineering:metal_decoration0:5>);
-recipes.addShaped(<immersiveengineering:metal_decoration0:5>*2,
+recipes.addShaped(<immersiveengineering:metal_decoration0:5>,
 [[<ore:blockSteel>, <immersiveengineering:material:9>, <ore:blockSteel>],
 [<minecraft:piston>, <pyrotech:cog_obsidian>, <minecraft:piston>],
 [<ore:blockSteel>, <immersiveengineering:material:9>, <ore:blockSteel>]]);
