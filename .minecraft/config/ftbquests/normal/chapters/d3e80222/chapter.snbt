@@ -1,7 +1,0 @@
-{
-	title: "Bounty hunters",
-	icon: "minecraft:diamond_sword",
-	always_invisible: false,
-	group: 298441905,
-	default_quest_shape: ""
-}

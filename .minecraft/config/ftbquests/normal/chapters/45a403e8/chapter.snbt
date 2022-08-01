@@ -1,7 +1,0 @@
-{
-	title: "Deals for sale",
-	icon: "minecraft:gold_block",
-	always_invisible: false,
-	group: 298441905,
-	default_quest_shape: ""
-}
