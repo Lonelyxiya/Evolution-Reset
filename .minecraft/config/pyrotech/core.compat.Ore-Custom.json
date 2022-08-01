@@ -54,7 +54,6 @@
         "mekanism:tile.OreBlock.CopperOre"
       ],
       "output": [
-        "immersiveengineering:metal:20",
         "mekanism:nugget:5"
       ]
     },
