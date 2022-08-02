@@ -315,7 +315,7 @@ recipes.addShapeless(sticks * 2, [<ore:plankWood>, handsaw.anyDamage().transform
 }
 
 recipes.addShaped(<artisanworktables:workshop:5>,
-[[<pyrotech:material:16>, <ore:plateCopper>, <pyrotech:material:16>],
+[[<ore:ingotSteel>, <ore:plateCopper>, <ore:ingotSteel>],
 [<ore:blockCopper>, <artisanworktables:workstation:5>, <ore:blockCopper>],
 [<pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>]]);
 
@@ -330,7 +330,7 @@ recipes.addShaped(<artisanworktables:workshop:11>,
 [<pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>]]);
 
 recipes.addShaped(<artisanworktables:workshop:6>,
-[[<ore:ingotSteel>, <ore:plateCopper>, <ore:ingotSteel>],
+[[<pyrotech:material:16>, <ore:plateCopper>, <pyrotech:material:16>],
 [<ore:blockSteel>, <artisanworktables:workstation:6>, <ore:blockSteel>],
 [<pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>]]);
 
