@@ -45,7 +45,7 @@ furnace.addRecipe(<tconstruct:materials>, <contenttweaker:searedbrick_unfired>);
 //Origins_Eternal
 //2021.3.28
 recipes.remove(<tconstruct:tooltables:3>);
-recipes.addShaped(<tconstruct:tooltables:3>,
+recipes.addShaped("tooltables", <tconstruct:tooltables:3>,
 [[<ore:slabWood>, <tconstruct:pattern>, <ore:slabWood>],
 [<pyrotech:material:20>, <pyrotech:worktable_stone>, <pyrotech:material:20>],
 [<pyrotech:material:20>, null, <pyrotech:material:20>]]);

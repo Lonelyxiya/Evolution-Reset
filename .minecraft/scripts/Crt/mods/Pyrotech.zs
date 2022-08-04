@@ -316,7 +316,8 @@ var worktable_recipes = [
 "tconstruct:tools/pattern", 
 "tconstruct:tools/table/stencil_table", 
 "tconstruct:tools/table/part_builder", 
-"minecraft:piston"
+"minecraft:piston", 
+"crafttweaker:tooltables"
 
 ] as string[];
 for items in worktable_recipes
