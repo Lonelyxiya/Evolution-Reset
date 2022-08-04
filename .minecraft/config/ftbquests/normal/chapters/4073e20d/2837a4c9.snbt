@@ -8,7 +8,18 @@
 		uid: "b79f6465",
 		type: "item",
 		items: [{
-			item: "mekanism:ingot 1 2"
+			ForgeCaps: {
+				Parent: {
+					data: "ingotBronze",
+					id: "ore"
+				}
+			},
+			id: "itemfilters:filter",
+			tag: {
+				display: {
+					Name: "Any ingotBronze"
+				}
+			}
 		}],
 		count: 10L
 	}],
