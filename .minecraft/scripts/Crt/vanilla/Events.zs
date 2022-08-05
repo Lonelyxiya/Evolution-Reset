@@ -59,7 +59,7 @@ if ((loadedMods.contains("champions")) &&
     (loadedMods.contains("hardcoredarkness")) && 
     (loadedMods.contains("resourceloader")) && 
     (loadedMods.contains("custommainmenu")) && 
-    (loadedMods.contains("AI-Improvements")) && 
+    (loadedMods.contains("aiimprovements")) && 
     (loadedMods.contains("pyrotech")) && 
     (loadedMods.contains("botania")) && 
     (loadedMods.contains("chisel")) && 
@@ -74,7 +74,7 @@ if ((loadedMods.contains("champions")) &&
     }
 for mods in InvalidMods {
     if (loadedMods.contains(mods)) {
-        player.update({RequiredMods: true});
+        player.update({InvalidMods: true});
     }
 }
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
@@ -88,16 +88,8 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
         }, 4 * 20);
     } else {
             if (isNull(event.player.data.InvalidMods)) {
-                DelayManager.addDelayWork(function() {
-                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
-                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
-                }, 4 * 20);
-                DelayManager.addDelayWork(function() {
-                ser.executeCommand(server, "gamemode spectator " + player.name);
-                }, 5 * 20);
-            } else {
-                    if (isNull(event.player.data.wasNotDifficultyLocked)) {
-                        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
+                if (isNull(event.player.data.wasNotDifficultyLocked)) {
+                    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
                     } else {
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
@@ -120,6 +112,14 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                                 }, 6 * 20);
                             }
                     }
+            } else {
+                    DelayManager.addDelayWork(function() {
+                    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+                    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
+                    }, 4 * 20);
+                    DelayManager.addDelayWork(function() {
+                    ser.executeCommand(server, "gamemode spectator " + player.name);
+                    }, 5 * 20);
             }
     }
 });
