@@ -78,7 +78,7 @@ for mods in InvalidMods {
     }
 }
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
-	if (isNull(event.player.data.InvalidMods)) {
+	if (isNull(event.player.data.RequiredMods)) {
         DelayManager.addDelayWork(function() {
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
