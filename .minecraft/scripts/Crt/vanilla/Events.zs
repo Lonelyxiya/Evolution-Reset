@@ -17,6 +17,112 @@ import crafttweaker.recipes.ICraftingRecipe;
 //Origins_Eternal
 //2021.8.14
 //events
+var InvalidMods as string[] = [
+    "xijun",
+    "bacteria",
+    "decomp_table",
+    "deconstrcution_table",
+    "decon_table",
+    "decontable",
+    "decon",
+    "uncraftingtable",
+    "deconstruction",
+    "avaritia",
+    "xray",
+    "oreping",
+    "reinforcedtools",
+    "scenter",
+    "extrabotany",
+    "oresniffer",
+    "eplus",
+    "stm",
+    "ISM",
+    "cycle",
+    "eplus",
+    "somanyenchantments",
+    "randomenchantments"
+];
+
+events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
+var player = event.player as IPlayer;
+var ser = server.commandManager as ICommandManager;
+if ((loadedMods.contains("champions")) && 
+    (loadedMods.contains("dynamicstealth")) && 
+    (loadedMods.contains("firstaid")) && 
+    (loadedMods.contains("hungeroverhaul")) && 
+    (loadedMods.contains("scalinghealth")) && 
+    (loadedMods.contains("zombieawareness")) && 
+    (loadedMods.contains("adpother")) && 
+    (loadedMods.contains("oeintegration")) && 
+    (loadedMods.contains("sereneseasons")) && 
+    (loadedMods.contains("toughasnails")) && 
+    (loadedMods.contains("hardcoredarkness")) && 
+    (loadedMods.contains("resourceloader")) && 
+    (loadedMods.contains("custommainmenu")) && 
+    (loadedMods.contains("AI-Improvements")) && 
+    (loadedMods.contains("pyrotech")) && 
+    (loadedMods.contains("botania")) && 
+    (loadedMods.contains("chisel")) && 
+    (loadedMods.contains("draconicevolution")) && 
+    (loadedMods.contains("environmentaltech")) && 
+    (loadedMods.contains("immersiveengineering")) && 
+    (loadedMods.contains("mekanism")) && 
+    (loadedMods.contains("tconstruct")) && 
+    (loadedMods.contains("twilightforest"))) 
+    {
+    player.update({RequiredMods: true});
+    }
+for mods in InvalidMods {
+    if (loadedMods.contains(mods)) {
+        player.update({RequiredMods: true});
+    }
+}
+player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
+	if (isNull(event.player.data.InvalidMods)) {
+        DelayManager.addDelayWork(function() {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
+        }, 3 * 20);
+	    DelayManager.addDelayWork(function() {
+          ser.executeCommand(server, "gamemode spectator " + player.name);
+        }, 4 * 20);
+    } else {
+            if (isNull(event.player.data.InvalidMods)) {
+                DelayManager.addDelayWork(function() {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
+                }, 4 * 20);
+                DelayManager.addDelayWork(function() {
+                ser.executeCommand(server, "gamemode spectator " + player.name);
+                }, 5 * 20);
+            } else {
+                    if (isNull(event.player.data.wasNotDifficultyLocked)) {
+                        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
+                    } else {
+                            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+                            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
+                            ser.executeCommand(server, "gamemode survival " + player.name);
+                            if (isNull(event.player.data.wasGivenStarters)) {
+                                ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
+                                event.player.update({wasGivenStarters: true});
+                                var start = [
+                                    <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
+                                    <pyrotech:apple_baked>,
+	                                <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
+                                ] as IItemStack[];
+                                for i in start {
+                                    event.player.give(i);
+	                            }
+                            }
+                            if (isNull(event.player.data.wasDifficultyLocked)) {
+                                DelayManager.addDelayWork(function() {
+                                event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
+                                }, 6 * 20);
+                            }
+                    }
+            }
+    }
+});
 
 events.onCommand(function(event as CommandEvent) {
    val command = event.command;
@@ -36,38 +142,10 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
-    if (isNull(event.player.data.wasGivenStarters)) {
+    if (isNull(event.player.data.wasDifficultyLocked)) {
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }, 1 * 20);
-  }
-});	
-
-events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
-    var ser = server.commandManager as ICommandManager;
-    if (isNull(event.player.data.wasGivenStarters)) {
-    ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
-    event.player.update({wasGivenStarters: true});
-    var start = [
-    <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
-    <pyrotech:apple_baked>,
-	<akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
-] as IItemStack[];
-for i in start
-	{
-    event.player.give(i);
-	}
-    DelayManager.addDelayWork(function() {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
-    }, 1 * 20);
-	DelayManager.addDelayWork(function() {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
-    }, 3 * 20);
-    if (isNull(event.player.data.wasGivenStarters)) {
-    DelayManager.addDelayWork(function() {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
-    }, 5 * 20);
-	}
   }
 });
 
@@ -76,7 +154,7 @@ for i in start
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
-    if (isNull(event.player.data.wasGivenStarters)) {
+    if (isNull(event.player.data.wasDifficultyLocked)) {
     DelayManager.addDelayWork(function() {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.difficulty"));
         }, 5 * 20);
@@ -136,8 +214,8 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         event.player.update({wasDifficultyLocked: true});
     } else {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.notchoose")); 
-        recipes.removeAll();
         ser.executeCommand(server, "gamemode spectator " + event.player.name);
+        event.player.update({wasNotDifficultyLocked: true});
     }  
         }, 26 * 20);
   } else {
