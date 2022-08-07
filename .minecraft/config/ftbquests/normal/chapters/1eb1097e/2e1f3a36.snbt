@@ -14,7 +14,6 @@
 	rewards: [{
 		uid: "97740301",
 		type: "random",
-		title: "随机奖励",
 		table: 2
 	}]
 }

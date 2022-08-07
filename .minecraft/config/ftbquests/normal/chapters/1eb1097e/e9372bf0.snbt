@@ -1,5 +1,4 @@
 {
-	title: "离子核心",
 	x: 2.5d,
 	y: -4.5d,
 	dependencies: [
