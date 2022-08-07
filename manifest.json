@@ -12,7 +12,7 @@
   "manifestVersion": 1,
   "name": "Evolution-Reset",
   "version": "1.0.0",
-  "author": "Origins_Eternal Lacz",
+  "author": "",
   "files": [
     {
       "projectID": 285742,
@@ -47,6 +47,11 @@
     {
       "projectID": 276837,
       "fileID": 3569536,
+      "required": true
+    },
+    {
+      "projectID": 240633,
+      "fileID": 2546769,
       "required": true
     },
     {
@@ -135,6 +140,11 @@
       "required": true
     },
     {
+      "projectID": 69162,
+      "fileID": 2920433,
+      "required": true
+    },
+    {
       "projectID": 261339,
       "fileID": 2541554,
       "required": true
@@ -145,8 +155,18 @@
       "required": true
     },
     {
+      "projectID": 271384,
+      "fileID": 2920434,
+      "required": true
+    },
+    {
       "projectID": 255232,
       "fileID": 2830265,
+      "required": true
+    },
+    {
+      "projectID": 308151,
+      "fileID": 2683605,
       "required": true
     },
     {
@@ -260,6 +280,11 @@
       "required": true
     },
     {
+      "projectID": 316582,
+      "fileID": 3010808,
+      "required": true
+    },
+    {
       "projectID": 223565,
       "fileID": 3431261,
       "required": true
@@ -317,11 +342,6 @@
     {
       "projectID": 220811,
       "fileID": 2571951,
-      "required": true
-    },
-    {
-      "projectID": 271384,
-      "fileID": 2920434,
       "required": true
     },
     {
@@ -420,11 +440,6 @@
       "required": true
     },
     {
-      "projectID": 240633,
-      "fileID": 2546769,
-      "required": true
-    },
-    {
       "projectID": 274338,
       "fileID": 3104696,
       "required": true
@@ -432,11 +447,6 @@
     {
       "projectID": 365686,
       "fileID": 3042436,
-      "required": true
-    },
-    {
-      "projectID": 316582,
-      "fileID": 3010808,
       "required": true
     },
     {
@@ -550,13 +560,13 @@
       "required": true
     },
     {
-      "projectID": 236541,
-      "fileID": 3801015,
+      "projectID": 245453,
+      "fileID": 2691536,
       "required": true
     },
     {
-      "projectID": 245453,
-      "fileID": 2691536,
+      "projectID": 236541,
+      "fileID": 3801015,
       "required": true
     },
     {
@@ -580,13 +590,13 @@
       "required": true
     },
     {
-      "projectID": 227639,
-      "fileID": 3051450,
+      "projectID": 238222,
+      "fileID": 3040523,
       "required": true
     },
     {
-      "projectID": 238222,
-      "fileID": 3040523,
+      "projectID": 227639,
+      "fileID": 3051450,
       "required": true
     },
     {
@@ -595,13 +605,13 @@
       "required": true
     },
     {
-      "projectID": 269973,
-      "fileID": 3514255,
+      "projectID": 359650,
+      "fileID": 2867152,
       "required": true
     },
     {
-      "projectID": 359650,
-      "fileID": 2867152,
+      "projectID": 269973,
+      "fileID": 3514255,
       "required": true
     },
     {
@@ -665,11 +675,6 @@
       "required": true
     },
     {
-      "projectID": 286231,
-      "fileID": 3006659,
-      "required": true
-    },
-    {
       "projectID": 237749,
       "fileID": 2902920,
       "required": true
@@ -685,11 +690,6 @@
       "required": true
     },
     {
-      "projectID": 338643,
-      "fileID": 2772302,
-      "required": true
-    },
-    {
       "projectID": 250577,
       "fileID": 2648656,
       "required": true
@@ -697,6 +697,11 @@
     {
       "projectID": 286230,
       "fileID": 2572528,
+      "required": true
+    },
+    {
+      "projectID": 286231,
+      "fileID": 3006659,
       "required": true
     },
     {
@@ -745,6 +750,11 @@
       "required": true
     },
     {
+      "projectID": 338643,
+      "fileID": 2772302,
+      "required": true
+    },
+    {
       "projectID": 222789,
       "fileID": 3025806,
       "required": true
@@ -757,16 +767,6 @@
     {
       "projectID": 278494,
       "fileID": 3327893,
-      "required": true
-    },
-    {
-      "projectID": 69162,
-      "fileID": 2920433,
-      "required": true
-    },
-    {
-      "projectID": 308151,
-      "fileID": 2683605,
       "required": true
     }
   ],
