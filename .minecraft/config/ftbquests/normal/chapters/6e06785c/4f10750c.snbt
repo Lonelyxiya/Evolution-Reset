@@ -1,5 +1,4 @@
 {
-	title: "炼油厂",
 	x: 4.5d,
 	y: 2.5d,
 	dependencies: [

@@ -44,7 +44,6 @@
 	{
 		uid: "9e715b7b",
 		type: "random",
-		title: "随机奖励",
 		table: 2
 	}]
 }
