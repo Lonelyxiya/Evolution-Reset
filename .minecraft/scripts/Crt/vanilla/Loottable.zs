@@ -78,8 +78,6 @@ val banlist = [
 <minecraft:bread>, 
 <minecraft:potato>, 
 <minecraft:apple>, 
-<minecraft:fish>, 
-<minecraft:fish:1>, 
 <minecraft:beetroot>, 
 <minecraft:cooked_chicken>, 
 <minecraft:cooked_beef>, 
