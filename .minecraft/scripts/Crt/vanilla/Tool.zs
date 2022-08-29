@@ -1,4 +1,3 @@
-#loader crafttweaker reloadableevents
 //Lacz
 //2020.10.16
 //tooltip
@@ -13,7 +12,7 @@ import crafttweaker.event.PlayerInteractEvent;
 
 <minecraft:diamond>.addTooltip(game.localize("crafttweaker.diamond.tooltip"));
 <immersiveengineering:metal:8>.addTooltip(game.localize("crafttweaker.metal8.tooltip"));
-<earthenbounty:black_diamond_ore>.addTooltip(game.localize("crafttweaker.iridium_ore.tooltip"));
+<contenttweaker:iridium_ore>.addTooltip(game.localize("crafttweaker.iridium_ore.tooltip"));
 <immersiveengineering:graphite_electrode>.addTooltip(game.localize("crafttweaker.graphite_electrode.tooltip"));
 <minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}).addTooltip(game.localize("crafttweaker.stone_pickaxe.tooltip"));
 <fluxnetworks:flux>.addTooltip(game.localize("crafttweaker.flux.tooltip"));

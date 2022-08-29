@@ -2,9 +2,6 @@
 //Lacz
 //2021.05.05
 import crafttweaker.item.IItemStack;
-
-recipes.replaceAllOccurences(<earthenbounty:mithril_ingot>, <twilightforest:fiery_ingot>);
-
 //2021.8.23
 var ingot = [
 <immersiveengineering:metal:7>,

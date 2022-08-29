@@ -410,6 +410,7 @@ GraniteAnvil.addRecipe("nugget_from_ingot_66", <mekanism:nugget:6>*9, <ore:ingot
 GraniteAnvil.addRecipe("nugget_from_ingot_67", <mekanism:nugget:2>*9, <ore:ingotBronze>, 10, "hammer", true);
 GraniteAnvil.addRecipe("copper_plate_from_block", <immersiveengineering:metal:30>*3, <ore:blockCopper>, 27, "hammer", true);
 GraniteAnvil.addRecipe("gold_plate_from_block", <immersiveengineering:metal:40>*3, <ore:blockGold>, 27, "hammer", true);
+GraniteAnvil.addRecipe("sulphur_powder_from_sulphur", <immersiveengineering:material:25>, <contenttweaker:sulphur>, 10, "hammer", true);
 
 //2021.8.27
 

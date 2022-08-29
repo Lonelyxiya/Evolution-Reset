@@ -16,36 +16,13 @@ import crafttweaker.recipes.ICraftingRecipe;
 //Origins_Eternal
 //2021.8.14
 //events
-var InvalidMods as string[] = [
-    "xijun",
-    "bacteria",
-    "decomp_table",
-    "deconstrcution_table",
-    "decon_table",
-    "decontable",
-    "decon",
-    "uncraftingtable",
-    "deconstruction",
-    "avaritia",
-    "xray",
-    "oreping",
-    "reinforcedtools",
-    "scenter",
-    "extrabotany",
-    "oresniffer",
-    "eplus",
-    "stm",
-    "ISM",
-    "cycle",
-    "eplus",
-    "somanyenchantments",
-    "randomenchantments"
-];
 
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
-ser.executeCommand(server, "gamemode survival " + player.name);
+ser.executeCommand(server, "gamemode spectator " + player.name);
+if (isNull(event.player.data.wasNotDifficultyLocked)) {
+player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
 if ((loadedMods.contains("champions")) && 
     (loadedMods.contains("dynamicstealth")) && 
     (loadedMods.contains("firstaid")) && 
@@ -70,29 +47,42 @@ if ((loadedMods.contains("champions")) &&
     (loadedMods.contains("tconstruct")) && 
     (loadedMods.contains("twilightforest"))) 
     {
-    player.update({RequiredMods: true});
-    }
-for mods in InvalidMods {
-    if (loadedMods.contains(mods)) {
-        player.update({InvalidMods: true});
-    }
-}
-player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
-DelayManager.addDelayWork(function() {
-player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
-}, 3 * 20);
-	if (isNull(event.player.data.RequiredMods)) {
+if ((loadedMods.contains("xijun")) ||  
+    (loadedMods.contains("bacteria")) ||  
+    (loadedMods.contains("decomp_table")) ||  
+    (loadedMods.contains("deconstrcution_table")) ||  
+    (loadedMods.contains("decon_table")) ||  
+    (loadedMods.contains("decontable")) ||  
+    (loadedMods.contains("decon")) ||  
+    (loadedMods.contains("uncraftingtable")) ||  
+    (loadedMods.contains("deconstruction")) ||  
+    (loadedMods.contains("avaritia")) ||  
+    (loadedMods.contains("xray")) ||  
+    (loadedMods.contains("oreping")) ||  
+    (loadedMods.contains("reinforcedtools")) ||  
+    (loadedMods.contains("scenter")) ||  
+    (loadedMods.contains("extrabotany")) ||  
+    (loadedMods.contains("oresniffer")) ||  
+    (loadedMods.contains("eplus")) ||  
+    (loadedMods.contains("stm")) ||  
+    (loadedMods.contains("ISM")) ||  
+    (loadedMods.contains("cycle")) ||  
+    (loadedMods.contains("eplus")) ||  
+    (loadedMods.contains("somanyenchantments")) ||  
+    (loadedMods.contains("randomenchantments"))) {
         DelayManager.addDelayWork(function() {
-        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
-        }, 3 * 20);
-	    DelayManager.addDelayWork(function() {
-          ser.executeCommand(server, "gamemode spectator " + player.name);
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
         }, 4 * 20);
     } else {
-            if (isNull(event.player.data.InvalidMods)) {
-                if (isNull(event.player.data.wasNotDifficultyLocked)) {
+                DelayManager.addDelayWork(function() {
+                    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
-                    if (isNull(event.player.data.wasGivenStarters)) {
+                }, 4 * 20);
+                DelayManager.addDelayWork(function() {
+                    ser.executeCommand(server, "gamemode survival " + player.name);
+                }, 5 * 20);
+                if (isNull(event.player.data.wasGivenStarters)) {
                         ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
                         event.player.update({wasGivenStarters: true});
                         var start = [
@@ -103,23 +93,21 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                         for i in start {
                              event.player.give(i);
 	                    }
-                    }
-                    if (isNull(event.player.data.wasDifficultyLocked)) {
-                         DelayManager.addDelayWork(function() {
-                         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
-                         }, 6 * 20);
-                    }
-                    } else {
-                            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
-                    }
-            } else {
+                }
+                if (isNull(event.player.data.wasDifficultyLocked)) {
                     DelayManager.addDelayWork(function() {
-                    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
-                    }, 4 * 20);
-                    DelayManager.addDelayWork(function() {
-                    ser.executeCommand(server, "gamemode spectator " + player.name);
-                    }, 5 * 20);
+                        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
+                    }, 6 * 20);
+                }
             }
+    } else {
+        DelayManager.addDelayWork(function() {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
+        }, 3 * 20);
+    }
+} else {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
     }
 });
 
@@ -277,8 +265,6 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         event.player.update({wasNotDifficultyLocked: true});
     }  
         }, 26 * 20);
-  } else {
-        event.player.update({wasDifficultyLocked: true});
   }
 });
 
@@ -336,4 +322,16 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
+});
+
+events.onCommand(function(event as CommandEvent) {
+   val command = event.command;
+   if((command.name == "backup") || (command.name == "ct") || (command.name == "crafttweaker") || (command.name == "team")) {
+       return;
+   }
+   else if (event.commandSender instanceof IPlayer) {
+   val player as IPlayer = event.commandSender;
+   player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.command.tip"));
+   event.cancel(); 
+   }
 });

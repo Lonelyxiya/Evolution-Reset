@@ -28,9 +28,6 @@ tungsten_carbide_nugget.register();
 val tungsten_carbide_ingot as Item = VanillaFactory.createItem("tungsten_carbide_ingot");
 tungsten_carbide_ingot.register();
 
-val platinum_nugget as Item = VanillaFactory.createItem("platinum_nugget");
-platinum_nugget.register();
-
 //2022.3.27
 val blueprint1 as Item = VanillaFactory.createItem("blueprint1");
 blueprint1.register();
@@ -151,3 +148,6 @@ blueprint39.register();
 
 val heavy_plating as Item = VanillaFactory.createItem("heavy_plating");
 heavy_plating.register();
+
+val sulphur as Item = VanillaFactory.createItem("sulphur");
+sulphur.register();

@@ -208,7 +208,6 @@ var dropores = [
 <pyrotech:material:8>,
 <pyrotech:material:18>,
 <pyrotech:generated_slag_iridium>,
-<pyrotech:generated_slag_platinum>,
 <pyrotech:generated_slag_titanium>
 
 ] as IItemStack[];
@@ -240,7 +239,6 @@ val ores = [
 <ore:blockSlakedlime>,
 <ore:eroreDiamond>,
 <ore:oreIridium>,
-<ore:orePlatinum>,
 <ore:oreTitanium>
 
 ] as IOreDictEntry[];
@@ -385,7 +383,7 @@ Dropt.list("list_keyblocks")
 var netherdropores = [
 
 <minecraft:quartz>,
-<earthenbounty:sulfur_item>,
+<contenttweaker:sulphur>,
 <pyrotech:generated_slag_prometheum>,
 <pyrotech:generated_slag_valyrium>
 

@@ -9,7 +9,6 @@ import crafttweaker.item.IItemStack;
 
 <ore:steel>.add(<immersiveengineering:metal:8>);
 <ore:steel>.add(<mekanism:ingot:4>);
-<ore:oreCopper>.add(<earthenbounty:mithril_ore>);
 
 var shears =[
     <pyrotech:clay_shears>,
@@ -196,8 +195,6 @@ for botflower in botflowers {
 }
 
 <ore:bed>.add(<minecraft:bed:*>);
-<ore:oreBlackDiamond>.remove(<earthenbounty:black_diamond_ore>);
-<ore:oreIridium>.add(<earthenbounty:black_diamond_ore>);
 
 var oneblocks = [
 
@@ -264,8 +261,7 @@ for fiveblock in fiveblocks {
 
 var sixblocks = [
 
-<ore:oreDiamond>,
-<ore:oreBlackDiamond>
+<ore:oreDiamond>
 
 ] as IOreDictEntry[];
 for sixblock in sixblocks {
@@ -303,8 +299,7 @@ for nineblock in nineblocks {
 
 var tenblocks = [
 
-<ore:oreIridium>,
-<ore:orePlatinum>
+<ore:oreIridium>
 
 ] as IOreDictEntry[];
 for tenblock in tenblocks {
@@ -482,43 +477,6 @@ var tool = [
     <minecraft:furnace>,
     <minecraft:crafting_table>,
     <refinedstorage:silicon>,
-    <earthenbounty:bronze_pickaxe>,
-    <earthenbounty:bronze_axe>,
-    <earthenbounty:bronze_hoe>,
-    <earthenbounty:bronze_shovel>,
-    <earthenbounty:mithril_pickaxe>,
-    <earthenbounty:mithril_axe>,
-    <earthenbounty:mithril_hoe>,
-    <earthenbounty:mithril_shovel>,
-    <earthenbounty:black_diamond_pickaxe>,
-    <earthenbounty:black_diamond_axe>,
-    <earthenbounty:black_diamond_axe>,
-    <earthenbounty:black_diamond_hoe>,
-    <earthenbounty:black_diamond_shovel>,
-    <earthenbounty:bronze_chestplate>,
-    <earthenbounty:bronze_helmet>,
-    <earthenbounty:bronze_legs>,
-    <earthenbounty:bronze_boots>,
-    <earthenbounty:mithril_chestplate>,
-    <earthenbounty:platinum_crown>,
-    <earthenbounty:mithril_helmet>,
-    <earthenbounty:mithril_legs>,
-    <earthenbounty:mithril_boots>,
-    <earthenbounty:black_diamond_chestplate>,
-    <earthenbounty:black_diamond_helmet>,
-    <earthenbounty:black_diamond_legs>,
-    <earthenbounty:black_diamond_boots>,
-    <earthenbounty:platinum_helmet>,
-    <earthenbounty:platinum_chestplate>,
-    <earthenbounty:platinum_legs>,
-    <earthenbounty:platinum_boots>,
-    <earthenbounty:black_diamond_block>,
-    <earthenbounty:black_diamond_item>,
-    <earthenbounty:bronze_sword>,
-    <earthenbounty:mithril_ingot>,
-    <earthenbounty:mithril_sword>,
-    <earthenbounty:black_diamond_sword>,
-    <earthenbounty:mithril_block>,
     <endreborn:tool_pickaxe_endorium>,
     <endreborn:tool_axe_endorium>,
     <endreborn:tool_hoe_endorium>,
@@ -532,21 +490,14 @@ var tool = [
     <endreborn:armour_chestplate_obsidian>,
     <endreborn:armour_leggings_obsidian>,
     <endreborn:armour_boots_obsidian>,
-    <endreborn:armour_helmet_helmet>,
-    <immersiveengineering:ore>,
-    <mekanism:oreblock:2>,
-    <mekanism:oreblock:1>,
-    <libvulpes:ore0:5>,
-    <libvulpes:ore0:5>,
-    <libvulpes:ore0:9>,
-    <libvulpes:ore0:10>,
-    <libvulpes:ore0>
+    <endreborn:armour_helmet_helmet>
     
 ] as IItemStack[];
 for items in tool
 	{	
 	<ore:banitems>.add(items);
     }
+<ore:oreSulfur>.add(<contenttweaker:sulphur_ore>);
 <ore:banitems>.addAll(<ore:oreSilicon>);
 <ore:whitesand>.add(<minecraft:sand>);
 <ore:radsand>.add(<minecraft:sand:1>);
@@ -554,6 +505,9 @@ for items in tool
 <ore:torch>.add(<advancedrocketry:unlittorch>);
 <ore:ergravel>.addAll(<ore:gravel>);
 <ore:ergravel>.add(<minecraft:flint>);
-<ore:blockSeven>.add(<earthenbounty:sulfur_ore>);
-<ore:oreSulfur>.add(<earthenbounty:sulfur_ore>);
+<ore:blockSeven>.addAll(<ore:oreSulfur>);
 <ore:stoneBasalt>.add(<advancedrocketry:basalt>);
+<ore:oreCopper>.add(<contenttweaker:copper_ore>);
+<ore:oreTin>.add(<contenttweaker:tin_ore>);
+<ore:oreIridium>.add(<contenttweaker:iridium_ore>);
+<ore:oreTitanium>.add(<contenttweaker:rutile_ore>);
