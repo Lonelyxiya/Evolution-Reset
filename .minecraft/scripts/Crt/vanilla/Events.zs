@@ -20,7 +20,7 @@ import crafttweaker.recipes.ICraftingRecipe;
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
-ser.executeCommand(server, "gamemode spectator " + player.name);
+ser.executeCommand(server, "gamemode adventure " + player.name);
 if (isNull(event.player.data.wasNotDifficultyLocked)) {
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
 if ((loadedMods.contains("champions")) && 
@@ -189,7 +189,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         event.player.update({wasDifficultyLocked: true});
     } else {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.notchoose")); 
-        ser.executeCommand(server, "gamemode spectator " + event.player.name);
+        ser.executeCommand(server, "gamemode adventure " + event.player.name);
         event.player.update({wasNotDifficultyLocked: true});
     }  
         }, 26 * 20);
@@ -261,7 +261,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         event.player.update({wasDifficultyLocked: true});
     } else {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.notchoose")); 
-        ser.executeCommand(server, "gamemode spectator " + event.player.name);
+        ser.executeCommand(server, "gamemode adventure " + event.player.name);
         event.player.update({wasNotDifficultyLocked: true});
     }  
         }, 26 * 20);
