@@ -1,4 +1,5 @@
 {
+	title: "焦炉砖",
 	x: -1.0d,
 	y: 2.0d,
 	dependencies: [
