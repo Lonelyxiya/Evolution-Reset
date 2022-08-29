@@ -53,3 +53,4 @@ crafttweaker.message.craft.tip3=§5木、石、骨、燧石质地的工具可以
 crafttweaker.message.craft.tip4=§5在耐火炉中把烈焰棒烧成烈焰粉制作火焰弹吧！另外，制作出熔炉核心后，僵尸将会开始出现，所以最好在准备好防御设施后再制作熔炉核心。§r
 crafttweaker.message.craft.tip5=§5用复合砧把玄武岩锤成未注魔的黑曜石，丢进魔力池里获得黑曜石，终于可以去地狱了！另外，到达地狱后系统将进行最后一次游戏难度锁定检测，如果还未锁定游戏难度，后果自负！§r
 crafttweaker.message.craft.tip6=§5用森林法杖把火红莲等产能花绑定在稀释魔力池里，待稀释魔力魔力足够时，把空玻璃瓶丢进稀释魔力池里即可获得瓶装魔力。§r
+crafttweaker.message.world.locked=§4由于您没有正确锁定游戏难度，该世界已被锁定！§r
