@@ -12,7 +12,7 @@
   "manifestVersion": 1,
   "name": "Evolution-Reset",
   "version": "1.0.0",
-  "author": "",
+  "author": "Origins_Eternal",
   "files": [
     {
       "projectID": 285742,
@@ -162,11 +162,6 @@
     {
       "projectID": 255232,
       "fileID": 2830265,
-      "required": true
-    },
-    {
-      "projectID": 308151,
-      "fileID": 2683605,
       "required": true
     },
     {
@@ -465,13 +460,13 @@
       "required": true
     },
     {
-      "projectID": 244830,
-      "fileID": 3758609,
+      "projectID": 250957,
+      "fileID": 2630860,
       "required": true
     },
     {
-      "projectID": 250957,
-      "fileID": 2630860,
+      "projectID": 244830,
+      "fileID": 3758609,
       "required": true
     },
     {
@@ -560,13 +555,13 @@
       "required": true
     },
     {
-      "projectID": 245453,
-      "fileID": 2691536,
+      "projectID": 236541,
+      "fileID": 3801015,
       "required": true
     },
     {
-      "projectID": 236541,
-      "fileID": 3801015,
+      "projectID": 245453,
+      "fileID": 2691536,
       "required": true
     },
     {
@@ -590,13 +585,13 @@
       "required": true
     },
     {
-      "projectID": 238222,
-      "fileID": 3040523,
+      "projectID": 227639,
+      "fileID": 3051450,
       "required": true
     },
     {
-      "projectID": 227639,
-      "fileID": 3051450,
+      "projectID": 238222,
+      "fileID": 3040523,
       "required": true
     },
     {
@@ -605,13 +600,13 @@
       "required": true
     },
     {
-      "projectID": 359650,
-      "fileID": 2867152,
+      "projectID": 269973,
+      "fileID": 3514255,
       "required": true
     },
     {
-      "projectID": 269973,
-      "fileID": 3514255,
+      "projectID": 359650,
+      "fileID": 2867152,
       "required": true
     },
     {
@@ -700,8 +695,8 @@
       "required": true
     },
     {
-      "projectID": 286231,
-      "fileID": 3006659,
+      "projectID": 306283,
+      "fileID": 3010526,
       "required": true
     },
     {
@@ -710,8 +705,8 @@
       "required": true
     },
     {
-      "projectID": 306283,
-      "fileID": 3010526,
+      "projectID": 286231,
+      "fileID": 3006659,
       "required": true
     },
     {
@@ -725,13 +720,13 @@
       "required": true
     },
     {
-      "projectID": 242818,
-      "fileID": 2779848,
+      "projectID": 235577,
+      "fileID": 2722385,
       "required": true
     },
     {
-      "projectID": 235577,
-      "fileID": 2722385,
+      "projectID": 242818,
+      "fileID": 2779848,
       "required": true
     },
     {
