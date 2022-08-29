@@ -243,7 +243,7 @@
       "slagColor": "897673",
       "langKey": [
 	    	"taiga:tile.meteoritecobble_block", 
-            "taiga.meteorite_block"
+        "taiga.meteorite_block"
       ],
       "output": [
         "taiga:meteorite_nugget"
@@ -252,25 +252,16 @@
    "oreIridium": {
       "slagColor": "a5a399",
       "langKey": [
-        "tile.black_diamond_ore"
+        "contenttweaker:tile.contenttweaker.iridium_ore"
       ],
       "output": [
         "libvulpes:productnugget:10"
       ]
     },
-   "orePlatinum": {
-      "slagColor": "292826",
-      "langKey": [
-        "tile.platinum_ore"
-      ],
-      "output": [
-        "contenttweaker:platinum_nugget"
-      ]
-    },
    "oreTitanium": {
       "slagColor": "6b503c",
       "langKey": [
-        "material.Rutile"
+        "contenttweaker:tile.contenttweaker.rutile_ore"
       ],
       "output": [
         "libvulpes:productnugget:7"

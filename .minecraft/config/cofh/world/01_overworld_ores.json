@@ -23,7 +23,7 @@
 		"copper": {
 			"distribution": "uniform",
 			"generator": {
-				"block": "earthenbounty:copper_ore",
+				"block": "contenttweaker:copper_ore",
 				"material": "minecraft:stone",
 				"cluster-size": 3
 			},
@@ -42,7 +42,7 @@
 		"tin": {
 			"distribution": "uniform",
 			"generator": {
-				"block": "earthenbounty:tin_ore",
+				"block": "contenttweaker:tin_ore",
 				"material": "minecraft:stone",
 				"cluster-size": 5
 			},
@@ -61,7 +61,7 @@
 		"iridium": {
 			"distribution": "uniform",
 			"generator": {
-				"block": "earthenbounty:black_diamond_ore",
+				"block": "contenttweaker:iridium_ore",
 				"material": "minecraft:stone",
 				"cluster-size": 1
 			},
@@ -77,16 +77,16 @@
 				]
 			}
 		},
-		"platinum": {
+		"rutile": {
 			"distribution": "uniform",
 			"generator": {
-				"block": "earthenbounty:platinum_ore",
+				"block": "contenttweaker:rutile_ore",
 				"material": "minecraft:stone",
-				"cluster-size": 3
+				"cluster-size": 5
 			},
 			"cluster-count": 2,
-			"min-height": 10,
-			"max-height": 40,
+			"min-height": 0,
+			"max-height": 50,
 			"retrogen": true,
 			"biome": "all",
 			"dimension": {
@@ -95,6 +95,28 @@
                     0
 				]
 			}
+		},
+		"sulphur": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "contenttweaker:sulphur_ore",
+				"material": "minecraft:netherrack",
+				"cluster-size": 10
+			},
+			"cluster-count": 10,
+			"min-height": 20,
+			"max-height": 120,
+			"retrogen": false,
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "dictionary",
+						"entry": "NETHER"
+					}
+				]
+			},
+			"dimension": "all"
 		}
 	}
 }
