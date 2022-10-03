@@ -1,0 +1,7 @@
+{
+	title: "Technology Age",
+	icon: "mekanismgenerators:generator",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: ""
+}
