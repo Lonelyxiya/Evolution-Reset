@@ -208,7 +208,8 @@ var dropores = [
 <pyrotech:material:8>,
 <pyrotech:material:18>,
 <pyrotech:generated_slag_iridium>,
-<pyrotech:generated_slag_titanium>
+<contenttweaker:sulphur>,
+<contenttweaker:rutile_ore>
 
 ] as IItemStack[];
 val ores = [
@@ -239,6 +240,7 @@ val ores = [
 <ore:blockSlakedlime>,
 <ore:eroreDiamond>,
 <ore:oreIridium>,
+<ore:oreSulfur>,
 <ore:oreTitanium>
 
 ] as IOreDictEntry[];
@@ -383,7 +385,6 @@ Dropt.list("list_keyblocks")
 var netherdropores = [
 
 <minecraft:quartz>,
-<contenttweaker:sulphur>,
 <pyrotech:generated_slag_prometheum>,
 <pyrotech:generated_slag_valyrium>
 
@@ -391,7 +392,6 @@ var netherdropores = [
 val netherores = [
 
 <ore:oreQuartz>,
-<ore:oreSulfur>,
 <ore:orePrometheum>,
 <ore:oreValyrium>
 
@@ -428,6 +428,63 @@ Dropt.list("list_netherore")
 	  .addDrop(Dropt.drop()
         .selector(Dropt.weight(25))
 		  .items([netherdropore], Dropt.range(4))  
+	   ) 
+   );
+}
+
+val adddropores = [
+
+<pyrotech:generated_slag_copper>,
+<pyrotech:generated_slag_tin>,
+<pyrotech:generated_slag_iridium>,
+<pyrotech:generated_slag_titanium>,
+<pyrotech:generated_slag_tungsten>,
+<contenttweaker:sulphur>
+
+] as IItemStack[];
+
+val addores = [
+
+"contenttweaker:copper_ore",
+"contenttweaker:tin_ore",
+"contenttweaker:iridium_ore",
+"contenttweaker:rutile_ore",
+"contenttweaker:tungsten_ore",
+"contenttweaker:sulphur_ore"
+
+] as string[];
+
+for i, adddropore in adddropores
+{
+var addore = addores[i];
+Dropt.list("list_addore")
+  	.add(Dropt.rule()
+     .matchBlocks([addore])
+  	   .matchHarvester(Dropt.harvester()
+         .type("EXPLOSION")
+      )
+      .addDrop(Dropt.drop()
+	     .selector(Dropt.weight(75))
+	     .items([<pyrotech:rock>], Dropt.range(3))  
+	   )
+	   .addDrop(Dropt.drop()
+         .selector(Dropt.weight(25))
+		 .items([<pyrotech:rock>], Dropt.range(4))  
+	   )
+	)
+	.add(Dropt.rule()
+     .matchBlocks([addore])
+      .addDrop(Dropt.drop()
+	     .force()
+		  .items([<pyrotech:rock>], Dropt.range(2))
+	   )
+	  .addDrop(Dropt.drop()
+	     .selector(Dropt.weight(75))
+	     .items([adddropore], Dropt.range(3))
+	   )
+	  .addDrop(Dropt.drop()
+        .selector(Dropt.weight(25))
+		  .items([adddropore], Dropt.range(4))  
 	   ) 
    );
 }

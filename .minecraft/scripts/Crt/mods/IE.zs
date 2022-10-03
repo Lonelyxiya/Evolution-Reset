@@ -97,7 +97,7 @@ var ingots as IItemStack[] = [
 	<taiga:valyrium_ingot>,
 	<taiga:uru_ingot>,
 	<taiga:tiberium_ingot>,
-	<endreborn:item_ingot_wolframium>,
+	<contenttweaker:tungsten_ingot>,
 	<libvulpes:productingot:10>
 ];
 for i, slag in slags {

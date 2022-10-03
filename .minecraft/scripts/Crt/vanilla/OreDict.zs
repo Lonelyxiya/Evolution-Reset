@@ -9,6 +9,23 @@ import crafttweaker.item.IItemStack;
 
 <ore:steel>.add(<immersiveengineering:metal:8>);
 <ore:steel>.add(<mekanism:ingot:4>);
+<ore:oreSulfur>.add(<contenttweaker:sulphur_ore>);
+<ore:banitems>.addAll(<ore:oreSilicon>);
+<ore:whitesand>.add(<minecraft:sand>);
+<ore:radsand>.add(<minecraft:sand:1>);
+<ore:skull>.add(<minecraft:skull:*>);
+<ore:torch>.add(<advancedrocketry:unlittorch>);
+<ore:ergravel>.addAll(<ore:gravel>);
+<ore:ergravel>.add(<minecraft:flint>);
+<ore:blockSeven>.addAll(<ore:oreSulfur>);
+<ore:stoneBasalt>.add(<advancedrocketry:basalt>);
+<ore:oreCopper>.add(<contenttweaker:copper_ore>);
+<ore:oreTin>.add(<contenttweaker:tin_ore>);
+<ore:oreIridium>.add(<contenttweaker:iridium_ore>);
+<ore:fiery>.add(<twilightforest:fiery_blood>);
+<ore:fiery>.add(<twilightforest:fiery_tears>);
+<ore:oreTungsten>.add(<contenttweaker:tungsten_ore>);
+<ore:oreTitanium>.add(<contenttweaker:rutile_ore>);
 
 var shears =[
     <pyrotech:clay_shears>,
@@ -23,9 +40,6 @@ var shears =[
 for i in shears {
     <ore:shears>.add(i);
 }
-
-<ore:fiery>.add(<twilightforest:fiery_blood>);
-<ore:fiery>.add(<twilightforest:fiery_tears>);
 
 //Origins_Eternal
 //2021.7.26
@@ -240,7 +254,8 @@ var fourblocks = [
 <ore:oreEezo>,
 <ore:oreOsram>,
 <ore:oreTiberium>,
-<ore:obsidian>
+<ore:obsidian>,
+<ore:oreTitanium>
 
 ] as IOreDictEntry[];
 for fourblock in fourblocks {
@@ -422,25 +437,6 @@ var tool = [
 	<betternether:cincinnasite_axe_diamond>,
 	<betternether:cincinnasite_pickaxe>,
 	<betternether:cincinnasite_pickaxe_diamond>,
-	<twilightforest:fiery_sword>,
-	<twilightforest:fiery_pickaxe>,
-	<twilightforest:steeleaf_helmet>,
-    <twilightforest:steeleaf_chestplate>,
-    <twilightforest:steeleaf_leggings>,
-    <twilightforest:steeleaf_boots>,
-    <twilightforest:steeleaf_sword>,
-    <twilightforest:steeleaf_shovel>,
-    <twilightforest:steeleaf_pickaxe>,
-    <twilightforest:steeleaf_axe>,
-    <twilightforest:steeleaf_hoe>,
-	<twilightforest:knightmetal_helmet>,
-    <twilightforest:knightmetal_chestplate>,
-    <twilightforest:knightmetal_leggings>,
-    <twilightforest:knightmetal_boots>,
-    <twilightforest:knightmetal_sword>,
-    <twilightforest:knightmetal_pickaxe>,
-    <twilightforest:knightmetal_axe>,
-    <twilightforest:knightmetal_shield>,
 	<minecraft:sugar>,
 	<mekanism:cardboardbox>,
     <mekanism:anchorupgrade>,
@@ -466,8 +462,6 @@ var tool = [
     <refinedstorage:wireless_fluid_grid:1>,
     <refinedstorage:wireless_crafting_monitor:1>,
     <conarm:gauntlet_mat_reach>,
-    <twilightforest:uncrafting_table>,
-    <twilightforest:uncrafting_table>,
     <projecte:item.pe_rm_katar>,
     <tconstruct:throwball:1>,
 	<tconstruct:nuggets:4>,
@@ -477,37 +471,28 @@ var tool = [
     <minecraft:furnace>,
     <minecraft:crafting_table>,
     <refinedstorage:silicon>,
-    <endreborn:tool_pickaxe_endorium>,
-    <endreborn:tool_axe_endorium>,
-    <endreborn:tool_hoe_endorium>,
-    <endreborn:tool_shovel_endorium>,
-    <endreborn:tool_hammer_iron>,
-    <endreborn:tool_pickaxe_wolframium>,
-    <endreborn:tool_sword_wolframium>,
-    <endreborn:tool_hoe_wolframium>,
-    <endreborn:tool_axe_wolframium>,
-    <endreborn:tool_shovel_wolframium>,
-    <endreborn:armour_chestplate_obsidian>,
-    <endreborn:armour_leggings_obsidian>,
-    <endreborn:armour_boots_obsidian>,
-    <endreborn:armour_helmet_helmet>
-    
+	<twilightforest:fiery_sword>,
+	<twilightforest:fiery_pickaxe>,
+	<twilightforest:steeleaf_helmet>,
+    <twilightforest:steeleaf_chestplate>,
+    <twilightforest:steeleaf_leggings>,
+    <twilightforest:steeleaf_boots>,
+    <twilightforest:steeleaf_sword>,
+    <twilightforest:steeleaf_shovel>,
+    <twilightforest:steeleaf_pickaxe>,
+    <twilightforest:steeleaf_axe>,
+    <twilightforest:steeleaf_hoe>,
+	<twilightforest:knightmetal_helmet>,
+    <twilightforest:knightmetal_chestplate>,
+    <twilightforest:knightmetal_leggings>,
+    <twilightforest:knightmetal_boots>,
+    <twilightforest:knightmetal_sword>,
+    <twilightforest:knightmetal_pickaxe>,
+    <twilightforest:knightmetal_axe>,
+    <twilightforest:knightmetal_shield>,
+	<twilightforest:uncrafting_table>
 ] as IItemStack[];
 for items in tool
 	{	
 	<ore:banitems>.add(items);
     }
-<ore:oreSulfur>.add(<contenttweaker:sulphur_ore>);
-<ore:banitems>.addAll(<ore:oreSilicon>);
-<ore:whitesand>.add(<minecraft:sand>);
-<ore:radsand>.add(<minecraft:sand:1>);
-<ore:skull>.add(<minecraft:skull:*>);
-<ore:torch>.add(<advancedrocketry:unlittorch>);
-<ore:ergravel>.addAll(<ore:gravel>);
-<ore:ergravel>.add(<minecraft:flint>);
-<ore:blockSeven>.addAll(<ore:oreSulfur>);
-<ore:stoneBasalt>.add(<advancedrocketry:basalt>);
-<ore:oreCopper>.add(<contenttweaker:copper_ore>);
-<ore:oreTin>.add(<contenttweaker:tin_ore>);
-<ore:oreIridium>.add(<contenttweaker:iridium_ore>);
-<ore:oreTitanium>.add(<contenttweaker:rutile_ore>);

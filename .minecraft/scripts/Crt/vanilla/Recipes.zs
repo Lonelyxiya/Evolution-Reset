@@ -14,7 +14,6 @@ var ingot = [
 <botania:manaresource>,
 <botania:manaresource:4>,
 <botania:manaresource:7>,
-<endreborn:item_ingot_wolframium>,
 <contenttweaker:tungsten_steel_ingot>,
 <draconicevolution:draconium_ingot>,
 <immersiveengineering:material:19>,
@@ -35,8 +34,6 @@ var ingot = [
 <plustic:alumiteingot>,
 <plustic:invaringot>,
 <plustic:mirioningot>,
-<twilightforest:ironwood_ingot>,
-<twilightforest:knightmetal_ingot>,
 <taiga:tiberium_ingot>,
 <taiga:aurorium_ingot>,
 <taiga:prometheum_ingot>,
@@ -70,7 +67,9 @@ var ingot = [
 <tconstruct:ingots:2>,
 <tconstruct:ingots:3>,
 <tconstruct:ingots:4>,
-<tconstruct:ingots:5>
+<tconstruct:ingots:5>,
+<twilightforest:ironwood_ingot>,
+<twilightforest:knightmetal_ingot>
 
 ] as IItemStack[];
 for items in ingot
@@ -93,7 +92,6 @@ var nugget = [
 <botania:manaresource:17>,
 <botania:manaresource:18>,
 <botania:manaresource:19>,
-<endreborn:wolframium_nugget>,
 <draconicevolution:nugget>,
 <draconicevolution:nugget:1>,
 <immersiveengineering:metal:20>,
@@ -237,7 +235,8 @@ furnace.addRecipe(<immersiveengineering:metal:25>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_slag_lead>);
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
-furnace.addRecipe(<endreborn:wolframium_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
+furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
+furnace.addRecipe(<minecraft:bread>, <xlfoodmod:dough>);
 furnace.setFuel(<minecraft:blaze_rod>, 0);
 
 //2021.8.10
@@ -363,3 +362,5 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 
 //2022.1.31
 furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);
+recipes.replaceAllOccurences(<minecraft:crafting_table>, <tconstruct:tooltables>);
+recipes.replaceAllOccurences(<minecraft:sugar>, <contenttweaker:sugar>);

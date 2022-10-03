@@ -34,7 +34,6 @@ if ((loadedMods.contains("champions")) &&
     (loadedMods.contains("sereneseasons")) && 
     (loadedMods.contains("toughasnails")) && 
     (loadedMods.contains("hardcoredarkness")) && 
-    (loadedMods.contains("resourceloader")) && 
     (loadedMods.contains("custommainmenu")) && 
     (loadedMods.contains("aiimprovements")) && 
     (loadedMods.contains("pyrotech")) && 

@@ -70,9 +70,7 @@ val banlist = [
 <betternether:cincinnasite_axe>, 
 <betternether:cincinnasite_axe_diamond>, 
 <betternether:cincinnasite_pickaxe>, 
-<betternether:cincinnasite_pickaxe_diamond>, 
-<twilightforest:fiery_sword>, 
-<twilightforest:fiery_pickaxe>, 
+<betternether:cincinnasite_pickaxe_diamond>,
 <minecraft:iron_ore>, 
 <minecraft:carrot>, 
 <minecraft:bread>, 
@@ -88,7 +86,11 @@ val banlist = [
 <minecraft:chainmail_helmet>, 
 <minecraft:chainmail_chestplate>, 
 <minecraft:chainmail_leggings>, 
-<minecraft:chainmail_boots>
+<minecraft:chainmail_boots>,
+<minecraft:leather>,
+<twilightforest:fiery_sword>, 
+<twilightforest:fiery_pickaxe>
+
 ] as IItemStack[];
 
 for items in banlist {

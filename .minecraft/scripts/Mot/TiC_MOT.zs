@@ -66,13 +66,13 @@ mods.tconstruct.Alloy.addRecipe(<liquid:obsidiorite_fluid> * 1, [<liquid:meteori
 
 //2021.8.15
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<pyrotech:generated_pile_slag_tungsten>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 16,<endreborn:wolframium_nugget>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 16,<contenttweaker:tungsten_nugget>, 1000);
 mods.tconstruct.Fuel.registerFuel(<liquid:obsidian_fluid> * 2, 200);
 mods.tconstruct.Fuel.registerFuel(<liquid:tungsten_steel_fluid> * 2, 200);
 
 //2021.12.7
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<endreborn:block_wolframium_ore>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<endreborn:item_ingot_wolframium>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ore>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ingot>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 144,<contenttweaker:tungsten_steel_ingot>, 1000);
 mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 16,<contenttweaker:tungsten_steel_nugget>, 1000);
 
@@ -91,7 +91,7 @@ mods.tconstruct.Alloy.addRecipe(<liquid:adamant_fluid> * 4, [<liquid:vibranium_f
 //2022.1.25
 mods.tconstruct.Casting.addTableRecipe(<libvulpes:productingot:10>, null, <liquid:iridium>, 144, false, 200);
 mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:metal:1>, null, <liquid:aluminum>, 144, false, 200);
-mods.tconstruct.Casting.addTableRecipe(<endreborn:item_ingot_wolframium>, null, <liquid:tungsten_fluid>, 144, false, 200);
+mods.tconstruct.Casting.addTableRecipe(<contenttweaker:tungsten_ingot>, null, <liquid:tungsten_fluid>, 144, false, 200);
 
 
 

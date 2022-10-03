@@ -10,9 +10,8 @@ mods.MobStages.addStage("one", "minecraft:zombie_villager");
 mods.MobStages.addStage("one", "minecraft:husk");
 mods.MobStages.addStage("one", "minecraft:zombie_horse");
 mods.MobStages.addStage("one", "minecraft:skeleton_horse");
+mods.MobStages.addStage("one", "minecraft:slime");
 mods.MobStages.addStage("one", "tconstruct:blueslime");
-
-mods.TimeStages.addTimer("protect", "", "one" , 14400,"seconds");
 
 mods.MobStages.addStage("two", "minecraft:spider");
 

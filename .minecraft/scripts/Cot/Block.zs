@@ -86,3 +86,13 @@ sulphur_ore.setToolClass("pickaxe");
 sulphur_ore.setToolLevel(3);
 sulphur_ore.setBlockSoundType(<soundtype:stone>);
 sulphur_ore.register();
+
+var tungsten_ore = VanillaFactory.createBlock("tungsten_ore", <blockmaterial:rock>);
+tungsten_ore.setLightOpacity(5);
+tungsten_ore.setLightValue(1);
+tungsten_ore.setBlockHardness(8.5);
+tungsten_ore.setBlockResistance(5.0);
+tungsten_ore.setToolClass("pickaxe");
+tungsten_ore.setToolLevel(8);
+tungsten_ore.setBlockSoundType(<soundtype:stone>);
+tungsten_ore.register();

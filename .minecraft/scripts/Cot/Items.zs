@@ -12,6 +12,12 @@ tungsten_steel_ingot.register();
 val tungsten_steel_nugget as Item = VanillaFactory.createItem("tungsten_steel_nugget");
 tungsten_steel_nugget.register();
 
+val tungsten_ingot as Item = VanillaFactory.createItem("tungsten_ingot");
+tungsten_ingot.register();
+
+val tungsten_nugget as Item = VanillaFactory.createItem("tungsten_nugget");
+tungsten_nugget.register();
+
 val flour as Item = VanillaFactory.createItem("flour");
 flour.register();
 

@@ -272,9 +272,6 @@ MechanicalCompactor.addRecipe("ardite_block_from_ingot", <tconstruct:metal:1>, <
 MechanicalCompactor.addRecipe("manyullyn_block_from_ingot", <tconstruct:metal:2>, <ore:blockManyullyn>,9);
 MechanicalCompactor.addRecipe("knightslime_block_from_ingot", <tconstruct:metal:3>, <ore:blockKnightslime>,9);
 MechanicalCompactor.addRecipe("alubrass_block_from_ingot", <tconstruct:metal:5>, <ore:blockAlubrass>,9);
-MechanicalCompactor.addRecipe("knightmetal_block_from_ingot", <twilightforest:knightmetal_block>, <ore:ingotKnightmetal>,9);
-MechanicalCompactor.addRecipe("fiery_block_from_ingot", <twilightforest:block_storage:1>, <ore:blockFiery>,9);
-MechanicalCompactor.addRecipe("ironwood_block_from_ingot", <twilightforest:block_storage>, <ore:ingotIronwood>,9);
 MechanicalCompactor.addRecipe("quartz_enriched_iron_block_from_ingot", <refinedstorage:quartz_enriched_iron_block>, <refinedstorage:quartz_enriched_iron>,9);
 MechanicalCompactor.addRecipe("draconium_block_from_ingot", <draconicevolution:draconium_block>, <ore:blockDraconium>,9);
 MechanicalCompactor.addRecipe("draconic_block_from_ingot", <draconicevolution:draconic_block>, <ore:ingotDraconiumAwakened>,9);
@@ -295,9 +292,12 @@ MechanicalCompactor.addRecipe("salt_block_from_ingot", <mekanism:saltblock>, <or
 MechanicalCompactor.addRecipe("mobius_fuel_block_from_ingot", <projecte:fuel_block:1>, <projecte:item.pe_fuel:1>,9);
 MechanicalCompactor.addRecipe("aeternalis_fuel_block_from_ingot", <projecte:fuel_block:2>, <projecte:item.pe_fuel:2>,9);
 MechanicalCompactor.addRecipe("achemical_coal_fuel_block_from_ingot", <projecte:fuel_block>, <projecte:item.pe_fuel>,9);
+MechanicalCompactor.addRecipe("lead_block_from_ingot", <immersiveengineering:storage:2>, <ore:ingotLead>,9);
+MechanicalCompactor.addRecipe("knightmetal_block_from_ingot", <twilightforest:knightmetal_block>, <ore:ingotKnightmetal>,9);
+MechanicalCompactor.addRecipe("fiery_block_from_ingot", <twilightforest:block_storage:1>, <ore:blockFiery>,9);
+MechanicalCompactor.addRecipe("ironwood_block_from_ingot", <twilightforest:block_storage>, <ore:ingotIronwood>,9);
 MechanicalCompactor.addRecipe("steeleaf_block_from_ingot", <twilightforest:block_storage:2>, <ore:ingotSteeleaf>,9);
 MechanicalCompactor.addRecipe("carminite_block_from_ingot", <twilightforest:block_storage:4>, <ore:carminite>,9);
-MechanicalCompactor.addRecipe("lead_block_from_ingot", <immersiveengineering:storage:2>, <ore:ingotLead>,9);
 MechanicalCompactor.addRecipe("furarctic_block_from_ingot", <twilightforest:block_storage:3>, <ore:furArctic>,9);
 MechanicalCompactor.removeRecipes(<minecraft:grass>);
 
@@ -307,7 +307,7 @@ var worktable_recipes = [
 "minecraft:bow", 
 "minecraft:iron_ingot_from_nuggets", 
 "minecraft:gold_ingot_from_nuggets", 
-"immersiveengineering:metal_storge/copper_ingot", 
+"immersiveengineering:metal_storage/copper_ingot", 
 "mekanism:ingot_5_alt", 
 "mekanism:ingot_6_alt", 
 "mekanism:basicblock_12", 
@@ -317,7 +317,7 @@ var worktable_recipes = [
 "tconstruct:tools/table/stencil_table", 
 "tconstruct:tools/table/part_builder", 
 "minecraft:piston", 
-"crafttweaker:tooltables"
+"toughasnails:campfire"
 
 ] as string[];
 for items in worktable_recipes
@@ -329,7 +329,6 @@ StoneSawmill.addRecipe("flour_from_cropWheat", <contenttweaker:flour>, <ore:crop
 BrickSawmill.addRecipe("flour_from_cropWheat2", <contenttweaker:flour>, <ore:cropWheat>, 200, <pyrotech:sawmill_blade_iron:*> | <pyrotech:sawmill_blade_stone:*> | <pyrotech:sawmill_blade_bone:*> | <pyrotech:sawmill_blade_flint:*> | <pyrotech:sawmill_blade_diamond:*> | <pyrotech:sawmill_blade_gold:*> | <pyrotech:sawmill_blade_obsidian:*>, 0);
 BrickSawmill.addRecipe("cement_powder_from_soil", <contenttweaker:cement_powder>, <tconstruct:soil>, 400, <pyrotech:sawmill_blade_iron:*> | <pyrotech:sawmill_blade_stone:*> | <pyrotech:sawmill_blade_bone:*> | <pyrotech:sawmill_blade_flint:*> | <pyrotech:sawmill_blade_diamond:*> | <pyrotech:sawmill_blade_gold:*> | <pyrotech:sawmill_blade_obsidian:*>, 0);
 
-Campfire.removeRecipes(<minecraft:bread>);
 Campfire.removeRecipes(<minecraft:blaze_powder>);
 
 StoneKiln.removeRecipes(<minecraft:netherbrick>);
@@ -350,7 +349,7 @@ IroncladAnvil.addRecipe("nugget_from_ingot_9", <botania:manaresource:17>*9, <ore
 IroncladAnvil.addRecipe("nugget_from_ingot_10", <botania:manaresource:18>*9, <ore:ingotTerrasteel>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_11", <botania:manaresource:19>*9, <ore:ingotElvenElementium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_12", <libvulpes:productnugget:3>*9, <ore:ingotSilicon>, 20, "hammer");
-IroncladAnvil.addRecipe("nugget_from_ingot_14", <endreborn:wolframium_nugget>*9, <endreborn:item_ingot_wolframium>, 20, "hammer");
+IroncladAnvil.addRecipe("nugget_from_ingot_14", <contenttweaker:tungsten_nugget>*9, <contenttweaker:tungsten_ingot>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_15", <draconicevolution:nugget>*9, <ore:ingotDraconium>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_16", <draconicevolution:nugget:1>*9, <ore:ingotDraconiumAwakened>, 20, "hammer");
 IroncladAnvil.addRecipe("nugget_from_ingot_17", <immersiveengineering:metal:21>*9, <ore:ingotAluminum>, 20, "hammer");
