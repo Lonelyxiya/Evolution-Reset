@@ -12,7 +12,7 @@
   "manifestVersion": 1,
   "name": "Evolution-Reset",
   "version": "1.0.0",
-  "author": "Origins_Eternal",
+  "author": "asiekierka",
   "files": [
     {
       "projectID": 285742,
@@ -72,11 +72,6 @@
     {
       "projectID": 71869,
       "fileID": 3013557,
-      "required": true
-    },
-    {
-      "projectID": 267934,
-      "fileID": 2566522,
       "required": true
     },
     {
