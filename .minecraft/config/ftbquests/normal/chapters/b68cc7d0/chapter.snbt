@@ -1,0 +1,7 @@
+{
+	title: "Primitive times",
+	icon: "minecraft:stick",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: ""
+}
