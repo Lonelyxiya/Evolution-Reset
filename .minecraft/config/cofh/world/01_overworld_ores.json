@@ -4,7 +4,7 @@
 		"wolframium": {
 			"distribution": "uniform",
 			"generator": {
-				"block": "endreborn:block_wolframium_ore",
+				"block": "contenttweaker:tungsten_ore",
 				"material": "minecraft:stone",
 				"cluster-size": 5
 			},
@@ -25,7 +25,7 @@
 			"generator": {
 				"block": "contenttweaker:copper_ore",
 				"material": "minecraft:stone",
-				"cluster-size": 3
+				"cluster-size": 4
 			},
 			"cluster-count": 3,
 			"min-height": 30,
@@ -100,7 +100,7 @@
 			"distribution": "uniform",
 			"generator": {
 				"block": "contenttweaker:sulphur_ore",
-				"material": "minecraft:netherrack",
+				"material": "minecraft:stone",
 				"cluster-size": 10
 			},
 			"cluster-count": 10,
@@ -110,13 +110,9 @@
 			"biome": {
 				"restriction": "whitelist",
 				"value": [
-					{
-						"type": "dictionary",
-						"entry": "NETHER"
-					}
+                    0
 				]
-			},
-			"dimension": "all"
+			}
 		}
 	}
 }
