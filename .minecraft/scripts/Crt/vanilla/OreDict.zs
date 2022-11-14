@@ -436,8 +436,7 @@ var tool = [
 <twilightforest:knightmetal_axe>,
 <twilightforest:knightmetal_shield>,
 <twilightforest:uncrafting_table>,
-<tconstruct:stone_stick>,
-<pyrotech:material:33>
+<tconstruct:stone_stick>
 ] as IItemStack[];
 
 for items in tool {	
