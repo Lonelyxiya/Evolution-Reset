@@ -5,10 +5,10 @@
 		"c4400174"
 	],
 	tasks: [{
-		uid: "ab9b9c9b",
+		uid: "8079a27f",
 		type: "item",
 		items: [{
-			item: "ercore:bread_unfired"
+			item: "xlfoodmod:dough"
 		}]
 	}],
 	rewards: [{

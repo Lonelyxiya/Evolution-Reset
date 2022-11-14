@@ -12,7 +12,7 @@
 			tag: {
 				PartType: "tconstruct:pick_head"
 			}
-		}],
+		}]
 	}],
 	rewards: [{
 		uid: "44a39c52",
