@@ -1,6 +1,4 @@
-//Origins_Eternal
-//2021.8.10
-#modloaded tanaddons
+#ignoreBracketErrors
 
 recipes.remove(<tanaddons:temp_regulator>);
 recipes.addShaped(<tanaddons:temp_regulator>,

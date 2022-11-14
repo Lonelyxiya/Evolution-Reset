@@ -8,7 +8,7 @@
 		uid: "84af8e0d",
 		type: "item",
 		items: [{
-			item: "contenttweaker:obsidian_nomana"
+			item: "ercore:obsidian_nomana"
 		}]
 	}],
 	rewards: [{

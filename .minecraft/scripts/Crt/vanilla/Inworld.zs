@@ -1,14 +1,10 @@
-//Lacz
-//2021.02.19
+#ignoreBracketErrors
 import crafttweaker.item.IItemStack;
+
 mods.inworldcrafting.FluidToItem.transform(<minecraft:stick>, <liquid:water>, [<minecraft:torch>], false);
-
-//Origins_Eternal
-//2021.8.20
 mods.inworldcrafting.FluidToItem.transform(<tconstruct:soil>, <liquid:slaked_lime>, [<minecraft:clay>], true);
-mods.plustweaks.Liquid.setInfinite(<liquid:water>, true);
 
-//2022.2.2
+mods.plustweaks.Liquid.setInfinite(<liquid:water>, true);
 
 var seeds as IItemStack[] = [
 	<botania:grassseeds>,

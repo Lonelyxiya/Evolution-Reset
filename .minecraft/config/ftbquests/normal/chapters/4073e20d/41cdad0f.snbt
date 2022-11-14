@@ -13,7 +13,6 @@
 				PartType: "tconstruct:pick_head"
 			}
 		}],
-		only_from_crafting: true
 	}],
 	rewards: [{
 		uid: "44a39c52",

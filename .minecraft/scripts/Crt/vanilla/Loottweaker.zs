@@ -1,6 +1,4 @@
-//Lacz
-//2021.08.11
-
+#ignoreBracketErrors
 import loottweaker.LootTweaker;
 import loottweaker.vanilla.loot.LootTable;
 import loottweaker.vanilla.loot.LootPool;
@@ -11,49 +9,6 @@ import crafttweaker.item.IItemStack;
 var ghast = LootTweaker.getTable("minecraft:entities/ghast");
 var ghast_extra = ghast.addPool("ghast_extra", 1, 1, 0, 0);
 ghast_extra.addItemEntry(<botania:manabottle>,1);
-
-var blueprints = [
-<contenttweaker:blueprint1>,
-<contenttweaker:blueprint2>,
-<contenttweaker:blueprint3>,
-<contenttweaker:blueprint4>,
-<contenttweaker:blueprint5>,
-<contenttweaker:blueprint6>,
-<contenttweaker:blueprint7>,
-<contenttweaker:blueprint8>,
-<contenttweaker:blueprint9>,
-<contenttweaker:blueprint10>,
-<contenttweaker:blueprint11>,
-<contenttweaker:blueprint12>,
-<contenttweaker:blueprint13>,
-<contenttweaker:blueprint14>,
-<contenttweaker:blueprint15>,
-<contenttweaker:blueprint16>,
-<contenttweaker:blueprint17>,
-<contenttweaker:blueprint18>,
-<contenttweaker:blueprint19>,
-<contenttweaker:blueprint20>,
-<contenttweaker:blueprint21>,
-<contenttweaker:blueprint22>,
-<contenttweaker:blueprint23>,
-<contenttweaker:blueprint24>,
-<contenttweaker:blueprint25>,
-<contenttweaker:blueprint26>,
-<contenttweaker:blueprint27>,
-<contenttweaker:blueprint28>,
-<contenttweaker:blueprint29>,
-<contenttweaker:blueprint30>,
-<contenttweaker:blueprint31>,
-<contenttweaker:blueprint32>,
-<contenttweaker:blueprint33>,
-<contenttweaker:blueprint34>,
-<contenttweaker:blueprint35>,
-<contenttweaker:blueprint36>,
-<contenttweaker:blueprint37>,
-<contenttweaker:blueprint38>,
-<contenttweaker:blueprint39>
-] as IItemStack[];
-
 
 var box = LootTweaker.getTable("minecraft:chests/abandoned_mineshaft");
 var box_extra = box.addPool("box_extra", 0, 1, 0, 0);
@@ -94,20 +49,18 @@ var box_extra11 = box11.addPool("box_extra11", 0, 1, 0, 0);
 var box12 = LootTweaker.getTable("minecraft:chests/woodland_mansion");
 var box_extra12 = box12.addPool("box_extra12", 0, 1, 0, 0);
 
-for items in blueprints {
-
-box_extra.addItemEntry(items,1);
-box_extra1.addItemEntry(items,1);
-box_extra2.addItemEntry(items,1);
-box_extra3.addItemEntry(items,1);
-box_extra4.addItemEntry(items,1);
-box_extra5.addItemEntry(items,1);
-box_extra6.addItemEntry(items,1);
-box_extra7.addItemEntry(items,1);
-box_extra8.addItemEntry(items,1);
-box_extra9.addItemEntry(items,1);
-box_extra10.addItemEntry(items,1);
-box_extra11.addItemEntry(items,1);
-box_extra12.addItemEntry(items,1);
-
+for item in <ore:blueprint>.items {
+box_extra.addItemEntry(item,1);
+box_extra1.addItemEntry(item,1);
+box_extra2.addItemEntry(item,1);
+box_extra3.addItemEntry(item,1);
+box_extra4.addItemEntry(item,1);
+box_extra5.addItemEntry(item,1);
+box_extra6.addItemEntry(item,1);
+box_extra7.addItemEntry(item,1);
+box_extra8.addItemEntry(item,1);
+box_extra9.addItemEntry(item,1);
+box_extra10.addItemEntry(item,1);
+box_extra11.addItemEntry(item,1);
+box_extra12.addItemEntry(item,1);
 }

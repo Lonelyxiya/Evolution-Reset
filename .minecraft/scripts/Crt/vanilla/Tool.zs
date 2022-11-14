@@ -1,7 +1,4 @@
-//Lacz
-//2020.10.16
-//tooltip
-
+#ignoreBracketErrors
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.command.ICommandManager;
@@ -12,16 +9,13 @@ import crafttweaker.event.PlayerInteractEvent;
 
 <minecraft:diamond>.addTooltip(game.localize("crafttweaker.diamond.tooltip"));
 <immersiveengineering:metal:8>.addTooltip(game.localize("crafttweaker.metal8.tooltip"));
-<contenttweaker:iridium_ore>.addTooltip(game.localize("crafttweaker.iridium_ore.tooltip"));
+<ercore:iridium_ore>.addTooltip(game.localize("crafttweaker.iridium_ore.tooltip"));
 <immersiveengineering:graphite_electrode>.addTooltip(game.localize("crafttweaker.graphite_electrode.tooltip"));
 <minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}).addTooltip(game.localize("crafttweaker.stone_pickaxe.tooltip"));
 <fluxnetworks:flux>.addTooltip(game.localize("crafttweaker.flux.tooltip"));
 <scalinghealth:crystalshard>.addTooltip(game.localize("crafttweaker.crystalshard.tooltip"));
 <minecraft:clay_ball>.addTooltip(game.localize("crafttweaker.clay_ball.tooltip"));
 <endercrop:ender_seeds>.addTooltip(game.localize("crafttweaker.enderseeds.tooltip"));
-
-//Origins_Eternal
-//2021.7.27
 
 <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}}).addTooltip(game.localize("crafttweaker.tome.tooltip"));
 <taiga:tiberium_ore>.addTooltip(game.localize("crafttweaker.tiberium_ore.tooltip"));
@@ -34,16 +28,16 @@ import crafttweaker.event.PlayerInteractEvent;
 <taiga:valyrium_ore>.addTooltip(game.localize("crafttweaker.valyrium_ore.tooltip"));
 <taiga:uru_ore>.addTooltip(game.localize("crafttweaker.uru_ore.tooltip"));
 <taiga:obsidiorite_block>.addTooltip(game.localize("crafttweaker.obsidiorite_block.tooltip"));
-<contenttweaker:tungsten_ore>.addTooltip(game.localize("crafttweaker.tungsten_ore.tooltip"));
+<ercore:tungsten_ore>.addTooltip(game.localize("crafttweaker.tungsten_ore.tooltip"));
 <pyrotech:kiln_pit>.addTooltip(game.localize("crafttweaker.kiln_pit.tooltip"));
 <tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
 
 for item in <ore:banitems>.items {
-item.maxDamage = 1;
-recipes.remove(item);
-mods.jei.JEI.hide(item);
-mods.ltt.LootTable.removeGlobalItem(item.definition.id);
+    item.maxDamage = 1;
+    recipes.remove(item);
+    mods.jei.JEI.hide(item);
+    mods.ltt.LootTable.removeGlobalItem(item.definition.id);
 events.onPlayerInteract(function(event as PlayerInteractEvent) {
     var ser = server.commandManager as ICommandManager;
         var toolname = item.definition.id;

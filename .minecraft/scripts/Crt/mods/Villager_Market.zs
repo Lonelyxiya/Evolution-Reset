@@ -1,6 +1,4 @@
-//2022.2.19
-//Origins_Eternal
-#modloaded villagermarket 
+#ignoreBracketErrors
 
 recipes.remove(<villagermarket:villager_market>);
 recipes.addShaped(<villagermarket:villager_market>, 

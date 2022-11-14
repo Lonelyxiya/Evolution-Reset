@@ -8,7 +8,7 @@
 		uid: "ab9b9c9b",
 		type: "item",
 		items: [{
-			item: "xlfoodmod:dough"
+			item: "ercore:bread_unfired"
 		}]
 	}],
 	rewards: [{
