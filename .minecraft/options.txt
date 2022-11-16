@@ -160,13 +160,6 @@ key_mekanism.key.voice:22
 key_key.taiga.alt_action:29
 key_Mo' Bends Menu:34
 key_Refresh Animations:68
-key_key.plustic_release_entity.desc:11
-key_key.plustic_toggle_gui.desc:23
-key_key.plustic_set_portal.desc:49
-key_key.plustic_brown_magic.desc:24
-key_key.plustic_toggle_tool.desc:51:ALT
-key_key.plustic_fruit_salad.desc:12:ALT
-key_key.plustic_mots.desc:13:ALT
 key_key.refinedstorage.focusSearchBar:15
 key_key.refinedstorage.clearGridCraftingMatrix:45:CONTROL
 key_key.refinedstorage.openWirelessGrid:0

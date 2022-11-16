@@ -29,9 +29,6 @@ var ingot = [
 <taiga:lumix_ingot>,
 <taiga:seismum_ingot>,
 <taiga:astrium_ingot>,
-<plustic:alumiteingot>,
-<plustic:invaringot>,
-<plustic:mirioningot>,
 <taiga:tiberium_ingot>,
 <taiga:aurorium_ingot>,
 <taiga:prometheum_ingot>,
@@ -77,7 +74,6 @@ recipes.remove(items);
 
 var nugget = [
 
-<plustic:mirionnugget>,
 <taiga:tiberium_nugget>,
 <taiga:aurorium_nugget>,
 <taiga:prometheum_nugget>,
@@ -108,7 +104,6 @@ var nugget = [
 <mekanism:nugget:4>,
 <mekanism:nugget:5>,
 <mekanism:nugget:6>,
-<plustic:alumitenugget>,
 <taiga:ovium_nugget>,
 <taiga:obsidiorite_nugget>,
 <taiga:dilithium_nugget>,

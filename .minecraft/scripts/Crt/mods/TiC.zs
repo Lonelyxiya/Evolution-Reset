@@ -64,9 +64,3 @@ recipes.addShaped(<tconstruct:tooltables:4>,
 [[<pyrotech:material:20>, <pyrotech:material:20>, <pyrotech:material:20>],
 [<pyrotech:material:20>, <pyrotech:crate_stone>, <pyrotech:material:20>],
 [<pyrotech:material:20>, <pyrotech:material:20>, <pyrotech:material:20>]]);
-
-recipes.remove(<plustic:centrifuge>);
-recipes.addShaped(<plustic:centrifuge>,
-[[<ore:blockClassColorless>, <ore:ingotIron>, <ore:blockClassColorless>],
-[<ore:ingotIron>, <tconstruct:shovel>.withTag({Material: "iron"}), <ore:ingotIron>],
-[<ore:blockClassColorless>, <ore:ingotIron>, <ore:blockClassColorless>]]);
