@@ -353,4 +353,3 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 
 furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);
 recipes.replaceAllOccurences(<minecraft:crafting_table>, <tconstruct:tooltables>);
-recipes.replaceAllOccurences(<minecraft:sugar>, <ercore:sugar>);

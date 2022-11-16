@@ -429,7 +429,7 @@ SoakingPot.addRecipe("basalt_block_from_basalt", <ercore:basalt_coaltar>, <liqui
 
 StoneCrucible.addRecipe("liquid_dirt_from_dirt", <liquid:dirt> * 500, <ore:dirt>, 3 * 60 * 20, true);
 
-SoakingPot.addRecipe("sugar_from_sugarcane", <ercore:sugar>, <liquid:sugarcane>, <pyrotech:material:8>, true, 5 * 60 * 20);
+SoakingPot.addRecipe("sugar_from_sugarcane", <minecraft:sugar>, <liquid:sugarcane>, <pyrotech:material:8>, true, 5 * 60 * 20);
 StoneCrucible.addRecipe("liquid_sugarcane_from_sugarcane", <liquid:sugarcane> * 500, <ore:sugarcane>, 2 * 60 * 20, true);
 
 Worktable.buildShaped(<immersiveengineering:tool>, [

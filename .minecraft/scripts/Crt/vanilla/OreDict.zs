@@ -40,8 +40,6 @@ for i in shears {
 <ore:mushroom>.add(<minecraft:red_mushroom>);
 <ore:mushroom>.add(<minecraft:brown_mushroom>);
 
-<ore:listAllsugar>.add(<ercore:sugar>);
-
 <ore:string>.add(<pyrotech:material:14>);
 
 <ore:carbon>.addAll(<ore:coal>);
@@ -409,7 +407,6 @@ var tool = [
 	<betternether:cincinnasite_axe_diamond>,
 	<betternether:cincinnasite_pickaxe>,
 	<betternether:cincinnasite_pickaxe_diamond>,
-	<minecraft:sugar>,
 	<mekanism:cardboardbox>,
     <mekanism:anchorupgrade>,
     <draconicevolution:grinder>,
