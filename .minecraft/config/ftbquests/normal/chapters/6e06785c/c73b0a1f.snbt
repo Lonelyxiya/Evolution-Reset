@@ -8,7 +8,7 @@
 		uid: "b54e974b",
 		type: "item",
 		items: [{
-			item: "ercore:searedbrick_unfired"
+			item: "contenttweaker:searedbrick_unfired"
 		}]
 	}],
 	rewards: [{

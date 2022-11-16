@@ -1,9 +1,11 @@
-#ignoreBracketErrors
+//Lacz
+//2021.09.02
+
+#modloaded armoreablemobs
 import mods.armoreablemobs.ArmorHandler;
 import mods.armoreablemobs.ArmorEntity;
 import mods.armoreablemobs.ArmorSlot;
 import mods.armoreablemobs.ArmorGroup;
-import crafttweaker.item.IItemStack;
 
 var mob_one = ArmorHandler.createArmorGroup("mob_one", 0.3);
 var mob_three = ArmorHandler.createArmorGroup("mob_three", 0.7);

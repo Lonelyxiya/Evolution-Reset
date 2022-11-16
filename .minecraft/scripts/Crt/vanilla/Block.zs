@@ -1,4 +1,7 @@
-#ignoreBracketErrors
+//Origins_Eternal
+//2021.6.29
+//Block
+
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemStack;
 
@@ -25,6 +28,8 @@ for fiveblock in <ore:blockFive>.items {
 for sixblock in <ore:blockSix>.items {	
 	sixblock.asBlock().definition.setHarvestLevel("pickaxe", 10);
 }
+
+//2022.1.21
 
 for sevenblock in <ore:blockSeven>.items {	
 	sevenblock.asBlock().definition.setHarvestLevel("pickaxe", 4);

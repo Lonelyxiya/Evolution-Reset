@@ -1,60 +1,25 @@
-#ignoreBracketErrors
+#modloaded armoreablemobs gamestages
+//Lacz
+//2021.09.02
+
 import mods.multiblockstages.IEMultiBlockStages;
 
-var mobsone = [
-"minecraft:witch",
-"minecraft:zombie",
-"minecraft:zombie_villager",
-"minecraft:husk",
-"minecraft:zombie_horse",
-"minecraft:skeleton_horse",
-"tconstruct:blueslime"
-] as string[];
+mods.MobStages.addStage("one", "minecraft:witch");
+mods.MobStages.addStage("one", "minecraft:zombie");
+mods.MobStages.addStage("one", "minecraft:zombie_villager");
+mods.MobStages.addStage("one", "minecraft:husk");
+mods.MobStages.addStage("one", "minecraft:zombie_horse");
+mods.MobStages.addStage("one", "minecraft:skeleton_horse");
+mods.MobStages.addStage("one", "minecraft:slime");
+mods.MobStages.addStage("one", "tconstruct:blueslime");
 
-for mobone in mobsone {
-    mods.MobStages.addStage("one", mobone);
-}
+mods.MobStages.addStage("two", "minecraft:spider");
 
-var mobsthree = [
-"minecraft:spider",
-"minecraft:skeleton",
-"minecraft:stray",
-"mekanism:babyskeleton",
-"minecraft:creeper",
-"minecraft:enderman"
-] as string[];
+mods.MobStages.addStage("three", "minecraft:skeleton");
+mods.MobStages.addStage("three", "minecraft:stray");
+mods.MobStages.addStage("three", "mekanism:babyskeleton");
 
-for mobthree in mobsthree {
-    mods.MobStages.addStage("three", mobthree);
-}
-
-var mobsfive = [
-"mutantbeasts:body_part",
-"mutantbeasts:chemical_x",
-"mutantbeasts:creeper_minion",
-"mutantbeasts:creeper_minion_egg",
-"mutantbeasts:endersoul_clone",
-"mutantbeasts:endersoul_fragment",
-"mutantbeasts:mutant_arrow",
-"mutantbeasts:mutant_creeper",
-"mutantbeasts:mutant_enderman",
-"mutantbeasts:mutant_skeleton",
-"mutantbeasts:mutant_snow_golem",
-"mutantbeasts:mutant_zombie",
-"mutantbeasts:skull_spirit",
-"mutantbeasts:spider_pig",
-"mutantbeasts:throwable_block"
-] as string[];
-
-for mobfive in mobsfive {
-    mods.MobStages.addStage("five", mobfive);
-}
+mods.MobStages.addStage("four", "minecraft:creeper");
+mods.MobStages.addStage("four", "minecraft:enderman");
 
 IEMultiBlockStages.addStage("oreexacavator", "IE:Excavator");
-
-if (journeymapstages == true) {
-    mods.jmapstages.JMapStages.setWaypointStage("seven");
-    mods.jmapstages.JMapStages.setDeathpointStage("eight");
-    mods.jmapstages.JMapStages.setMinimapStage("six");
-    mods.jmapstages.JMapStages.setFullscreenStage("nine");
-}

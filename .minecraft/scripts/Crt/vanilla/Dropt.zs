@@ -1,16 +1,20 @@
-#ignoreBracketErrors
 import mods.dropt.Dropt;
 import mods.dropt.Harvester;
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 
+//2022.6.22
+//Origin_Eternity
 val woods = [
+
 <ore:logWood>,
 <ore:plankWood>,
 <ore:flower>
+
 ] as IOreDictEntry[];
 
-for wood in woods {
+for wood in woods
+{
 Dropt.list("list_woods")
     .add(Dropt.rule()
     .matchDrops([wood])
@@ -36,22 +40,27 @@ Dropt.list("list_woods")
 }
 
 var dropdirts = [
+
 <pyrotech:rock:4>,
 <pyrotech:rock:5>,
 <pyrotech:rock:9>,
 <pyrotech:material:17>,
-<ercore:cement_powder>
+<contenttweaker:cement_powder>
+
 ] as IItemStack[];
 
 val dirts = [
+
 <ore:dirt>,
 <ore:whitesand>,
 <ore:radsand>,
 <ore:ballClay>,
 <ore:grout>
+
 ] as IOreDictEntry[];
 
-for i, dirt in dirts {
+for i, dirt in dirts
+{
 var dropdirt = dropdirts[i];
 Dropt.list("list_dirt")
     .add(Dropt.rule()
@@ -169,9 +178,10 @@ Dropt.list("list_wool")
           .selector(Dropt.weight(25))
           .items([<minecraft:string>])
       )
-   );
+    );
 
 var dropores = [
+
 <pyrotech:generated_slag_copper>,
 <pyrotech:generated_slag_iron>,
 <pyrotech:generated_slag_tin>,
@@ -198,10 +208,12 @@ var dropores = [
 <pyrotech:material:8>,
 <pyrotech:material:18>,
 <pyrotech:generated_slag_iridium>,
-<pyrotech:generated_slag_titanium>
-] as IItemStack[];
+<contenttweaker:sulphur>,
+<contenttweaker:rutile_ore>
 
+] as IItemStack[];
 val ores = [
+
 <ore:oreCopper>,
 <ore:oreIron>,
 <ore:oreTin>,
@@ -228,10 +240,13 @@ val ores = [
 <ore:blockSlakedlime>,
 <ore:eroreDiamond>,
 <ore:oreIridium>,
+<ore:oreSulfur>,
 <ore:oreTitanium>
+
 ] as IOreDictEntry[];
 
-for i, ore in ores {
+for i, ore in ores
+{
 var dropore = dropores[i];
 Dropt.list("list_ore")
   	.add(Dropt.rule()
@@ -266,6 +281,7 @@ Dropt.list("list_ore")
 }
 
 var bandrops = [
+
 <pyrotech:rock:7>,
 <minecraft:gunpowder>,
 <pyrotech:rock_netherrack>,
@@ -276,9 +292,11 @@ var bandrops = [
 <pyrotech:rock:2>,
 <pyrotech:rock:8>,
 <minecraft:bone>
+
 ] as IItemStack[];
 
 val banblocks = [
+
 <ore:torch>,
 <ore:tnt>,
 <ore:netherrack>,
@@ -289,9 +307,11 @@ val banblocks = [
 <ore:erstoneDiorite>,
 <ore:erstoneLimestone>,
 <ore:skull>
+
 ] as IOreDictEntry[];
 
-for i, banblock in banblocks {
+for i, banblock in banblocks
+{
 var bandrop = bandrops[i];
 Dropt.list("list_banblocks")
  .add(Dropt.rule()
@@ -315,16 +335,21 @@ Dropt.list("list_banblocks")
 }
 
 val keyblocks = [
+
 <ore:chest>,
 <ore:bed>
+
 ] as IOreDictEntry[];
 
 val stages = [
+
 "chest",
 "bed"
+
 ] as string[];
 
-for i, keyblock in keyblocks {
+for i, keyblock in keyblocks
+{
 var stage = stages[i];
 Dropt.list("list_keyblocks")
     .add(Dropt.rule()
@@ -358,20 +383,22 @@ Dropt.list("list_keyblocks")
 }
 
 var netherdropores = [
+
 <minecraft:quartz>,
 <pyrotech:generated_slag_prometheum>,
-<pyrotech:generated_slag_valyrium>,
-<ercore:sulphur>
-] as IItemStack[];
+<pyrotech:generated_slag_valyrium>
 
+] as IItemStack[];
 val netherores = [
+
 <ore:oreQuartz>,
 <ore:orePrometheum>,
-<ore:oreValyrium>,
-<ore:oreSulfur>
+<ore:oreValyrium>
+
 ] as IOreDictEntry[];
 
-for i, netherore in netherores {
+for i, netherore in netherores
+{
 var netherdropore = netherdropores[i];
 Dropt.list("list_netherore")
   	.add(Dropt.rule()
@@ -401,6 +428,63 @@ Dropt.list("list_netherore")
 	  .addDrop(Dropt.drop()
         .selector(Dropt.weight(25))
 		  .items([netherdropore], Dropt.range(4))  
+	   ) 
+   );
+}
+
+val adddropores = [
+
+<pyrotech:generated_slag_copper>,
+<pyrotech:generated_slag_tin>,
+<pyrotech:generated_slag_iridium>,
+<pyrotech:generated_slag_titanium>,
+<pyrotech:generated_slag_tungsten>,
+<contenttweaker:sulphur>
+
+] as IItemStack[];
+
+val addores = [
+
+"contenttweaker:copper_ore",
+"contenttweaker:tin_ore",
+"contenttweaker:iridium_ore",
+"contenttweaker:rutile_ore",
+"contenttweaker:tungsten_ore",
+"contenttweaker:sulphur_ore"
+
+] as string[];
+
+for i, adddropore in adddropores
+{
+var addore = addores[i];
+Dropt.list("list_addore")
+  	.add(Dropt.rule()
+     .matchBlocks([addore])
+  	   .matchHarvester(Dropt.harvester()
+         .type("EXPLOSION")
+      )
+      .addDrop(Dropt.drop()
+	     .selector(Dropt.weight(75))
+	     .items([<pyrotech:rock>], Dropt.range(3))  
+	   )
+	   .addDrop(Dropt.drop()
+         .selector(Dropt.weight(25))
+		 .items([<pyrotech:rock>], Dropt.range(4))  
+	   )
+	)
+	.add(Dropt.rule()
+     .matchBlocks([addore])
+      .addDrop(Dropt.drop()
+	     .force()
+		  .items([<pyrotech:rock>], Dropt.range(2))
+	   )
+	  .addDrop(Dropt.drop()
+	     .selector(Dropt.weight(75))
+	     .items([adddropore], Dropt.range(3))
+	   )
+	  .addDrop(Dropt.drop()
+        .selector(Dropt.weight(25))
+		  .items([adddropore], Dropt.range(4))  
 	   ) 
    );
 }

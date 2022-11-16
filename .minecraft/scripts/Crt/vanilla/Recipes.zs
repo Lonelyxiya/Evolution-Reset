@@ -1,13 +1,8 @@
-#ignoreBracketErrors
 #priority 99999
+//Lacz
+//2021.05.05
 import crafttweaker.item.IItemStack;
-
-recipes.remove(<ore:matal_block>);
-
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
-
+//2021.8.23
 var ingot = [
 <immersiveengineering:metal:7>,
 <immersiveengineering:metal:8>,
@@ -19,7 +14,7 @@ var ingot = [
 <botania:manaresource>,
 <botania:manaresource:4>,
 <botania:manaresource:7>,
-<ercore:tungsten_steel_ingot>,
+<contenttweaker:tungsten_steel_ingot>,
 <draconicevolution:draconium_ingot>,
 <immersiveengineering:material:19>,
 <immersiveengineering:metal:1>,
@@ -36,6 +31,9 @@ var ingot = [
 <taiga:lumix_ingot>,
 <taiga:seismum_ingot>,
 <taiga:astrium_ingot>,
+<plustic:alumiteingot>,
+<plustic:invaringot>,
+<plustic:mirioningot>,
 <taiga:tiberium_ingot>,
 <taiga:aurorium_ingot>,
 <taiga:prometheum_ingot>,
@@ -72,13 +70,16 @@ var ingot = [
 <tconstruct:ingots:5>,
 <twilightforest:ironwood_ingot>,
 <twilightforest:knightmetal_ingot>
-] as IItemStack[];
 
-for items in ingot {
-    recipes.remove(items);
+] as IItemStack[];
+for items in ingot
+{
+recipes.remove(items);
 }
 
 var nugget = [
+
+<plustic:mirionnugget>,
 <taiga:tiberium_nugget>,
 <taiga:aurorium_nugget>,
 <taiga:prometheum_nugget>,
@@ -109,6 +110,7 @@ var nugget = [
 <mekanism:nugget:4>,
 <mekanism:nugget:5>,
 <mekanism:nugget:6>,
+<plustic:alumitenugget>,
 <taiga:ovium_nugget>,
 <taiga:obsidiorite_nugget>,
 <taiga:dilithium_nugget>,
@@ -145,13 +147,15 @@ var nugget = [
 <taiga:iox_nugget>,
 <taiga:meteorite_nugget>,
 <taiga:basalt_nugget>
-] as IItemStack[];
 
-for items in nugget {
-    recipes.remove(items);
+] as IItemStack[];
+for items in nugget
+{
+recipes.remove(items);
 }
 
-var game_recipes = [
+var vanilla_recipes = [
+
 <minecraft:wool>,
 <minecraft:torch>,
 <minecraft:bread>,
@@ -170,12 +174,35 @@ var game_recipes = [
 <minecraft:brewing_stand>,
 <minecraft:sugar>,
 <minecraft:chest>,
-<minecraft:gunpowder>,
-<tconstruct:materials>
-] as IItemStack[];
+<minecraft:gunpowder>
 
-for items in game_recipes {
-    recipes.remove(items);
+] as IItemStack[];
+for items in vanilla_recipes
+{
+recipes.remove(items);
+}
+
+mods.immersiveengineering.MetalPress.addRecipe(<minecraft:light_weighted_pressure_plate>, <minecraft:gold_block>, <immersiveengineering:mold>, 1000);
+mods.immersiveengineering.MetalPress.addRecipe(<minecraft:heavy_weighted_pressure_plate>, <minecraft:iron_block>, <immersiveengineering:mold>, 2000);
+
+recipes.addShaped(<minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}),
+[[<pyrotech:material:16>, <pyrotech:material:16>, <pyrotech:material:16>],
+[null, <minecraft:stick>, null],
+[null, <minecraft:stick>, null]]);
+
+
+
+var pickaxe = [
+
+<minecraft:iron_pickaxe>,
+<minecraft:diamond_pickaxe>,
+<minecraft:golden_pickaxe>,
+<immersiveengineering:pickaxe_steel>
+
+] as IItemStack[];
+for items in pickaxe
+{
+recipes.remove(items);
 }
 
 var myLogs = [<minecraft:log:0>,<minecraft:log:1>,<minecraft:log:2>,<minecraft:log:3>,<minecraft:log2>,<minecraft:log2:1>] as IItemStack[];
@@ -184,32 +211,40 @@ var mySlabs = [<minecraft:wooden_slab>,<minecraft:wooden_slab:1>,<minecraft:wood
 
 var diamond = <artisanworktables:artisans_handsaw_diamond>.anyDamage().transformDamage(5);
 
-for i, log in myLogs {
-    var plank = myPlanks[i];
-    recipes.addShapeless(plank * 4, [log, diamond]);
+for i, log in myLogs
+{
+var plank = myPlanks[i];
+recipes.addShapeless(plank * 4, [log, diamond]);
 }
 
-for j, plank in myPlanks {
-    var slab = mySlabs[j];
-    recipes.addShapeless(slab * 3, [plank, diamond]);
+for j, plank in myPlanks
+{
+var slab = mySlabs[j];
+recipes.addShapeless(slab * 3, [plank, diamond]);
 }
 
-furnace.setFuel(<minecraft:blaze_rod>, 0);
-furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);
-furnace.addRecipe(<minecraft:gold_nugget> * 9, <pyrotech:generated_pile_slag_gold>);
-furnace.addRecipe(<minecraft:iron_nugget> * 9, <pyrotech:generated_pile_slag_iron>);
-furnace.addRecipe(<immersiveengineering:metal:20> * 9, <pyrotech:generated_pile_slag_copper>);
-furnace.addRecipe(<mekanism:nugget:6> * 9, <pyrotech:generated_pile_slag_tin>);
-furnace.addRecipe(<immersiveengineering:metal:21> * 9, <pyrotech:generated_pile_slag_aluminum>);
-furnace.addRecipe(<mekanism:nugget:1> * 9, <pyrotech:generated_pile_slag_osmium>);
-furnace.addRecipe(<immersiveengineering:metal:23> * 9, <pyrotech:generated_pile_slag_silver>);
-furnace.addRecipe(<immersiveengineering:metal:25> * 9, <pyrotech:generated_pile_slag_uranium>);
-furnace.addRecipe(<immersiveengineering:metal:22> * 9, <pyrotech:generated_pile_slag_lead>);
-furnace.addRecipe(<tconstruct:nuggets:1> * 9, <pyrotech:generated_pile_slag_ardite>);
-furnace.addRecipe(<tconstruct:nuggets> * 9, <pyrotech:generated_pile_slag_cobalt>);
-furnace.addRecipe(<ercore:tungsten_nugget> * 9, <pyrotech:generated_pile_slag_tungsten>);
+//2021.8.15
+furnace.addRecipe(<minecraft:gold_nugget>*9, <pyrotech:generated_pile_slag_gold>);
+furnace.addRecipe(<minecraft:iron_nugget>*9, <pyrotech:generated_pile_slag_iron>);
+furnace.addRecipe(<immersiveengineering:metal:20>*9, <pyrotech:generated_pile_slag_copper>);
+furnace.addRecipe(<mekanism:nugget:6>*9, <pyrotech:generated_pile_slag_tin>);
+furnace.addRecipe(<immersiveengineering:metal:21>*9, <pyrotech:generated_pile_slag_aluminum>);
+furnace.addRecipe(<mekanism:nugget:1>*9, <pyrotech:generated_pile_slag_osmium>);
+furnace.addRecipe(<immersiveengineering:metal:23>*9, <pyrotech:generated_pile_slag_silver>);
+furnace.addRecipe(<immersiveengineering:metal:25>*9, <pyrotech:generated_pile_slag_uranium>);
+furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_slag_lead>);
+furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
+furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
+furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
 furnace.addRecipe(<minecraft:bread>, <xlfoodmod:dough>);
 furnace.setFuel(<minecraft:blaze_rod>, 0);
+
+//2021.8.10
+recipes.remove(<ore:matal_block>);
+
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
 
 var sticks = [
 <minecraft:stick>,
@@ -269,9 +304,10 @@ var handsaws = [
 <artisanworktables:artisans_handsaw_invar>
 ] as IItemStack[];
 
-for i, handsaw in handsaws {
-    var sticks = sticks[i];
-    recipes.addShapeless(sticks * 2, [<ore:plankWood>, handsaw.anyDamage().transformDamage(5)]);
+for i, handsaw in handsaws
+{
+var sticks = sticks[i];
+recipes.addShapeless(sticks * 2, [<ore:plankWood>, handsaw.anyDamage().transformDamage(5)]);
 }
 
 recipes.addShaped(<artisanworktables:workshop:5>,
@@ -324,7 +360,7 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 [<pyrotech:planks_tarred>, <artisanworktables:workstation:13>, <pyrotech:planks_tarred>],
 [<pyrotech:wool_tarred>, <pyrotech:wool_tarred>, <pyrotech:wool_tarred>]]);
 
-recipes.addShaped(<minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}),
-[[<pyrotech:material:16>, <pyrotech:material:16>, <pyrotech:material:16>],
-[null, <minecraft:stick>, null],
-[null, <minecraft:stick>, null]]);
+//2022.1.31
+furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);
+recipes.replaceAllOccurences(<minecraft:crafting_table>, <tconstruct:tooltables>);
+recipes.replaceAllOccurences(<minecraft:sugar>, <contenttweaker:sugar>);

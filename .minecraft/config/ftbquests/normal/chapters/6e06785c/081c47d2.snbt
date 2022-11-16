@@ -5,10 +5,10 @@
 		"d8aa4c74"
 	],
 	tasks: [{
-		uid: "3a288f7d",
+		uid: "84af8e0d",
 		type: "item",
 		items: [{
-			item: "minecraft:obsidian"
+			item: "contenttweaker:obsidian_nomana"
 		}]
 	}],
 	rewards: [{
