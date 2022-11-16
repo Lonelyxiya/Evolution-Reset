@@ -1,98 +1,142 @@
-//Origins_Eternal
-//2021.7.27
-//Tconstruct_Mot
 import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
 
-mods.tconstruct.Melting.addRecipe(<liquid:gold> * 144,<pyrotech:generated_pile_slag_gold>, 354);
-mods.tconstruct.Melting.addRecipe(<liquid:iron> * 144,<pyrotech:generated_pile_slag_iron>, 511);
-mods.tconstruct.Melting.addRecipe(<liquid:copper> * 144,<pyrotech:generated_pile_slag_copper>, 361);
-mods.tconstruct.Melting.addRecipe(<liquid:tin> * 144,<pyrotech:generated_pile_slag_tin>, 77);
-mods.tconstruct.Melting.addRecipe(<liquid:aluminum> * 144,<pyrotech:generated_pile_slag_aluminum>, 220);
-mods.tconstruct.Melting.addRecipe(<liquid:silver> * 144,<pyrotech:generated_pile_slag_silver>, 320);
-mods.tconstruct.Melting.addRecipe(<liquid:uranium> * 144,<pyrotech:generated_pile_slag_uranium>, 377);
-mods.tconstruct.Melting.addRecipe(<liquid:lead> * 144,<pyrotech:generated_pile_slag_lead>, 109);
-mods.tconstruct.Melting.addRecipe(<liquid:ardite> * 144,<pyrotech:generated_pile_slag_ardite>, 333);
-mods.tconstruct.Melting.addRecipe(<liquid:cobalt> * 144,<pyrotech:generated_pile_slag_cobalt>, 498);
-mods.tconstruct.Melting.addRecipe(<liquid:dilithium_fluid> * 144,<pyrotech:generated_pile_slag_dilithium>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:abyssum_fluid> * 144,<pyrotech:generated_pile_slag_abyssum>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:eezo_fluid> * 144,<pyrotech:generated_pile_slag_eezo>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:osram_fluid> * 144,<pyrotech:generated_pile_slag_osram>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:palladium_fluid> * 144,<pyrotech:generated_pile_slag_palladium>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:prometheum_fluid> * 144,<pyrotech:generated_pile_slag_prometheum>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:valyrium_fluid> * 144,<pyrotech:generated_pile_slag_valyrium>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:uru_fluid> * 144,<pyrotech:generated_pile_slag_uru>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tiberium_fluid> * 144,<pyrotech:generated_pile_slag_tiberium>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:vibranium_fluid> * 144,<pyrotech:generated_pile_slag_vibranium>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<pyrotech:generated_pile_slag_tungsten>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:iridium> * 144,<pyrotech:generated_pile_slag_iridium>, 1000);
-
-//2021.8.10
-var iron = [
-
-<minecraft:iron_axe>,
-<minecraft:iron_pickaxe>,
-<minecraft:iron_shovel>,
-<minecraft:iron_sword>,
-<minecraft:iron_hoe>,
-<minecraft:iron_helmet>,
-<minecraft:iron_chestplate>,
-<minecraft:iron_leggings>,
-<minecraft:iron_boots>,
-<minecraft:iron_horse_armor>
-
-] as IItemStack[];
-for items in iron
-    {
-mods.tconstruct.Melting.removeRecipe(<liquid:iron>, items);
-    }
-
-mods.tconstruct.Alloy.removeRecipe(<liquid:obsidian>);
 mods.tconstruct.Melting.removeRecipe(<liquid:obsidian>);
 
-//2021.8.11
-mods.tconstruct.Melting.addRecipe(<liquid:obsidian_fluid> * 72,<pyrotech:material:33>, 1000);
+var liquids = [
+<liquid:gold>,
+<liquid:iron>,
+<liquid:copper>,
+<liquid:tin>,
+<liquid:aluminum>,
+<liquid:silver>,
+<liquid:uranium>,
+<liquid:lead>,
+<liquid:ardite>,
+<liquid:cobalt>,
+<liquid:dilithium_fluid>,
+<liquid:abyssum_fluid>,
+<liquid:eezo_fluid> ,
+<liquid:osram_fluid>,
+<liquid:palladium_fluid>,
+<liquid:prometheum_fluid>,
+<liquid:valyrium_fluid>,
+<liquid:uru_fluid>,
+<liquid:tiberium_fluid>,
+<liquid:vibranium_fluid>,
+<liquid:tungsten>,
+<liquid:iridium>
+] as ILiquidStack[];
 
-//2021.8.14
-mods.tconstruct.Alloy.addRecipe(<liquid:tungsten_steel_fluid> * 1, [<liquid:tungsten_fluid> * 1, <liquid:steel> * 3]);
-mods.tconstruct.Alloy.removeRecipe(<liquid:fractum_fluid>);
-mods.tconstruct.Alloy.addRecipe(<liquid:fractum_fluid> * 2, [<liquid:tiberium_fluid> * 3, <liquid:obsidian_fluid> * 3, <liquid:abyssum_fluid> * 1]);
-mods.tconstruct.Alloy.removeRecipe(<liquid:seismum_fluid>);
-mods.tconstruct.Alloy.addRecipe(<liquid:seismum_fluid> * 4, [<liquid:tiberium_fluid> * 2, <liquid:obsidian_fluid> * 4, <liquid:eezo_fluid> * 1]);
-mods.tconstruct.Alloy.removeRecipe(<liquid:iox_fluid>);
-mods.tconstruct.Alloy.addRecipe(<liquid:iox_fluid> * 1, [<liquid:obsidian_fluid> * 1, <liquid:eezo_fluid> * 1, <liquid:abyssum_fluid> * 1, <liquid:meteorite_fluid> * 1, <liquid:ovium_fluid> * 1]);
+var slags = [
+<pyrotech:generated_pile_slag_gold>,
+<pyrotech:generated_pile_slag_iron>,
+<pyrotech:generated_pile_slag_copper>,
+<pyrotech:generated_pile_slag_tin>,
+<pyrotech:generated_pile_slag_aluminum>,
+<pyrotech:generated_pile_slag_silver>,
+<pyrotech:generated_pile_slag_uranium>,
+<pyrotech:generated_pile_slag_lead>,
+<pyrotech:generated_pile_slag_ardite>,
+<pyrotech:generated_pile_slag_cobalt>,
+<pyrotech:generated_pile_slag_dilithium>,
+<pyrotech:generated_pile_slag_abyssum>,
+<pyrotech:generated_pile_slag_eezo> ,
+<pyrotech:generated_pile_slag_osram>,
+<pyrotech:generated_pile_slag_palladium>,
+<pyrotech:generated_pile_slag_prometheum>,
+<pyrotech:generated_pile_slag_valyrium>,
+<pyrotech:generated_pile_slag_uru>,
+<pyrotech:generated_pile_slag_tiberium>,
+<pyrotech:generated_pile_slag_vibranium>,
+<pyrotech:generated_pile_slag_tungsten>,
+<pyrotech:generated_pile_slag_iridium>
+] as IItemStack[];
+
+for i, liquid in liquids {
+    var slag = slags[i];
+    mods.tconstruct.Melting.addRecipe(liquid * 144, slag, 1000);
+}
+
+var fuels = [
+<liquid:obsidian_magic>,
+<liquid:tungsten_steel>    
+] as ILiquidStack[];
+
+for fuel in fuels {
+    mods.tconstruct.Fuel.registerFuel(fuel * 2, 200);
+}
+
+var removeliquids = [
+<liquid:fractum_fluid>,
+<liquid:obsidian>,
+<liquid:seismum_fluid>,
+<liquid:iox_fluid>,
+<liquid:obsidiorite_fluid>,
+<liquid:adamant_fluid>
+] as ILiquidStack[];
+
+for removeliquid in removeliquids {
+    mods.tconstruct.Alloy.removeRecipe(removeliquid);
+}
+
+mods.tconstruct.Melting.addRecipe(<liquid:obsidian_magic> * 72,<pyrotech:material:33>, 1000);
+
+var nuggetliquids = [
+<liquid:tungsten>,
+<liquid:tungsten_steel>,
+<liquid:tungsten_carbide>
+] as ILiquidStack[];
+
+var nuggets = [
+<ercore:tungsten_nugget>,
+<ercore:tungsten_steel_nugget>,
+<ercore:tungsten_carbide_nugget>
+] as IItemStack[];
+
+for j, nuggetliquid in nuggetliquids {
+    var nugget = nuggets[j];
+    mods.tconstruct.Melting.addRecipe(nuggetliquid * 16, nugget, 1000);
+}
+
+var ingotliquids = [
+<liquid:tungsten>,
+<liquid:tungsten_steel>,
+<liquid:tungsten_carbide>
+] as ILiquidStack[];
+
+var ingots = [
+<ercore:tungsten_ingot>,
+<ercore:tungsten_steel_ingot>,
+<ercore:tungsten_carbide_ingot>
+] as IItemStack[];
+
+for k, ingotliquid in ingotliquids {
+    var ingot = ingots[k];
+    mods.tconstruct.Melting.addRecipe(ingotliquid * 144, ingot, 1000);
+}
+
+mods.tconstruct.Alloy.addRecipe(<liquid:tungsten_steel> * 1, [<liquid:tungsten> * 1, <liquid:steel> * 3]);
+mods.tconstruct.Alloy.addRecipe(<liquid:fractum_fluid> * 2, [<liquid:tiberium_fluid> * 3, <liquid:obsidian_magic> * 3, <liquid:abyssum_fluid> * 1]);
+mods.tconstruct.Alloy.addRecipe(<liquid:seismum_fluid> * 4, [<liquid:tiberium_fluid> * 2, <liquid:obsidian_magic> * 4, <liquid:eezo_fluid> * 1]);
+mods.tconstruct.Alloy.addRecipe(<liquid:iox_fluid> * 1, [<liquid:obsidian_magic> * 1, <liquid:eezo_fluid> * 1, <liquid:abyssum_fluid> * 1, <liquid:meteorite_fluid> * 1, <liquid:ovium_fluid> * 1]);
 mods.tconstruct.Alloy.addRecipe(<liquid:iox_fluid> * 1, [<liquid:eezo_fluid> * 2, <liquid:abyssum_fluid> * 2, <liquid:meteorite_fluid> * 9, <liquid:ovium_fluid> * 2]);
-mods.tconstruct.Alloy.removeRecipe(<liquid:obsidiorite_fluid>);
-mods.tconstruct.Alloy.addRecipe(<liquid:obsidiorite_fluid> * 1, [<liquid:meteorite_fluid> * 1 , <liquid:obsidian_fluid> * 1]);
-
-//2021.8.15
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<pyrotech:generated_pile_slag_tungsten>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 16,<contenttweaker:tungsten_nugget>, 1000);
-mods.tconstruct.Fuel.registerFuel(<liquid:obsidian_fluid> * 2, 200);
-mods.tconstruct.Fuel.registerFuel(<liquid:tungsten_steel_fluid> * 2, 200);
-
-//2021.12.7
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ore>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_fluid> * 144,<contenttweaker:tungsten_ingot>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 144,<contenttweaker:tungsten_steel_ingot>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_steel_fluid> * 16,<contenttweaker:tungsten_steel_nugget>, 1000);
-
-//2021.12.14
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_carbide> * 144,<contenttweaker:tungsten_carbide_ingot>, 1000);
-mods.tconstruct.Melting.addRecipe(<liquid:tungsten_carbide> * 16,<contenttweaker:tungsten_carbide_nugget>, 1000);
-
-//2021.12.18
-mods.tconstruct.Alloy.removeRecipe(<liquid:alumite>);
-mods.tconstruct.Alloy.addRecipe(<liquid:alumite> * 3, [<liquid:obsidian_fluid> * 2, <liquid:iron> * 2, <liquid:aluminum> * 5]);
-
-//2022.1.22
-mods.tconstruct.Alloy.removeRecipe(<liquid:adamant_fluid>);
+mods.tconstruct.Alloy.addRecipe(<liquid:obsidiorite_fluid> * 1, [<liquid:meteorite_fluid> * 1 , <liquid:obsidian_magic> * 1]);
 mods.tconstruct.Alloy.addRecipe(<liquid:adamant_fluid> * 4, [<liquid:vibranium_fluid> * 2, <liquid:solarium_fluid> * 3, <liquid:iox_fluid> * 5, <liquid:iridium> * 3]);
 
-//2022.1.25
-mods.tconstruct.Casting.addTableRecipe(<libvulpes:productingot:10>, null, <liquid:iridium>, 144, false, 200);
-mods.tconstruct.Casting.addTableRecipe(<immersiveengineering:metal:1>, null, <liquid:aluminum>, 144, false, 200);
-mods.tconstruct.Casting.addTableRecipe(<contenttweaker:tungsten_ingot>, null, <liquid:tungsten_fluid>, 144, false, 200);
+var castliquids =[
+<liquid:iridium>,
+<liquid:aluminum>,
+<liquid:tungsten>
+] as ILiquidStack[];
 
+var castingots = [
+<libvulpes:productingot:10>,
+<immersiveengineering:metal:1>,
+<ercore:tungsten_ingot>
+] as IItemStack[];
 
-
-
+for n, castliquid in castliquids {
+    var castingot = castingots[n];
+    mods.tconstruct.Casting.addTableRecipe(castingot, null, castliquid, 144, false, 200);
+}

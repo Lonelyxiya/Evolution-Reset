@@ -1,8 +1,5 @@
 #priority 99999
 #loader crafttweaker reloadableevents
-//Lacz
-//2021.10.17
-
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.BlockHarvestDropsEvent;
 import crafttweaker.event.IBlockEvent;

@@ -5,12 +5,12 @@
 		"c64f3174"
 	],
 	tasks: [{
-		uid: "52fbeeef",
+		uid: "58a6dde9",
 		type: "item",
 		items: [{
 			id: "tconstruct:pick_head",
 			tag: {
-				Material: "black_obsidian"
+				Material: "obsidian_magic"
 			}
 		}]
 	}]

@@ -1,6 +1,3 @@
-//Lacz
-//2020.10.16
-/*environmentaltech*/
 import crafttweaker.item.IItemStack;
 
 recipes.addShaped(<environmentaltech:void_ore_miner_cont_2>,
@@ -27,8 +24,6 @@ recipes.addShaped(<environmentaltech:void_ore_miner_cont_6>,
 [[<environmentaltech:aethium>, <mekanism:machineblock:4>, <environmentaltech:aethium>],
 [<environmentaltech:aethium>, <environmentaltech:void_ore_miner_cont_5>, <environmentaltech:aethium>],
 [<chisel:diamond>, <environmentaltech:laser_lens>, <chisel:diamond:*>]]);
-
-//2020.10.16
 
 var miner = [
 

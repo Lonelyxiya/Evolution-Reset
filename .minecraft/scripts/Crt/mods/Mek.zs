@@ -1,7 +1,4 @@
 #priority 0
-//Lacz
-//2020.10.16
-
 import crafttweaker.item.IItemStack;
 
 recipes.remove(<mekanism:machineblock:8>);

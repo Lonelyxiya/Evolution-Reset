@@ -1,7 +1,4 @@
 #priority 99999
-//Lacz
-//2020.10.16
-//OreDict
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemDefinition;
@@ -9,7 +6,7 @@ import crafttweaker.item.IItemStack;
 
 <ore:steel>.add(<immersiveengineering:metal:8>);
 <ore:steel>.add(<mekanism:ingot:4>);
-<ore:oreSulfur>.add(<contenttweaker:sulphur_ore>);
+<ore:oreSulfur>.add(<ercore:sulphur_ore>);
 <ore:banitems>.addAll(<ore:oreSilicon>);
 <ore:whitesand>.add(<minecraft:sand>);
 <ore:radsand>.add(<minecraft:sand:1>);
@@ -19,13 +16,9 @@ import crafttweaker.item.IItemStack;
 <ore:ergravel>.add(<minecraft:flint>);
 <ore:blockSeven>.addAll(<ore:oreSulfur>);
 <ore:stoneBasalt>.add(<advancedrocketry:basalt>);
-<ore:oreCopper>.add(<contenttweaker:copper_ore>);
-<ore:oreTin>.add(<contenttweaker:tin_ore>);
-<ore:oreIridium>.add(<contenttweaker:iridium_ore>);
 <ore:fiery>.add(<twilightforest:fiery_blood>);
 <ore:fiery>.add(<twilightforest:fiery_tears>);
-<ore:oreTungsten>.add(<contenttweaker:tungsten_ore>);
-<ore:oreTitanium>.add(<contenttweaker:rutile_ore>);
+<ore:oreTitanium>.add(<ercore:rutile_ore>);
 
 var shears =[
     <pyrotech:clay_shears>,
@@ -41,43 +34,22 @@ for i in shears {
     <ore:shears>.add(i);
 }
 
-//Origins_Eternal
-//2021.7.26
-
 <ore:sandpile>.add(<pyrotech:rock:5>);
 <ore:sandpile>.add(<pyrotech:rock:9>);
 
-//2021.1.11
-
-var wand =[
-
-<betterbuilderswands:wandiron>,
-<betterbuilderswands:wandstone>,
-<betterbuilderswands:wanddiamond>,
-<betterbuilderswands:wandunbreakable>
-
-] as IItemStack[];
-for i in wand{
-    <ore:constructionWand>.add(i);
-}
-
-//2021.1.29
 <ore:mushroom>.add(<minecraft:red_mushroom>);
 <ore:mushroom>.add(<minecraft:brown_mushroom>);
 
-//2022.2.8
-<ore:listAllsugar>.add(<contenttweaker:sugar>);
+<ore:listAllsugar>.add(<ercore:sugar>);
 
-//2022.3.12
 <ore:string>.add(<pyrotech:material:14>);
 
-//2022.5.2
 <ore:carbon>.addAll(<ore:coal>);
 <ore:carbon>.addAll(<ore:charcoal>);
 
 <ore:chest>.add(<immersiveengineering:wooden_device0>);
 <ore:grout>.add(<tconstruct:soil>);
-<ore:blockSlakedlime>.add(<contenttweaker:slakedlime_block>);
+<ore:blockSlakedlime>.add(<ercore:slakedlime_block>);
 <ore:tnt>.add(<minecraft:tnt>);
 
 var flowers =[

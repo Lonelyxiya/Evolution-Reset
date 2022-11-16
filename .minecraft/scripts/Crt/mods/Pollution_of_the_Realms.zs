@@ -1,7 +1,3 @@
-//Origins_Eternal
-//2022.2.6
-//Pollution_of_the_Realms
-
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.item.IItemStack;
 

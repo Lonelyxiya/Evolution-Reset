@@ -1,11 +1,5 @@
-//Origins_Eternal
-//2021.05.30
-//botania
+mods.botania.ManaInfusion.addInfusion(<ercore:obsidian_magic>, <minecraft:obsidian>, 5000);
 
-mods.botania.ManaInfusion.addInfusion(<minecraft:obsidian>, <contenttweaker:obsidian_nomana>, 5000);
-
-//Lacz
-//2021.02.18
 recipes.remove(<scalinghealth:heartcontainer>);
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "puredaisy"}), [<twilightforest:steeleaf_ingot>, <botania:petal>, <botania:petal>, <twilightforest:steeleaf_ingot>, <botania:petal>, <botania:petal>]);
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "endoflame"}), [<ore:petalBrown>, <ore:petalBrown>, <ore:petalLightGray>, <ore:petalRed>, <scalinghealth:crystalshard>]);

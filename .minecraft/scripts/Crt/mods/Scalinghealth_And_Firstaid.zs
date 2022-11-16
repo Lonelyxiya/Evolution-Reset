@@ -1,7 +1,3 @@
-//Lacz
-//2021.02.23
-//scalinghealth & firstaid
-
 import crafttweaker.item.IItemStack;
 import mods.jei.JEI.removeAndHide;
 import mods.jei.JEI;

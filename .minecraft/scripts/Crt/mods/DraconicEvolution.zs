@@ -1,5 +1,3 @@
-//Lacz
-//2020.10.16
 import moretweaker.draconicevolution.FusionCrafting;
 import crafttweaker.item.IItemStack;
 

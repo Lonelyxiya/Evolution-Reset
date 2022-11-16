@@ -3,8 +3,6 @@ import mods.dropt.Harvester;
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 
-//2022.6.22
-//Origin_Eternity
 val woods = [
 
 <ore:logWood>,
@@ -45,7 +43,7 @@ var dropdirts = [
 <pyrotech:rock:5>,
 <pyrotech:rock:9>,
 <pyrotech:material:17>,
-<contenttweaker:cement_powder>
+<ercore:cement_powder>
 
 ] as IItemStack[];
 
@@ -208,8 +206,8 @@ var dropores = [
 <pyrotech:material:8>,
 <pyrotech:material:18>,
 <pyrotech:generated_slag_iridium>,
-<contenttweaker:sulphur>,
-<contenttweaker:rutile_ore>
+<ercore:sulphur>,
+<ercore:rutile_ore>
 
 ] as IItemStack[];
 val ores = [
@@ -439,18 +437,18 @@ val adddropores = [
 <pyrotech:generated_slag_iridium>,
 <pyrotech:generated_slag_titanium>,
 <pyrotech:generated_slag_tungsten>,
-<contenttweaker:sulphur>
+<ercore:sulphur>
 
 ] as IItemStack[];
 
 val addores = [
 
-"contenttweaker:copper_ore",
-"contenttweaker:tin_ore",
-"contenttweaker:iridium_ore",
-"contenttweaker:rutile_ore",
-"contenttweaker:tungsten_ore",
-"contenttweaker:sulphur_ore"
+"ercore:copper_ore",
+"ercore:tin_ore",
+"ercore:iridium_ore",
+"ercore:rutile_ore",
+"ercore:tungsten_ore",
+"ercore:sulphur_ore"
 
 ] as string[];
 

@@ -1,7 +1,3 @@
-//Lacz
-//2021.02.18
-//Bot
-#modloaded botania
 import crafttweaker.item.IItemStack;
 
 var botbanlist = [
@@ -39,6 +35,5 @@ recipes.addShaped(<botania:pylon:2>,
 [<botania:manaresource:7>, <minecraft:nether_star>, <botania:manaresource:7>],
 [null, <botania:manaresource:8>, null]]);
 
-//2022.1.29
 recipes.remove(<botania:altar>);
 recipes.remove(<botania:brewery>);

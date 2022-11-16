@@ -1,19 +1,11 @@
 #loader crafttweaker reloadableevents
 
-
-//Lacz
-//2022.01.20
-
-
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerLeftClickBlockEvent;
 import crafttweaker.event.IEventCancelable;
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
-
 import crafttweaker.event.IPlayerEvent;
-
 import crafttweaker.player.IPlayer;
 
 

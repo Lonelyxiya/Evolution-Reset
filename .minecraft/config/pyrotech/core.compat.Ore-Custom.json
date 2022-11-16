@@ -76,7 +76,7 @@
     "oreCopper": {
       "slagColor": "ffaa1c",
       "langKey": [
-        "contenttweaker:tile.contenttweaker.copper_ore",
+        "ercore:tile.ercore.copper_ore",
         "earthenbounty:tile.copper_ore",
         "immersiveengineering:tile.immersiveengineering.ore.copper",
         "libvulpes:material.Copper",
@@ -116,7 +116,7 @@
     "oreIridium": {
       "slagColor": "d5d4e7",
       "langKey": [
-        "contenttweaker:tile.contenttweaker.iridium_ore"
+        "ercore:tile.ercore.iridium_ore"
       ],
       "output": [
         "libvulpes:productnugget:10"
@@ -219,7 +219,7 @@
     "oreTin": {
       "slagColor": "c3e9ff",
       "langKey": [
-        "contenttweaker:tile.contenttweaker.tin_ore",
+        "ercore:tile.ercore.tin_ore",
         "earthenbounty:tile.tin_ore",
         "libvulpes:material.Tin",
         "mekanism:tile.OreBlock.TinOre"
@@ -257,10 +257,10 @@
     "oreTungsten": {
       "slagColor": "e1e6e8",
       "langKey": [
-        "contenttweaker:tile.contenttweaker.tungsten_ore"
+        "ercore:tile.ercore.tungsten_ore"
       ],
       "output": [
-        "contenttweaker:tungsten_nugget"
+        "ercore:tungsten_nugget"
       ]
     },
 	  "oreDilithium": {
@@ -376,7 +376,7 @@
    "oreTitanium": {
       "slagColor": "6b503c",
       "langKey": [
-        "contenttweaker:tile.contenttweaker.rutile_ore"
+        "ercore:tile.ercore.rutile_ore"
       ],
       "output": [
         "libvulpes:productnugget:7"

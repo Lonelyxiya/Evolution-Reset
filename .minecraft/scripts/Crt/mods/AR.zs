@@ -1,9 +1,5 @@
 import crafttweaker.item.IItemStack;
 
-//2022.1.21
-//Origins_Eternal
-//Advanced rocketry
-
 var rocketry = [
 
 <advancedrocketry:drill>,
@@ -24,7 +20,7 @@ recipes.replaceAllOccurences(<libvulpes:structuremachine>, <mekanism:machinebloc
 recipes.replaceAllOccurences(<ore:plateGold>, <mekanism:compressedobsidian>, <advancedrocketry:chemicalreactor>);
 recipes.replaceAllOccurences(<ore:slabWood>, <mekanism:crystal:1>, <advancedrocketry:ic:4>);
 recipes.replaceAllOccurences(<minecraft:stone_button>, <tconstruct:pan_head>.withTag({Material: "osmiridium"}), <advancedrocketry:planetholoselector>);
-recipes.replaceAllOccurences(<ore:plateSteel>, <contenttweaker:heavy_plating>, <ore:rocketparts>);
+recipes.replaceAllOccurences(<ore:plateSteel>, <ercore:heavy_plating>, <ore:rocketparts>);
 
 recipes.addShaped(<advancedrocketry:nuclearrocketmotor>,
 [[<tconstruct:large_plate>.withTag({Material: "nihilite"}), <advancedrocketry:productingot>, <tconstruct:large_plate>.withTag({Material: "nihilite"})],
@@ -33,7 +29,7 @@ recipes.addShaped(<advancedrocketry:nuclearrocketmotor>,
 
 recipes.addShapeless(<advancedrocketry:spacehelmet>, [<conarm:helmet>.withTag({Material: "steel"}), <ore:wool>, <pyrotech:material:41>, <tconstruct:fancy_frame:6>]);
 
-recipes.addShaped(<contenttweaker:heavy_plating>,
+recipes.addShaped(<ercore:heavy_plating>,
 [[<tconstruct:large_plate>.withTag({Material: "ignitz"}), <tconstruct:large_plate>.withTag({Material: "ignitz"}), <tconstruct:large_plate>.withTag({Material: "ignitz"})],
 [<ore:plateSteel>, <ore:sheetSteel>, <ore:plateSteel>],
 [<tconstruct:large_plate>.withTag({Material: "dyonite"}), <tconstruct:large_plate>.withTag({Material: "dyonite"}), <tconstruct:large_plate>.withTag({Material: "dyonite"})]]);

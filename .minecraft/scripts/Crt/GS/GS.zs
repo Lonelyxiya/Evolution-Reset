@@ -1,7 +1,3 @@
-#modloaded armoreablemobs gamestages
-//Lacz
-//2021.09.02
-
 import mods.multiblockstages.IEMultiBlockStages;
 
 mods.MobStages.addStage("one", "minecraft:witch");

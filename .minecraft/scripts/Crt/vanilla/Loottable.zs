@@ -1,6 +1,4 @@
 #priority 0
-//Origins_Eternal
-//2021.8.26
 import crafttweaker.item.IItemStack;
 
 val banlist = [

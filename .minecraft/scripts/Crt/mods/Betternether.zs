@@ -1,8 +1,3 @@
-#modloaded betternether​
-//Origins_Eternal
-//2021.4.30
-//betternether
-
 recipes.remove(<betternether:netherrack_furnace>);
 recipes.addShaped(<betternether:netherrack_furnace>, 
 [[<minecraft:netherbrick>, <minecraft:netherbrick>, <minecraft:netherbrick>],

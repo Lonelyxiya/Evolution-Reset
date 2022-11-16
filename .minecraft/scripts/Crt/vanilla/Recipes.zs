@@ -1,8 +1,6 @@
 #priority 99999
-//Lacz
-//2021.05.05
 import crafttweaker.item.IItemStack;
-//2021.8.23
+
 var ingot = [
 <immersiveengineering:metal:7>,
 <immersiveengineering:metal:8>,
@@ -14,7 +12,7 @@ var ingot = [
 <botania:manaresource>,
 <botania:manaresource:4>,
 <botania:manaresource:7>,
-<contenttweaker:tungsten_steel_ingot>,
+<ercore:tungsten_steel_ingot>,
 <draconicevolution:draconium_ingot>,
 <immersiveengineering:material:19>,
 <immersiveengineering:metal:1>,
@@ -223,7 +221,6 @@ var slab = mySlabs[j];
 recipes.addShapeless(slab * 3, [plank, diamond]);
 }
 
-//2021.8.15
 furnace.addRecipe(<minecraft:gold_nugget>*9, <pyrotech:generated_pile_slag_gold>);
 furnace.addRecipe(<minecraft:iron_nugget>*9, <pyrotech:generated_pile_slag_iron>);
 furnace.addRecipe(<immersiveengineering:metal:20>*9, <pyrotech:generated_pile_slag_copper>);
@@ -235,11 +232,10 @@ furnace.addRecipe(<immersiveengineering:metal:25>*9, <pyrotech:generated_pile_sl
 furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_slag_lead>);
 furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
 furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
-furnace.addRecipe(<contenttweaker:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
+furnace.addRecipe(<ercore:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
 furnace.addRecipe(<minecraft:bread>, <xlfoodmod:dough>);
 furnace.setFuel(<minecraft:blaze_rod>, 0);
 
-//2021.8.10
 recipes.remove(<ore:matal_block>);
 
 recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
@@ -360,7 +356,6 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 [<pyrotech:planks_tarred>, <artisanworktables:workstation:13>, <pyrotech:planks_tarred>],
 [<pyrotech:wool_tarred>, <pyrotech:wool_tarred>, <pyrotech:wool_tarred>]]);
 
-//2022.1.31
 furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);
 recipes.replaceAllOccurences(<minecraft:crafting_table>, <tconstruct:tooltables>);
-recipes.replaceAllOccurences(<minecraft:sugar>, <contenttweaker:sugar>);
+recipes.replaceAllOccurences(<minecraft:sugar>, <ercore:sugar>);

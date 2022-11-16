@@ -1,8 +1,4 @@
 #priority 1000
-//Lacz
-//2020.10.16
-//Tic
-
 import mods.tconstruct.Drying;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
@@ -34,23 +30,17 @@ tic2Dying(<tconstruct:edible:12>, <minecraft:chicken>, 120*20);
 tic2Dying(<tconstruct:edible:11>, <minecraft:beef>, 120*20);
 tic2Dying(<tconstruct:edible:10>, <minecraft:rotten_flesh>, 150*20);
 
-//Origins_Eternal
-//2021.3.27
-
 recipes.remove(<tconstruct:soil>);
 
 furnace.remove(<tconstruct:materials>);
-furnace.addRecipe(<tconstruct:materials>, <contenttweaker:searedbrick_unfired>);
+furnace.addRecipe(<tconstruct:materials>, <ercore:searedbrick_unfired>);
 
-//Origins_Eternal
-//2021.3.28
 recipes.remove(<tconstruct:tooltables:3>);
 recipes.addShaped("tooltables", <tconstruct:tooltables:3>,
 [[<ore:slabWood>, <tconstruct:pattern>, <ore:slabWood>],
 [<pyrotech:material:20>, <pyrotech:worktable_stone>, <pyrotech:material:20>],
 [<pyrotech:material:20>, null, <pyrotech:material:20>]]);
 
-//2021.7.27
 recipes.remove(<tconstruct:smeltery_io>);
 recipes.addShaped(<tconstruct:smeltery_io>, 
 [[<tconstruct:materials:0>, <tconstruct:materials:0>, <tconstruct:materials:0>],
@@ -69,14 +59,12 @@ recipes.addShaped(<tconstruct:faucet>,
 [<tconstruct:materials:0>, <pyrotech:faucet_brick>, <tconstruct:materials:0>], 
 [null, <tconstruct:materials:0>, null]]);
 
-//2021.8.23
 recipes.remove(<tconstruct:tooltables:4>);
 recipes.addShaped(<tconstruct:tooltables:4>,
 [[<pyrotech:material:20>, <pyrotech:material:20>, <pyrotech:material:20>],
 [<pyrotech:material:20>, <pyrotech:crate_stone>, <pyrotech:material:20>],
 [<pyrotech:material:20>, <pyrotech:material:20>, <pyrotech:material:20>]]);
 
-//2021.12.25
 recipes.remove(<plustic:centrifuge>);
 recipes.addShaped(<plustic:centrifuge>,
 [[<ore:blockClassColorless>, <ore:ingotIron>, <ore:blockClassColorless>],
