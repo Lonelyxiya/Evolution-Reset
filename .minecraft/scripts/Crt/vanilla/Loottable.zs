@@ -96,17 +96,3 @@ for items in banlist {
 mods.ltt.LootTable.removeGlobalItem(items.definition.id);
 
 }
-
-val modchest = [
-
-"champions"
-
-] as string[];
-
-for mod in modchest {
-
-mods.ltt.LootTable.removeModTable(mod);
-mods.ltt.LootTable.removeModItem(mod);
-mods.ltt.LootTable.removeModEntry(mod);
-
-}
