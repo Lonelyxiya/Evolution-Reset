@@ -1,5 +1,5 @@
 {
-	title: "Interstellar Age",
+	title: "{evolutionreset.chapter.interstellarage.title}",
 	icon: {
 		id: "advancedrocketry:satellite",
 		tag: {

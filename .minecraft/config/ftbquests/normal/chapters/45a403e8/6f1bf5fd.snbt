@@ -1,9 +1,8 @@
 {
-	disable_toast: true,
 	x: -4.0d,
 	y: 1.0d,
 	can_repeat: true,
-	hide_dependency_lines: true,
+	dependency_requirement: "one_started",
 	tasks: [{
 		uid: "ce81b287",
 		type: "item",

@@ -1,5 +1,4 @@
 {
-	disable_toast: true,
 	x: -2.0d,
 	y: -2.0d,
 	can_repeat: true,
