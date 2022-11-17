@@ -1,7 +1,7 @@
 {
-	title: "Stone Age",
+	title: "{evolutionreset.chapter.stoneage.title}",
 	icon: "pyrotech:crude_axe",
 	always_invisible: false,
-	group: -1232287792,
+	group: 0,
 	default_quest_shape: ""
 }

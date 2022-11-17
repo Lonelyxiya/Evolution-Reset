@@ -2,6 +2,6 @@
 	title: "Basic industries",
 	icon: "immersiveengineering:metal_device1 1 2",
 	always_invisible: false,
-	group: 1373748224,
+	group: 0,
 	default_quest_shape: ""
 }
