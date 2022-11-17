@@ -254,7 +254,6 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
     if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
         ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
         event.player.update({wasGivenTip12: true});
     }
     if ((isNull(event.player.data.wasGivenTip13)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
@@ -278,4 +277,16 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
+});
+
+events.onCommand(function(event as CommandEvent) {
+   val command = event.command;
+   if((command.name == "backup") || (command.name == "ct") || (command.name == "crafttweaker") || (command.name == "team")) {
+       return;
+   }
+   else if (event.commandSender instanceof IPlayer) {
+   val player as IPlayer = event.commandSender;
+   player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.command.tip"));
+   event.cancel(); 
+   }
 });

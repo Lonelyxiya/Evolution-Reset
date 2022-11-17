@@ -19,6 +19,7 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
     if (isNull(event.player.data.wasGivenStarters)) {
+        var ser = server.commandManager as ICommandManager;
         ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
         event.player.update({wasGivenStarters: true});
         var start = [
@@ -37,9 +38,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
-	if (rebornhunger == true) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
-    }
   }
 );
 
@@ -95,9 +94,6 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
     if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
         ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
-        if (journeymapstages == true) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
-        }
         event.player.update({wasGivenTip12: true});
     }
     if ((isNull(event.player.data.wasGivenTip13)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
