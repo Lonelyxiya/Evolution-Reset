@@ -19,6 +19,7 @@ import crafttweaker.item.IItemStack;
 <ore:fiery>.add(<twilightforest:fiery_blood>);
 <ore:fiery>.add(<twilightforest:fiery_tears>);
 <ore:oreTitanium>.add(<ercore:rutile_ore>);
+<ore:oreTungsten>.add(<ercore:tungsten_ore>);
 
 var shears =[
     <pyrotech:clay_shears>,

@@ -279,15 +279,3 @@ events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
-
-events.onCommand(function(event as CommandEvent) {
-   val command = event.command;
-   if((command.name == "backup") || (command.name == "ct") || (command.name == "crafttweaker") || (command.name == "team")) {
-       return;
-   }
-   else if (event.commandSender instanceof IPlayer) {
-   val player as IPlayer = event.commandSender;
-   player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.command.tip"));
-   event.cancel(); 
-   }
-});
