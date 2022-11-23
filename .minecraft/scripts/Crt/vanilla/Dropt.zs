@@ -335,14 +335,16 @@ Dropt.list("list_banblocks")
 val keyblocks = [
 
 <ore:chest>,
-<ore:bed>
+<ore:bed>,
+<ore:piston>
 
 ] as IOreDictEntry[];
 
 val stages = [
 
 "chest",
-"bed"
+"bed",
+"piston"
 
 ] as string[];
 

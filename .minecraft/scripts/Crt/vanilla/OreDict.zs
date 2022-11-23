@@ -20,6 +20,8 @@ import crafttweaker.item.IItemStack;
 <ore:fiery>.add(<twilightforest:fiery_tears>);
 <ore:oreTitanium>.add(<ercore:rutile_ore>);
 <ore:oreTungsten>.add(<ercore:tungsten_ore>);
+<ore:piston>.add(<minecraft:piston>);
+<ore:piston>.add(<minecraft:sticky_piston>);
 
 var shears =[
     <pyrotech:clay_shears>,

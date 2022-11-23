@@ -272,6 +272,10 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
         event.player.update({wasGivenTip15: true});
     }
+    if ((isNull(event.player.data.wasGivenTip16)) && (event.output.definition.id == "minecraft:piston")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " piston");
+        event.player.update({wasGivenTip16: true});
+    }
 });
 
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
