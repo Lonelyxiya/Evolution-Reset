@@ -8,8 +8,10 @@ mods.MobStages.addStage("one", "minecraft:zombie_horse");
 mods.MobStages.addStage("one", "minecraft:skeleton_horse");
 mods.MobStages.addStage("one", "minecraft:slime");
 mods.MobStages.addStage("one", "tconstruct:blueslime");
+mods.MobStages.addStage("one", "pyrotech:pyrotech.mud");
 
 mods.MobStages.addStage("two", "minecraft:spider");
+mods.MobStages.addStage("two", "minecraft:cave_spider");
 
 mods.MobStages.addStage("three", "minecraft:skeleton");
 mods.MobStages.addStage("three", "minecraft:stray");

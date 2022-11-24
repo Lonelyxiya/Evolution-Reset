@@ -20,6 +20,9 @@ import crafttweaker.item.IItemStack;
 <ore:fiery>.add(<twilightforest:fiery_tears>);
 <ore:oreTitanium>.add(<ercore:rutile_ore>);
 <ore:oreTungsten>.add(<ercore:tungsten_ore>);
+<ore:oreCopper>.add(<ercore:copper_ore>);
+<ore:oreTin>.add(<ercore:tin_ore>);
+<ore:oreIridium>.add(<ercore:iridium_ore>);
 <ore:piston>.add(<minecraft:piston>);
 <ore:piston>.add(<minecraft:sticky_piston>);
 
@@ -249,7 +252,8 @@ for fiveblock in fiveblocks {
 
 var sixblocks = [
 
-<ore:oreDiamond>
+<ore:oreDiamond>,
+<ore:blockDiamond>
 
 ] as IOreDictEntry[];
 for sixblock in sixblocks {
@@ -258,7 +262,9 @@ for sixblock in sixblocks {
 
 var sevenblocks = [
 
-<ore:blockBasalt>
+<ore:blockBasalt>,
+<ore:blockIron>,
+<ore:blockGold>
 
 ] as IOreDictEntry[];
 for sevenblock in sevenblocks {
@@ -435,9 +441,6 @@ var tool = [
     <refinedstorage:wireless_crafting_monitor:1>,
     <conarm:gauntlet_mat_reach>,
     <projecte:item.pe_rm_katar>,
-    <tconstruct:throwball:1>,
-	<tconstruct:nuggets:4>,
-	<tconstruct:ingots:4>,
     <projecte:item.pe_rm_sword>,
     <botania:terrapick>,
     <minecraft:furnace>,
@@ -462,7 +465,17 @@ var tool = [
     <twilightforest:knightmetal_pickaxe>,
     <twilightforest:knightmetal_axe>,
     <twilightforest:knightmetal_shield>,
-	<twilightforest:uncrafting_table>
+	<twilightforest:uncrafting_table>,
+    <twilightforest:twilight_oak_door>,
+    <twilightforest:canopy_door>,
+    <twilightforest:mangrove_door>,
+    <twilightforest:dark_door>,
+    <twilightforest:time_door>,
+    <twilightforest:trans_door>,
+    <twilightforest:mine_door>,
+    <twilightforest:sort_door>,
+    <betternether:netherrack_furnace>,
+    <betternether:cincinnasite_forge>
 ] as IItemStack[];
 for items in tool
 	{	
