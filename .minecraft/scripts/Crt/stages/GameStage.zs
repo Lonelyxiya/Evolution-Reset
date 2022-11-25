@@ -1,23 +1,38 @@
 import mods.multiblockstages.IEMultiBlockStages;
 
-mods.MobStages.addStage("one", "minecraft:witch");
-mods.MobStages.addStage("one", "minecraft:zombie");
-mods.MobStages.addStage("one", "minecraft:zombie_villager");
-mods.MobStages.addStage("one", "minecraft:husk");
-mods.MobStages.addStage("one", "minecraft:zombie_horse");
-mods.MobStages.addStage("one", "minecraft:skeleton_horse");
-mods.MobStages.addStage("one", "minecraft:slime");
-mods.MobStages.addStage("one", "tconstruct:blueslime");
-mods.MobStages.addStage("one", "pyrotech:pyrotech.mud");
+var mobsone = [
+"minecraft:witch",
+"minecraft:zombie",
+"minecraft:zombie_villager",
+"minecraft:husk",
+"minecraft:slime",
+"minecraft:zombie_horse",
+"minecraft:skeleton_horse",
+"tconstruct:blueslime",
+"pyrotech:pyrotech.mud"
+] as string[];
 
-mods.MobStages.addStage("two", "minecraft:spider");
-mods.MobStages.addStage("two", "minecraft:cave_spider");
+for mobone in mobsone {
+    mods.MobStages.addStage("one", mobone);
+    mods.MobStages.addReplacement(mobone, "minecraft:villager");
+    mods.MobStages.addRange(mobone, 100);
+    mods.MobStages.toggleSpawner(mobone, false);
+}
 
-mods.MobStages.addStage("three", "minecraft:skeleton");
-mods.MobStages.addStage("three", "minecraft:stray");
-mods.MobStages.addStage("three", "mekanism:babyskeleton");
+var mobsthree = [
+"minecraft:spider",
+"minecraft:skeleton",
+"minecraft:stray",
+"mekanism:babyskeleton",
+"minecraft:creeper",
+"minecraft:enderman"
+] as string[];
 
-mods.MobStages.addStage("four", "minecraft:creeper");
-mods.MobStages.addStage("four", "minecraft:enderman");
+for mobthree in mobsthree {
+    mods.MobStages.addStage("three", mobthree);
+    mods.MobStages.addReplacement(mobthree, "minecraft:bat");
+    mods.MobStages.addRange(mobthree, 100);
+    mods.MobStages.toggleSpawner(mobthree, false);
+}
 
 IEMultiBlockStages.addStage("oreexacavator", "IE:Excavator");
