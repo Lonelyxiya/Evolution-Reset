@@ -444,7 +444,6 @@ var tool = [
     <projecte:item.pe_rm_sword>,
     <botania:terrapick>,
     <minecraft:furnace>,
-    <minecraft:crafting_table>,
     <refinedstorage:silicon>,
 	<twilightforest:fiery_sword>,
 	<twilightforest:fiery_pickaxe>,
@@ -475,7 +474,8 @@ var tool = [
     <twilightforest:mine_door>,
     <twilightforest:sort_door>,
     <betternether:netherrack_furnace>,
-    <betternether:cincinnasite_forge>
+    <betternether:cincinnasite_forge>,
+    <toughasnails:campfire>
 ] as IItemStack[];
 for items in tool
 	{	

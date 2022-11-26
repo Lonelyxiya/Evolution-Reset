@@ -14,9 +14,6 @@ var mobsone = [
 
 for mobone in mobsone {
     mods.MobStages.addStage("one", mobone);
-    mods.MobStages.addReplacement(mobone, "minecraft:villager");
-    mods.MobStages.addRange(mobone, 100);
-    mods.MobStages.toggleSpawner(mobone, false);
 }
 
 var mobsthree = [
@@ -30,9 +27,6 @@ var mobsthree = [
 
 for mobthree in mobsthree {
     mods.MobStages.addStage("three", mobthree);
-    mods.MobStages.addReplacement(mobthree, "minecraft:bat");
-    mods.MobStages.addRange(mobthree, 100);
-    mods.MobStages.toggleSpawner(mobthree, false);
 }
 
 IEMultiBlockStages.addStage("oreexacavator", "IE:Excavator");
