@@ -7,7 +7,6 @@ import crafttweaker.event.PlayerRespawnEvent;
 import crafttweaker.event.PlayerLoggedInEvent;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
-import mods.zenutils.DelayManager;
 import crafttweaker.command.ICommandManager;
 import crafttweaker.text.ITextComponent;
 import crafttweaker.event.PlayerChangedDimensionEvent;

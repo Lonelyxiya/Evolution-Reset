@@ -7,7 +7,6 @@ import crafttweaker.event.PlayerRespawnEvent;
 import crafttweaker.event.PlayerLoggedInEvent;
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
-import mods.zenutils.DelayManager;
 import crafttweaker.command.ICommandManager;
 import crafttweaker.text.ITextComponent;
 import crafttweaker.event.PlayerChangedDimensionEvent;
@@ -74,16 +73,16 @@ for mods in InvalidMods {
     }
 }
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
-DelayManager.addDelayWork(function() {
+event.player.world.catenation().sleep(60).then(function(world, context){
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
-}, 3 * 20);
+}).start();
 	if (isNull(event.player.data.RequiredMods)) {
-        DelayManager.addDelayWork(function() {
+        event.player.world.catenation().sleep(60).then(function(world, context){
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
-        }, 3 * 20);
-	    DelayManager.addDelayWork(function() {
+        }).start();
+        event.player.world.catenation().sleep(80).then(function(world, context){
           ser.executeCommand(server, "gamemode spectator " + player.name);
-        }, 4 * 20);
+        }).start();
     } else {
             if (isNull(event.player.data.InvalidMods)) {
                 if (isNull(event.player.data.wasNotDifficultyLocked)) {
@@ -101,20 +100,20 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
 	                    }
                     }
                     if (isNull(event.player.data.wasDifficultyLocked)) {
-                         DelayManager.addDelayWork(function() {
+                         event.player.world.catenation().sleep(120).then(function(world, context){
                          event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
-                         }, 6 * 20);
+                        }).start();
                     }
                     } else {
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
                     }
             } else {
-                    DelayManager.addDelayWork(function() {
+                    event.player.world.catenation().sleep(80).then(function(world, context){
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
-                    }, 4 * 20);
-                    DelayManager.addDelayWork(function() {
+                    }).start();
+                    event.player.world.catenation().sleep(100).then(function(world, context){
                     ser.executeCommand(server, "gamemode spectator " + player.name);
-                    }, 5 * 20);
+                    }).start();
             }
     }
 });
@@ -126,9 +125,9 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
     if (isNull(event.player.data.wasDifficultyLocked)) {
-    DelayManager.addDelayWork(function() {
+    event.player.world.catenation().sleep(20).then(function(world, context){
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
-    }, 1 * 20);
+    }).start();
   }
 });
 
@@ -138,10 +137,10 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
     if (isNull(event.player.data.wasDifficultyLocked)) {
-    DelayManager.addDelayWork(function() {
+    event.player.world.catenation().sleep(100).then(function(world, context){
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.difficulty"));
-        }, 5 * 20);
-    DelayManager.addDelayWork(function() {
+    }).start();
+    event.player.world.catenation().sleep(300).then(function(world, context){
     var info = event.fromWorld.getWorldInfo();
     var Locked = info.isDifficultyLocked();
     var difficulty = info.getDifficulty();
@@ -154,38 +153,38 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     if ((difficulty == "PEACEFUL" && Locked != true) || (difficulty1 == "PEACEFUL" && Locked1 != true)) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.peaceful"));
     }
-        }, 15 * 20);
-    DelayManager.addDelayWork(function() { 
+    }).start();
+    event.player.world.catenation().sleep(320).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.10"));
-        }, 16 * 20);
-    DelayManager.addDelayWork(function() { 
+    }).start();
+    event.player.world.catenation().sleep(340).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.9"));
-        }, 17 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(360).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.8"));
-        }, 18 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(380).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.7"));
-        }, 19 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(400).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.6"));
-        }, 20 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(420).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.5"));
-        }, 21 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start();
+    event.player.world.catenation().sleep(440).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.4"));
-        }, 22 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(460).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.3"));
-        }, 23 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(480).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.2"));
-        }, 24 * 20); 
-    DelayManager.addDelayWork(function() { 
+    }).start(); 
+    event.player.world.catenation().sleep(500).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.1"));
-        }, 25 * 20); 
-    DelayManager.addDelayWork(function() {
+    }).start(); 
+    event.player.world.catenation().sleep(520).then(function(world, context){
     var info2 = event.fromWorld.getWorldInfo();
     var Locked2 = info2.isDifficultyLocked();
     var difficulty2 = info2.getDifficulty();
@@ -200,7 +199,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         ser.executeCommand(server, "gamemode spectator " + event.player.name);
         event.player.update({wasNotDifficultyLocked: true});
     }  
-        }, 26 * 20);
+    }).start();
   }
 });
 
