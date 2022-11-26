@@ -66,50 +66,12 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         event.player.update({wasGivenTip5: true});
     }
     if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " two");       
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));     
         event.player.update({wasGivenTip6: true});
     }
-    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:furnace_core")) {
+    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " one");
         event.player.update({wasGivenTip8: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "tconstruct:smeltery_controller")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " three");
-        event.player.update({wasGivenTip9: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "immersiveengineering:metal_decoration0:5")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " oreexacavator");
-        event.player.update({wasGivenTip10: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "pyrotech:wither_forge")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " four");
-        event.player.update({wasGivenTip11: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
-        event.player.update({wasGivenTip12: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
-        event.player.update({wasGivenTip12: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip13)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
-        event.player.update({wasGivenTip13: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip14)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
-        event.player.update({wasGivenTip14: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip15)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
-        event.player.update({wasGivenTip15: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip15)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
-        event.player.update({wasGivenTip15: true});
     }
 });
 

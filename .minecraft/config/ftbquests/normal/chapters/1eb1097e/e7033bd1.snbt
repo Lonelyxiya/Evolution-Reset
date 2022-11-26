@@ -51,5 +51,11 @@
 		uid: "4d4f94ab",
 		type: "item",
 		item: "tconstruct:casting 1 1"
+	},
+	{
+		uid: "aab71b43",
+		type: "gamestage",
+		auto: "no_toast",
+		stage: "three"
 	}]
 }

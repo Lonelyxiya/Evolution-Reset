@@ -21,5 +21,11 @@
 		type: "item",
 		item: "minecraft:coal_block",
 		count: 2
+	},
+	{
+		uid: "e2c6dfea",
+		type: "gamestage",
+		auto: "no_toast",
+		stage: "one"
 	}]
 }

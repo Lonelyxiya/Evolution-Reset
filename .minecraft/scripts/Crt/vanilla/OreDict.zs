@@ -443,7 +443,6 @@ var tool = [
     <projecte:item.pe_rm_katar>,
     <projecte:item.pe_rm_sword>,
     <botania:terrapick>,
-    <minecraft:furnace>,
     <refinedstorage:silicon>,
 	<twilightforest:fiery_sword>,
 	<twilightforest:fiery_pickaxe>,

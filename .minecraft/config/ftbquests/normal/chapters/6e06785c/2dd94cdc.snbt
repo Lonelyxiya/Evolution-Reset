@@ -11,5 +11,11 @@
 		items: [{
 			item: "botania:pool 1 2"
 		}]
+	}],
+	rewards: [{
+		uid: "83f29f00",
+		type: "gamestage",
+		auto: "no_toast",
+		stage: "two"
 	}]
 }

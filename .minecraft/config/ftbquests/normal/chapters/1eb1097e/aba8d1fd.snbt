@@ -16,5 +16,11 @@
 		uid: "be31e71e",
 		type: "item",
 		item: "scalinghealth:difficultychanger"
+	},
+	{
+		uid: "1c75fd59",
+		type: "gamestage",
+		auto: "no_toast",
+		stage: "four"
 	}]
 }

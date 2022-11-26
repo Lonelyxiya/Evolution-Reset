@@ -12,5 +12,11 @@
 			item: "immersiveengineering:metal_decoration0 1 5"
 		}],
 		count: 2L
+	}],
+	rewards: [{
+		uid: "5db3929b",
+		type: "gamestage",
+		auto: "no_toast",
+		stage: "oreexacavator"
 	}]
 }
