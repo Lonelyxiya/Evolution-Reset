@@ -216,23 +216,7 @@ var slab = mySlabs[j];
 recipes.addShapeless(slab * 3, [plank, diamond]);
 }
 
-furnace.addRecipe(<minecraft:gold_nugget>*9, <pyrotech:generated_pile_slag_gold>);
-furnace.addRecipe(<minecraft:iron_nugget>*9, <pyrotech:generated_pile_slag_iron>);
-furnace.addRecipe(<immersiveengineering:metal:20>*9, <pyrotech:generated_pile_slag_copper>);
-furnace.addRecipe(<mekanism:nugget:6>*9, <pyrotech:generated_pile_slag_tin>);
-furnace.addRecipe(<immersiveengineering:metal:21>*9, <pyrotech:generated_pile_slag_aluminum>);
-furnace.addRecipe(<mekanism:nugget:1>*9, <pyrotech:generated_pile_slag_osmium>);
-furnace.addRecipe(<immersiveengineering:metal:23>*9, <pyrotech:generated_pile_slag_silver>);
-furnace.addRecipe(<immersiveengineering:metal:25>*9, <pyrotech:generated_pile_slag_uranium>);
-furnace.addRecipe(<immersiveengineering:metal:22>*9, <pyrotech:generated_pile_slag_lead>);
-furnace.addRecipe(<tconstruct:nuggets:1>*9, <pyrotech:generated_pile_slag_ardite>);
-furnace.addRecipe(<tconstruct:nuggets>*9, <pyrotech:generated_pile_slag_cobalt>);
-furnace.addRecipe(<ercore:tungsten_nugget>*9, <pyrotech:generated_pile_slag_tungsten>);
-furnace.addRecipe(<minecraft:bread>, <xlfoodmod:dough>);
-furnace.setFuel(<minecraft:blaze_rod>, 0);
-
 recipes.remove(<ore:matal_block>);
-
 recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
 recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
 recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
@@ -350,5 +334,3 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 [[<minecraft:leather>, <minecraft:leather>, <minecraft:leather>],
 [<pyrotech:planks_tarred>, <artisanworktables:workstation:13>, <pyrotech:planks_tarred>],
 [<pyrotech:wool_tarred>, <pyrotech:wool_tarred>, <pyrotech:wool_tarred>]]);
-
-furnace.addRecipe(<minecraft:paper>, <pyrotech:material:25>);

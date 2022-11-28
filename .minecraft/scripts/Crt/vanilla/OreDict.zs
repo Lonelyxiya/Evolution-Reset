@@ -412,6 +412,7 @@ var tool = [
 	<minecraft:chainmail_chestplate>,
 	<minecraft:chainmail_leggings>,
 	<minecraft:chainmail_boots>,
+    <minecraft:furnace>,
 	<betternether:cincinnasite_axe>,
 	<betternether:cincinnasite_axe_diamond>,
 	<betternether:cincinnasite_pickaxe>,
