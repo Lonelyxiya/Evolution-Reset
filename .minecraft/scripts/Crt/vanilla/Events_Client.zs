@@ -229,9 +229,9 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));     
         event.player.update({wasGivenTip6: true});
     }
-    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
+    if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
-        event.player.update({wasGivenTip8: true});
+        event.player.update({wasGivenTip7: true});
     }
 });
 

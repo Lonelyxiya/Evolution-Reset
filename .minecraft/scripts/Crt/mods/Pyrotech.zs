@@ -26,6 +26,7 @@ import crafttweaker.oredict.IOreDictEntry;
 import mods.pyrotech.CrudeDryingRack;
 import mods.pyrotech.DryingRack;
 import mods.pyrotech.Burn;
+import mods.pyrotech.Bloomery;
 
 function pyrKilns(name as string, output as IItemStack, input as IIngredient, failed as IItemStack, time as int){
     PitKiln.removeRecipes(output);
@@ -459,3 +460,13 @@ if (recipe.resourceDomain == "pyrotech") {
 var recipelocation = recipe.fullResourceDomain;
 Worktable.whitelistVanillaRecipes([recipelocation]);}
 }
+
+Bloomery.createWitherForgeBuilder("shard_from_obsidain_magic", <ercore:obsidian_magic_shard>, <ercore:obsidian_magic>)
+.setAnvilTiers(["obsidian"])
+.setBurnTimeTicks(30000)
+.setFailureChance(0.45)
+.setBloomYield(7, 9)
+.setSlagItem(<pyrotech:slag>, 4)
+.addFailureItem(<pyrotech:slag>, 1)
+.addFailureItem(<pyrotech:rock>, 2)
+.register();
