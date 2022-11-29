@@ -8,7 +8,7 @@
 		uid: "8079a27f",
 		type: "item",
 		items: [{
-			item: "xlfoodmod:dough"
+			item: "xlfoodmod:cooked_dough"
 		}]
 	}],
 	rewards: [{

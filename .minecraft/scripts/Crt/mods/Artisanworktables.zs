@@ -1139,8 +1139,8 @@ RecipeBuilder.get("chef")
 
 RecipeBuilder.get("chef")
 .setShaped([
-    [<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>],
-    [<xlfoodmod:dough>, null, <xlfoodmod:dough>],
+    [<xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>],
+    [<xlfoodmod:cooked_dough>, null, <xlfoodmod:cooked_dough>],
     [null, null, null]])
 .setMaximumTier(2)
 .setLevelRequired(10)
@@ -1154,8 +1154,8 @@ RecipeBuilder.get("chef")
 RecipeBuilder.get("chef")
 .setShaped([
     [null, null, null],
-    [<xlfoodmod:dough>, null, <xlfoodmod:dough>],
-    [<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>]])
+    [<xlfoodmod:cooked_dough>, null, <xlfoodmod:cooked_dough>],
+    [<xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>]])
 .setMaximumTier(2)
 .setLevelRequired(10)
 .setConsumeExperience(false)	
@@ -1167,9 +1167,9 @@ RecipeBuilder.get("chef")
   
 RecipeBuilder.get("chef")
 .setShaped([
-    [<xlfoodmod:dough>, null, null],
-    [null, <xlfoodmod:dough>, null],
-    [null, null, <xlfoodmod:dough>]])
+    [<xlfoodmod:cooked_dough>, null, null],
+    [null, <xlfoodmod:cooked_dough>, null],
+    [null, null, <xlfoodmod:cooked_dough>]])
 .setMaximumTier(2)
 .setLevelRequired(10)
 .setConsumeExperience(false)	
@@ -1182,7 +1182,7 @@ RecipeBuilder.get("chef")
 RecipeBuilder.get("chef")
 .setShaped([
     [null, null, null],
-    [<xlfoodmod:dough>, <minecraft:baked_potato>, <xlfoodmod:dough>],
+    [<xlfoodmod:cooked_dough>, <minecraft:baked_potato>, <xlfoodmod:cooked_dough>],
     [null, null, null]])
 .setMaximumTier(2)
 .setLevelRequired(10)
@@ -1195,8 +1195,8 @@ RecipeBuilder.get("chef")
   
 RecipeBuilder.get("chef")
 .setShaped([
-    [<xlfoodmod:dough>, <xlfoodmod:dough>, <xlfoodmod:dough>],
-    [<xlfoodmod:dough>, null, <xlfoodmod:dough>],
+    [<xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>, <xlfoodmod:cooked_dough>],
+    [<xlfoodmod:cooked_dough>, null, <xlfoodmod:cooked_dough>],
     [null, null, null]])
 .setMaximumTier(2)
 .setLevelRequired(10)
@@ -1210,7 +1210,7 @@ RecipeBuilder.get("chef")
 RecipeBuilder.get("chef")
 .setShaped([
     [null, null, null],
-    [<xlfoodmod:dough>, <xlfoodmod:rice>, <xlfoodmod:dough>],
+    [<xlfoodmod:cooked_dough>, <xlfoodmod:rice>, <xlfoodmod:cooked_dough>],
     [null, null, null]])
 .setMaximumTier(2)
 .setLevelRequired(10)

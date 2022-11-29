@@ -239,7 +239,7 @@ CompactingBin.addRecipe("flint_from_gravel", <minecraft:flint>, <ore:gravel>, 4)
 BrickKiln.addRecipe("searedbrick_from_unfired", <tconstruct:materials>, <ercore:searedbrick_unfired>, 8000, 0.5, [<pyrotech:material:7>*6]);
 BrickKiln.addRecipe("netherbrick_from_netherrack", <minecraft:netherbrick>, <minecraft:netherrack>, 6000, 0.3, [<pyrotech:rock_netherrack>*4]);
 BrickOven.addRecipe("blaze_powder_from_blaze_rod", <minecraft:blaze_powder>, <minecraft:blaze_rod>);
-BrickOven.addRecipe("bread_from_dough", <minecraft:bread>, <xlfoodmod:dough>);
+BrickOven.addRecipe("cooked_dough_from_dough", <xlfoodmod:cooked_dough>, <xlfoodmod:dough>);
 
 recipes.remove(<pyrotech:cog_diamond>);
 recipes.addShaped(<pyrotech:cog_diamond>,

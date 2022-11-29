@@ -222,6 +222,7 @@ var threeblocks = [
 for threeblock in threeblocks {
 <ore:blockThree>.addAll(threeblock);
 }
+<ore:blockThree>.remove(<minecraft:stone>);
 
 var fourblocks = [
 

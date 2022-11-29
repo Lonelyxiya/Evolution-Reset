@@ -13,6 +13,8 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.world.IWorldInfo;
 import crafttweaker.event.PlayerSleepInBedEvent;
 import crafttweaker.recipes.ICraftingRecipe;
+import crafttweaker.event.BlockBreakEvent;
+import crafttweaker.block.IBlockDefinition;
 
 var InvalidMods as string[] = [
     "xijun",
@@ -250,4 +252,20 @@ events.onCommand(function(event as CommandEvent) {
    player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.command.tip"));
    event.cancel(); 
    }
+});
+
+events.onBlockBreak(function(event as BlockBreakEvent) {
+    val player as IPlayer = event.player;
+	val block as IBlock = event.block;
+    if(block.definition.hardness > 0.5) {
+        if(player.currentItem == null) {
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
+            player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
+            player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
+            event.cancel();
+        } else if(player.toolClasses == null) {
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
+            event.cancel();
+        }
+    }
 });
