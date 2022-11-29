@@ -1,1 +1,0 @@
-resourcePacks:["Evolution-Reset-Resource-Pack-1.0.0.zip"]
