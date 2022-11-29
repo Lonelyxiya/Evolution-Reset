@@ -13,7 +13,7 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.world.IWorldInfo;
 import crafttweaker.event.PlayerSleepInBedEvent;
 import crafttweaker.recipes.ICraftingRecipe;
-import crafttweaker.event.PlayerBreakSpeedEvent;
+import crafttweaker.event.BlockBreakEvent;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlock;
 import crafttweaker.oredict.IOreDictEntry;
@@ -84,10 +84,10 @@ events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
 
-events.onPlayerBreakSpeed(function(event as PlayerBreakSpeedEvent) {
+events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
-    if(block.definition.hardness > 0.5) {
+    if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
         if(isNull(player.currentItem)) {
             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
             player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
