@@ -13,6 +13,10 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.world.IWorldInfo;
 import crafttweaker.event.PlayerSleepInBedEvent;
 import crafttweaker.recipes.ICraftingRecipe;
+import crafttweaker.event.PlayerBreakSpeedEvent;
+import crafttweaker.block.IBlockDefinition;
+import crafttweaker.block.IBlock;
+import crafttweaker.oredict.IOreDictEntry;
 
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
@@ -78,4 +82,20 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
+});
+
+events.onPlayerBreakSpeed(function(event as PlayerBreakSpeedEvent) {
+    val player as IPlayer = event.player;
+	val block as IBlock = event.block;
+    if(block.definition.hardness > 0.5) {
+        if(player.currentItem.isEmpty == true) {
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
+            player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
+            player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
+            event.cancel();
+        } else if(isNull(player.currentItem.toolClasses)) {
+            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
+            event.cancel();
+        }
+    }
 });
