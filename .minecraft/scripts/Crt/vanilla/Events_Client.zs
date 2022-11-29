@@ -260,7 +260,7 @@ events.onPlayerBreakSpeed(function(event as PlayerBreakSpeedEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
     if(block.definition.hardness > 0.5) {
-        if(player.currentItem.isEmpty == true) {
+        if(isNull(player.currentItem)) {
             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
             player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
             player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
