@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 

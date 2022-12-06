@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 #sideonly server
 import crafttweaker.event.PlayerCraftedEvent;
 import crafttweaker.events.IEventManager;
@@ -41,7 +42,9 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
+	if (rebornhunger == true) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
+    }
   }
 );
 
@@ -52,37 +55,55 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
+    } else if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip2"));
         event.player.update({wasGivenTip2: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
+    } else if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip3"));
         event.player.update({wasGivenTip3: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
+    } else if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip4"));
         event.player.update({wasGivenTip4: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
+    } else if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip5"));
         event.player.update({wasGivenTip5: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));     
+    } else if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));   
         event.player.update({wasGivenTip6: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
+    } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
+        event.player.update({wasGivenTip7: true});
+    } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+        if (journeymapstages == true) {
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
+        }
         event.player.update({wasGivenTip8: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip13)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
+        event.player.update({wasGivenTip13: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip14)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
+        event.player.update({wasGivenTip14: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip15)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
+        event.player.update({wasGivenTip15: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip15)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
+        event.player.update({wasGivenTip15: true});
     }
 });
 
+if (sleephunger == true) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
+}
 
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;

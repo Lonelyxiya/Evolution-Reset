@@ -1,1 +1,0 @@
-mods.mekanism.enrichment.addRecipe(<refinedstorage:quartz_enriched_iron>*9, <refinedstorage:quartz_enriched_iron_block>);

@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.command.ICommandManager;
@@ -33,10 +34,10 @@ import crafttweaker.event.PlayerInteractEvent;
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
 
 for item in <ore:banitems>.items {
-item.maxDamage = 1;
-recipes.remove(item);
-mods.jei.JEI.hide(item);
-mods.ltt.LootTable.removeGlobalItem(item.definition.id);
+    item.maxDamage = 1;
+    recipes.remove(item);
+    mods.jei.JEI.hide(item);
+    mods.ltt.LootTable.removeGlobalItem(item.definition.id);
 events.onPlayerInteract(function(event as PlayerInteractEvent) {
     var ser = server.commandManager as ICommandManager;
         var toolname = item.definition.id;

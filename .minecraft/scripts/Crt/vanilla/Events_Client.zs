@@ -1,4 +1,5 @@
 #sideonly client
+#ignoreBracketErrors
 import crafttweaker.event.PlayerCraftedEvent;
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.CommandEvent;
@@ -44,6 +45,7 @@ var InvalidMods as string[] = [
     "randomenchantments"
 ];
 
+if (modcheck == true) {
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
@@ -84,7 +86,7 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
         event.player.world.catenation().sleep(60).then(function(world, context){
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
         }).start();
-        event.player.world.catenation().sleep(80).then(function(world, context){
+	    event.player.world.catenation().sleep(80).then(function(world, context){
           ser.executeCommand(server, "gamemode spectator " + player.name);
         }).start();
     } else {
@@ -103,10 +105,10 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                              event.player.give(i);
 	                    }
                     }
-                    if (isNull(event.player.data.wasDifficultyLocked)) {
+                    if ((isNull(event.player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
                          event.player.world.catenation().sleep(120).then(function(world, context){
                          event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
-                        }).start();
+                         }).start();
                     }
                     } else {
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
@@ -121,14 +123,17 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
             }
     }
 });
+}
 
 events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     val player as IPlayer = event.player;
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
+	if (rebornhunger == true) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
-    if (isNull(event.player.data.wasDifficultyLocked)) {
+    }
+    if ((isNull(event.player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
     event.player.world.catenation().sleep(20).then(function(world, context){
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }).start();
@@ -137,13 +142,14 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 
 <minecraft:bread>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}).addTooltip(game.localize("crafttweaker.stick.tooltip"));
 
+if (difficultydetect == true) {
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
     if (isNull(event.player.data.wasDifficultyLocked)) {
-    event.player.world.catenation().sleep(100).then(function(world, context){
+    event.player.world.catenation().sleep(60).then(function(world, context){
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.difficulty"));
-    }).start();
+        }).start();
     event.player.world.catenation().sleep(300).then(function(world, context){
     var info = event.fromWorld.getWorldInfo();
     var Locked = info.isDifficultyLocked();
@@ -157,37 +163,37 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     if ((difficulty == "PEACEFUL" && Locked != true) || (difficulty1 == "PEACEFUL" && Locked1 != true)) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.peaceful"));
     }
-    }).start();
+        }).start();
     event.player.world.catenation().sleep(320).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.10"));
-    }).start();
+        }).start();
     event.player.world.catenation().sleep(340).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.9"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(360).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.8"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(380).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.7"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(400).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.6"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(420).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.5"));
-    }).start();
+        }).start(); 
     event.player.world.catenation().sleep(440).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.4"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(460).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.3"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(480).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.2"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(500).then(function(world, context){ 
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.1"));
-    }).start(); 
+        }).start(); 
     event.player.world.catenation().sleep(520).then(function(world, context){
     var info2 = event.fromWorld.getWorldInfo();
     var Locked2 = info2.isDifficultyLocked();
@@ -203,47 +209,67 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
         ser.executeCommand(server, "gamemode spectator " + event.player.name);
         event.player.update({wasNotDifficultyLocked: true});
     }  
-    }).start();
+        }).start();
   }
 });
+}
 
 events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     var ser = server.commandManager as ICommandManager;
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
+    } else if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip2"));
         event.player.update({wasGivenTip2: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
+    } else if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip3"));
         event.player.update({wasGivenTip3: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
+    } else if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip4"));
         event.player.update({wasGivenTip4: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
+    } else if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip5"));
         event.player.update({wasGivenTip5: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));     
+    } else if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));   
         event.player.update({wasGivenTip6: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
+    } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
         event.player.update({wasGivenTip7: true});
+    } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+        if (journeymapstages == true) {
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
+        }
+        event.player.update({wasGivenTip8: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
+        event.player.update({wasGivenTip9: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
+        event.player.update({wasGivenTip10: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
+        event.player.update({wasGivenTip11: true});
+    }
+    if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
+        event.player.update({wasGivenTip12: true});
     }
 });
 
+if (sleephunger == true) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
+}
 
+if (disablecommand == true) {
 events.onCommand(function(event as CommandEvent) {
    val command = event.command;
    if((command.name == "backup") || (command.name == "ct") || (command.name == "crafttweaker") || (command.name == "team")) {
@@ -255,6 +281,7 @@ events.onCommand(function(event as CommandEvent) {
    event.cancel(); 
    }
 });
+}
 
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
