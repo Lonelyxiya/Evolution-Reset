@@ -373,9 +373,9 @@ RecipeBuilder.get("mage")
 
 RecipeBuilder.get("basic")
 .setShaped([
-    [<minecraft:wool:4>, <minecraft:wool:3>, <minecraft:wool:10>, <minecraft:wool:3>, <minecraft:wool:4>],
-    [<minecraft:wool:10>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <minecraft:wool:10>],
-    [<minecraft:wool:4>, <ore:blockGold>, <ore:blockGold>, <ore:blockGold>, <minecraft:wool:4>],
+    [<ore:dyeYellow>, <ore:dyeLightBlue>, <ore:dyePurple>, <ore:dyeLightBlue>, <ore:dyeYellow>],
+    [<ore:dyePurple>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:dyePurple>],
+    [<ore:dyeYellow>, <ore:blockGold>, <ore:blockGold>, <ore:blockGold>, <ore:dyeYellow>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
 .setName("tailor_workstation")
@@ -388,6 +388,7 @@ RecipeBuilder.get("basic")
 .addTool(<ore:artisansShears>, 20)
 .addTool(<ercore:tailor_workstation_blueprint>, 2)
 .addTool(<ore:artisansCarver>, 30)
+.setSecondaryIngredients([<minecraft:wool> * 9])
 .addOutput(<artisanworktables:workstation>)
 .create();  
   
