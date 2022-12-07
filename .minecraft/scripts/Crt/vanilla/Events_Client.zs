@@ -18,6 +18,7 @@ import crafttweaker.event.BlockBreakEvent;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlock;
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.world.IWorld;
 
 var InvalidMods as string[] = [
     "xijun",
@@ -79,50 +80,78 @@ for mods in InvalidMods {
     }
 }
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.begin"));
-event.player.world.catenation().sleep(60).then(function(world, context){
+player.world.catenation().sleep(60).then(function(world, context){
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modloaded"));
 }).start();
-	if (isNull(event.player.data.RequiredMods)) {
-        event.player.world.catenation().sleep(60).then(function(world, context){
+	if (isNull(player.data.RequiredMods)) {
+        player.world.catenation().sleep(60).then(function(world, context){
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.modrequired"));
         }).start();
-	    event.player.world.catenation().sleep(80).then(function(world, context){
+	    player.world.catenation().sleep(80).then(function(world, context){
           ser.executeCommand(server, "gamemode spectator " + player.name);
         }).start();
     } else {
-            if (isNull(event.player.data.InvalidMods)) {
-                if (isNull(event.player.data.wasNotDifficultyLocked)) {
+            if (isNull(player.data.InvalidMods)) {
+                if (isNull(player.data.wasNotDifficultyLocked)) {
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
                     if (isNull(event.player.data.wasGivenStarters)) {
-                        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
-                        event.player.update({wasGivenStarters: true});
-                        var start = [
-                            <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
-                            <pyrotech:apple_baked>,
-	                        <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
-                        ] as IItemStack[];
-                        for i in start {
-                             event.player.give(i);
-	                    }
+                        if (checkworldtype == true) {
+                            if ((player.world.getWorldType() != "realistic") && (checkworldtype == true)) {
+                                ser.executeCommand(server, "gamemode spectator " + player.name);
+                                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
+                            } else {
+                                ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
+                                event.player.update({wasGivenStarters: true});
+                                var start = [
+                                    <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
+                                    <pyrotech:apple_baked>,
+	                                <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
+                                ] as IItemStack[];
+                                for i in start {
+                                    event.player.give(i);
+	                            }                                
+                            }
+                        }
                     }
-                    if ((isNull(event.player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
-                         event.player.world.catenation().sleep(120).then(function(world, context){
-                         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
+                    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
+                         player.world.catenation().sleep(120).then(function(world, context){
+                         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
                          }).start();
                     }
                     } else {
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.world.locked"));
                     }
             } else {
-                    event.player.world.catenation().sleep(80).then(function(world, context){
+                    player.world.catenation().sleep(80).then(function(world, context){
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.invalid"));
                     }).start();
-                    event.player.world.catenation().sleep(100).then(function(world, context){
+                    player.world.catenation().sleep(100).then(function(world, context){
                     ser.executeCommand(server, "gamemode spectator " + player.name);
                     }).start();
             }
     }
 });
+} else {
+events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
+var player = event.player as IPlayer;
+var ser = server.commandManager as ICommandManager;
+if (checkworldtype == true) {
+    if ((player.world.getWorldType() != "realistic") && (checkworldtype == true)) {
+        ser.executeCommand(server, "gamemode spectator " + player.name);
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
+    } else {
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
+        event.player.update({wasGivenStarters: true});
+        var start = [
+            <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
+            <pyrotech:apple_baked>,
+	        <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
+        ] as IItemStack[];
+        for i in start {
+            event.player.give(i);
+	    }                                
+    }
+}});
 }
 
 events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
@@ -133,9 +162,9 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 	if (rebornhunger == true) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
     }
-    if ((isNull(event.player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
-    event.player.world.catenation().sleep(20).then(function(world, context){
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
+    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
+    player.world.catenation().sleep(20).then(function(world, context){
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }).start();
   }
 });
@@ -283,6 +312,7 @@ events.onCommand(function(event as CommandEvent) {
 });
 }
 
+if (forcetool == true) {
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
@@ -298,3 +328,4 @@ events.onBlockBreak(function(event as BlockBreakEvent) {
         }
     }
 });
+}

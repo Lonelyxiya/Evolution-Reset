@@ -25,3 +25,11 @@ global rebornhunger as bool = true;
 # If false, You can use all the functions of journeymap at any time. 
 # Default: true 
 global journeymapstages as bool = true;
+
+# If false, You can use break blocks without tools. 
+# Default: true 
+global forcetool as bool = true;
+
+# If false, You will not receive tips about world type when you login. 
+# Default: true 
+global checkworldtype as bool = true;
