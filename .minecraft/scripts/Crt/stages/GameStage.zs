@@ -10,7 +10,10 @@ var mobsone = [
 "minecraft:zombie_horse",
 "minecraft:skeleton_horse",
 "tconstruct:blueslime",
-"pyrotech:pyrotech.mud"
+"pyrotech:pyrotech.mud",
+"minecraft:magma_cube",
+"minecraft:zombified_piglin",
+"minecraft:wither_skeleton"
 ] as string[];
 
 for mobone in mobsone {
@@ -24,7 +27,8 @@ var mobsthree = [
 "mekanism:babyskeleton",
 "minecraft:creeper",
 "minecraft:enderman",
-"minecraft:cave_spider"
+"minecraft:cave_spider",
+"minecraft:ghast"
 ] as string[];
 
 for mobthree in mobsthree {
