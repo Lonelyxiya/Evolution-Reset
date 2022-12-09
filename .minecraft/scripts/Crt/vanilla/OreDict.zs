@@ -404,8 +404,6 @@ var tool = [
 <doggytalents:creative_collar>,
 <doggytalents:creative_radar>,
 <draconicevolution:creative_rf_source>,
-<mekanism:energycube>,
-<mekanism:energycube>,
 <projecte:item.pe_tome>,
 <refinedstorage:controller:1>,
 <refinedstorage:portable_grid:1>,
