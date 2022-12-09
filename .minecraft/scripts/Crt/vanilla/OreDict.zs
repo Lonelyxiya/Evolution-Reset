@@ -452,3 +452,10 @@ var tool = [
 for items in tool {	
     <ore:banitems>.add(items);
 }
+
+for ban in <ore:banitems>.items {
+    ban.maxDamage = 1;
+    recipes.remove(ban);
+    mods.jei.JEI.hide(ban);
+    mods.ltt.LootTable.removeGlobalItem(ban.definition.id);
+}
