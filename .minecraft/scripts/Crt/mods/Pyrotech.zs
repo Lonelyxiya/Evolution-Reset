@@ -308,7 +308,7 @@ BrickKiln.addRecipe("netherbrick_from_netherrack", <minecraft:netherbrick>, <min
 BrickOven.addRecipe("blaze_powder_from_blaze_rod", <minecraft:blaze_powder>, <minecraft:blaze_rod>);
 BrickOven.addRecipe("cooked_dough_from_dough", <xlfoodmod:cooked_dough>, <xlfoodmod:dough>);
 
-SoakingPot.addRecipe("basalt_block_from_basalt", <ercore:basalt_coaltar>, <liquid:coal_tar>, <taiga:basalt_block>, true, 10 * 60 * 20);
+SoakingPot.addRecipe("basalt_block_from_basalt", <ercore:basalt_coaltar>, <liquid:coal_tar>, <advancedrocketry:basalt>, true, 10 * 60 * 20);
 SoakingPot.addRecipe("sugar_from_sugarcane", <minecraft:sugar>, <liquid:sugarcane>, <pyrotech:material:8>, true, 5 * 60 * 20);
 
 StoneCrucible.addRecipe("liquid_dirt_from_dirt", <liquid:dirt> * 500, <ore:dirt>, 3 * 60 * 20, true);
