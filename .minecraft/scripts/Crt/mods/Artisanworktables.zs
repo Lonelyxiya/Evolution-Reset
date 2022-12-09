@@ -222,11 +222,11 @@ RecipeBuilder.get("basic")
   
 RecipeBuilder.get("potter")
 .setShaped([
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>]])
+    [null, null, null, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, null, null, null]])
 .setFluid(<liquid:water> * 500)
 .setLevelRequired(10)
 .addRequirement(GameStages.allOf(["one"]))
