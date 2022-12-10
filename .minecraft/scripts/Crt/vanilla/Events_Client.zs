@@ -96,7 +96,7 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
                     if (isNull(event.player.data.wasGivenStarters)) {
                         if (checkworldtype == true) {
-                            if ((player.world.getWorldType() != "realistic") && (checkworldtype == true)) {
+                            if ((player.world.getWorldType() != "RTG") && (checkworldtype == true)) {
                                 ser.executeCommand(server, "gamemode spectator " + player.name);
                                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
                             } else {
@@ -136,7 +136,7 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
 if (checkworldtype == true) {
-    if ((player.world.getWorldType() != "realistic") && (checkworldtype == true)) {
+    if ((player.world.getWorldType() != "RTG") && (checkworldtype == true)) {
         ser.executeCommand(server, "gamemode spectator " + player.name);
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
     } else {
