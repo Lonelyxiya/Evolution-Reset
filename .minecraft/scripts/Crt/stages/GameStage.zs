@@ -12,7 +12,7 @@ var mobsone = [
 "tconstruct:blueslime",
 "pyrotech:pyrotech.mud",
 "minecraft:magma_cube",
-"minecraft:zombified_pigman",
+"minecraft:zombie_pigman",
 "minecraft:wither_skeleton"
 ] as string[];
 

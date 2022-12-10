@@ -326,15 +326,17 @@ if (forcetool == true) {
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
-    if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
-        if(isNull(player.currentItem)) {
-            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
-            player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
-            player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
-            event.cancel();
-        } else if(isNull(player.currentItem.toolClasses)) {
-            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
-            event.cancel();
+    if(!player.creative) {
+        if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
+            if(isNull(player.currentItem)) {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
+                player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
+                player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
+                event.cancel();
+            } else if(isNull(player.currentItem.toolClasses)) {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
+                event.cancel();
+            }
         }
     }
 });

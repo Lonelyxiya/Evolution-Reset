@@ -35,10 +35,9 @@ import crafttweaker.event.PlayerInteractEvent;
 
 events.onPlayerInteract(function(event as PlayerInteractEvent) {
     var ser = server.commandManager as ICommandManager;
-    if(!event.world.isRemote()) {
-        if (event.player.currentItem.name == "item.glassBottle") {
-            event.player.dropItem(true);
-        }
+    var current = event.player.currentItem;
+    if (!isNull(current) && current.name == "item.glassBottle") {
+        event.player.dropItem(true);
     }
     for item in <ore:banitems>.items {
         var toolname = item.definition.id;
@@ -46,12 +45,6 @@ events.onPlayerInteract(function(event as PlayerInteractEvent) {
             var ban = event.player.getInventoryStack(i);
 	        if(!isNull(ban) && ban.definition.id == toolname) {
 		        ser.executeCommand(server, "clear " + event.player.name + " " + ban.definition.id);
-		    }
-        }
-        for g in 0 to 9 {
-            var ban1 = event.player.getHotbarStack(g);
-		    if(!isNull(ban1) && ban1.definition.id == toolname) {
-		        ser.executeCommand(server, "clear " + event.player.name + " " + ban1.definition.id);
 		    }
         }
     }

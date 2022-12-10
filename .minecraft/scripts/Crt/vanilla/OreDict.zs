@@ -26,7 +26,7 @@ import crafttweaker.item.IItemStack;
 <ore:ergravel>.addAll(<ore:gravel>);
 <ore:ergravel>.add(<minecraft:flint>);
 <ore:blockSeven>.addAll(<ore:oreSulfur>);
-<ore:stoneBasalt>.add(<advancedrocketry:basalt>);
+<ore:blockBasalt>.add(<advancedrocketry:basalt>);
 <ore:fiery>.add(<twilightforest:fiery_blood>);
 <ore:fiery>.add(<twilightforest:fiery_tears>);
 <ore:oreTitanium>.add(<ercore:rutile_ore>);
@@ -415,9 +415,6 @@ var tool = [
 <refinedstorage:wireless_crafting_monitor:1>,
 <conarm:gauntlet_mat_reach>,
 <projecte:item.pe_rm_katar>,
-<tconstruct:throwball:1>,
-<tconstruct:nuggets:4>,
-<tconstruct:ingots:4>,
 <projecte:item.pe_rm_sword>,
 <botania:terrapick>,
 <refinedstorage:silicon>,
