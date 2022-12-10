@@ -18,6 +18,15 @@ import crafttweaker.event.BlockBreakEvent;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlock;
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.event.PlayerInteractEntityEvent;
+import crafttweaker.entity.IEntityDefinition;
+
+events.onPlayerInteractEntity(function(event as PlayerInteractEntityEvent) {
+var entity = event.target.definition.id;
+if (entity == <entity:minecraft:villager>.id) {
+    event.cancel();
+}
+});
 
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
