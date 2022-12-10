@@ -3,7 +3,6 @@ import crafttweaker.item.IItemStack;
 
 mods.inworldcrafting.FluidToItem.transform(<minecraft:stick>, <liquid:water>, [<minecraft:torch>], false);
 mods.inworldcrafting.FluidToItem.transform(<tconstruct:soil>, <liquid:slaked_lime>, [<minecraft:clay_ball>, <pyrotech:material:3>], true);
-mods.plustweaks.Liquid.setInfinite(<liquid:water>, true);
 
 var seeds as IItemStack[] = [
 	<botania:grassseeds>,

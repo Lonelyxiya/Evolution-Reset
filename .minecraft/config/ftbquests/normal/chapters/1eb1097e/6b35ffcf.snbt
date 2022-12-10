@@ -1,0 +1,17 @@
+{
+	x: -1.5d,
+	y: 2.0d,
+	dependencies: [
+		"e7033bd1"
+	],
+	tasks: [{
+		uid: "857585fa",
+		type: "item",
+		items: [{
+			id: "tconstruct:pick_head",
+			tag: {
+				Material: "fierymetal"
+			}
+		}]
+	}]
+}

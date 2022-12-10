@@ -266,28 +266,29 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
         event.player.update({wasGivenTip7: true});
-    } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
-        if (journeymapstages == true) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
+    }
+    if (journeymapstages == true) {    
+        if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+            event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
+            event.player.update({wasGivenTip8: true});
         }
-        event.player.update({wasGivenTip8: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
-        event.player.update({wasGivenTip9: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
-        event.player.update({wasGivenTip10: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
-        event.player.update({wasGivenTip11: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
-        event.player.update({wasGivenTip12: true});
+        if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
+            event.player.update({wasGivenTip9: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
+            event.player.update({wasGivenTip10: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
+            event.player.update({wasGivenTip11: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
+            event.player.update({wasGivenTip12: true});
+        }
     }
 });
 
