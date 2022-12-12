@@ -81,7 +81,7 @@ for removeliquid in removeliquids {
     mods.tconstruct.Alloy.removeRecipe(removeliquid);
 }
 
-mods.tconstruct.Melting.addRecipe(<liquid:obsidian_magic> * 72,<pyrotech:material:33>, 1000);
+mods.tconstruct.Melting.addRecipe(<liquid:obsidian_magic> * 72,<ercore:obsidian_magic_shard>, 1000);
 
 var nuggetliquids = [
 <liquid:tungsten>,
