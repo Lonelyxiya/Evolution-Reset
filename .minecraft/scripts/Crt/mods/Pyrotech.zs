@@ -260,46 +260,46 @@ Worktable.buildShaped(<pyrotech:worktable_stone>, [
 .register();
 
 val ietool as IItemStack = <immersiveengineering:tool>.transformDamage(1);
-function pyrWorktableCreate(modid as string, name as string, output as IItemStack, slot1 as IItemStack, slot2 as IItemStack, slot3 as IItemStack, slot4 as IItemStack, slot5 as IItemStack, slot6 as IItemStack, slot7 as IItemStack, slot8 as IItemStack, slot9 as IItemStack, damage as int){
-    Worktable.buildShaped(output, [[slot1, slot2, slot3], [slot4, slot5, slot6], [slot7, slot8, slot9]])
+function pyrWorktableCreate(modid as string, name as string, output as IItemStack, inputs1 as IIngredient[], inputs2 as IIngredient[], inputs3 as IIngredient[], damage as int){
+    Worktable.buildShaped(output, [inputs1, inputs2, inputs3])
     .setName(modid ~ name)
     .setTool(<pyrotech:bone_hammer> | <pyrotech:flint_hammer> | <pyrotech:diamond_hammer> | <pyrotech:iron_hammer> | <pyrotech:gold_hammer>, damage)
     .register();
 }
-pyrWorktableCreate("IE", "_plateiron", <immersiveengineering:metal:39>, null, <minecraft:iron_ingot>, null, null, ietool, null, null, null, null, 2);
-pyrWorktableCreate("tconstruct", "_sharp bamboo nails", <tconstruct:punji> * 5, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, null, <minecraft:reeds>, 5);
-pyrWorktableCreate("artisans", "_hammerwood", <artisanworktables:artisans_hammer_wood>, null, <minecraft:planks:*>, <ore:string>, null, <minecraft:stick>, <minecraft:planks:*>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_hammerstone", <artisanworktables:artisans_hammer_stone>, null, <minecraft:stone>, <ore:string>, null, <minecraft:stick>, <minecraft:stone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_hammerbone", <artisanworktables:artisans_hammer_bone>, null, <minecraft:bone>, <ore:string>, null, <minecraft:stick>, <minecraft:bone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_hammerflint", <artisanworktables:artisans_hammer_flint>, null, <minecraft:flint>, <ore:string>, null, <minecraft:stick>, <minecraft:flint>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_carverwood", <artisanworktables:artisans_carver_wood>, null, null, <minecraft:planks:*>, <ore:string>, <minecraft:stick>, <ore:string>, <minecraft:planks:*>, null, null, 3);
-pyrWorktableCreate("artisans", "_carverstone", <artisanworktables:artisans_carver_stone>, null, null, <minecraft:stone>, <ore:string>, <minecraft:stick>, <ore:string>, <minecraft:stone>, null, null, 3);
-pyrWorktableCreate("artisans", "_carverbone", <artisanworktables:artisans_carver_bone>, null, null, <minecraft:bone>, <ore:string>, <minecraft:stick>, <ore:string>, <minecraft:bone>, null, null, 3);
-pyrWorktableCreate("artisans", "_carverflint", <artisanworktables:artisans_carver_flint>, null, null, <minecraft:flint>, <ore:string>, <minecraft:stick>, <ore:string>, <minecraft:flint>, null, null, 3);
-pyrWorktableCreate("artisans", "_handsawwood", <artisanworktables:artisans_handsaw_wood>, null, <minecraft:planks:*>, <ore:string>, <minecraft:planks:*>, <minecraft:stick>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_handsawstone", <artisanworktables:artisans_handsaw_stone>, null, <minecraft:stone>, <ore:string>, <minecraft:stone>, <minecraft:stick>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_handsawbone", <artisanworktables:artisans_handsaw_bone>, null, <minecraft:bone>, <ore:string>, <minecraft:bone>, <minecraft:stick>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_handsawflint", <artisanworktables:artisans_handsaw_flint>, null, <minecraft:flint>, <ore:string>, <minecraft:flint>, <minecraft:stick>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_tsquare_wood", <artisanworktables:artisans_tsquare_wood>, <minecraft:stick>, <minecraft:stick>, <minecraft:stick>, null, <minecraft:planks:*>, null, null, <minecraft:planks:*>, null, 3);
-pyrWorktableCreate("artisans", "_tsquare_stone", <artisanworktables:artisans_tsquare_stone>, <minecraft:stick>, <minecraft:stick>, <minecraft:stick>, null, <minecraft:stone>, null, null, <minecraft:stone>, null, 3);
-pyrWorktableCreate("artisans", "_tsquare_bone", <artisanworktables:artisans_tsquare_bone>, <minecraft:stick>, <minecraft:stick>, <minecraft:stick>, null, <minecraft:bone>, null, null, <minecraft:bone>, null, 3);
-pyrWorktableCreate("artisans", "_tsquare_flint", <artisanworktables:artisans_tsquare_flint>, <minecraft:stick>, <minecraft:stick>, <minecraft:stick>, null, <minecraft:flint>, null, null, <minecraft:flint>, null, 3);
-pyrWorktableCreate("artisans", "_spanner_wood", <artisanworktables:artisans_spanner_wood>, null, <minecraft:planks:*>, null, null, <minecraft:stick>, <minecraft:planks:*>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_spanner_stone", <artisanworktables:artisans_spanner_stone>, null, <minecraft:stone>, null, null, <minecraft:stick>, <minecraft:stone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_spanner_bone", <artisanworktables:artisans_spanner_bone>, null, <minecraft:bone>, null, null, <minecraft:stick>, <minecraft:bone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_spanner_flint", <artisanworktables:artisans_spanner_flint>, null, <minecraft:flint>, null, null, <minecraft:stick>, <minecraft:flint>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_driver_wood", <artisanworktables:artisans_driver_wood>, null, null, <minecraft:planks:*>, null, <minecraft:planks:*>, null, <minecraft:stick>, <ore:string>, null, 3);
-pyrWorktableCreate("artisans", "_driver_stone", <artisanworktables:artisans_driver_stone>, null, null, <minecraft:stone>, null, <minecraft:stone>, null, <minecraft:stick>, <ore:string>, null, 3);
-pyrWorktableCreate("artisans", "_driver_bone", <artisanworktables:artisans_driver_bone>, null, null, <minecraft:bone>, null, <minecraft:bone>, null, <minecraft:stick>, <ore:string>, null, 3);
-pyrWorktableCreate("artisans", "_driver_flint", <artisanworktables:artisans_driver_flint>, null, null, <minecraft:flint>, null, <minecraft:flint>, null, <minecraft:stick>, <ore:string>, null, 3);
-pyrWorktableCreate("artisans", "_trowel_wood", <artisanworktables:artisans_trowel_wood>, null, null, <minecraft:planks:*>, null, <minecraft:stick>, <minecraft:planks:*>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_trowel_stone", <artisanworktables:artisans_trowel_stone>, null, null, <minecraft:stone>, null, <minecraft:stick>, <minecraft:stone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_trowel_bone", <artisanworktables:artisans_trowel_bone>, null, null, <minecraft:bone>, null, <minecraft:stick>, <minecraft:bone>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_trowel_flint", <artisanworktables:artisans_trowel_flint>, null, null, <minecraft:flint>, null, <minecraft:stick>, <minecraft:flint>, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_chisel_wood", <artisanworktables:artisans_chisel_wood>, null, null, <minecraft:planks:*>, null, <minecraft:planks:*>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_chisel_stone", <artisanworktables:artisans_chisel_stone>, null, null, <minecraft:stone>, null, <minecraft:stone>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_chisel_bone", <artisanworktables:artisans_chisel_bone>, null, null, <minecraft:bone>, null, <minecraft:bone>, null, <minecraft:stick>, null, null, 3);
-pyrWorktableCreate("artisans", "_chisel_flint", <artisanworktables:artisans_chisel_flint>, null, null, <minecraft:flint>, null, <minecraft:flint>, null, <minecraft:stick>, null, null, 3);
+pyrWorktableCreate("IE", "_plateiron", <immersiveengineering:metal:39>, [null, <minecraft:iron_ingot>, null], [null, ietool, null], [null, null, null], 2);
+pyrWorktableCreate("tconstruct", "_sharp bamboo nails", <tconstruct:punji> * 5, [<minecraft:reeds>, null, <minecraft:reeds>], [null, <minecraft:reeds>, null], [<minecraft:reeds>, null, <minecraft:reeds>], 5);
+pyrWorktableCreate("artisans", "_tsquare_wood", <artisanworktables:artisans_tsquare_wood>, [<minecraft:stick>, <minecraft:stick>, <minecraft:stick>], [null, <minecraft:planks:*>, null], [null, <minecraft:planks:*>, null], 3);
+pyrWorktableCreate("artisans", "_tsquare_stone", <artisanworktables:artisans_tsquare_stone>, [<minecraft:stick>, <minecraft:stick>, <minecraft:stick>], [null, <minecraft:stone>, null], [null, <minecraft:stone>, null], 3);
+pyrWorktableCreate("artisans", "_tsquare_bone", <artisanworktables:artisans_tsquare_bone>, [<minecraft:stick>, <minecraft:stick>, <minecraft:stick>], [null, <minecraft:bone>, null], [null, <minecraft:bone>, null], 3);
+pyrWorktableCreate("artisans", "_tsquare_flint", <artisanworktables:artisans_tsquare_flint>, [<minecraft:stick>, <minecraft:stick>, <minecraft:stick>], [null, <minecraft:flint>, null], [null, <minecraft:flint>, null], 3);
+pyrWorktableCreate("artisans", "_spanner_wood", <artisanworktables:artisans_spanner_wood>, [null, <minecraft:planks:*>, null], [null, <minecraft:stick>, <minecraft:planks:*>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_spanner_stone", <artisanworktables:artisans_spanner_stone>, [null, <minecraft:stone>, null], [null, <minecraft:stick>, <minecraft:stone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_spanner_bone", <artisanworktables:artisans_spanner_bone>, [null, <minecraft:bone>, null], [null, <minecraft:stick>, <minecraft:bone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_spanner_flint", <artisanworktables:artisans_spanner_flint>, [null, <minecraft:flint>, null], [null, <minecraft:stick>, <minecraft:flint>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_trowel_wood", <artisanworktables:artisans_trowel_wood>, [null, null, <minecraft:planks:*>], [null, <minecraft:stick>, <minecraft:planks:*>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_trowel_stone", <artisanworktables:artisans_trowel_stone>, [null, null, <minecraft:stone>], [null, <minecraft:stick>, <minecraft:stone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_trowel_bone", <artisanworktables:artisans_trowel_bone>, [null, null, <minecraft:bone>], [null, <minecraft:stick>, <minecraft:bone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_trowel_flint", <artisanworktables:artisans_trowel_flint>, [null, null, <minecraft:flint>], [null, <minecraft:stick>, <minecraft:flint>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_chisel_wood", <artisanworktables:artisans_chisel_wood>, [null, null, <minecraft:planks:*>], [null, <minecraft:planks:*>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_chisel_stone", <artisanworktables:artisans_chisel_stone>, [null, null, <minecraft:stone>], [null, <minecraft:stone>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_chisel_bone", <artisanworktables:artisans_chisel_bone>, [null, null, <minecraft:bone>], [null, <minecraft:bone>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_chisel_flint", <artisanworktables:artisans_chisel_flint>, [null, null, <minecraft:flint>], [null, <minecraft:flint>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_hammerwood", <artisanworktables:artisans_hammer_wood>, [null, <minecraft:planks:*>, <minecraft:string>.or(<pyrotech:material:14>)], [null, <minecraft:stick>, <minecraft:planks:*>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_hammerstone", <artisanworktables:artisans_hammer_stone>, [null, <minecraft:stone>, <minecraft:string>.or(<pyrotech:material:14>)], [null, <minecraft:stick>, <minecraft:stone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_hammerbone", <artisanworktables:artisans_hammer_bone>, [null, <minecraft:bone>, <minecraft:string>.or(<pyrotech:material:14>)], [null, <minecraft:stick>, <minecraft:bone>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_hammerflint", <artisanworktables:artisans_hammer_flint>, [null, <minecraft:flint>, <minecraft:string>.or(<pyrotech:material:14>)], [null, <minecraft:stick>, <minecraft:flint>], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_carverwood", <artisanworktables:artisans_carver_wood>, [null, null, <minecraft:planks:*>], [<minecraft:string>.or(<pyrotech:material:14>), <minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:planks:*>, null, null], 3);
+pyrWorktableCreate("artisans", "_carverstone", <artisanworktables:artisans_carver_stone>, [null, null, <minecraft:stone>], [<minecraft:string>.or(<pyrotech:material:14>), <minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:stone>, null, null], 3);
+pyrWorktableCreate("artisans", "_carverbone", <artisanworktables:artisans_carver_bone>, [null, null, <minecraft:bone>], [<minecraft:string>.or(<pyrotech:material:14>), <minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:bone>, null, null], 3);
+pyrWorktableCreate("artisans", "_carverflint", <artisanworktables:artisans_carver_flint>, [null, null, <minecraft:flint>], [<minecraft:string>.or(<pyrotech:material:14>), <minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:flint>, null, null], 3);
+pyrWorktableCreate("artisans", "_handsawwood", <artisanworktables:artisans_handsaw_wood>, [null, <minecraft:planks:*>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:planks:*>, <minecraft:stick>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_handsawstone", <artisanworktables:artisans_handsaw_stone>, [null, <minecraft:stone>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:stone>, <minecraft:stick>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_handsawbone", <artisanworktables:artisans_handsaw_bone>, [null, <minecraft:bone>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:bone>, <minecraft:stick>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_handsawflint", <artisanworktables:artisans_handsaw_flint>, [null, <minecraft:flint>, <minecraft:string>.or(<pyrotech:material:14>)], [<minecraft:flint>, <minecraft:stick>, null], [<minecraft:stick>, null, null], 3);
+pyrWorktableCreate("artisans", "_driver_wood", <artisanworktables:artisans_driver_wood>, [null, null, <minecraft:planks:*>], [null, <minecraft:planks:*>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
+pyrWorktableCreate("artisans", "_driver_stone", <artisanworktables:artisans_driver_stone>, [null, null, <minecraft:stone>], [null, <minecraft:stone>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
+pyrWorktableCreate("artisans", "_driver_bone", <artisanworktables:artisans_driver_bone>, [null, null, <minecraft:bone>], [null, <minecraft:bone>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
+pyrWorktableCreate("artisans", "_driver_flint", <artisanworktables:artisans_driver_flint>, [null, null, <minecraft:flint>], [null, <minecraft:flint>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
 
 CompactingBin.addRecipe("flint_from_gravel", <minecraft:flint>, <ore:gravel>, 4);
 

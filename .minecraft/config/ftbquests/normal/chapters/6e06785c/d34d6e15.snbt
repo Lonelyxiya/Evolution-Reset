@@ -27,5 +27,10 @@
 		type: "gamestage",
 		auto: "no_toast",
 		stage: "one"
+	},
+	{
+		uid: "11baa8aa",
+		type: "item",
+		item: "doggytalents:doggy_charm"
 	}]
 }
