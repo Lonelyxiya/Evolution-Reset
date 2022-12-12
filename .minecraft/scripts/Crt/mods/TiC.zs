@@ -37,8 +37,6 @@ tic2Dying(<tconstruct:edible:12>, <minecraft:chicken>, 120 * 20);
 tic2Dying(<tconstruct:edible:11>, <minecraft:beef>, 120 * 20);
 tic2Dying(<tconstruct:edible:10>, <minecraft:rotten_flesh>, 150 * 20);
 
-furnace.addRecipe(<tconstruct:materials>, <ercore:searedbrick_unfired>);
-
 recipes.addShaped(<tconstruct:smeltery_controller>, 
 [[<tconstruct:materials>, <tconstruct:materials>, <tconstruct:materials>],
 [<tconstruct:materials>, <pyrotech:furnace_core>, <tconstruct:materials>], 

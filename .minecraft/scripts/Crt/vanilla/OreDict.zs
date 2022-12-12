@@ -400,7 +400,6 @@ var tool = [
 <draconicevolution:ender_energy_manipulator>,
 <draconicevolution:creative_exchanger>,
 <draconicevolution:info_tablet>,
-<botania:manatablet>,
 <doggytalents:creative_collar>,
 <doggytalents:creative_radar>,
 <draconicevolution:creative_rf_source>,
