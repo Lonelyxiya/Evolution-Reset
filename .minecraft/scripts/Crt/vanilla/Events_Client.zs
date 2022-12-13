@@ -55,7 +55,7 @@ var InvalidMods as string[] = [
     "randomenchantments"
 ];
 
-if (modcheck == true) {
+if (modcheck != false) {
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
@@ -104,8 +104,8 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                 if (isNull(player.data.wasNotDifficultyLocked)) {
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
                     if (isNull(event.player.data.wasGivenStarters)) {
-                        if (checkworldtype == true) {
-                            if ((player.world.getWorldType() != "RTG") && (checkworldtype == true)) {
+                        if (checkworldtype != false) {
+                            if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
                                 ser.executeCommand(server, "gamemode spectator " + player.name);
                                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
                             } else {
@@ -122,7 +122,7 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                             }
                         }
                     }
-                    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
+                    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect != false)) {
                          player.world.catenation().sleep(120).then(function(world, context){
                          player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
                          }).start();
@@ -144,8 +144,8 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 var ser = server.commandManager as ICommandManager;
-if (checkworldtype == true) {
-    if ((player.world.getWorldType() != "RTG") && (checkworldtype == true)) {
+if (checkworldtype != false) {
+    if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
         ser.executeCommand(server, "gamemode spectator " + player.name);
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
     } else {
@@ -168,10 +168,10 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
-	if (rebornhunger == true) {
+	if (rebornhunger != false) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
     }
-    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect == true)) {
+    if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect != false)) {
     player.world.catenation().sleep(20).then(function(world, context){
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.tip"));
     }).start();
@@ -180,7 +180,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 
 <minecraft:bread>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}).addTooltip(game.localize("crafttweaker.stick.tooltip"));
 
-if (difficultydetect == true) {
+if (difficultydetect != false) {
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
@@ -239,7 +239,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var info3 = event.toWorld.getWorldInfo();
     var Locked3 = info3.isDifficultyLocked();
     var difficulty3 = info3.getDifficulty();
-    if ((Locked2 == true) && (difficulty2 != "PEACEFUL") && (Locked3 == true) && (difficulty3 != "PEACEFUL")) {
+    if ((Locked2 != false) && (difficulty2 != "PEACEFUL") && (Locked3 != false) && (difficulty3 != "PEACEFUL")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.locked"));
         event.player.update({wasDifficultyLocked: true});
     } else {
@@ -276,7 +276,7 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
         event.player.update({wasGivenTip7: true});
     }
-    if (journeymapstages == true) {    
+    if (journeymapstages != false) {    
         if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
             ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
             event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
@@ -301,14 +301,14 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
 });
 
-if (sleephunger == true) {
+if (sleephunger != false) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
 }
 
-if (disablecommand == true) {
+if (disablecommand != false) {
 events.onCommand(function(event as CommandEvent) {
    val command = event.command;
    if((command.name == "backup") || (command.name == "ct") || (command.name == "crafttweaker") || (command.name == "team")) {
@@ -322,12 +322,12 @@ events.onCommand(function(event as CommandEvent) {
 });
 }
 
-if (forcetool == true) {
+if (forcetool != false) {
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
     if(!player.creative) {
-        if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
+        if((block.definition.hardness > 0.5) && (event.isPlayer != false)) {
             if(isNull(player.currentItem)) {
                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
                 player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));

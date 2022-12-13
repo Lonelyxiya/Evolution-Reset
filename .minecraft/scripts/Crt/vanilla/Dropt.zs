@@ -6,8 +6,7 @@ import crafttweaker.oredict.IOreDictEntry;
 
 val woods = [
 <ore:logWood>,
-<ore:plankWood>,
-<ore:flower>
+<ore:plankWood>
 ] as IOreDictEntry[];
 
 for wood in woods {
@@ -292,7 +291,8 @@ var bandrops = [
 <pyrotech:rock:1>,
 <pyrotech:rock:2>,
 <pyrotech:rock:8>,
-<minecraft:bone>
+<minecraft:bone>,
+<pyrotech:material:12>
 ] as IItemStack[];
 
 val banblocks = [
@@ -305,7 +305,8 @@ val banblocks = [
 <ore:erstoneGranite>,
 <ore:erstoneDiorite>,
 <ore:erstoneLimestone>,
-<ore:skull>
+<ore:skull>,
+<ore:flower>
 ] as IOreDictEntry[];
 
 for i, banblock in banblocks {
