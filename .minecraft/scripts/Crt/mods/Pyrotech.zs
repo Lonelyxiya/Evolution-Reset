@@ -59,6 +59,8 @@ for items in compacting_bin_recipes {
 
 for recipe in recipes.all {
     if (recipe.resourceDomain == "pyrotech") {
+        var outputitem = recipe.output;
+        recipes.replaceAllOccurences(<minecraft:ladder>, <pyrotech:material:20>, outputitem);
         var recipelocation = recipe.fullResourceDomain;
         Worktable.whitelistVanillaRecipes([recipelocation]);
     }
