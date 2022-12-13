@@ -23,6 +23,7 @@ import crafttweaker.event.PlayerInteractEntityEvent;
 import crafttweaker.entity.IEntityDefinition;
 
 events.onPlayerInteractEntity(function(event as PlayerInteractEntityEvent) {
+if (event.target instanceof IPlayer) return;
 var entity = event.target.definition.id;
 if (entity == <entity:minecraft:villager>.id) {
     event.cancel();
@@ -109,7 +110,6 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                                 ser.executeCommand(server, "gamemode spectator " + player.name);
                                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
                             } else {
-                                ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
                                 event.player.update({wasGivenStarters: true});
                                 var start = [
                                     <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
@@ -149,7 +149,6 @@ if (checkworldtype != false) {
         ser.executeCommand(server, "gamemode spectator " + player.name);
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
     } else {
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
         event.player.update({wasGivenStarters: true});
         var start = [
             <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
@@ -273,7 +272,6 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));   
         event.player.update({wasGivenTip6: true});
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
-        ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
         event.player.update({wasGivenTip7: true});
     }
     if (journeymapstages != false) {    

@@ -35,6 +35,7 @@ for items in modrecipes {
 }
 
 recipes.addShapeless(<immersiveengineering:metal:39>, [<minecraft:iron_ingot>, <immersiveengineering:tool>.transformDamage(1)]);
+recipes.addShapeless("treated_stick", <immersiveengineering:material>, [<pyrotech:material:23>, <pyrotech:material:23>]);
 
 recipes.addShaped(<immersiveengineering:metal_decoration0:5>,
 [[<ore:blockSteel>, <immersiveengineering:material:9>, <ore:blockSteel>],

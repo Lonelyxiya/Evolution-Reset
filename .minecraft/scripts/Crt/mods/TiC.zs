@@ -42,7 +42,7 @@ recipes.addShaped(<tconstruct:smeltery_controller>,
 [<tconstruct:materials>, <pyrotech:furnace_core>, <tconstruct:materials>], 
 [<tconstruct:materials>, <tconstruct:materials>, <tconstruct:materials>]]);
 
-recipes.addShaped(<tconstruct:tooltables:3>,
+recipes.addShaped("tooltables", <tconstruct:tooltables:3>,
 [[<ore:slabWood>, <tconstruct:pattern>, <ore:slabWood>],
 [<pyrotech:material:20>, <pyrotech:worktable_stone>, <pyrotech:material:20>],
 [<pyrotech:material:20>, null, <pyrotech:material:20>]]);
