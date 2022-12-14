@@ -27,7 +27,8 @@ var modrecipes = [
 <immersiveengineering:metal:34>,
 <immersiveengineering:stone_decoration:1>,
 <immersiveengineering:stone_decoration>,
-<immersiveengineering:stone_decoration:10>
+<immersiveengineering:stone_decoration:10>,
+<immersiveengineering:tool>
 ] as IItemStack[];
 
 for items in modrecipes {
@@ -35,7 +36,6 @@ for items in modrecipes {
 }
 
 recipes.addShapeless(<immersiveengineering:metal:39>, [<minecraft:iron_ingot>, <immersiveengineering:tool>.transformDamage(1)]);
-recipes.addShapeless("treated_stick", <immersiveengineering:material>, [<pyrotech:material:23>, <pyrotech:material:23>]);
 
 recipes.addShaped(<immersiveengineering:metal_decoration0:5>,
 [[<ore:blockSteel>, <immersiveengineering:material:9>, <ore:blockSteel>],
@@ -56,6 +56,11 @@ recipes.addShaped(<immersiveengineering:stone_decoration:8> * 2,
 [[null, <ore:blockGlass>, null],
 [<ore:plateIron>, <ore:dyeGreen>, <ore:plateIron>],
 [null, <ore:blockGlass>, null]]);
+
+recipes.addShaped("ie_hammer", <immersiveengineering:tool>,
+[[null, <pyrotech:material:16>, <pyrotech:material:26>],
+[null, <ore:stickTreatedWood>, <pyrotech:material:16>],
+[<ore:stickTreatedWood>, null, null]]);
 
 recipes.addShaped(<immersiveengineering:wooden_device0>,
 [[<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:plankTreatedWood>],
