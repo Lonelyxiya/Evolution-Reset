@@ -164,16 +164,28 @@ Dropt.list("list_gravel")
         )
 );
 
+var sheardrops = [
+<minecraft:string>,
+<pyrotech:material:12>
+] as IItemStack[];
+
+val shearblocks = [
+<ore:wool>,
+<ore:flower>
+] as IOreDictEntry[];
+
+for j, shearblock in shearblocks {
+var sheardrop = sheardrops[j];
 Dropt.list("list_wool")
 	.add(Dropt.rule()
-     .matchDrops([<ore:wool>])
+     .matchDrops([shearblock])
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
       .addDrop(Dropt.drop())
 	)
 	.add(Dropt.rule()
-     .matchDrops([<ore:wool>])
+     .matchDrops([shearblock])
        .matchHarvester(Dropt.harvester()
             .type("PLAYER")
             .mainHand("BLACKLIST", [], "shears;0;-1")
@@ -183,9 +195,10 @@ Dropt.list("list_wool")
       )
       .addDrop(Dropt.drop()
           .selector(Dropt.weight(25))
-          .items([<minecraft:string>])
+          .items([sheardrop])
       )
    );
+}
 
 var dropores = [
 <pyrotech:generated_slag_copper>,
@@ -291,8 +304,7 @@ var bandrops = [
 <pyrotech:rock:1>,
 <pyrotech:rock:2>,
 <pyrotech:rock:8>,
-<minecraft:bone>,
-<pyrotech:material:12>
+<minecraft:bone>
 ] as IItemStack[];
 
 val banblocks = [
@@ -305,8 +317,7 @@ val banblocks = [
 <ore:erstoneGranite>,
 <ore:erstoneDiorite>,
 <ore:erstoneLimestone>,
-<ore:skull>,
-<ore:flower>
+<ore:skull>
 ] as IOreDictEntry[];
 
 for i, banblock in banblocks {
