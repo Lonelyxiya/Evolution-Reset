@@ -113,7 +113,9 @@ var slags as IItemStack[] = [
 <pyrotech:generated_pile_slag_uru>,
 <pyrotech:generated_pile_slag_tiberium>,
 <pyrotech:generated_pile_slag_tungsten>,
-<pyrotech:generated_pile_slag_iridium>	
+<pyrotech:generated_pile_slag_iridium>,
+<twilightforest:ironwood_raw>,
+<twilightforest:armor_shard_cluster>
 ];
 
 var ingots as IItemStack[] = [
@@ -139,7 +141,9 @@ var ingots as IItemStack[] = [
 <taiga:uru_ingot>,
 <taiga:tiberium_ingot>,
 <ercore:tungsten_ingot>,
-<libvulpes:productingot:10>
+<libvulpes:productingot:10>,
+<twilightforest:ironwood_ingot>,
+<twilightforest:knightmetal_ingot>
 ];
 
 for i, slag in slags {
