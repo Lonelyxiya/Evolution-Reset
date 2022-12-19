@@ -47,16 +47,12 @@ Dropt.list("list_woods")
 
 var dropdirts = [
 <pyrotech:rock:4>,
-<pyrotech:rock:5>,
-<pyrotech:rock:9>,
 <pyrotech:material:17>,
 <ercore:cement_powder>
 ] as IItemStack[];
 
 val dirts = [
 <ore:dirt>,
-<ore:whitesand>,
-<ore:radsand>,
 <ore:ballClay>,
 <ore:grout>
 ] as IOreDictEntry[];
@@ -115,37 +111,10 @@ Dropt.list("list_gravel")
   	  .matchHarvester(Dropt.harvester()
          .type("EXPLOSION")
       )
-        .addDrop(Dropt.drop()
-		    .selector(Dropt.weight(25))
-            .items([<pyrotech:rock>], Dropt.range(3))
-	    )
-        .addDrop(Dropt.drop()
-            .selector(Dropt.weight(25))
-            .items([<pyrotech:rock:2>], Dropt.range(3))
-        )
-		.addDrop(Dropt.drop()
-            .selector(Dropt.weight(25))
-            .items([<pyrotech:rock:3>], Dropt.range(3))
-        )
-		.addDrop(Dropt.drop()
-            .selector(Dropt.weight(25))
-            .items([<pyrotech:rock:8>], Dropt.range(3))
-        )
+     .addDrop(Dropt.drop())
 	)
-	 .add(Dropt.rule()
-       .matchDrops([<ore:ergravel>])
-        .matchHarvester(Dropt.harvester()
-          .type("PLAYER")
-          .mainHand("BLACKLIST", [], "shovel;1;-1")
-        )
-        .addDrop(Dropt.drop())
-        )
     .add(Dropt.rule()
      .matchDrops([<ore:ergravel>])
-        .matchHarvester(Dropt.harvester()
-            .type("PLAYER")
-            .mainHand("WHITELIST", [], "shovel;1;-1")
-        )
         .addDrop(Dropt.drop()
 		    .selector(Dropt.weight(25))
             .items([<pyrotech:rock>], Dropt.range(3))
@@ -304,7 +273,9 @@ var bandrops = [
 <pyrotech:rock:1>,
 <pyrotech:rock:2>,
 <pyrotech:rock:8>,
-<minecraft:bone>
+<minecraft:bone>,
+<pyrotech:rock:5>,
+<pyrotech:rock:9>,
 ] as IItemStack[];
 
 val banblocks = [
@@ -317,7 +288,9 @@ val banblocks = [
 <ore:erstoneGranite>,
 <ore:erstoneDiorite>,
 <ore:erstoneLimestone>,
-<ore:skull>
+<ore:skull>,
+<ore:whitesand>,
+<ore:radsand>
 ] as IOreDictEntry[];
 
 for i, banblock in banblocks {

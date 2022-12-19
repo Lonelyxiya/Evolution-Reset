@@ -283,8 +283,6 @@ pyrWorktableCreate("artisans", "_driver_stone", <artisanworktables:artisans_driv
 pyrWorktableCreate("artisans", "_driver_bone", <artisanworktables:artisans_driver_bone>, [null, null, <minecraft:bone>], [null, <minecraft:bone>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
 pyrWorktableCreate("artisans", "_driver_flint", <artisanworktables:artisans_driver_flint>, [null, null, <minecraft:flint>], [null, <minecraft:flint>, null], [<minecraft:stick>, <minecraft:string>.or(<pyrotech:material:14>), null], 3);
 
-CompactingBin.addRecipe("flint_from_gravel", <minecraft:flint>, <ore:gravel>, 4);
-
 BrickKiln.addRecipe("searedbrick_from_unfired", <tconstruct:materials>, <ercore:searedbrick_unfired>, 8000, 0.5, [<pyrotech:material:7>*6]);
 BrickKiln.addRecipe("netherbrick_from_netherrack", <minecraft:netherbrick>, <minecraft:netherrack>, 6000, 0.3, [<pyrotech:rock_netherrack>*4]);
 BrickOven.addRecipe("blaze_powder_from_blaze_rod", <minecraft:blaze_powder>, <minecraft:blaze_rod>);
@@ -379,6 +377,7 @@ GraniteAnvil.addRecipe("nugget_from_ingot_tin", <mekanism:nugget:6> * 9, <ore:in
 GraniteAnvil.addRecipe("nugget_from_ingot_bronze", <mekanism:nugget:2> * 9, <ore:ingotBronze>, 10, "hammer", true);
 GraniteAnvil.addRecipe("copper_plate_from_block", <immersiveengineering:metal:30> * 3, <ore:blockCopper>, 27, "hammer", true);
 GraniteAnvil.addRecipe("gold_plate_from_block", <immersiveengineering:metal:40> * 3, <ore:blockGold>, 27, "hammer", true);
+GraniteAnvil.addRecipe("flint_from_limestone", <minecraft:flint> * 3, <ore:stoneLimestone>, 15, "pickaxe", true);
 
 MechanicalCompactor.removeRecipes(<minecraft:grass>);
 MechanicalCompactor.addRecipe("iron_block_from_ingot", <minecraft:iron_block>, <ore:ingotIron>, 9);
