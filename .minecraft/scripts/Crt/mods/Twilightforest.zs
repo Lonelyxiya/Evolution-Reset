@@ -2,7 +2,6 @@
 import crafttweaker.item.IItemStack;
 
 var items = [
-<twilightforest:fiery_ingot>,
 <twilightforest:block_storage:*>
 ] as IItemStack[];
 

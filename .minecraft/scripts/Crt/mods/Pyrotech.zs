@@ -398,7 +398,7 @@ MechanicalCompactor.addRecipe("manyullyn_block_from_ingot", <tconstruct:metal:2>
 MechanicalCompactor.addRecipe("knightslime_block_from_ingot", <tconstruct:metal:3>, <ore:blockKnightslime>,9);
 MechanicalCompactor.addRecipe("alubrass_block_from_ingot", <tconstruct:metal:5>, <ore:blockAlubrass>,9);
 MechanicalCompactor.addRecipe("knightmetal_block_from_ingot", <twilightforest:knightmetal_block>, <ore:ingotKnightmetal>,9);
-MechanicalCompactor.addRecipe("fiery_block_from_ingot", <twilightforest:block_storage:1>, <ore:blockFiery>,9);
+MechanicalCompactor.addRecipe("fiery_block_from_ingot", <twilightforest:block_storage:1>, <ore:ingotFiery>,9);
 MechanicalCompactor.addRecipe("ironwood_block_from_ingot", <twilightforest:block_storage>, <ore:ingotIronwood>,9);
 MechanicalCompactor.addRecipe("quartz_enriched_iron_block_from_ingot", <refinedstorage:quartz_enriched_iron_block>, <refinedstorage:quartz_enriched_iron>,9);
 MechanicalCompactor.addRecipe("draconium_block_from_ingot", <draconicevolution:draconium_block>, <ore:blockDraconium>,9);
