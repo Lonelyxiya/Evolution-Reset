@@ -139,7 +139,10 @@ var worktable_recipes = [
 "tconstruct:tools/pattern", 
 "tconstruct:tools/table/stencil_table", 
 "tconstruct:tools/table/part_builder", 
-"minecraft:piston"
+"minecraft:piston",
+"locks:wood_lock_pick",
+"locks:gold_lock_pick",
+"locks:iron_lock_pick"
 ] as string[];
 
 for items in worktable_recipes {
