@@ -1,4 +1,5 @@
 #ignoreBracketErrors
+#loader crafttweaker reloadable
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.command.ICommandManager;
@@ -37,6 +38,9 @@ events.onPlayerInteract(function(event as PlayerInteractEvent) {
     var ser = server.commandManager as ICommandManager;
     var current = event.player.currentItem;
     if (!isNull(current) && current.name == "item.glassBottle") {
+        event.player.dropItem(true);
+    }
+    if (!isNull(current) && current.name == "item.dyePowder.white") {
         event.player.dropItem(true);
     }
     for item in <ore:banitems>.items {

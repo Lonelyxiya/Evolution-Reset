@@ -14,6 +14,7 @@
 	rewards: [{
 		uid: "66536e79",
 		type: "gamestage",
+		team_reward: true,
 		auto: "no_toast",
 		stage: "chest"
 	},

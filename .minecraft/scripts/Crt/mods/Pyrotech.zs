@@ -123,6 +123,7 @@ pyrRack("pyrotech_dry_fiber2", <pyrotech:material:13>, <pyrotech:material:12>, 1
 pyrRack("pyrotech_straw", <pyrotech:material:2>, <minecraft:wheat>, 120 * 20);
 
 var worktable_recipes = [
+"advancedrocketry:unpackingotcopper",
 "minecraft:wooden_sword", 
 "minecraft:bow", 
 "minecraft:iron_ingot_from_nuggets", 

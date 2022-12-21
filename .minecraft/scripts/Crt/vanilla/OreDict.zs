@@ -19,6 +19,8 @@ import crafttweaker.item.IItemStack;
 <ore:steel>.add(<mekanism:ingot:4>);
 <ore:oreSulfur>.add(<ercore:sulphur_ore>);
 <ore:whitesand>.add(<minecraft:sand>);
+<ore:whitesand>.add(<biomesoplenty:white_sand>);
+<ore:gravel>.add(<biomesoplenty:dried_sand>);
 <ore:radsand>.add(<minecraft:sand:1>);
 <ore:skull>.add(<minecraft:skull:*>);
 <ore:torch>.add(<advancedrocketry:unlittorch>);
@@ -38,6 +40,22 @@ import crafttweaker.item.IItemStack;
 <ore:oreCopper>.add(<ercore:copper_ore>);
 <ore:oreTin>.add(<ercore:tin_ore>);
 <ore:oreIridium>.add(<ercore:iridium_ore>);
+<ore:blockFour>.add(<biomesoplenty:hard_ice>);
+<ore:erstone>.add(<biomesoplenty:grass>);
+<ore:erstone>.add(<biomesoplenty:grass:1>);
+
+var dirts =[
+<biomesoplenty:dirt:8>,
+<biomesoplenty:dirt>,
+<biomesoplenty:dirt:9>,
+<biomesoplenty:dirt:1>,
+<biomesoplenty:dirt:10>,
+<biomesoplenty:dirt:2>
+] as IItemStack[];
+
+for d in dirts {
+    <ore:dirt>.add(d);
+}
 
 var shears =[
 <pyrotech:clay_shears>,
@@ -224,8 +242,6 @@ var fourblocks = [
 for fourblock in fourblocks {
     <ore:blockFour>.addAll(fourblock);
 }
-
-<ore:blockFour>.add(<biomesoplenty:hard_ice>);
 
 var fiveblocks = [
 <ore:oreUru>,
