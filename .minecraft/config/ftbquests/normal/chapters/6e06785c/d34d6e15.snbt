@@ -25,7 +25,13 @@
 	{
 		uid: "e2c6dfea",
 		type: "gamestage",
+		team_reward: true,
 		auto: "no_toast",
 		stage: "one"
+	},
+	{
+		uid: "11baa8aa",
+		type: "item",
+		item: "doggytalents:doggy_charm"
 	}]
 }

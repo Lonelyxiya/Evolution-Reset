@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 import loottweaker.LootTweaker;
 import loottweaker.vanilla.loot.LootTable;
 import loottweaker.vanilla.loot.LootPool;
@@ -7,7 +8,11 @@ import crafttweaker.item.IItemStack;
 
 var ghast = LootTweaker.getTable("minecraft:entities/ghast");
 var ghast_extra = ghast.addPool("ghast_extra", 1, 1, 0, 0);
-ghast_extra.addItemEntry(<botania:manabottle>,1);
+ghast_extra.addItemEntry(<botania:manabottle>, 1);
+
+var naga = LootTweaker.getTable("twilightforest:entities/naga");
+var naga_extra = naga.addPool("naga_extra", 1, 2, 0, 0);
+naga_extra.addItemEntry(<twilightforest:steeleaf_ingot>, 1);
 
 var box = LootTweaker.getTable("minecraft:chests/abandoned_mineshaft");
 var box_extra = box.addPool("box_extra", 0, 1, 0, 0);

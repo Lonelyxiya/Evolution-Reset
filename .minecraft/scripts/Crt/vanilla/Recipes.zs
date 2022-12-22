@@ -1,5 +1,14 @@
+#ignoreBracketErrors
 #priority 99999
 import crafttweaker.item.IItemStack;
+
+recipes.remove(<ore:matal_block>);
+
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
+recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
+
+recipes.replaceAllOccurences(<minecraft:furnace>, <pyrotech:furnace_core>);
 
 var ingot = [
 <immersiveengineering:metal:7>,
@@ -65,15 +74,13 @@ var ingot = [
 <tconstruct:ingots:5>,
 <twilightforest:ironwood_ingot>,
 <twilightforest:knightmetal_ingot>
-
 ] as IItemStack[];
-for items in ingot
-{
-recipes.remove(items);
+
+for items in ingot {
+    recipes.remove(items);
 }
 
 var nugget = [
-
 <taiga:tiberium_nugget>,
 <taiga:aurorium_nugget>,
 <taiga:prometheum_nugget>,
@@ -140,15 +147,13 @@ var nugget = [
 <taiga:iox_nugget>,
 <taiga:meteorite_nugget>,
 <taiga:basalt_nugget>
-
 ] as IItemStack[];
-for items in nugget
-{
-recipes.remove(items);
+
+for items in nugget {
+    recipes.remove(items);
 }
 
-var vanilla_recipes = [
-
+var game_recipes = [
 <minecraft:wool>,
 <minecraft:torch>,
 <minecraft:bread>,
@@ -167,35 +172,12 @@ var vanilla_recipes = [
 <minecraft:brewing_stand>,
 <minecraft:sugar>,
 <minecraft:chest>,
-<minecraft:gunpowder>
-
+<minecraft:gunpowder>,
+<tconstruct:materials>
 ] as IItemStack[];
-for items in vanilla_recipes
-{
-recipes.remove(items);
-}
 
-mods.immersiveengineering.MetalPress.addRecipe(<minecraft:light_weighted_pressure_plate>, <minecraft:gold_block>, <immersiveengineering:mold>, 1000);
-mods.immersiveengineering.MetalPress.addRecipe(<minecraft:heavy_weighted_pressure_plate>, <minecraft:iron_block>, <immersiveengineering:mold>, 2000);
-
-recipes.addShaped(<minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}),
-[[<pyrotech:material:16>, <pyrotech:material:16>, <pyrotech:material:16>],
-[null, <minecraft:stick>, null],
-[null, <minecraft:stick>, null]]);
-
-
-
-var pickaxe = [
-
-<minecraft:iron_pickaxe>,
-<minecraft:diamond_pickaxe>,
-<minecraft:golden_pickaxe>,
-<immersiveengineering:pickaxe_steel>
-
-] as IItemStack[];
-for items in pickaxe
-{
-recipes.remove(items);
+for items in game_recipes {
+    recipes.remove(items);
 }
 
 var myLogs = [<minecraft:log:0>,<minecraft:log:1>,<minecraft:log:2>,<minecraft:log:3>,<minecraft:log2>,<minecraft:log2:1>] as IItemStack[];
@@ -204,22 +186,15 @@ var mySlabs = [<minecraft:wooden_slab>,<minecraft:wooden_slab:1>,<minecraft:wood
 
 var diamond = <artisanworktables:artisans_handsaw_diamond>.anyDamage().transformDamage(5);
 
-for i, log in myLogs
-{
-var plank = myPlanks[i];
-recipes.addShapeless(plank * 4, [log, diamond]);
+for i, log in myLogs {
+    var plank = myPlanks[i];
+    recipes.addShapeless(plank * 4, [log, diamond]);
 }
 
-for j, plank in myPlanks
-{
-var slab = mySlabs[j];
-recipes.addShapeless(slab * 3, [plank, diamond]);
+for j, plank in myPlanks {
+    var slab = mySlabs[j];
+    recipes.addShapeless(slab * 3, [plank, diamond]);
 }
-
-recipes.remove(<ore:matal_block>);
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <minecraft:flint_and_steel>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:flint_and_tinder>.anyDamage().transformDamage(1)]);
-recipes.addShapeless(<minecraft:torch>, [<ore:carbon>, <ore:stickWood>, <pyrotech:bow_drill>.anyDamage().transformDamage(1)]);
 
 var sticks = [
 <minecraft:stick>,
@@ -279,10 +254,9 @@ var handsaws = [
 <artisanworktables:artisans_handsaw_invar>
 ] as IItemStack[];
 
-for i, handsaw in handsaws
-{
-var sticks = sticks[i];
-recipes.addShapeless(sticks * 2, [<ore:plankWood>, handsaw.anyDamage().transformDamage(5)]);
+for i, handsaw in handsaws {
+    var sticks = sticks[i];
+    recipes.addShapeless(sticks * 2, [<ore:plankWood>, handsaw.anyDamage().transformDamage(5)]);
 }
 
 recipes.addShaped(<artisanworktables:workshop:5>,
@@ -334,3 +308,8 @@ recipes.addShaped(<artisanworktables:workshop:13>,
 [[<minecraft:leather>, <minecraft:leather>, <minecraft:leather>],
 [<pyrotech:planks_tarred>, <artisanworktables:workstation:13>, <pyrotech:planks_tarred>],
 [<pyrotech:wool_tarred>, <pyrotech:wool_tarred>, <pyrotech:wool_tarred>]]);
+
+recipes.addShaped(<minecraft:stone_pickaxe>.withTag({ench: [{lvl: 3 as short, id: 32 as short}, {lvl: 1 as short, id: 34 as short}], RepairCost: 3}),
+[[<pyrotech:material:16>, <pyrotech:material:16>, <pyrotech:material:16>],
+[null, <minecraft:stick>, null],
+[null, <minecraft:stick>, null]]);

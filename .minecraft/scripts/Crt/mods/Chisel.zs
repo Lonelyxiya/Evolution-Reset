@@ -1,5 +1,4 @@
-#loader crafttweaker reloadableevents
-
+#ignoreBracketErrors
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerLeftClickBlockEvent;
 import crafttweaker.event.IEventCancelable;
@@ -7,7 +6,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.event.IPlayerEvent;
 import crafttweaker.player.IPlayer;
-
 
 events.onPlayerLeftClickBlock(function(event as PlayerLeftClickBlockEvent) {
     val player as IPlayer = event.player;

@@ -1,3 +1,5 @@
+#ignoreBracketErrors
+#loader crafttweaker reloadable
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 import crafttweaker.command.ICommandManager;
@@ -32,28 +34,25 @@ import crafttweaker.event.PlayerInteractEvent;
 <tconstruct:tool_rod>.withTag({Material: "copper"}).addTooltip(game.localize("crafttweaker.copper_rod.tooltip"));
 <draconicevolution:draconium_chest>.addTooltip(game.localize("crafttweaker.draconium_chest.tooltip"));
 
-for item in <ore:banitems>.items {
-item.maxDamage = 1;
-recipes.remove(item);
-mods.jei.JEI.hide(item);
-mods.ltt.LootTable.removeGlobalItem(item.definition.id);
 events.onPlayerInteract(function(event as PlayerInteractEvent) {
     var ser = server.commandManager as ICommandManager;
-        var toolname = item.definition.id;
-	for i in 0 to 41 {
-        var ban = event.player.getInventoryStack(i);
-	    if(!isNull(ban) && ban.definition.id == toolname) {
-		    ser.executeCommand(server, "clear " + event.player.name + " " + ban.definition.id);
-		}
+    var current = event.player.currentItem;
+    if (!isNull(current) && current.name == "item.glassBottle") {
+        event.player.dropItem(true);
     }
-    for g in 0 to 9 {
-        var ban1 = event.player.getHotbarStack(g);
-		if(!isNull(ban1) && ban1.definition.id == toolname) {
-		    ser.executeCommand(server, "clear " + event.player.name + " " + ban1.definition.id);
-		}
+    if (!isNull(current) && current.name == "item.dyePowder.white") {
+        event.player.dropItem(true);
+    }
+    for item in <ore:banitems>.items {
+        var toolname = item.definition.id;
+	    for i in 0 to 41 {
+            var ban = event.player.getInventoryStack(i);
+	        if(!isNull(ban) && ban.definition.id == toolname) {
+		        ser.executeCommand(server, "clear " + event.player.name + " " + ban.definition.id);
+		    }
+        }
     }
  });
-}
 
 <toughasnails:wool_helmet>.maxDamage = 500;
 <toughasnails:wool_chestplate>.maxDamage = 800;

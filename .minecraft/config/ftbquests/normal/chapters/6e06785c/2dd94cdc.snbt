@@ -15,6 +15,7 @@
 	rewards: [{
 		uid: "83f29f00",
 		type: "gamestage",
+		team_reward: true,
 		auto: "no_toast",
 		stage: "two"
 	}]

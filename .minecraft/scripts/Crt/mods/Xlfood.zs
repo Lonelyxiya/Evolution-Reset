@@ -1,3 +1,3 @@
-import crafttweaker.item.IItemStack;
+#ignoreBracketErrors
 
 recipes.removeByMod("xlfoodmod");

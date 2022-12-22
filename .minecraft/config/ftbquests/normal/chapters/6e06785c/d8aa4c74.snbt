@@ -1,14 +1,14 @@
 {
-	x: -1.5d,
-	y: 5.5d,
+	x: -2.0d,
+	y: 6.0d,
 	dependencies: [
-		"7add994b"
+		"6b35ffcf"
 	],
 	tasks: [{
-		uid: "17928053",
+		uid: "d915d68a",
 		type: "item",
 		items: [{
-			item: "taiga:basalt_block"
+			item: "advancedrocketry:basalt"
 		}],
 		count: 10L
 	}],

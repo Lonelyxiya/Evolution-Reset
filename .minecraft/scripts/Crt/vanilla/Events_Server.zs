@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 #sideonly server
 import crafttweaker.event.PlayerCraftedEvent;
 import crafttweaker.events.IEventManager;
@@ -17,13 +18,22 @@ import crafttweaker.event.BlockBreakEvent;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlock;
 import crafttweaker.oredict.IOreDictEntry;
+import crafttweaker.event.PlayerInteractEntityEvent;
+import crafttweaker.entity.IEntityDefinition;
+
+events.onPlayerInteractEntity(function(event as PlayerInteractEntityEvent) {
+if (event.target instanceof IPlayer) return;
+var entity = event.target.definition.id;
+if (entity == <entity:minecraft:villager>.id) {
+    event.cancel();
+}
+});
 
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
     if (isNull(event.player.data.wasGivenStarters)) {
         var ser = server.commandManager as ICommandManager;
-        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " greenhand");
         event.player.update({wasGivenStarters: true});
         var start = [
             <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
@@ -41,7 +51,9 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     var ser = server.commandManager as ICommandManager;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
+	if (rebornhunger == true) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
+    }
   }
 );
 
@@ -52,50 +64,77 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
+    } else if ((isNull(event.player.data.wasGivenTip2)) && (event.output.definition.id == "pyrotech:bloomery")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip2"));
         event.player.update({wasGivenTip2: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
+    } else if ((isNull(event.player.data.wasGivenTip3)) && (event.output.definition.id == "artisanworktables:workstation:14")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip3"));
         event.player.update({wasGivenTip3: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
+    } else if ((isNull(event.player.data.wasGivenTip4)) && (event.output.definition.id == "pyrotech:brick_oven")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip4"));
         event.player.update({wasGivenTip4: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
+    } else if ((isNull(event.player.data.wasGivenTip5)) && (event.output.definition.id == "minecraft:obsidian")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip5"));
         event.player.update({wasGivenTip5: true});
-    }
-    if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
-        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));     
+    } else if ((isNull(event.player.data.wasGivenTip6)) && (event.output.definition.id == "botania:pool:2")) {
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip6"));   
         event.player.update({wasGivenTip6: true});
+    } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
+        event.player.update({wasGivenTip7: true});
     }
-    if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
-        ser.executeCommand(server, "gamestage silentremove " + event.player.name + " greenhand");
-        event.player.update({wasGivenTip8: true});
+    if (journeymapstages == true) {    
+        if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+            event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
+            event.player.update({wasGivenTip8: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
+            event.player.update({wasGivenTip9: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
+            event.player.update({wasGivenTip10: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
+            event.player.update({wasGivenTip11: true});
+        }
+        if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
+            event.player.update({wasGivenTip12: true});
+        }
     }
 });
 
+if (sleephunger == true) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
+}
 
+if (forcetool == true) {
 events.onBlockBreak(function(event as BlockBreakEvent) {
     val player as IPlayer = event.player;
 	val block as IBlock = event.block;
-    if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
-        if(isNull(player.currentItem)) {
-            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
-            player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
-            player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
-            event.cancel();
-        } else if(isNull(player.currentItem.toolClasses)) {
-            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
-            event.cancel();
+    if(!player.creative) {
+        if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
+            if(isNull(player.currentItem)) {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
+                player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
+                player.addPotionEffect(<potion:minecraft:mining_fatigue>.makePotionEffect(200, 1));
+                event.cancel();
+            } else {
+                val name = player.currentItem.definition.id;
+                if(name.contains("axe")) return;
+                if(name.contains("shovel")) return;
+                if(name.contains("hoe")) return;
+                if(name.contains("sword")) return;
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip2"));
+                event.cancel();
+            }
         }
     }
 });
+}

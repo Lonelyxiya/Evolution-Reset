@@ -1,20 +1,6 @@
+#ignoreBracketErrors
 #priority 99999
-#loader crafttweaker reloadableevents
-import crafttweaker.events.IEventManager;
-import crafttweaker.event.BlockHarvestDropsEvent;
-import crafttweaker.event.IBlockEvent;
-import crafttweaker.event.CommandEvent;
-import crafttweaker.enchantments.IEnchantment;
-import crafttweaker.command.ICommandSender;
-import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
-import crafttweaker.command.ICommand;
-import crafttweaker.data.IData;
-import crafttweaker.player.IPlayer;
-import crafttweaker.command.ICommandManager;
-import crafttweaker.block.IBlock;
-import crafttweaker.block.IBlockDefinition;
-import crafttweaker.text.ITextComponent;
 
 recipes.addShapeless(<minecraft:bow>.withTag({ench: [{lvl: 1 as short, id: 51 as short}], RepairCost: 1}), [<minecraft:bow>, <scalinghealth:crystalshard>, <minecraft:book>]);
 <minecraft:bow>.withTag({ench: [{lvl: 1 as short, id: 51 as short}], RepairCost: 1}).maxDamage = 385;

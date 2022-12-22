@@ -1,3 +1,4 @@
+#ignoreBracketErrors
 import mods.artisanworktables.builder.RecipeBuilder;
 import crafttweaker.item.IItemStack;
 import mods.artisanworktables.builder.Copy;
@@ -6,8 +7,8 @@ import mods.artisanintegrations.requirement.GameStages;
 
 RecipeBuilder.get("basic")
 .setShaped([
-    [<pyrotech:material:16>, <pyrotech:material:16>],
-    [<ore:ingotIron>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:ingotIron>],
+    [<pyrotech:material:16>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:planks_tarred>, <pyrotech:material:16>],
+    [<ore:blockIron>, <ore:ingotIron>, <pyrotech:stash_stone>, <ore:ingotIron>, <ore:blockIron>],
     [<pyrotech:material:16>, <ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>, <pyrotech:material:16>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
@@ -221,11 +222,11 @@ RecipeBuilder.get("basic")
   
 RecipeBuilder.get("potter")
 .setShaped([
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>],
-    [<ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>]])
+    [null, null, null, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, <ercore:cement_powder>, <ercore:cement_powder>, null],
+    [null, <ercore:cement_powder>, null, null, null]])
 .setFluid(<liquid:water> * 500)
 .setLevelRequired(10)
 .addRequirement(GameStages.allOf(["one"]))
@@ -372,9 +373,9 @@ RecipeBuilder.get("mage")
 
 RecipeBuilder.get("basic")
 .setShaped([
-    [<minecraft:wool:4>, <minecraft:wool:3>, <minecraft:wool:10>, <minecraft:wool:3>, <minecraft:wool:4>],
-    [<minecraft:wool:10>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <minecraft:wool:10>],
-    [<minecraft:wool:4>, <ore:blockGold>, <ore:blockGold>, <ore:blockGold>, <minecraft:wool:4>],
+    [<ore:dyeYellow>, <ore:dyeLightBlue>, <ore:dyePurple>, <ore:dyeLightBlue>, <ore:dyeYellow>],
+    [<ore:dyePurple>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <pyrotech:stash_stone>, <ore:dyePurple>],
+    [<ore:dyeYellow>, <ore:blockGold>, <ore:blockGold>, <ore:blockGold>, <ore:dyeYellow>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>],
     [<ore:stoneBasaltPolished>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <pyrotech:masonry_brick_block>, <ore:stoneBasaltPolished>]])
 .setName("tailor_workstation")
@@ -387,6 +388,7 @@ RecipeBuilder.get("basic")
 .addTool(<ore:artisansShears>, 20)
 .addTool(<ercore:tailor_workstation_blueprint>, 2)
 .addTool(<ore:artisansCarver>, 30)
+.setSecondaryIngredients([<minecraft:wool> * 9])
 .addOutput(<artisanworktables:workstation>)
 .create();  
   
@@ -423,7 +425,7 @@ RecipeBuilder.get("tailor")
     [<ore:wool>, <ore:wool>, <ore:wool>],
     [<ore:wool>, <pyrotech:material:2>, <ore:wool>],
     [<ore:wool>, <pyrotech:material:2>, <ore:wool>]])
-.setSecondaryIngredients([<minecraft:string> * 7])
+.setSecondaryIngredients([<ore:string> * 7])
 .setLevelRequired(3)
 .addTool(<ore:artisansNeedle>, 25)
 .addTool(<ore:artisansShears>, 15)
@@ -438,7 +440,7 @@ RecipeBuilder.get("tailor")
     [<ore:wool>, null, <ore:wool>],
     [<ore:wool>, null, <ore:wool>]])
 .setLevelRequired(1)
-.setSecondaryIngredients([<minecraft:string> * 4])
+.setSecondaryIngredients([<ore:string> * 4])
 .addTool(<ore:artisansNeedle>, 25)
 .addTool(<ore:artisansShears>, 15)
 .addOutput(<toughasnails:wool_boots>)
@@ -465,7 +467,7 @@ RecipeBuilder.get("tailor")
     [<ore:wool>, <ore:wool>, <pyrotech:material:22>, <ore:wool>, <ore:wool>],
     [<ore:wool>, <pyrotech:material:22>, <ore:wool>, <pyrotech:material:22>, <ore:wool>],
     [<ore:wool>, <ore:wool>, <ore:wool>, <ore:wool>, <ore:wool>]])
-.setSecondaryIngredients([<minecraft:string> * 9])
+.setSecondaryIngredients([<ore:string> * 9])
 .setLevelRequired(5)
 .setConsumeExperience(false)
 .setMaximumTier(2)
@@ -489,7 +491,7 @@ RecipeBuilder.get("tailor")
 .setLevelRequired(5)
 .setConsumeExperience(false)
 .setMaximumTier(2)
-.setSecondaryIngredients([<minecraft:string> * 8])
+.setSecondaryIngredients([<ore:string> * 8])
 .addTool(<ore:artisansLens>, 20)
 .addTool(<ore:artisansNeedle>, 20)
 .addTool(<ore:artisansShears>, 25)
@@ -593,7 +595,7 @@ RecipeBuilder.get("tailor")
     [<pyrotech:planks_tarred>, <pyrotech:wool_tarred>, <immersiveengineering:metal:38>, <pyrotech:wool_tarred>, <pyrotech:planks_tarred>]])
 .setName("bed")
 .setLevelRequired(25)
-.setSecondaryIngredients([<minecraft:string>])
+.setSecondaryIngredients([<ore:string>])
 .setMaximumTier(2)
 .addTool(<ore:artisansCutters>, 15)
 .addTool(<ercore:bed_blueprint>, 2)
@@ -831,7 +833,7 @@ RecipeBuilder.get("tanner")
 .setName("smallbag")
 .setLevelRequired(5)
 .setConsumeExperience(false)
-.setSecondaryIngredients([<minecraft:string> * 4])  
+.setSecondaryIngredients([<ore:string> * 4])  
 .setExtraOutputOne(<minecraft:leather>, 0.1)	 
 .setExtraOutputTwo(<minecraft:string> * 2, 0.9)	
 .addTool(<ercore:small_backpack_blueprint>, 2)
@@ -849,7 +851,7 @@ RecipeBuilder.get("tanner")
 .setName("midbag")
 .setLevelRequired(10)
 .setConsumeExperience(false)
-.setSecondaryIngredients([<minecraft:string> * 6])  
+.setSecondaryIngredients([<ore:string> * 6])  
 .setExtraOutputOne(<minecraft:leather> * 4, 0.2)	 
 .setExtraOutputTwo(<minecraft:string> * 3, 0.4)
 .setExtraOutputThree(<minecraft:feather> * 2, 0.4)  
@@ -869,7 +871,7 @@ RecipeBuilder.get("tanner")
 .setName("largebag")
 .setLevelRequired(15)
 .setConsumeExperience(false)
-.setSecondaryIngredients([<minecraft:string> * 8])  
+.setSecondaryIngredients([<ore:string> * 8])  
 .setExtraOutputOne(<minecraft:leather> * 2, 0.3)	 
 .setExtraOutputTwo(<minecraft:string> * 4, 0.5)
 .setExtraOutputThree(<minecraft:feather> * 6, 0.2)  
@@ -887,7 +889,7 @@ RecipeBuilder.get("tanner")
 .setName("simplebag")
 .setLevelRequired(3)
 .setConsumeExperience(false)
-.setSecondaryIngredients([<minecraft:string> * 4])  
+.setSecondaryIngredients([<ore:string> * 4])  
 .setExtraOutputTwo(<minecraft:string> * 2, 0.8)
 .setExtraOutputThree(<minecraft:leather>, 0.2)  
 .addTool(<ore:artisansNeedle>, 15)
