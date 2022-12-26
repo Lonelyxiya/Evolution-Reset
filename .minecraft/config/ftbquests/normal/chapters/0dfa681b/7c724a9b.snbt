@@ -14,7 +14,6 @@
 	rewards: [{
 		uid: "093ef8cc",
 		type: "xp",
-		team_reward: true,
 		xp: 10
 	}]
 }

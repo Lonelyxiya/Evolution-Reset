@@ -22,11 +22,45 @@ import crafttweaker.world.IWorld;
 import crafttweaker.event.PlayerInteractEntityEvent;
 import crafttweaker.entity.IEntityDefinition;
 
+var stages as string[] = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "oreexacavator",
+    "bed",
+    "chest",
+    "piston",
+    "crafting_table"
+];
+
 events.onPlayerInteractEntity(function(event as PlayerInteractEntityEvent) {
-if (event.target instanceof IPlayer) return;
+if (event.target instanceof IPlayer) {
+    var current = event.player.currentItem;
+    if (!isNull(current) && current.name == "item.writingBook") {
+        var target as IPlayer = event.target;
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.give.stage"));
+        event.player.dropItem(true);
+        target.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.accept.stage"));
+        for stage in stages {
+            if (event.player.hasGameStage(stage)) {
+                if(!target.hasGameStage(stage)) {
+                   target.addGameStage(stage);
+                   event.player.xp += 1;
+                }
+            }
+        }
+    }
+} else {
 var entity = event.target.definition.id;
 if (entity == <entity:minecraft:villager>.id) {
     event.cancel();
+}
 }
 });
 
@@ -104,13 +138,13 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
             if (isNull(player.data.InvalidMods)) {
                 if (isNull(player.data.wasNotDifficultyLocked)) {
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
-                    if (isNull(event.player.data.wasGivenStarters)) {
+                    if (!player.hasGameStage("master")) {
                         if (checkworldtype != false) {
                             if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
                                 ser.executeCommand(server, "gamemode spectator " + player.name);
                                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
                             } else {
-                                event.player.update({wasGivenStarters: true});
+                                player.addGameStage("master");
                                 var start = [
                                     <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
                                     <pyrotech:apple_baked>,

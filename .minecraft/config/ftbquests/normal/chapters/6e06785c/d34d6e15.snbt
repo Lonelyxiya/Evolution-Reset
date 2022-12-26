@@ -25,7 +25,6 @@
 	{
 		uid: "e2c6dfea",
 		type: "gamestage",
-		team_reward: true,
 		auto: "no_toast",
 		stage: "one"
 	},

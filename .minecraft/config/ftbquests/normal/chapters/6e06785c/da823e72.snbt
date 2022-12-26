@@ -22,7 +22,6 @@
 	rewards: [{
 		uid: "015ed46d",
 		type: "xp_levels",
-		team_reward: true,
 		xp_levels: 1
 	},
 	{

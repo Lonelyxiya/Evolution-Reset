@@ -30,7 +30,6 @@
 	{
 		uid: "84767df8",
 		type: "gamestage",
-		team_reward: true,
 		auto: "no_toast",
 		stage: "crafting_table"
 	}]
