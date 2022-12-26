@@ -35,8 +35,6 @@ import crafttweaker.item.IItemStack;
 <ore:sandpile>.add(<pyrotech:rock:9>);
 <ore:ballClay>.add(<minecraft:clay_ball>);
 <ore:oreTungsten>.add(<ercore:tungsten_ore>);
-<ore:piston>.add(<minecraft:piston>);
-<ore:piston>.add(<minecraft:sticky_piston>);
 <ore:oreCopper>.add(<ercore:copper_ore>);
 <ore:oreTin>.add(<ercore:tin_ore>);
 <ore:oreIridium>.add(<ercore:iridium_ore>);

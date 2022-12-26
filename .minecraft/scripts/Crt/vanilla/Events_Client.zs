@@ -21,6 +21,24 @@ import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.world.IWorld;
 import crafttweaker.event.PlayerInteractEntityEvent;
 import crafttweaker.entity.IEntityDefinition;
+import crafttweaker.event.PlayerInteractBlockEvent;
+
+events.onPlayerInteractBlock(function(event as PlayerInteractBlockEvent) {
+var name = event.block.definition.id;
+var player = event.player;
+if (name == "minecraft:crafting_table") {
+    if (!player.hasGameStage("crafting_table")) {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+        event.cancel();
+    }
+} else if (name == "minecraft:bed") { 
+    if (!player.hasGameStage("bed")) {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+        event.cancel();
+    }
+} else if (name == "minecraft:furnace") {
+    event.cancel();
+}});
 
 var stages as string[] = [
     "one",
@@ -139,21 +157,19 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
                 if (isNull(player.data.wasNotDifficultyLocked)) {
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
                     if (!player.hasGameStage("master")) {
-                        if (checkworldtype != false) {
-                            if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
-                                ser.executeCommand(server, "gamemode spectator " + player.name);
-                                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
-                            } else {
-                                player.addGameStage("master");
-                                var start = [
-                                    <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
-                                    <pyrotech:apple_baked>,
-	                                <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
-                                ] as IItemStack[];
-                                for i in start {
-                                    event.player.give(i);
-	                            }                                
-                            }
+                        if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
+                            ser.executeCommand(server, "gamemode spectator " + player.name);
+                            player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
+                        } else {
+                            player.addGameStage("master");
+                            var start = [
+                                <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
+                                <pyrotech:apple_baked>,
+	                            <akashictome:tome>.withTag({"akashictome:data": {tconstruct: {id: "tconstruct:book", Count: 1 as byte, tag: {"akashictome:definedMod": "tconstruct"}, Damage: 0 as short}, botania: {id: "botania:lexicon", Count: 1 as byte, tag: {"akashictome:definedMod": "botania"}, Damage: 0 as short}, conarm: {id: "conarm:book", Count: 1 as byte, tag: {"akashictome:definedMod": "conarm"}, Damage: 0 as short}, ftbquests: {id: "ftbquests:book", Count: 1 as byte, tag: {"akashictome:definedMod": "ftbquests"}, Damage: 0 as short}, immersiveengineering: {id: "immersiveengineering:tool", Count: 1 as byte, tag: {"akashictome:definedMod": "immersiveengineering"}, Damage: 3 as short}, twilightforest: {id: "patchouli:guide_book", Count: 1 as byte, tag: {"akashictome:definedMod": "twilightforest", "patchouli:book": "twilightforest:guide"}, Damage: 0 as short}, valkyrielib: {id: "valkyrielib:guide", Count: 1 as byte, tag: {"akashictome:definedMod": "valkyrielib"}, Damage: 0 as short}, pyrotech: {id: "pyrotech:book", Count: 1 as byte, tag: {"akashictome:definedMod": "pyrotech"}, Damage: 0 as short}}})
+                            ] as IItemStack[];
+                            for i in start {
+                                event.player.give(i);
+	                        }                                
                         }
                     }
                     if ((isNull(player.data.wasDifficultyLocked)) && (difficultydetect != false)) {
@@ -354,11 +370,26 @@ events.onCommand(function(event as CommandEvent) {
 });
 }
 
-if (forcetool != false) {
+val blockstages = [
+"chest",
+"bed",
+"piston",
+"crafting_table"
+] as string[];
+
 events.onBlockBreak(function(event as BlockBreakEvent) {
-    val player as IPlayer = event.player;
-	val block as IBlock = event.block;
-    if(!player.creative) {
+val player as IPlayer = event.player;
+val block as IBlock = event.block;
+if(!player.creative) {
+    for blockstage in blockstages {
+        if (block.definition.id.contains(blockstage)) {
+            if (!player.hasGameStage(blockstage)) {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+                event.cancel();
+            }
+        }
+    }
+    if (forcetool != false) {
         if((block.definition.hardness > 0.5) && (event.isPlayer != false)) {
             if(isNull(player.currentItem)) {
                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
@@ -376,5 +407,4 @@ events.onBlockBreak(function(event as BlockBreakEvent) {
             }
         }
     }
-});
-}
+}});

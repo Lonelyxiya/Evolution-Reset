@@ -276,6 +276,7 @@ var bandrops = [
 <minecraft:bone>,
 <pyrotech:rock:5>,
 <pyrotech:rock:9>,
+<pyrotech:rock:7>
 ] as IItemStack[];
 
 val banblocks = [
@@ -290,7 +291,8 @@ val banblocks = [
 <ore:erstoneLimestone>,
 <ore:skull>,
 <ore:whitesand>,
-<ore:radsand>
+<ore:radsand>,
+<ore:bed>
 ] as IOreDictEntry[];
 
 for i, banblock in banblocks {
@@ -314,51 +316,6 @@ Dropt.list("list_banblocks")
 		  .items([bandrop], Dropt.range(4))  
 	   )
    );
-}
-
-val keyblocks = [
-<ore:chest>,
-<ore:bed>,
-<ore:piston>
-] as IOreDictEntry[];
-
-val stages = [
-"chest",
-"bed",
-"piston"
-] as string[];
-
-for i, keyblock in keyblocks {
-var stage = stages[i];
-Dropt.list("list_keyblocks")
-    .add(Dropt.rule()
-    .matchDrops([keyblock])
-  	  .matchHarvester(Dropt.harvester()
-         .type("EXPLOSION")
-      )
-      .addDrop(Dropt.drop())
-	)
-	   .add(Dropt.rule()
-     .matchDrops([keyblock])
-     .matchHarvester(Dropt.harvester()
-     .gameStages("BLACKLIST", "ANY", [stage])
-       )
-       .addDrop(Dropt.drop())
-    )
-      .add(Dropt.rule()
-     .matchDrops([keyblock])
-       .matchHarvester(Dropt.harvester()
-            .type("PLAYER")
-            .mainHand("BLACKLIST", [], "axe;5;-1")
-       )
-	  .addDrop(Dropt.drop()
-	     .selector(Dropt.weight(80))
-	     .items([<pyrotech:rock:7>], Dropt.range(3))  
-	  )
-	  .addDrop(Dropt.drop()
-         .selector(Dropt.weight(20))
-	  )
-    );
 }
 
 var netherdropores = [

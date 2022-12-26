@@ -20,6 +20,19 @@ import crafttweaker.block.IBlock;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.event.PlayerInteractEntityEvent;
 import crafttweaker.entity.IEntityDefinition;
+import crafttweaker.event.PlayerInteractBlockEvent;
+
+events.onPlayerInteractBlock(function(event as PlayerInteractBlockEvent) {
+var name = event.block.definition.id;
+var player = event.player;
+if (name == "minecraft:crafting_table") {
+    if (!player.hasGameStage("crafting_table")) {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+        event.cancel();
+    }
+} else if (name == "minecraft:furnace") {
+    event.cancel();
+}});
 
 var stages as string[] = [
     "one",
@@ -62,8 +75,10 @@ if (entity == <entity:minecraft:villager>.id) {
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
-    var ser = server.commandManager as ICommandManager;
-    ser.executeCommand(server, "tpd " + event.player.name + " 312");
+    if (checkworldtype != false) {
+        var ser = server.commandManager as ICommandManager;
+        ser.executeCommand(server, "tpd " + event.player.name + " 312");
+    }
     if (!player.hasGameStage("master")) {
         player.addGameStage("master");
         var start = [
@@ -81,7 +96,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
     val player as IPlayer = event.player;
     player.addPotionEffect(<potion:minecraft:invisibility>.makePotionEffect(12000, 5));
 	player.addPotionEffect(<potion:minecraft:night_vision>.makePotionEffect(6000, 5));
-	if (rebornhunger == true) {
+	if (rebornhunger != false) {
     player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(400, 1));
     }
   }
@@ -112,7 +127,7 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         event.player.update({wasGivenTip7: true});
     }
-    if (journeymapstages == true) {    
+    if (journeymapstages != false) {    
         if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
             ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
             event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
@@ -137,19 +152,34 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
 });
 
-if (sleephunger == true) {
+if (sleephunger != false) {
 events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
     val player as IPlayer = event.player;
 	player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(200, 2));
 });
 }
 
-if (forcetool == true) {
+val stages = [
+"chest",
+"bed",
+"piston",
+"crafting_table"
+] as string[];
+
 events.onBlockBreak(function(event as BlockBreakEvent) {
-    val player as IPlayer = event.player;
-	val block as IBlock = event.block;
-    if(!player.creative) {
-        if((block.definition.hardness > 0.5) && (event.isPlayer == true)) {
+val player as IPlayer = event.player;
+val block as IBlock = event.block;
+if(!player.creative) {
+    for stage in stages {
+        if (block.definition.id.contains(stage)) {
+            if (!player.hasGameStage(stage)) {
+                player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+                event.cancel();
+            }
+        }
+    }
+    if (forcetool != false) {
+        if((block.definition.hardness > 0.5) && (event.isPlayer != false)) {
             if(isNull(player.currentItem)) {
                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.blockbreak.tip1"));
                 player.addPotionEffect(<potion:tconstruct:dot>.makePotionEffect(20, 1));
@@ -166,5 +196,4 @@ events.onBlockBreak(function(event as BlockBreakEvent) {
             }
         }
     }
-});
-}
+}});
