@@ -1222,3 +1222,17 @@ RecipeBuilder.get("chef")
 .addTool(<ore:artisansBurner>, 20)
 .addOutput(<xlfoodmod:rice_bread>)
 .create();
+
+for recipe4 in recipes.all {
+    if (recipe4.resourceDomain == "comforts") {
+        RecipeBuilder.get("tailor")
+        .setCopy(Copy.byRecipe(recipe4))
+        .setLevelRequired(10)
+        .addTool(<ore:artisansNeedle>, 15)
+        .addTool(<ercore:tool_blueprint>, 2)
+        .setExtraOutputOne(<minecraft:string> * 2, 0.5)	 
+        .setExtraOutputTwo(<minecraft:feather> * 1, 0.5)
+        .setSecondaryIngredients([<ore:string> * 9])
+        .create();
+    }
+}

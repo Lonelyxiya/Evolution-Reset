@@ -5,7 +5,6 @@ import crafttweaker.block.IBlockDefinition;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.item.IItemStack;
 
-<ore:bed>.add(<minecraft:bed:*>);
 <ore:mushroom>.add(<minecraft:red_mushroom>);
 <ore:mushroom>.add(<minecraft:brown_mushroom>);
 <ore:string>.add(<pyrotech:material:14>);
