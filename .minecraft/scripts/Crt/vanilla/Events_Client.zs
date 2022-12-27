@@ -302,7 +302,6 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 }
 
 events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
-    var ser = server.commandManager as ICommandManager;
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
@@ -323,27 +322,25 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
         event.player.update({wasGivenTip6: true});
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         event.player.update({wasGivenTip7: true});
-    }
-    if (journeymapstages != false) {    
-        if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
+    } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
+        event.player.addGameStage("five");
+        event.player.update({wasGivenTip8: true});
+        if (journeymapstages != false) { 
             event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
-            event.player.update({wasGivenTip8: true});
         }
+    }
+    if (journeymapstages != false) { 
         if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
-            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
+            event.player.addGameStage("six");
             event.player.update({wasGivenTip9: true});
-        }
-        if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
-            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
+        } else if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
+            event.player.addGameStage("seven");
             event.player.update({wasGivenTip10: true});
-        }
-        if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
-            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
+        } else if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
+            event.player.addGameStage("eight");
             event.player.update({wasGivenTip11: true});
-        }
-        if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
-            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
+        } else if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
+            event.player.addGameStage("nine");
             event.player.update({wasGivenTip12: true});
         }
     }
