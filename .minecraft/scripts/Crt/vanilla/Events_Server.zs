@@ -30,6 +30,11 @@ if (name == "minecraft:crafting_table") {
         player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
         event.cancel();
     }
+} else if (name == "minecraft:bed") { 
+    if (!player.hasGameStage("bed")) {
+        player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
+        event.cancel();
+    }
 } else if (name == "minecraft:furnace") {
     event.cancel();
 }});
@@ -53,14 +58,19 @@ var stages as string[] = [
 
 events.onPlayerInteractEntity(function(event as PlayerInteractEntityEvent) {
 if (event.target instanceof IPlayer) {
-    var target as IPlayer = event.target;
-    event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.give.stage"));
-    target.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.accept.stage"));
-    for stage in stages {
-        if (event.player.hasGameStage(stage)) {
-            if(!target.hasGameStage(stage)) {
-               target.addGameStage(stage);
-               event.player.xp += 1;
+    var current = event.player.currentItem;
+    if (!isNull(current) && current.name == "item.writingBook") {
+        var target as IPlayer = event.target;
+        event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.give.stage"));
+        event.player.dropItem(true);
+        target.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.accept.stage"));
+        for stage in stages {
+            if (event.player.hasGameStage(stage)) {
+                if(!target.hasGameStage(stage)) {
+                   var ser = server.commandManager as ICommandManager;
+                   ser.executeCommand(server, "gamestage silentadd " + target.name + " " + stage);
+                   event.player.xp += 1;
+                }
             }
         }
     }
@@ -74,13 +84,13 @@ if (entity == <entity:minecraft:villager>.id) {
 
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 var player = event.player as IPlayer;
+var ser = server.commandManager as ICommandManager;
 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
     if (checkworldtype != false) {
-        var ser = server.commandManager as ICommandManager;
         ser.executeCommand(server, "tpd " + event.player.name + " 312");
     }
     if (!player.hasGameStage("master")) {
-        player.addGameStage("master");
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " master");
         var start = [
             <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
             <pyrotech:apple_baked>,
@@ -105,6 +115,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}).addTooltip(game.localize("crafttweaker.stick.tooltip"));
 
 events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
+    var ser = server.commandManager as ICommandManager;
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
@@ -126,7 +137,7 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         event.player.update({wasGivenTip7: true});
     } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-        event.player.addGameStage("five");
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
         event.player.update({wasGivenTip8: true});
         if (journeymapstages != false) { 
             event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
@@ -134,16 +145,16 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
     if (journeymapstages != false) { 
         if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
-            event.player.addGameStage("six");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
             event.player.update({wasGivenTip9: true});
         } else if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
-            event.player.addGameStage("seven");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
             event.player.update({wasGivenTip10: true});
         } else if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
-            event.player.addGameStage("eight");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
             event.player.update({wasGivenTip11: true});
         } else if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
-            event.player.addGameStage("nine");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
             event.player.update({wasGivenTip12: true});
         }
     }
@@ -156,7 +167,7 @@ events.onPlayerSleepInBed(function(event as PlayerSleepInBedEvent) {
 });
 }
 
-val stages = [
+val blockstages = [
 "chest",
 "bed",
 "piston",
@@ -167,9 +178,9 @@ events.onBlockBreak(function(event as BlockBreakEvent) {
 val player as IPlayer = event.player;
 val block as IBlock = event.block;
 if(!player.creative) {
-    for stage in stages {
-        if (block.definition.id.contains(stage)) {
-            if (!player.hasGameStage(stage)) {
+    for blockstage in blockstages {
+        if (block.definition.id.contains(blockstage)) {
+            if (!player.hasGameStage(blockstage)) {
                 player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.lack.stage"));
                 event.cancel();
             }

@@ -68,7 +68,8 @@ if (event.target instanceof IPlayer) {
         for stage in stages {
             if (event.player.hasGameStage(stage)) {
                 if(!target.hasGameStage(stage)) {
-                   target.addGameStage(stage);
+                   var ser = server.commandManager as ICommandManager;
+                   ser.executeCommand(server, "gamestage silentadd " + target.name + " " + stage);
                    event.player.xp += 1;
                 }
             }
@@ -154,14 +155,14 @@ player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.
         }).start();
     } else {
             if (isNull(player.data.InvalidMods)) {
-                if (isNull(player.data.wasNotDifficultyLocked)) {
+                if ((!player.hasGameStage("notlockdifficulty")) || (difficultydetect != false)) {
                     player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.hello"));
                     if (!player.hasGameStage("master")) {
                         if ((player.world.getWorldType() != "RTG") && (checkworldtype != false)) {
                             ser.executeCommand(server, "gamemode spectator " + player.name);
                             player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.worldtype.tip"));
                         } else {
-                            player.addGameStage("master");
+                            ser.executeCommand(server, "gamestage silentadd " + player.name + " master");
                             var start = [
                                 <minecraft:stick>.withTag({ench: [{lvl: 5 as short, id: 19 as short}], RepairCost: 1}),
                                 <pyrotech:apple_baked>,
@@ -233,7 +234,7 @@ if (difficultydetect != false) {
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var ser = server.commandManager as ICommandManager;
     event.player.addPotionEffect(<potion:minecraft:hunger>.makePotionEffect(1000, 3)); 
-    if (isNull(event.player.data.wasDifficultyLocked)) {
+    if (!event.player.hasGameStage("lockdifficulty")) {
     event.player.world.catenation().sleep(60).then(function(world, context){
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.login.difficulty"));
         }).start();
@@ -290,11 +291,11 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
     var difficulty3 = info3.getDifficulty();
     if ((Locked2 != false) && (difficulty2 != "PEACEFUL") && (Locked3 != false) && (difficulty3 != "PEACEFUL")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.locked"));
-        event.player.update({wasDifficultyLocked: true});
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " lockdifficulty");
     } else {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.difficulty.notchoose")); 
         ser.executeCommand(server, "gamemode spectator " + event.player.name);
-        event.player.update({wasNotDifficultyLocked: true});
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " notlockdifficulty");
     }  
         }).start();
   }
@@ -302,6 +303,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 }
 
 events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
+    var ser = server.commandManager as ICommandManager;
 	if ((isNull(event.player.data.wasGivenTip1)) && (event.output.definition.id == "pyrotech:compacting_bin")) {
         event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip1"));
         event.player.update({wasGivenTip1: true});
@@ -323,7 +325,7 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     } else if ((isNull(event.player.data.wasGivenTip7)) && (event.output.definition.id == "pyrotech:brick_crucible")) {
         event.player.update({wasGivenTip7: true});
     } else if ((isNull(event.player.data.wasGivenTip8)) && (event.output.definition.id == "advancedrocketry:rocketbuilder")) {
-        event.player.addGameStage("five");
+        ser.executeCommand(server, "gamestage silentadd " + event.player.name + " five");
         event.player.update({wasGivenTip8: true});
         if (journeymapstages != false) { 
             event.player.sendRichTextMessage(ITextComponent.fromTranslation("crafttweaker.message.craft.tip7"));
@@ -331,16 +333,16 @@ events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
     }
     if (journeymapstages != false) { 
         if ((isNull(event.player.data.wasGivenTip9)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:1")) {
-            event.player.addGameStage("six");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " six");
             event.player.update({wasGivenTip9: true});
         } else if ((isNull(event.player.data.wasGivenTip10)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction")) {
-            event.player.addGameStage("seven");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " seven");
             event.player.update({wasGivenTip10: true});
         } else if ((isNull(event.player.data.wasGivenTip11)) && (event.output.definition.id == "advancedrocketry:beaconfinder")) {
-            event.player.addGameStage("eight");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " eight");
             event.player.update({wasGivenTip11: true});
         } else if ((isNull(event.player.data.wasGivenTip12)) && (event.output.definition.id == "advancedrocketry:satelliteprimaryfunction:3")) {
-            event.player.addGameStage("nine");
+            ser.executeCommand(server, "gamestage silentadd " + event.player.name + " nine");
             event.player.update({wasGivenTip12: true});
         }
     }
